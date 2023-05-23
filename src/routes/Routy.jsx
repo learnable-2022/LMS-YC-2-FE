@@ -22,9 +22,6 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
                 <Route index element = {<StudentDashboard />} />
               </Route>
              
-              {/* ERROR PAGE */}
-              <Route path = "*" element = {<NotFound />}/>
-
               {/*PARENT LOGIN AND SIGNUP PAGE*/}
               <Route path = "/parentLogin" element = {<ParentLogin />} />
 
