@@ -1,5 +1,7 @@
-// STUDENT DASHBOARD
+//GENERAL
 export { default as Logo } from "./images/logo.png"
+
+// STUDENT DASHBOARD
 export { default as ProfileImg } from "./images/profileImg.png"
 export { default as Dashboard } from "./images/Dashboard.png"
 export { default as Quiz } from "./images/Quiz.png"
@@ -39,6 +41,9 @@ export { default as TestimonialCurve1 } from "./images/TestimonialCurve1.png"
 export { default as TestimonialCurve2 } from "./images/TestimonialCurve2.png"
 export { default as ArrowDown } from "./images/ArrowDown.png"
 export { default as ArrowUp } from "./images/ArrowUp.png"
+
+//LOGIN PAGE
+export { default as FormImg} from "./images/FormImg.png"
 
 
 // FOOTER
