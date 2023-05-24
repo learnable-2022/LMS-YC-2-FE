@@ -17,8 +17,8 @@
     justify-content: space-evenly;
   }
   
-  img .logoImage {
-    width: 100px;
+  .logoImage {
+    width: 160px;
     height: auto;
   }
   
@@ -47,24 +47,24 @@
     border-radius: 25px 0;
   }
   
-  form {
+  .form {
     display: flex;
     flex-direction: column;
   }
   
-  h2 {
+  .h2 {
     color: #F8A711;
     text-align: center;
   }
   
-  h4 {
+  .h4 {
     color: #070000;
     text-align: center;
     font-weight: normal;
     margin: 10px;
   }
   
-  h3 {
+  .h3 {
     color: #070000;
     text-align: center;
     font-weight: 600;
