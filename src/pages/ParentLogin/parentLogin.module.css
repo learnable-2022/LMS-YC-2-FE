@@ -3,29 +3,29 @@
   
   }
    */
-  .main-container {
+  .mainContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
   
-  img .login-image {
+  img .loginImage {
     width: 300px;
     height: auto;
     left: 57px;
     top: 57px;
   }
   
-  .image-area {
+  .imageArea {
     max-width: 40%;
   }
   
-  .form-area {
+  .formArea {
     max-width: 60%;
   }
   
-  .form-container {
+  .formContainer {
     width: 400px;
     height: 80vh;
     padding: 20px;
@@ -68,8 +68,8 @@
   
   button[type="submit"],
   button[type="button"],
-  .google-btn,
-  .facebook-btn {
+  .googleBtn,
+  .facebookBtn {
     color: #070000;
     border-radius: 3px;
     cursor: pointer;
@@ -91,17 +91,17 @@
     border-bottom: 1px solid #ccc;
   }
   
-  .google-btn, .facebook-btn {
+  .googleBtn, .facebookBtn {
     width: 100%;
     background-color: transparent;
     border: 1px solid #070000;
   }
   
-  .sign-up {
+  .signUp {
     color: #070000;
     font-size: 12px;
   }
   
-  .sign-up a {
+  .signUp a {
     cursor: pointer;
   }
