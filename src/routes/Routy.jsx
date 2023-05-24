@@ -5,6 +5,7 @@ import {
     RouterProvider
       } from "react-router-dom";
 import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
+import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import ParentLogin from "../pages/ParentLogin/ParentLogin";
 import SignUp from "../pages/SignUp/SignUp";
@@ -29,7 +30,8 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
               {/* SIGN UP PAGE */}
               <Route path = "/signup" element = {<SignUp />} />
 
-              {/* ADMIN PAGE */}
+              {/* ADMIN PAGEs */}
+              <Route path = "/adminLogin" element = {<AdminLogin />} />
           </>
           
       
