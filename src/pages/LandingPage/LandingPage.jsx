@@ -1,9 +1,6 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, LandingPageLogo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
-Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2, TestimonialCurve1, 
-TestimonialCurve2, ArrowUp, ArrowDown} from "../../assets"
-import { NavLink } from "react-router-dom"
-import { useState } from "react"
+Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3} from "../../assets"
 
 
 function LandingPage() {
@@ -202,76 +199,6 @@ function LandingPage() {
                 <img src= {TestimonialCurve2} alt=""/>
                 
             </section>
-
-            {/* ---------------------------------------------------------------FAQs---------------------------------------------------- */}
-            <section className = {styles.faqsContainer}>
-                <div className= {styles.faqHeading}>
-                    <h2>Frequently Asked Question</h2>
-                    <p>Find answers to your questions and get the information you need to make the most of our platform.</p>
-
-                </div>
-                
-
-                <div className= {styles.questions}>
-                    <div className= {styles.question_answer}>
-                        <div className= {styles.question}>
-                            <p>What type of Courses can I create and upload</p>
-                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer1(!showAnswer1)}>
-                                {showAnswer1 && <img src= {ArrowUp} alt=""/>}
-                                {!showAnswer1 &&<img src= {ArrowDown} alt=""/>}
-                            </div>
-                            
-                        </div>
-                         
-                        <p className = {`${styles.answer} ${!showAnswer1 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
-                    </div>
-
-                    <div className= {styles.question_answer}>
-                        <div className= {styles.question}>
-                            <p>What type of Courses can I create and upload</p>
-                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer2(!showAnswer2)}>
-                                {showAnswer2 && <img src= {ArrowUp} alt=""/>}
-                                {!showAnswer2 &&<img src= {ArrowDown} alt=""/>}
-                            </div>
-                            
-                        </div>
-                         
-                        <p className = {`${styles.answer} ${!showAnswer2 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
-                    </div>
-
-                    <div className= {styles.question_answer}>
-                        <div className= {styles.question}>
-                            <p>What type of Courses can I create and upload</p>
-                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer3(!showAnswer3)}>
-                                {showAnswer3 && <img src= {ArrowUp} alt=""/>}
-                                {!showAnswer3 &&<img src= {ArrowDown} alt=""/>}
-                            </div>
-                            
-                        </div>
-                         
-                        <p className = {`${styles.answer} ${!showAnswer3 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
-                    </div>
-                    <div className= {styles.question_answer}>
-                        <div className= {styles.question}>
-                            <p>What type of Courses can I create and upload</p>
-                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer4(!showAnswer4)}>
-                                {showAnswer4 && <img src= {ArrowUp} alt=""/>}
-                                {!showAnswer4 &&<img src= {ArrowDown} alt=""/>}
-                            </div>
-                            
-                        </div>
-                         
-                        <p className = {`${styles.answer} ${!showAnswer4 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
-                    </div>
-                </div>
-
-                <div className = {styles.support}>
-                    <h3>Couldn't find what you were looking for?</h3>
-                    <p>Our support team is just an email away and ready to help you out</p>
-                    <button>Contact our Support team</button>
-                </div>
-            </section>
-            
         </div>
     )
 }
