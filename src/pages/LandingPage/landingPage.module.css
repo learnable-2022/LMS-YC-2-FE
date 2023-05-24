@@ -178,3 +178,54 @@
     transform: translateY(-50%);
     right: 3%;
 }
+
+/* ----------------------------------------------------------TESTIMONIAL SECTION------------------------------------------------------- */
+.testimonialContainer{
+    padding:  3rem 7rem;
+    margin-top: 2rem; 
+    position: relative;
+    border-bottom: 1px solid black;
+}
+.testimonialContainer > h2{
+    text-align: center;
+}
+.testimonials{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.testimonial{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    width: fit-content;
+}
+#testimonialImg{
+    height: 13rem;
+}
+.testimonialContents{
+    /* background-color: green; */
+    border-left: 3px solid #2767DC;
+    padding: 0 2rem;
+    max-width: 14rem;
+}
+.role, .name{
+    /* text-align: center; */
+    font-weight: bolder;
+}
+.testimonialContainer img:nth-child(3){
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    height: 20rem;
+}
+.testimonialContainer img:nth-child(4){
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    height: 20rem;
+}
+
+/* ---------------------------------------------------------------------FAQ SECTION----------------------------------------------- */

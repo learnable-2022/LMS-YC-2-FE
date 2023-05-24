@@ -1,9 +1,11 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, LandingPageLogo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
-Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3} from "../../assets"
+Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2, TestimonialCurve1, 
+TestimonialCurve2, ArrowUp, ArrowDown} from "../../assets"
 
 
 function LandingPage() {
+    
     return (
         <div className = {styles.landingPageContainer} >
             <nav className = {styles.nav}>
@@ -153,9 +155,60 @@ function LandingPage() {
                 
             </section>
 
+            {/* ------------------------------------------------------------TESTIMONIAL SECTION--------------------------------------------------------------------------------- */}
             <section className = {styles.testimonialContainer}>
                 <h2>Discover Solutions to meet every learning goal</h2>
+
+                <div className= {styles.testimonials}>
+                    <div className= {styles.testimonial}>
+                        <div className= {styles.testimonialContents}>
+                            {/* <p className= {styles.name}>Mr Kelvin</p>
+                            <p className = {styles.role}>Tutor</p> */}
+                            <p className= {styles.testimony}>"Students are engaged, learning new tools, exposed to a variety of resources, and having fun while they learn." — Mr kelvin , product design tutor</p>
+                        </div>
+                        <img src= {TestimonialImg1} id =  {styles.testimonialImg} />
+                    </div>
+                    <div className= {styles.testimonial}>
+                        <img src= {TestimonialImg2} id =  {styles.testimonialImg} />
+                        <div className= {styles.testimonialContents}>
+                            {/* <p className={styles.name}>Averie williams</p>
+                            <p className = {styles.role}>Tutor</p> */}
+                            <p className= {styles.testimony}>“…my students [have] the opportunity to explore scientific concepts through real-world applications while actionable diagnostics allow me to track [their] mastery” — Averie williams</p>
+                        </div>
+                    </div>
+                </div>
+
+                <img src= {TestimonialCurve1} alt=""/>
+                <img src= {TestimonialCurve2} alt=""/>
                 
+            </section>
+
+            {/* ---------------------------------------------------------------FAQs---------------------------------------------------- */}
+            <section>
+                <h2>Frequently Asked Question</h2>
+
+                <div className="questions">
+                    <div className="question_answer">
+                        <div className= {styles.question}>
+                            <p>What type of Courses can I create and upload</p>
+                            <img src= {ArrowUp} alt="" />
+                        </div>
+                         
+                        <p id = {styles.answer}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+
+                    <div className="question_answer">
+                        <p id = {styles.question}>What type of Courses can I create and upload</p>
+                        <img src= {ArrowUp} alt="" /> 
+                        <p id = {styles.answer}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+
+                    <div className="question_answer">
+                        <p id = {styles.question}>What type of Courses can I create and upload</p>
+                        <img src= {ArrowUp} alt="" /> 
+                        <p id = {styles.answer}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+                </div>
             </section>
         </div>
     )
