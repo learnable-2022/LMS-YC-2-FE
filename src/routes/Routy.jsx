@@ -26,13 +26,12 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
              
               {/* LOGIN PAGE*/}
               <Route path = "/login" element = {<ParentLogin />} />
-              <Route path = "/adminLogin" element = {<AdminLogin />}/>
 
               {/* SIGN UP PAGE */}
               <Route path = "/signup" element = {<SignUp />} />
 
-
-              {/* ADMIN PAGE */}
+              {/* ADMIN PAGEs */}
+              <Route path = "/adminLogin" element = {<AdminLogin />} />
           </>
           
       
