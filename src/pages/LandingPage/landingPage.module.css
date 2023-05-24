@@ -1,0 +1,395 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+}
+.navLinks{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.logo img{
+    width: 7rem;
+
+}
+.login{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.login button{
+    background-color: #E9C335;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+/* -------------------------------------------------HERO CONTAINER----------------------------------------- */
+.heroContainer{
+    background-color: #E5EBF4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0 2rem 4rem;
+    gap: 9rem;
+    height: fit-content;
+}
+.heroContents{
+   
+}
+.heroContents h1{
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem;
+    max-width: 500px;
+}
+.heroContents > p{
+    /* font-size: 1.1rem; */
+    line-height: 1.5rem;
+    max-width: 500px;
+
+}
+.heroContents button{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #B0C4DD;
+    color: white;
+    margin: 1rem 0;
+    border-radius: 3px;
+    padding: 0.3rem 1rem;
+    border: none;
+}
+.heroContents button img{
+    width: 1.5rem;
+}
+.users{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.users div{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+#userNo{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+#user{
+    max-width: 5rem;
+    /* background-color: orange; */
+    font-size: 0.8rem;
+}
+.heroImg{
+    /* background-color: green; */
+    width: 400px;
+}
+.heroImg img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+/* -----------------------------------------------------------FEATURES SECTION----------------------------------------------------- */
+.featuresContainer{
+    padding: 3rem 4rem  1rem;
+    
+}
+.featuresContainer > h2{
+    text-align: center;
+}
+.features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-top: 3rem;
+    border-bottom: 1px solid black;
+    padding: 1rem 0 4rem; 
+}
+.feature{
+    text-align: center;
+}
+.featureImg{
+    background-color: blue;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem;
+    background: #F4EBFF;
+    border-radius: 50%;
+}
+.featureImg img{
+    margin: auto;
+    display: block;
+    width: 1.5rem;
+}
+.featureTitle{
+    margin: 1rem 0;
+}
+#abtFeature{
+    color: #667085;
+    font-size: 0.8rem;
+}
+
+
+/* --------------------------------------------------------------FEATUED COURSES----------------------------------------------------- */
+.featuredCoursesContainer{
+    padding:  2rem 4rem;
+    background: #EFF3F8;
+    margin-top: 2rem;
+}
+.featuredCoursesContainer > h2{
+    text-align: center;
+}
+.featuredCourses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.featuredCourse{
+    background-color: white;
+    height: 150px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+.featuredCourse > h3{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.featuredCourse img:nth-child(2){
+    /* display: none; */
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.featuredCourse img:nth-child(3){
+    /* display: none; */
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 3%;
+}
+
+/* ----------------------------------------------------------TESTIMONIAL SECTION------------------------------------------------------- */
+.testimonialContainer{
+    padding:  3rem 7rem;
+    margin-top: 2rem; 
+    position: relative;
+    border-bottom: 1px solid black;
+}
+.testimonialContainer > h2{
+    text-align: center;
+}
+.testimonials{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.testimonial{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    width: fit-content;
+}
+#testimonialImg{
+    height: 13rem;
+}
+.testimonialContents{
+    /* background-color: green; */
+    border-left: 3px solid #2767DC;
+    padding: 0 2rem;
+    max-width: 14rem;
+}
+.role, .name{
+    /* text-align: center; */
+    font-weight: bolder;
+}
+.testimonialContainer img:nth-child(3){
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    height: 20rem;
+}
+.testimonialContainer img:nth-child(4){
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    height: 20rem;
+}
+
+/* ---------------------------------------------------------------------FAQ SECTION----------------------------------------------- */
+.faqsContainer{
+    padding:  4rem;
+    /* margin-top: 2rem; */
+}
+.faqHeading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.faqHeading h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.faqHeading p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+}
+.question_answer{
+    margin-bottom: 1rem;
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D5D5D5;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+}
+.showAnswer{
+    width: fit-content;
+}
+.answer{
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    transition: all 600ms ease;
+}
+.answer.none{
+    display: none;
+}
+.support{
+    width: fit-content;
+    text-align: center;
+    margin: 5rem auto 2rem;
+}
+.support h3{
+    margin-bottom: 0.5rem;
+}
+.support button{
+    background-color: #F8A711;
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+    padding: 0.8rem 2.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+
+
+/* -------------------------------------------------------------MEDIA QUERY FOR TABLETS----------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 600px){
+    .heroContainer{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+        gap: 4rem;
+    }
+    .heroContents h1{
+        font-size: 1.5rem;
+        margin: 0;
+        max-width: 320px;
+    }
+    .heroContents > p{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        max-width: 350px;
+    
+    }
+    .heroImg{
+        background-color: green;
+        width: 350px;
+
+    }
+    .heroImg img{
+        display: block;
+        margin: auto;
+    }
+
+    /* ----------------------------------------------------------------FEATURES SECTION-------------------------------------------- */
+    .featuresContainer{
+        border-bottom: 1px solid black;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        border-bottom: none;
+    }
+
+    /* -------------------------------------------------------------------FEATURED COURSES------------------------------------- */
+    .featuredCoursesContainer{
+        padding: 2rem;
+    }
+    .featuredCourses{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    /* ------------------------------------------------------------------TESTIMONIAL SECTION--------------------------------------------- */
+    .testimonialContainer{
+        padding:  2rem;
+    }
+    .testimonials{
+        margin-top: 5rem;
+    }
+    .testimonial{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .testimonialContainer img:nth-child(3){
+        height: 8rem;
+        top: 10%;
+    }
+    .testimonialContainer img:nth-child(4){
+        height: 10rem;
+        top: 10%;
+    }
+    #testimonialImg{
+        order: 1;
+        display: block;
+        margin-left: auto;
+        height: 10rem;
+    }
+
+    /* ---------------------------------------------------------------------------FAQS SECTION----------------------------------------------------   */
+    .faqsContainer{
+        padding: 2rem;
+    }
+    .question{
+        padding: 0.5rem;
+    }
+    .question > p{
+        /* background: orange; */
+        font-size: 0.9rem;
+        max-width: 250px;
+    }
+    .answer{
+        padding: 0.5rem;
+    }
+}
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 400px){
+    .heroImg{
+        /* background-color: green; */
+        width: 300px;
+    }
+}
