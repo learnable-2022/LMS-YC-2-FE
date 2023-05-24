@@ -1,0 +1,11 @@
+.inputItem {
+    padding: 16px 10px;
+    gap: 10px;
+    margin-top: 0;
+    background: #E0E0E0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 420px;
+    height: 10px;
+}
