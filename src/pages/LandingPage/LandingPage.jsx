@@ -1,6 +1,7 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, LandingPageLogo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
 Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3} from "../../assets"
+import Footer from "../../components/footer/Footer"
 
 
 function LandingPage() {
@@ -157,6 +158,8 @@ function LandingPage() {
                 <h2>Discover Solutions to meet every learning goal</h2>
                 
             </section>
+
+            <Footer />
         </div>
     )
 }

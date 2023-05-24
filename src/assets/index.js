@@ -33,3 +33,13 @@ export { default as CourseCurve2 } from "./images/CourseCurve2.png"
 export { default as CourseCurve3 } from "./images/CourseCurve3.png"
 export { default as WavyLines1 } from "./images/WavyLines1.png"
 export { default as WavyLines2 } from "./images/WavyLines2.png"
+
+
+// FOOTER
+export { default as YellowLogo } from "./images/yellowLogo.png"
+export { default as Twitter } from "./images/twitter.png"
+export { default as Linkedln } from "./images/linkedln.png"
+export { default as Facebook } from "./images/facebook.png"
+export { default as Instagram } from "./images/instagram.png"
+export { default as Call } from "./images/call.png"
+export { default as SMS } from "./images/sms.png"
