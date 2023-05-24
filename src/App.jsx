@@ -1,9 +1,10 @@
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard";
+import Routy from "./routes/Routy";
 
 function App() {
   return (
     <div>
-      <StudentDashboard />
+      <Routy />
     </div>
   )
 }
