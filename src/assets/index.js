@@ -33,6 +33,12 @@ export { default as CourseCurve2 } from "./images/CourseCurve2.png"
 export { default as CourseCurve3 } from "./images/CourseCurve3.png"
 export { default as WavyLines1 } from "./images/WavyLines1.png"
 export { default as WavyLines2 } from "./images/WavyLines2.png"
+export { default as TestimonialImg1 } from "./images/TestimonialImg1.png"
+export { default as TestimonialImg2 } from "./images/TestimonialImg2.png"
+export { default as TestimonialCurve1 } from "./images/TestimonialCurve1.png"
+export { default as TestimonialCurve2 } from "./images/TestimonialCurve2.png"
+export { default as ArrowDown } from "./images/ArrowDown.png"
+export { default as ArrowUp } from "./images/ArrowUp.png"
 
 
 // FOOTER
