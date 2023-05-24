@@ -134,6 +134,7 @@
     font-size: 0.8rem;
 }
 
+
 /* --------------------------------------------------------------FEATUED COURSES----------------------------------------------------- */
 .featuredCoursesContainer{
     padding:  2rem 4rem;
@@ -267,16 +268,6 @@
 }
 .answer.none{
     display: none;
-    animation: none 1s ease;transition: all 400ms ease;
-
-}
-@keyframes none{
-    0%{
-        display: block;
-    }
-    100%{
-        display: none;
-    }
 }
 .support{
     width: fit-content;
@@ -296,4 +287,108 @@
     font-weight: bold;
     font-size: 1.1rem;
     margin-top: 1rem;
+}
+
+
+
+/* -------------------------------------------------------------MEDIA QUERY FOR TABLETS----------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 600px){
+    .heroContainer{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+        gap: 4rem;
+    }
+    .heroContents h1{
+        font-size: 1.5rem;
+        margin: 0;
+        max-width: 320px;
+    }
+    .heroContents > p{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        max-width: 350px;
+    
+    }
+    .heroImg{
+        /* background-color: green; */
+        width: 350px;
+    }
+    .heroImg img{
+        display: block;
+        margin: auto;
+    }
+
+    /* ----------------------------------------------------------------FEATURES SECTION-------------------------------------------- */
+    .featuresContainer{
+        border-bottom: 1px solid black;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        border-bottom: none;
+    }
+
+    /* -------------------------------------------------------------------FEATURED COURSES------------------------------------- */
+    .featuredCoursesContainer{
+        padding: 2rem;
+    }
+    .featuredCourses{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    /* ------------------------------------------------------------------TESTIMONIAL SECTION--------------------------------------------- */
+    .testimonialContainer{
+        padding:  2rem;
+    }
+    .testimonials{
+        margin-top: 5rem;
+    }
+    .testimonial{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .testimonialContainer img:nth-child(3){
+        height: 8rem;
+        top: 10%;
+    }
+    .testimonialContainer img:nth-child(4){
+        height: 10rem;
+        top: 10%;
+    }
+    #testimonialImg{
+        order: 1;
+        display: block;
+        margin-left: auto;
+        height: 10rem;
+    }
+
+    /* ---------------------------------------------------------------------------FAQS SECTION----------------------------------------------------   */
+    .faqsContainer{
+        padding: 2rem;
+    }
+    .question{
+        padding: 0.5rem;
+    }
+    .question > p{
+        /* background: orange; */
+        font-size: 0.9rem;
+        max-width: 250px;
+    }
+    .answer{
+        padding: 0.5rem;
+    }
+}
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 400px){
+    .heroImg{
+        /* background-color: green; */
+        width: 250px;
+    }
 }
