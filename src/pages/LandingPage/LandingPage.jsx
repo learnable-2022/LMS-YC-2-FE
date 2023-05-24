@@ -1,9 +1,11 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, LandingPageLogo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
-Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2, TestimonialCurve1, 
-TestimonialCurve2, ArrowUp, ArrowDown} from "../../assets"
-import { NavLink } from "react-router-dom"
+Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2,TestimonialCurve1, 
+TestimonialCurve2, ArrowDown, ArrowUp} from "../../assets"
+import Footer from "../../components/footer/Footer"
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
+
 
 
 function LandingPage() {
@@ -12,19 +14,6 @@ function LandingPage() {
     const [showAnswer2, setShowAnswer2] = useState(false)
     const [showAnswer3, setShowAnswer3] = useState(false)
     const [showAnswer4, setShowAnswer4] = useState(false)
-    const [showAnswer5, setShowAnswer5] = useState(false)
-
-    // const showAnswer = (e) => {
-    //     if(e.target.parentElement.classList.contains(styles.showAnswer) && showAnswer1 == false){
-    //         e.target.parentElement.parentElement.nextSibling.classList.remove("none")
-    //         setShowAnswer1(true)
-    //         // console.log(true)
-    //     }else if(e.target.parentElement.classList.contains(styles.showAnswer) && showAnswer1 == true){
-    //         e.target.parentElement.parentElement.nextSibling.classList.add("none")
-    //         setShowAnswer1(false)
-    //         // console.log(false)
-    //     }
-    // }
     
     return (
         <div className = {styles.landingPageContainer} >
@@ -271,6 +260,9 @@ function LandingPage() {
                     <button>Contact our Support team</button>
                 </div>
             </section>
+
+            {/* ----------------------------------------------------FOOTER SECTION-------------------------------------- */}
+                <Footer />
             
         </div>
     )
