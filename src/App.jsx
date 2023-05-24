@@ -1,13 +1,9 @@
-import StudentDashboard from "./Pages/StudentDashboard/StudentDashboard";
-import AdminPage from "./Pages/AdminLogin/adminLogin";
-import ForgotPasswordAdmin from "./Pages/ForgotPasswordAdmin/ForgotPasswordAdmin";
+import Routy from "./routes/Routy";
 
 function App() {
   return (
     <div>
-      <StudentDashboard />
-      <AdminPage />
-      <ForgotPasswordAdmin />
+      <Routy />
     </div>
   )
 }
