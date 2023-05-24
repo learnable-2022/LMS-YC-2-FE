@@ -39,3 +39,13 @@ export { default as TestimonialCurve1 } from "./images/TestimonialCurve1.png"
 export { default as TestimonialCurve2 } from "./images/TestimonialCurve2.png"
 export { default as ArrowDown } from "./images/ArrowDown.png"
 export { default as ArrowUp } from "./images/ArrowUp.png"
+
+
+// FOOTER
+export { default as YellowLogo } from "./images/yellowLogo.png"
+export { default as Twitter } from "./images/twitter.png"
+export { default as Linkedln } from "./images/linkedln.png"
+export { default as Facebook } from "./images/facebook.png"
+export { default as Instagram } from "./images/instagram.png"
+export { default as Call } from "./images/call.png"
+export { default as SMS } from "./images/sms.png"
