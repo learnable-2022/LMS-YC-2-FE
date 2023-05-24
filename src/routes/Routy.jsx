@@ -7,6 +7,7 @@ import {
 import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import ParentLogin from "../pages/ParentLogin/ParentLogin";
+import SignUp from "../pages/SignUp/SignUp";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 
 
@@ -22,8 +23,11 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
                 <Route index element = {<StudentDashboard />} />
               </Route>
              
-              {/*PARENT LOGIN AND SIGNUP PAGE*/}
+              {/* LOGIN PAGE*/}
               <Route path = "/login" element = {<ParentLogin />} />
+
+              {/* SIGN UP PAGE */}
+              <Route path = "/signup" element = {<SignUp />} />
 
               {/* ADMIN PAGE */}
           </>
