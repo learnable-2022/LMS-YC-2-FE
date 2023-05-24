@@ -23,7 +23,7 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
               </Route>
              
               {/*PARENT LOGIN AND SIGNUP PAGE*/}
-              <Route path = "/parentLogin" element = {<ParentLogin />} />
+              <Route path = "/login" element = {<ParentLogin />} />
 
               {/* ADMIN PAGE */}
           </>
