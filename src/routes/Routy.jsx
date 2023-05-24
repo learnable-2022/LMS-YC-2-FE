@@ -4,7 +4,7 @@ import {
     createRoutesFromElements,
     RouterProvider
       } from "react-router-dom";
-import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
+// import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import ParentLogin from "../pages/ParentLogin/ParentLogin";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
