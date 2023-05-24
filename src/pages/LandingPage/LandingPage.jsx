@@ -271,6 +271,61 @@ function LandingPage() {
                     <button>Contact our Support team</button>
                 </div>
             </section>
+
+            {/* ----------------------------------------------------FOOTER SECTION-------------------------------------- */}
+
+            <section className={styles.wrapper}>
+                <div className={styles.cont}>
+                    <div>
+                        <img src={YellowLogo} alt="" />
+                    </div>
+                    <div>
+                        <h3>Company</h3>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Privacy & Policy</a></li>
+                        <li><a href="">Partners</a></li>
+                    </div>
+                    <div>
+                        <h3>Product</h3>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Features</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Releases</a></li>
+                        <li><a href="">Dashboards</a></li>
+                    </div>
+                    <div>
+                        <h3>Resources</h3>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Bulletin</a></li>
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Tutorials</a></li>
+                    </div>
+                    <div>
+                        <h3>Contact Us</h3> 
+                        <div className={styles.flex}>
+                            <img src={SMS} alt="" />
+                            <p>contact <br />@Learnz.com</p>
+                        </div>
+                        <div className={styles.flex}>
+                            <img src={Call} alt="" />
+                            <p>+12372828292</p>
+                        </div>
+                        <div style={{paddingTop: '30px'}}>
+                            <p>Follow us on Social Media</p>
+                            <div className={styles.flex}>
+                                <img src={Linkedln} alt="" />
+                                <img src={Twitter} alt="" />
+                                <img src={Instagram} alt="" />
+                                <img src={Facebook} alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <p className={styles.para}>© 2023 LEARN.Z</p>
+            </section>
             
         </div>
     )
