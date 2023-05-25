@@ -1,26 +1,25 @@
 import styles from "./forgotPasswordAdmin.module.css";
-import { Logo } from "../../assets";
-import Input from "../../components/Input/Input";
-import  Button  from "../../components/Button/Button";
+import {Logo} from "../../assets";
 
 
-function AdminLogin() {
+function ForgotPasswordAdmin() {
   return (
     <div className={styles.container}>
 
         <div className={styles.adminNav}>
 
             <div className= {styles.logo}>
-                <img src= {Logo} alt=""/>
-                <h3>Learn.Z</h3>
+                <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
+            </div>
 
-                <ul className={styles.nav}>
+            <div className= {styles.nav}>
+                <ul>
                     <li className={styles.active}>Home</li>
                     <li>Website</li>
                     <li>Blog</li>
                 </ul>
-        
             </div>
+           
         </div>
 
 
@@ -42,17 +41,22 @@ function AdminLogin() {
                     
                     <form>
                         <h1>Reset Password</h1>
-                        <label className={styles.LabelItem}>
-                            Email address
-                        </label>
-                        <Input type= "email" placeholder= "peter@gmail.com" />
 
-                        <Button type = "submit" value = "Send" />
+                        <div>
+                            <label className={styles.LabelItem}>
+                                Email address
+                            </label>
+                            <br />
+                            <input type= "email" placeholder= "peter@gmail.com" required/>
+                        </div>
+
+                        <button type="submit">Send</button>
 
                         <p> <span>Log in</span> with your credentials</p>
 
                     </form>
                 </div>
+
             </div>
 
         </div>
@@ -61,4 +65,4 @@ function AdminLogin() {
   )
 }
 
-export default AdminLogin
+export default ForgotPasswordAdmin
