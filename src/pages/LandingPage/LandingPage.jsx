@@ -1,6 +1,10 @@
 import styles from "./landingPage.module.css"
+import { useState } from "react"
+import { NavLink } from "react-router-dom"
 import { HeroImg, LandingPageLogo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
-Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3} from "../../assets"
+Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, 
+TestimonialImg1, TestimonialImg2, TestimonialCurve1, TestimonialCurve2} from "../../assets"
+import Footer from "../../components/footer/Footer"
 
 
 function LandingPage() {
@@ -199,6 +203,8 @@ function LandingPage() {
                 <img src= {TestimonialCurve2} alt=""/>
                 
             </section>
+
+            <Footer />
         </div>
     )
 }
