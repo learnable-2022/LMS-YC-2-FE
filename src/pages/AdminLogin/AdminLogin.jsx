@@ -1,17 +1,15 @@
 import styles from "./adminLogin.module.css";
-import {Logo} from "../../assets";
+import {Logo, AdminForm} from "../../assets";
 
 
 function AdminLogin() {
   return (
     <div className={styles.container}>
-
+        
         <div className={styles.adminNav}>
-
             <div className= {styles.logo}>
                 <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
             </div>
-
             <div className= {styles.nav}>
                 <ul>
                     <li className={styles.active}>Home</li>
@@ -23,10 +21,7 @@ function AdminLogin() {
         </div>
 
 
-
-
         <div className={styles.main}>
-
             <div className={styles.textBox}>
                 <h1>Admin Login</h1>
                 <p>Please enter your credentials below to access 
@@ -35,12 +30,11 @@ function AdminLogin() {
                 </p>
             </div>
             
-        
             <div className={styles.inputContainer}>
-
+                <div className = {styles.formBlur}></div>
                 <div className={styles.inputPage}>
                     
-                    <form>
+                    <form className = {styles.form}>
                         <h1>Login</h1>
 
                         <div>
@@ -65,10 +59,12 @@ function AdminLogin() {
 
                     </form>
                 </div>
+                <img src= {AdminForm} alt=""/>
 
             </div>
 
         </div>
+        <div className = {styles.bgBlur}></div>
         
     </div>
   )

@@ -2,6 +2,8 @@
     width: 100%;
     height: 100vh;
     background:  #EFF2F8;
+    position: relative;
+    /* background-color: blue; */
 }
 
 .adminNav {
@@ -16,12 +18,12 @@
     padding-left: 80px;
 }
 
-ul {
+.nav ul {
     display: flex;
     margin: 0 50px;
 }
 
-li {
+.nav ul li {
     padding: 20px;
 }
 
@@ -49,10 +51,18 @@ li {
 
 .inputContainer {
     width: 35%;
-    height: 500px;
+    height: 550px;
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 16px;
+    z-index: 300;
+    position: relative;
+}
+.inputContainer img{
+    height: 10rem;
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
 }
 
 .InputPage {
@@ -66,7 +76,7 @@ li {
     border-radius: 10px;
 }
 
-input[type="email"],
+.form input[type="email"],
 input[type="password"] {
   padding: 8px 15px !important;
   margin-bottom: 10px;
@@ -76,16 +86,17 @@ input[type="password"] {
   border-radius: 3px;
 }
 
-form {
+.form {
     padding: 50px;
+    z-index: 500;
 }
 
-form h1 {
+.form h1 {
     padding-bottom: 20px;
     font-size: 24px;
 }
 
-form p {
+.form p {
     float: right;
     font-size: 12px;
     color: #F8A711;
@@ -99,7 +110,7 @@ form p {
     padding-top: 50px;
 }
 
-button {
+.inputPage button {
   border-radius: 5px !important;
   cursor: pointer;
   margin-top: 15px;
@@ -110,8 +121,29 @@ button {
   background-color: #F8A711 !important;
 }
 
-button:hover {
+.inputPage button:hover {
     border: 1px solid #F8A711 !important;
     color: #F8A711 !important;
     background-color: #FFF !important;
-  }
+}
+.formBlur{
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    filter: blur(50px);
+}
+.bgBlur{
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    filter: blur(100px);
+    
+}

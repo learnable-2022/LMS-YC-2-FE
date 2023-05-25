@@ -1,11 +1,10 @@
 import styles from "./forgotPasswordAdmin.module.css";
-import {Logo} from "../../assets";
+import {Logo, AdminForm} from "../../assets";
 
 
 function ForgotPasswordAdmin() {
   return (
     <div className={styles.container}>
-
         <div className={styles.adminNav}>
 
             <div className= {styles.logo}>
@@ -36,10 +35,10 @@ function ForgotPasswordAdmin() {
             
         
             <div className={styles.inputContainer}>
-
+                <div className = {styles.formBlur}></div>
                 <div className={styles.inputPage}>
                     
-                    <form>
+                    <form className = {styles.form}>
                         <h1>Reset Password</h1>
 
                         <div>
@@ -56,10 +55,12 @@ function ForgotPasswordAdmin() {
 
                     </form>
                 </div>
+                <img src= {AdminForm} alt=""/>
 
             </div>
 
         </div>
+        <div className = {styles.bgBlur}></div>
         
     </div>
   )
