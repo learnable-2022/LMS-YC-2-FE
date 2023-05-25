@@ -123,3 +123,13 @@
     color: #F8A711;
     font-weight: 600;
   }
+
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+
+    @media screen and (max-width : 600px) {
+      .mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
