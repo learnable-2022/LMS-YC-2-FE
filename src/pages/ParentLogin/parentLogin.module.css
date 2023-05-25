@@ -1,6 +1,5 @@
 .mainBody {
   background-color: #b0c4dd;
-  overflow-x: hidden;
   }
   
   .mainContainer {
@@ -120,16 +119,39 @@
   
   .signUp a {
     cursor: pointer;
-    color: #F8A711;
+    color: #2767DC;
     font-weight: 600;
   }
 
     /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 
-    @media screen and (max-width : 600px) {
+    @media screen and (max-width : 650px) {
       .mainContainer {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
       }
+
+      .imageArea {
+        max-width: 100%;
+      }
+      .logoImage {
+        width: 100px;
+      }
+      .loginImage {
+        width: 300px;
+        height: auto;
+      }
+      .formArea {
+        max-width: 100%;
+      }
+      .formContainer {
+        border-radius: 0%;
+        width: 350px;
+      }
+      /* button[type="submit"] {
+        width: 200px;
+      } */
+
     }
