@@ -1,16 +1,15 @@
-import style from "./Button.module.css";
+import styles from "./button.module.css";
 
 
 function Button({type, value, id, setButton}) {
   return (
 
-    <div className={style.ButtonContainer}>
+    <div className={styles.ButtonContainer}>
       <button type={type}
         id={id}
+        className={styles.Button}
         onClick={setButton}
         >{value}</button>
-    
-
     </div>
   )
 }

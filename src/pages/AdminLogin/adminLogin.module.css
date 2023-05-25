@@ -1,45 +1,30 @@
 .container {
-    width: 1440px;
-    height: 1024px;
+    width: 100%;
+    height: 100vh;
     background:  #EFF2F8;
+    position: relative;
+    /* background-color: blue; */
 }
 
 .adminNav {
-    width: 1440px;
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FFFFFF;;
+    background: #fff;
+    
 }
 
-.logo{
+.logo {
+    padding-left: 80px;
+}
+
+.nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
-    padding: 2rem 4rem;
-    gap: 0.5rem;
+    margin: 0 50px;
 }
 
-.logo h3{
-    color: #F8A711;
-    font-size: 1.3rem;
-} 
-
-.logo img {
-    background-color: #F8A711;
-}
-
-.nav {
-   display: flex;
-   align-items: center;
-   margin-left: 58rem;
-}
-
-ul li{
-    padding-right: 20px;
-
+.nav ul li {
+    padding: 20px;
 }
 
 .active {
@@ -50,7 +35,7 @@ ul li{
     display: flex;
     align-items: center; 
     justify-content: space-around;
-    margin: 100px 20px 20px 20px;
+    margin: 50px 10px;
 }
 
 .textBox h1 {
@@ -65,12 +50,19 @@ ul li{
 }
 
 .inputContainer {
-    width: 550px;
-    height: 600px;
+    width: 35%;
+    height: 550px;
     background: #FFFFFF;
-    margin-top: 50px;
     border: 1px solid #E0E0E0;
     border-radius: 16px;
+    z-index: 300;
+    position: relative;
+}
+.inputContainer img{
+    height: 10rem;
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
 }
 
 .InputPage {
@@ -78,23 +70,35 @@ ul li{
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin: 25px;
+    margin: 10px;
     width: 410px;
     height: 470px;
     border-radius: 10px;
 }
 
-form {
-    padding: 55px;
+.form input[type="email"],
+input[type="password"] {
+  padding: 8px 15px !important;
+  margin-bottom: 10px;
+  min-width: 90%;
+  background-color: #E0E0E0 !important;
+  border: none !important;
+  border-radius: 3px;
 }
 
-form h1 {
+.form {
+    padding: 50px;
+    z-index: 500;
+}
+
+.form h1 {
     padding-bottom: 20px;
+    font-size: 24px;
 }
 
-form p {
-    padding-top: 5px;
+.form p {
     float: right;
+    font-size: 12px;
     color: #F8A711;
 }
 
@@ -104,4 +108,42 @@ form p {
     font-size: 12px;
     line-height: 30px;
     padding-top: 50px;
+}
+
+.inputPage button {
+  border-radius: 5px !important;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 370px;
+  padding: 8px 15px !important;
+  border: none !important;
+  color: #fff !important;
+  background-color: #F8A711 !important;
+}
+
+.inputPage button:hover {
+    border: 1px solid #F8A711 !important;
+    color: #F8A711 !important;
+    background-color: #FFF !important;
+}
+.formBlur{
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    filter: blur(50px);
+}
+.bgBlur{
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    filter: blur(100px);
+    
 }
