@@ -9,6 +9,7 @@ import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import ParentLogin from "../pages/ParentLogin/ParentLogin";
 import SignUp from "../pages/SignUp/SignUp";
+import SecondSignUp from "../pages/SecondSignUp/SecondSignUp";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 
 
@@ -29,6 +30,9 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 
               {/* SIGN UP PAGE */}
               <Route path = "/signup" element = {<SignUp />} />
+
+              {/* SECOND SIGN UP PAGE */}
+              <Route path = "/finishsignup" element = {<SecondSignUp />} />
 
               {/* ADMIN PAGEs */}
               <Route path = "/adminLogin" element = {<AdminLogin />} />

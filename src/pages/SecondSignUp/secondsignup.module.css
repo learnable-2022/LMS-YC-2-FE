@@ -88,27 +88,28 @@
       border: 1px solid #070000;
       border-radius: 3px;
     }
+
+    input [type="date"] {
+      padding: 10px;
+      width: 93%;
+    }
+
+    .formContainer .passwordInfo {
+      color: #FA8072;
+      width: 350px;
+      font-weight: normal;
+      font-size: 9px;
+    }
     
-    .formContainer .continue {
+    .formContainer .done {
         width: 350px;
         font-size: 12px;
         font-weight: 500;
         padding: 7px;
-        margin-top: 10px;
+        color: #fff;
+        margin-top: 30px;
         margin-bottom: 10px;
         margin-left: 20px;
         background-color: #F8A711;
       }
 
-      .formContainer  .previous {
-        width: 350px;
-        color: #86B7F4;
-        font-weight: 500;
-        padding: 7px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        font-size: 12px;
-        cursor: pointer;
-        background-color: transparent;
-        border: 1px solid #070000;
-      }
