@@ -1,6 +1,5 @@
 .mainBody {
   background-color: #b0c4dd;
-  overflow-x: hidden;
   }
   
   .mainContainer {
@@ -50,6 +49,7 @@
   .form {
     display: flex;
     flex-direction: column;
+    padding: 30px;
   }
   
   .h2 {
@@ -61,7 +61,7 @@
     color: #070000;
     text-align: center;
     font-weight: normal;
-    margin: 10px;
+    margin-top: 15px;
   }
   
   .h3 {
@@ -73,9 +73,9 @@
   
   input[type="text"],
   input[type="password"] {
-    padding: 10px 15px;
+    padding: 10px;
     margin-bottom: 10px;
-    min-width: 90%;
+    width: 93%;
     background-color: transparent;
     border: 1px solid #070000;
     border-radius: 3px;
@@ -88,39 +88,70 @@
     color: #070000;
     border-radius: 3px;
     cursor: pointer;
-    margin-bottom: 10px;
   }
   
   button[type="submit"] {
-    background-color: transparent;
-    padding: 10px 15px;
-    border: 1px solid #070000;
-  }
-  
-  button[type="submit"]:hover,
-  button[type="button"]:hover {
-    background-color: #F8A711;
-    border: none;
     width: 100%;
+    background-color: #F8A711;
+    padding: 10px;
+    border: none;
   }
+
   
   .line {
-    border-bottom: 1px solid #ccc;
-    margin: 30px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
   }
   
   .googleBtn, .facebookBtn {
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px;
+    margin-bottom: 10px;
     background-color: transparent;
     border: 1px solid #070000;
   }
   
   .signUp {
     color: #070000;
-    font-size: 12px;
+    font-size: 13px;
+    margin-top: 10px;
   }
   
   .signUp a {
     cursor: pointer;
+    color: #2767DC;
+    font-weight: 600;
   }
+
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+
+    @media screen and (max-width : 650px) {
+      .mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .imageArea {
+        max-width: 100%;
+      }
+      .logoImage {
+        width: 100px;
+      }
+      .loginImage {
+        width: 300px;
+        height: auto;
+      }
+      .formArea {
+        max-width: 100%;
+      }
+      .formContainer {
+        border-radius: 0%;
+        width: 350px;
+      }
+      /* button[type="submit"] {
+        width: 200px;
+      } */
+
+    }

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './parentLogin.module.css'
 import {Logo, FormImg} from '../../assets';
+import { NavLink } from 'react-router-dom';
 
 function ParentLogin() {
 //   const handleLogin = (e) => {
@@ -46,7 +47,7 @@ function ParentLogin() {
                 Sign In with Facebook
               </button>
             </div>
-            <p className= {styles.signUp}>Don't have an account? <a>Sign up</a> </p>
+            <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
           </div>
         </div>  
       </div>

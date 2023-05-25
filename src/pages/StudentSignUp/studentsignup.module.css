@@ -49,17 +49,30 @@
 
     .formTitle {
       margin-left: 20px;
-      font-size: 16px;
+      font-size: 18px;
+      color:#86B7F4;
+      font-weight: bolder;
     }
     
     .form {
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      padding: 10px 20px;
+      /* background-color: blue; */
     }
 
     .form label {
         font-size: 12px;
+        display: block;
+    }
+    .form input{
+      padding: 8px;
+      margin-bottom: 15px;
+      font-size: 11px;
+      width: 93%;
+      border: 1px solid #86B7F4;
+      border-radius: 3px;
+      outline: none;
     }
     
     .h2 {
@@ -78,40 +91,42 @@
     }
   
     
-    input[type="text"],
-    input[type="password"] {
-      padding: 8px;
-      margin-bottom: 15px;
-      font-size: 11px;
-      width: 93%;
-      background-color: transparent;
-      border: 1px solid #070000;
-      border-radius: 3px;
+   .formContainer .continue {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+      margin: 20px auto 20px;
+      padding: 10px 0px;
+      color: white;
+      text-decoration: none;
+      gap: 1rem;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #F8A711;
+      border-radius: 6px;
     }
-    
-    .formContainer .continue {
-        width: 350px;
-        font-size: 12px;
-        font-weight: 500;
-        padding: 7px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        background-color: #F8A711;
-      }
-
-      .formContainer  .previous {
-        width: 350px;
-        color: #86B7F4;
-        font-weight: 500;
-        padding: 7px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        font-size: 12px;
-        cursor: pointer;
-        background-color: transparent;
-        border: 1px solid #070000;
-      }
+    .formContainer  .previous {
+      width: 350px;
+      display: block;
+      color: #86B7F4;
+      font-weight: 600;
+      padding: 10px 0px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #86B7F4;
+      text-align: center;
+      border-radius: 6px;
+      transition: all 400ms ease;
+    }
+    .formContainer .previous:hover{
+      background-color: #F8A711;
+      color: white;
+      border-color: transparent;
+    }
 
           /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 

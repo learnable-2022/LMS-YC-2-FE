@@ -78,8 +78,7 @@
     }
   
     
-    input[type="text"],
-    input[type="password"] {
+    .form input {
       padding: 8px;
       margin-bottom: 15px;
       font-size: 11px;
@@ -88,32 +87,36 @@
       border: 1px solid #070000;
       border-radius: 3px;
     }
+
+    input [type="date"] {
+      padding: 10px;
+      width: 93%;
+    }
+
+    .formContainer .passwordInfo {
+      color: #FA8072;
+      width: 350px;
+      font-weight: normal;
+      font-size: 9px;
+    }
     
-    .formContainer .continue {
-        width: 350px;
-        font-size: 12px;
-        font-weight: 500;
-        padding: 7px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        background-color: #F8A711;
+    .formContainer .done {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+      margin: 20px auto 20px;
+      padding: 10px 0px;
+      color: white;
+      text-decoration: none;
+      gap: 1rem;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #F8A711;
+      border-radius: 6px;
       }
 
-      .formContainer  .previous {
-        width: 350px;
-        color: #86B7F4;
-        font-weight: 500;
-        padding: 7px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        font-size: 12px;
-        cursor: pointer;
-        background-color: transparent;
-        border: 1px solid #070000;
-      }
-
-          /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 
     @media screen and (max-width : 650px) {
       .mainContainer {
