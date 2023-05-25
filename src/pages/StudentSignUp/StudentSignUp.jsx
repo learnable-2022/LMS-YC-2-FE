@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './signup.module.css'
-import {Logo, FormImg} from '../../assets';
+import styles from './studentsignup.module.css'
+import {Logo, FormImg, ArrowRight} from '../../assets';
+import { NavLink } from 'react-router-dom';
 
 
-function SignUp() {
+function StudentSignUp() {
     return (
         <div className= {styles.mainBody}>
         <div className= {styles.mainContainer}>
@@ -17,26 +18,30 @@ function SignUp() {
               <h4 className = {styles.h4}>Please enter the information below to give your child an edge.</h4>
               <p className= {styles.formTitle}>Parents Information</p>
               <form className = {styles.form}>
-              <div>
-                <label>Name</label>
-                <input type="text" id="name" placeholder='Full name' required/>
-              </div>
+                <div>
+                  <label>Name</label>
+                  <input type="text" id="name" placeholder='Full name' required/>
+                </div>
                 <div>
                   <label>Email address</label>  
-                  <input type="text" id="email" placeholder='Ifunanya123@gmail.com' required/>
+                  <input type="email" id="email" placeholder='Ifunanya123@gmail.com' required/>
                 </div>
                 <div>
-                <label>Relationship</label>  
+                  <label>Relationship</label>  
                   <input type="text" id="relationship" placeholder='Mother' required/>
                 </div>
+                
               </form>
-              <div>
-                <button type="submit" className= {styles.continue}>
-                  Continue
-                </button>
-                <button className= {styles.previous}>
-                  Previous
-                </button>
+              <NavLink to = "/signup/student_2" className= {styles.continue} >
+                <p>Continue</p>
+                <img src= {ArrowRight} alt=""/>
+              </NavLink>
+              
+            <div>
+                
+            <NavLink to = "/signup" className= {styles.previous}>
+              Previous
+            </NavLink>
               </div>
             </div>
           </div>  
@@ -45,4 +50,4 @@ function SignUp() {
     )
 }
 
-export default SignUp
+export default StudentSignUp
