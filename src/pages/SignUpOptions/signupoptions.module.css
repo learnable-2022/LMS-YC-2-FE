@@ -49,7 +49,7 @@
 
     .formTitle {
       margin-left: 20px;
-      font-size: 16px;
+      font-size: 14px;
     }
     
     .form {
@@ -58,14 +58,11 @@
       padding: 20px;
     }
 
-    .form label {
-        font-size: 12px;
-    }
-    
     .h2 {
       color: #F8A711;
       text-align: center;
       font-size: 25px;
+      margin: 20px;
     }
     
     .h4 {
@@ -73,47 +70,59 @@
       width: 350px;
       text-align: center;
       font-weight: normal;
-      margin: 15px;
+      margin: 20px 13px;
       font-size: 13px;
     }
-  
-    
-    input[type="text"],
-    input[type="password"] {
-      padding: 8px;
-      margin-bottom: 15px;
-      font-size: 11px;
-      width: 93%;
-      background-color: transparent;
-      border: 1px solid #070000;
-      border-radius: 3px;
-    }
-    
-    .formContainer .continue {
+
+    .formContainer .signupoptionone {
         width: 350px;
         font-size: 12px;
         font-weight: 500;
         padding: 7px;
-        margin-top: 10px;
+        color: #fff;
+        margin-top: 30px;
+        margin-left: 20px;
+        background-color: #F8A711;
+    }
+    
+    .formContainer .signupoptiontwo {
+        width: 350px;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 7px;
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        margin-left: 20px;
+        background-color: #F8A711;
+    }
+
+    .formContainer .done {
+        width: 350px;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 7px;
+        color: #fff;
+        margin-top: 30px;
         margin-bottom: 10px;
         margin-left: 20px;
         background-color: #F8A711;
       }
 
-      .formContainer  .previous {
-        width: 350px;
-        color: #86B7F4;
-        font-weight: 500;
-        padding: 7px;
-        margin-bottom: 10px;
+      .login {
+        color: #070000;
+        font-size: 13px;
+        margin-top: 10px;
         margin-left: 20px;
-        font-size: 12px;
+      }
+      
+      .login a {
         cursor: pointer;
-        background-color: transparent;
-        border: 1px solid #070000;
+        color: #2767DC;
+        font-weight: 600;
       }
 
-          /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 
     @media screen and (max-width : 650px) {
       .mainContainer {
