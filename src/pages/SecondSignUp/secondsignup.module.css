@@ -113,3 +113,35 @@
         background-color: #F8A711;
       }
 
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+
+    @media screen and (max-width : 650px) {
+      .mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .imageArea {
+        max-width: 100%;
+      }
+      .logoImage {
+        width: 100px;
+      }
+      .loginImage {
+        width: 300px;
+        height: auto;
+      }
+      .formArea {
+        max-width: 100%;
+      }
+      .formContainer {
+        border-radius: 0%;
+        width: 350px;
+      }
+      /* button[type="submit"] {
+        width: 200px;
+      } */
+
+    }
