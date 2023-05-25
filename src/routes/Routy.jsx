@@ -13,6 +13,7 @@ import SecondSignUp from "../pages/SecondSignUp/SecondSignUp";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
+import ForgotPasswordAdmin from "../pages/ForgotPasswordAdmin/ForgotPasswordAdmin";
 
     const Routy = () => {
     
@@ -39,7 +40,9 @@ import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
               <Route path = "/signup/student_2" element = {<SecondSignUp />} />
 
               {/* ADMIN PAGEs */}
-              <Route path = "/adminLogin" element = {<AdminLogin />} />
+              <Route path = "/admin/login" element = {<AdminLogin />} />
+              <Route path = "/admin/forgotPassword" element = {<ForgotPasswordAdmin />} />
+
           </>
           
       

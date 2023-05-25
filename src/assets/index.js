@@ -49,6 +49,8 @@ export { default as FormImg} from "./images/FormImg.png"
 export {default as ProfileIcon } from "./images/ProfileIcon.png"
 export {default as ArrowRight } from "./images/ArrowRight.png"
 
+//ADMIN PAGES
+export {default as AdminForm } from "./images/AdminForm.png"
 
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
