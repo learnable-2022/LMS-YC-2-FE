@@ -1,7 +1,7 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, Logo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
 Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2,TestimonialCurve1, 
-TestimonialCurve2, ArrowDown, ArrowUp} from "../../assets"
+TestimonialCurve2, ArrowDown, ArrowUp, UpcomingBatch, Enroll, MenuBurger} from "../../assets"
 import Footer from "../../components/footer/Footer"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
@@ -18,6 +18,7 @@ function LandingPage() {
     return (
         <div className = {styles.landingPageContainer} >
             <nav className = {styles.nav}>
+                <img src= {MenuBurger} alt="" id = {styles.burger}/>
                 <div className= {styles.logo}>
                     <img src= {Logo} alt=""/>
                 </div>
@@ -30,7 +31,7 @@ function LandingPage() {
 
                 <div className= {styles.login}>
                     <NavLink to = "/login">Login</NavLink>
-                    <button>Start free trial</button>
+                    {/* <button>Start free trial</button> */}
                 </div>
             </nav>
 
@@ -171,8 +172,8 @@ function LandingPage() {
                 <div className= {styles.testimonials}>
                     <div className= {styles.testimonial}>
                         <div className= {styles.testimonialContents}>
-                            {/* <p className= {styles.name}>Mr Kelvin</p>
-                            <p className = {styles.role}>Tutor</p> */}
+                            <p className= {styles.name}>Mr Kelvin</p>
+                            <p className = {styles.role}>Tutor</p>
                             <p className= {styles.testimony}>"Students are engaged, learning new tools, exposed to a variety of resources, and having fun while they learn." — Mr kelvin , product design tutor</p>
                         </div>
                         <img src= {TestimonialImg1} id =  {styles.testimonialImg} />
@@ -180,8 +181,8 @@ function LandingPage() {
                     <div className= {styles.testimonial}>
                         <img src= {TestimonialImg2} id =  {styles.testimonialImg} />
                         <div className= {styles.testimonialContents}>
-                            {/* <p className={styles.name}>Averie williams</p>
-                            <p className = {styles.role}>Tutor</p> */}
+                            <p className={styles.name}>Averie williams</p>
+                            <p className = {styles.role}>Tutor</p>
                             <p className= {styles.testimony}>“…my students [have] the opportunity to explore scientific concepts through real-world applications while actionable diagnostics allow me to track [their] mastery” — Averie williams</p>
                         </div>
                     </div>
@@ -190,6 +191,23 @@ function LandingPage() {
                 <img src= {TestimonialCurve1} alt=""/>
                 <img src= {TestimonialCurve2} alt=""/>
                 
+            </section>
+
+            {/* ------------------------------------------------------------UPCOMING BATCH SECTION------------------------------------------------------- */}
+            <section className= {styles.upcomingBatchContainer}>
+                <img src= {UpcomingBatch} alt=""/>
+                <div className= {styles.upcomingBatchContents}>
+                    <h2>Don't miss out on Learn.z's upcoming batch!</h2>
+                    <p>The program starts on January 16th 2023 and is open to all who are willing to learn new skills and benefit from them. Once we receive your application, we‘ll send an email to you to determine if the program is the right fit for you and discuss how we can help you achieve your career goals.</p>
+                    <div className= {styles.upcomingBatchBtns}>
+                        <button>Contact Us</button>
+                        <button>
+                            Enroll Now
+                            <img src= {Enroll} alt=""/>
+                        </button>
+                    </div>
+                </div>
+                            
             </section>
 
             {/* ---------------------------------------------------------------FAQs---------------------------------------------------- */}
