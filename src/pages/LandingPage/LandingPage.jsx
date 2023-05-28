@@ -13,25 +13,12 @@ function LandingPage() {
     const [showAnswer2, setShowAnswer2] = useState(false)
     const [showAnswer3, setShowAnswer3] = useState(false)
     const [showAnswer4, setShowAnswer4] = useState(false)
-    const [showAnswer5, setShowAnswer5] = useState(false)
-
-    // const showAnswer = (e) => {
-    //     if(e.target.parentElement.classList.contains(styles.showAnswer) && showAnswer1 == false){
-    //         e.target.parentElement.parentElement.nextSibling.classList.remove("none")
-    //         setShowAnswer1(true)
-    //         // console.log(true)
-    //     }else if(e.target.parentElement.classList.contains(styles.showAnswer) && showAnswer1 == true){
-    //         e.target.parentElement.parentElement.nextSibling.classList.add("none")
-    //         setShowAnswer1(false)
-    //         // console.log(false)
-    //     }
-    // }
     
     return (
         <div className = {styles.landingPageContainer} >
             <nav className = {styles.nav}>
                 <div className= {styles.logo}>
-                    <img src= {LandingPageLogo} alt=""/>
+                    <img src= {Logo} alt=""/>
                 </div>
                 <div className={styles.navLinks}>
                     <p>Home</p>
@@ -41,7 +28,7 @@ function LandingPage() {
                 </div>
 
                 <div className= {styles.login}>
-                    <NavLink to = "/parentLogin">Login</NavLink>
+                    <NavLink to = "/login">Login</NavLink>
                     <button>Start free trial</button>
                 </div>
             </nav>
@@ -204,7 +191,78 @@ function LandingPage() {
                 
             </section>
 
-            <Footer />
+            {/* ---------------------------------------------------------------FAQs---------------------------------------------------- */}
+            <section className = {styles.faqsContainer}>
+                <div className= {styles.faqHeading}>
+                    <h2>Frequently Asked Question</h2>
+                    <p>Find answers to your questions and get the information you need to make the most of our platform.</p>
+
+                </div>
+                
+
+                <div className= {styles.questions}>
+                    <div className= {styles.question_answer}>
+                        <div className= {styles.question}>
+                            <p>What type of Courses can I create and upload</p>
+                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer1(!showAnswer1)}>
+                                {showAnswer1 && <img src= {ArrowUp} alt=""/>}
+                                {!showAnswer1 &&<img src= {ArrowDown} alt=""/>}
+                            </div>
+                            
+                        </div>
+                         
+                        <p className = {`${styles.answer} ${!showAnswer1 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+
+                    <div className= {styles.question_answer}>
+                        <div className= {styles.question}>
+                            <p>What type of Courses can I create and upload</p>
+                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer2(!showAnswer2)}>
+                                {showAnswer2 && <img src= {ArrowUp} alt=""/>}
+                                {!showAnswer2 &&<img src= {ArrowDown} alt=""/>}
+                            </div>
+                            
+                        </div>
+                         
+                        <p className = {`${styles.answer} ${!showAnswer2 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+
+                    <div className= {styles.question_answer}>
+                        <div className= {styles.question}>
+                            <p>What type of Courses can I create and upload</p>
+                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer3(!showAnswer3)}>
+                                {showAnswer3 && <img src= {ArrowUp} alt=""/>}
+                                {!showAnswer3 &&<img src= {ArrowDown} alt=""/>}
+                            </div>
+                            
+                        </div>
+                         
+                        <p className = {`${styles.answer} ${!showAnswer3 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+                    <div className= {styles.question_answer}>
+                        <div className= {styles.question}>
+                            <p>What type of Courses can I create and upload</p>
+                            <div className= {styles.showAnswer} onClick = {()=> setShowAnswer4(!showAnswer4)}>
+                                {showAnswer4 && <img src= {ArrowUp} alt=""/>}
+                                {!showAnswer4 &&<img src= {ArrowDown} alt=""/>}
+                            </div>
+                            
+                        </div>
+                         
+                        <p className = {`${styles.answer} ${!showAnswer4 && styles.none}`}>You can create courses on variety of topics and fields, from business and technology to personal development and creative arts. All courses only need to abide by our Code of Conduct and Policy of Use.</p>
+                    </div>
+                </div>
+
+                <div className = {styles.support}>
+                    <h3>Couldn't find what you were looking for?</h3>
+                    <p>Our support team is just an email away and ready to help you out</p>
+                    <button>Contact our Support team</button>
+                </div>
+            </section>
+
+            {/* ----------------------------------------------------FOOTER SECTION-------------------------------------- */}
+                <Footer />
+            
         </div>
     )
 }
