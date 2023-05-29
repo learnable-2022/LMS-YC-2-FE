@@ -97,6 +97,52 @@
     
 }
 
+/* ----------------------------------------------------------------------REASONS SECTION------------------------------------------------------- */
+.reasonContainer{
+    padding: 2rem 4rem;
+    background-color: #FFF5E3;
+    text-align: center;
+}
+.reasonContainer > h2{
+    margin: 1rem 0;
+}
+.reasonContainer > p{
+    max-width: 8000px;
+}
+.reason{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.reason p{
+    background-color: #FBD388;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .reasonContainer{
+        padding: 2rem;
+    }
+    .reasons{
+        background-color: green;
+        width: 350px;
+        /* display: grid;
+        grid-template-columns: ; */
+    }
+    .reason{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .reason p{
+        background-color: #FBD388;
+        border-radius: 1.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+}
 /* -----------------------------------------------------------FEATURES SECTION----------------------------------------------------- */
 .featuresContainer{
     padding: 3rem 4rem  1rem;

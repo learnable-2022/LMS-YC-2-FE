@@ -22,13 +22,6 @@ function LandingPage() {
                 <div className= {styles.logo}>
                     <img src= {Logo} alt=""/>
                 </div>
-                <div className={styles.navLinks}>
-                    <p>Home</p>
-                    <p>Blog</p>
-                    <p>Course</p>
-                    <p>About</p>
-                </div>
-
                 <div className= {styles.login}>
                     <NavLink to = "/login">Login</NavLink>
                     {/* <button>Start free trial</button> */}
@@ -276,6 +269,37 @@ function LandingPage() {
                     <h3>Couldn't find what you were looking for?</h3>
                     <p>Our support team is just an email away and ready to help you out</p>
                     <button>Contact our Support team</button>
+                </div>
+            </section>
+
+             {/* -----------------------------------------------------------------LEARNING REASON----------------------------------------- */}
+             <section>
+                <div className= {styles.reasonContainer}>
+                    <h2>Why Learn with Learn.z</h2>
+                    <p>We have trained hundreds of students through our courses and internship, We are an AI focused company with global recognition. Best of all, we just want to give you the best start to your Data Science career</p>
+
+                    <div className= {styles.reasons}>
+                        <div className= {styles.reason}>
+                            <p>Live classes</p>
+                            <p>Access video recordings</p>
+                            <p>Fun learning</p>
+                            <p>Gear up your Resume</p>
+                        </div>
+                        <div className= {styles.reason}>
+                            <p>Hands-on Course</p>
+                            <p>Mentorship from Data Science Experts</p>
+                            <p>Makes your career ready</p>
+                        </div>
+                        <div className= {styles.reason}>
+                            <p>Interview Support</p>
+                            <p>Internship Opportunities</p>
+                            <p>6 real world projects</p>
+                        </div>
+                        <div className= {styles.reason}>
+                            <p>8 hours a day Slack support</p>
+                            <p>Build a job worthy Portfolio</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
