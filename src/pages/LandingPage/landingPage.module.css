@@ -11,6 +11,9 @@
     font-size: 0.9rem;
     font-weight: bold;
 }
+#burger{
+    display: none;
+}
 .logo img{
     width: 7rem;
 
@@ -94,6 +97,48 @@
     
 }
 
+/* ----------------------------------------------------------------------REASONS SECTION------------------------------------------------------- */
+.reasonContainer{
+    padding: 2rem 4rem;
+    background-color: #FFF5E3;
+    text-align: center;
+}
+.reasonContainer > h2{
+    margin: 1rem 0;
+}
+.reasonContainer > p{
+    max-width: 8000px;
+}
+.reason{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.reason p{
+    background-color: #FBD388;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .reasonContainer{
+        padding: 2rem;
+    }
+    .reason{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .reason p{
+        background-color: #FBD388;
+        border-radius: 1.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+}
 /* -----------------------------------------------------------FEATURES SECTION----------------------------------------------------- */
 .featuresContainer{
     padding: 3rem 4rem  1rem;
@@ -138,7 +183,7 @@
 /* --------------------------------------------------------------FEATUED COURSES----------------------------------------------------- */
 .featuredCoursesContainer{
     padding:  2rem 4rem;
-    background: #EFF3F8;
+    background: #FEEDCF;
     margin-top: 2rem;
 }
 .featuredCoursesContainer > h2{
@@ -229,6 +274,58 @@
     height: 20rem;
 }
 
+/* -----------------------------------------------------UPCOMING BATCH SECTION------------------------------------- */
+.upcomingBatchContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #FFF5E3;
+    margin-top: 3rem;
+    align-items: center;
+    padding-right: 5rem ;
+}
+.upcomingBatchContainer img{
+    width: 400px;
+}
+.upcomingBatchContents h2{
+    font-size: 2rem;
+    text-align: right;
+    font-weight: bolder;
+}
+.upcomingBatchContents p{
+    text-align: right;
+    color: #4D4D4D;
+    margin-top: 1rem;
+}
+.upcomingBatchBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.upcomingBatchBtns button:nth-child(1){
+    background-color: transparent;
+    color: #F8A711;
+    border: 1px solid #F8A711;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+}
+.upcomingBatchBtns button:nth-child(2){
+    background-color: #F8A711;
+    color: white;
+    border: 1px solid transparent;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.upcomingBatchBtns button:nth-child(2) img{
+    width: 1rem;
+}
 /* ---------------------------------------------------------------------FAQ SECTION----------------------------------------------- */
 .faqsContainer{
     padding:  4rem;
@@ -296,6 +393,15 @@
 
 /* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
 @media screen and (max-width : 600px){
+    .nav{
+        padding: 2rem;
+    }
+    #burger{
+        display: block;
+    }
+    .navLinks{
+        display: none;
+    }
     .heroContainer{
         grid-template-columns: repeat(1, 1fr);
         padding: 2rem;
@@ -367,6 +473,17 @@
         display: block;
         margin-left: auto;
         height: 10rem;
+    }
+
+    /* -----------------------------------------------------UPCOMING BATCH SECTION------------------------------------- */
+    .upcomingBatchContainer{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+    }
+    .upcomingBatchContainer img{
+        width: 320px;
+        display: block;
+        margin: auto
     }
 
     /* ---------------------------------------------------------------------------FAQS SECTION----------------------------------------------------   */
