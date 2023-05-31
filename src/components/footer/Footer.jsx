@@ -5,10 +5,12 @@ import { Call, Facebook, Instagram, Linkedln, SMS, Twitter, YellowLogo } from '.
 const Footer = () => {
   return (
     <div className={Foot.wrapper}>
+                
         <div className={Foot.cont}>
-                <div>
-                    <img src={YellowLogo} alt="" />
-                </div>
+            <div>
+                <img src={YellowLogo} alt="" id = {Foot.footerLo}/>
+            </div>
+            <div className= {Foot.footerInfos}>
                 <div>
                     <h3>Company</h3>
                     <li><a href="">About Us</a></li>
@@ -34,14 +36,14 @@ const Footer = () => {
                 </div>
                 <div>
                    <h3>Contact Us</h3> 
+                    <div className={Foot.flex}>
+                        <img src={SMS} alt="" />
+                        <p>contact <br />@Learnz.com</p>
+                    </div>
                    <div className={Foot.flex}>
-                    <img src={SMS} alt="" />
-                   <p>contact <br />@Learnz.com</p>
-                   </div>
-                   <div className={Foot.flex}>
-                    <img src={Call} alt="" />
-                   <p>+12372828292</p>
-                   </div>
+                        <img src={Call} alt="" />
+                        <p>+12372828292</p>
+                    </div>
                     <div style={{paddingTop: '30px'}}>
                         <p>Follow us on Social Media</p>
                         <div className={Foot.flex}>
@@ -52,7 +54,10 @@ const Footer = () => {
                         </div>
                     </div>
 
+                </div>
             </div>
+                
+                
         </div>
         <p className={Foot.para}>© 2023 LEARN.Z</p>
     </div>
