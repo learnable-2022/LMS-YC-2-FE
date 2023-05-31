@@ -154,6 +154,7 @@
       .formContainer {
         border-radius: 0%;
         width: 350px;
+        height: fit-content;
       }
       /* button[type="submit"] {
         width: 200px;
