@@ -55,6 +55,11 @@ export {default as ArrowRight } from "./images/ArrowRight.png"
 //ADMIN PAGES
 export {default as AdminForm } from "./images/AdminForm.png"
 
+//STUDENT DASHBOARD MESSAGE
+export { default as MessageImage1} from "./images/messageImage1.png" 
+export { default as Search} from "./images/search.png" 
+
+
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
 export { default as Twitter } from "./images/twitter.png"

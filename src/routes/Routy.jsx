@@ -1,9 +1,9 @@
 import {
-    createBrowserRouter,
-    Route, 
-    createRoutesFromElements,
-    RouterProvider
-      } from "react-router-dom";
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
@@ -14,46 +14,45 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
 import ForgotPasswordAdmin from "../pages/ForgotPasswordAdmin/ForgotPasswordAdmin";
+import StudentMessage from "../pages/StudentDashboard/StudentMessage/StudentMessage";
+import StudentQuiz from "../pages/StudentDashboard/StudentQuiz/StudentQuiz";
 
-    const Routy = () => {
-    
-      const router = createBrowserRouter(
-        createRoutesFromElements(
-          <>
-            <Route path='/' element= {<LandingPage />} />
-            
-            {/* DASHBOARD */}
-              <Route path = "/student/dashboard" element = {<StudentSidebar />}> 
-                <Route index element = {<StudentDashboard />} />
-              </Route>
-             
-              {/* LOGIN PAGE*/}
-              <Route path = "/login" element = {<ParentLogin />} />
+const Routy = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" element={<LandingPage />} />
 
-              {/* SIGN UP OPTIONS */}
-              <Route path = "/signup" element = {<SignUpOptions />} />
+        {/* DASHBOARD */}
+        <Route path="/student/dashboard" element={<StudentSidebar />}>
+          <Route index element={<StudentDashboard />} />
+          <Route path="studentMessage" element={<StudentMessage />} />
+          <Route path="studentQuiz" element={<StudentQuiz />} />
+        </Route>
 
-              {/* SIGN UP PAGE */}
-              <Route path = "/signup/student" element = {<StudentSignUp />} />
+        {/* LOGIN PAGE*/}
+        <Route path="/login" element={<ParentLogin />} />
 
-              {/* SECOND SIGN UP PAGE */}
-              <Route path = "/signup/student_2" element = {<SecondSignUp />} />
+        {/* SIGN UP OPTIONS */}
+        <Route path="/signup" element={<SignUpOptions />} />
 
-              {/* ADMIN PAGEs */}
-              <Route path = "/admin/login" element = {<AdminLogin />} />
-              <Route path = "/admin/forgotPassword" element = {<ForgotPasswordAdmin />} />
+        {/* SIGN UP PAGE */}
+        <Route path="/signup/student" element={<StudentSignUp />} />
 
-          </>
-          
-      
-        )
-      )
-      return (
-        
-        <div>
-             <RouterProvider router={router} />
-        </div>
-      )
-    }
-    
-    export default Routy
+        {/* SECOND SIGN UP PAGE */}
+        <Route path="/signup/student_2" element={<SecondSignUp />} />
+
+        {/* ADMIN PAGEs */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/forgotPassword" element={<ForgotPasswordAdmin />} />
+      </>
+    )
+  );
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
+};
+
+export default Routy;

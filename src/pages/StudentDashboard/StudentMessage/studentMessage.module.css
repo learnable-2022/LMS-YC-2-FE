@@ -1,0 +1,81 @@
+.wrap {
+  width: 100%;
+  display: flex;
+}
+.nav {
+  width: 30%;
+  padding: 0 30px;
+}
+.main {
+  width: 70%;
+}
+.ash {
+  background-color: #eff2f8;
+  display: flex;
+  justify-content: space-around;
+  height: 37.71px;
+  border-radius: 8.98px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.ash div {
+  background-color: white;
+  border-radius: 8.98px;
+  height: 26.94px;
+  text-align: center;
+  width: 126.6px;
+}
+.input {
+  position: relative;
+}
+.input img {
+  position: absolute;
+  right: 15px;
+  height: 15px;
+  top: 10px;
+}
+.nav input {
+  border-radius: 10px;
+  background-color: #eff2f8;
+  border: none;
+}
+.box {
+  height: 86.19px;
+  width: 339.3px;
+  border-radius: 10.77px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.box span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin-left: 30px;
+}
+
+/* MAIN SECTION */
+.mainOne {
+  display: flex;
+}
+.mainOne div span {
+  height: 12px;
+  width: 12px;
+  background-color: #00c008;
+  border-radius: 50%;
+}
+.mainTwo {
+  background-color: #eff2f8;
+  padding-top: 40px;
+}
+.chat {
+  width: 50%;
+  margin: 30px 0;
+  padding: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
