@@ -6,22 +6,26 @@ import { StudentData } from "../../../Data/MessageData";
 const messages = [
   {
     text: "Mr. Drew Teachston",
+    image: MessageImage1,
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     status: "receiver",
   },
   {
     text: "",
+    image: MessageImage1,
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     status: "sender",
   },
   {
     text: "Mr. Drew Teachston",
+    image: MessageImage1,
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     status: "receiver",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
-    para: "dgdjfkv",
+    text: "",
+    image: MessageImage1,
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     status: "sender",
   },
 ];
@@ -91,23 +95,25 @@ const StudentMessage = () => {
                   key={index}
                   style={{
                     display: "flex",
-                    justifyContent:
-                      message.status == "sender" ? "flex-end" : "flex-start",
+                    flexDirection: "column",
+                    alignItems:
+                      message.status === "sender" ? "flex-end" : "flex-start",
                     width: "100%",
+                    overflow:'hidden'
                   }}
                 >
                   <div
                     className={Message.chat}
                     style={{
-                      background: message.status == "sender"
-                        ? "#3F75FF"
-                        : "white",
+                      background:
+                        message.status == "sender" ? "#3F75FF" : "white",
                       color: message.status == "sender" ? "white" : "black",
                     }}
                   >
                     <p>{message.text}</p>
                     <p>{message.para}</p>
                   </div>
+                  <img src={message.image} height={40} width={40} alt="" />
                 </div>
               ))}
             </div>

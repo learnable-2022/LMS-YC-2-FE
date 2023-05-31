@@ -72,10 +72,14 @@
   padding-top: 40px;
 }
 .chat {
-  width: 50%;
-  margin: 30px 0;
+  width: 45%;
+  margin: 30px 45px;
   padding: 20px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.mainTwo img {
+  margin-top: -50px;
+  border-radius: 50%;
 }
