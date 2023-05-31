@@ -167,3 +167,11 @@
         width: 200px;
       } */
     }
+        
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS PHONES-------------------------------------------- */
+
+    @media screen and (max-width : 400px) {
+      .formArea {
+        max-width: 280px;
+      }
+    }
