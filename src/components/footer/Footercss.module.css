@@ -5,33 +5,50 @@ a{
     text-decoration: none;
 }
 .wrapper{
-    min-height: 380px;
+    padding: 4rem 4rem 2rem;
     width: 100%;
-    background-color: #5D6A79;
+    background-color: #1E1E1E;
     color: white;
     position: relative;
 
 }
 .cont{
-    width: 85%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
+    gap: 10rem;
+    margin-bottom: 10rem;
+}
+.footerInfos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .cont li a{
     color: white;
     line-height: 40px;
 }
-.wrapper .para{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    padding-bottom: 20px;
+.para{
+    text-align: center;
 }
 .flex{
     display: flex;
     gap: 10px;
     align-items: center;
     margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 600px){
+    .wrapper{
+        padding: 2rem 1rem;
+    }
+    .cont{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    .footerInfos{
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 0.9rem;
+        gap: 0;
+    }
 }
