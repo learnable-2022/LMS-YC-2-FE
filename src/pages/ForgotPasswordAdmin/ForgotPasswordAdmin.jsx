@@ -1,26 +1,24 @@
 import styles from "./forgotPasswordAdmin.module.css";
-import { Logo } from "../../assets";
-import Input from "../../components/Input/Input";
-import  Button  from "../../components/Button/Button";
+import {Logo, AdminForm} from "../../assets";
 
 
-function AdminLogin() {
+function ForgotPasswordAdmin() {
   return (
     <div className={styles.container}>
-
         <div className={styles.adminNav}>
 
             <div className= {styles.logo}>
-                <img src= {Logo} alt=""/>
-                <h3>Learn.Z</h3>
+                <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
+            </div>
 
-                <ul className={styles.nav}>
+            <div className= {styles.nav}>
+                <ul>
                     <li className={styles.active}>Home</li>
                     <li>Website</li>
                     <li>Blog</li>
                 </ul>
-        
             </div>
+           
         </div>
 
 
@@ -37,28 +35,35 @@ function AdminLogin() {
             
         
             <div className={styles.inputContainer}>
-
+                <div className = {styles.formBlur}></div>
                 <div className={styles.inputPage}>
                     
-                    <form>
+                    <form className = {styles.form}>
                         <h1>Reset Password</h1>
-                        <label className={styles.LabelItem}>
-                            Email address
-                        </label>
-                        <Input type= "email" placeholder= "peter@gmail.com" />
 
-                        <Button type = "submit" value = "Send" />
+                        <div>
+                            <label className={styles.LabelItem}>
+                                Email address
+                            </label>
+                            <br />
+                            <input type= "email" placeholder= "peter@gmail.com" required/>
+                        </div>
+
+                        <button type="submit">Send</button>
 
                         <p> <span>Log in</span> with your credentials</p>
 
                     </form>
                 </div>
+                <img src= {AdminForm} alt=""/>
+
             </div>
 
         </div>
+        <div className = {styles.bgBlur}></div>
         
     </div>
   )
 }
 
-export default AdminLogin
+export default ForgotPasswordAdmin

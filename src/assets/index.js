@@ -41,10 +41,19 @@ export { default as TestimonialCurve1 } from "./images/TestimonialCurve1.png"
 export { default as TestimonialCurve2 } from "./images/TestimonialCurve2.png"
 export { default as ArrowDown } from "./images/ArrowDown.png"
 export { default as ArrowUp } from "./images/ArrowUp.png"
+export { default as UpcomingBatch } from "./images/UpcomingBatch.png"
+export { default as Enroll } from "./images/Enroll.png"
+export { default as MenuBurger } from "./images/MenuBurger.png"
 
 //LOGIN PAGE
 export { default as FormImg} from "./images/FormImg.png"
 
+//SIGNUP PAGE
+export {default as ProfileIcon } from "./images/ProfileIcon.png"
+export {default as ArrowRight } from "./images/ArrowRight.png"
+
+//ADMIN PAGES
+export {default as AdminForm } from "./images/AdminForm.png"
 
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"

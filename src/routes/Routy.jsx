@@ -8,10 +8,12 @@ import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
 import ParentLogin from "../pages/ParentLogin/ParentLogin";
-import SignUp from "../pages/SignUp/SignUp";
+import SignUp from "../pages/StudentSignUp/StudentSignUp";
 import SecondSignUp from "../pages/SecondSignUp/SecondSignUp";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
+import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
+import ForgotPasswordAdmin from "../pages/ForgotPasswordAdmin/ForgotPasswordAdmin";
 
     const Routy = () => {
     
@@ -21,7 +23,7 @@ import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
             <Route path='/' element= {<LandingPage />} />
             
             {/* DASHBOARD */}
-              <Route path = "dashboard" element = {<StudentSidebar />}> 
+              <Route path = "/student/dashboard" element = {<StudentSidebar />}> 
                 <Route index element = {<StudentDashboard />} />
               </Route>
              
@@ -29,16 +31,18 @@ import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
               <Route path = "/login" element = {<ParentLogin />} />
 
               {/* SIGN UP OPTIONS */}
-              <Route path = "/signupoptions" element = {<SignUpOptions />} />
+              <Route path = "/signup" element = {<SignUpOptions />} />
 
               {/* SIGN UP PAGE */}
-              <Route path = "/signup" element = {<SignUp />} />
+              <Route path = "/signup/student" element = {<StudentSignUp />} />
 
               {/* SECOND SIGN UP PAGE */}
-              <Route path = "/finishsignup" element = {<SecondSignUp />} />
+              <Route path = "/signup/student_2" element = {<SecondSignUp />} />
 
               {/* ADMIN PAGEs */}
-              <Route path = "/adminLogin" element = {<AdminLogin />} />
+              <Route path = "/admin/login" element = {<AdminLogin />} />
+              <Route path = "/admin/forgotPassword" element = {<ForgotPasswordAdmin />} />
+
           </>
           
       

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './secondsignup.module.css'
 import {Logo, FormImg} from '../../assets';
+import { NavLink } from 'react-router-dom';
 
 
 function SignUp() {
@@ -36,9 +37,9 @@ function SignUp() {
               <p className= {styles.passwordInfo}>Password must contain at least 6 letters, an uppercase and a special character</p>
               </form>
               <div>
-                <button type="submit" className= {styles.done}>
-                  done
-                </button>
+                <NavLink to = "/student/dashboard" className= {styles.done}>
+                  <p>Done</p>
+                </NavLink>
               </div>
             </div>
           </div>  
