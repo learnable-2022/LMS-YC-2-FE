@@ -5,9 +5,13 @@ const AppContext = createContext()
 export const AppProvider = ({children}) => {
     
     const [studentData, setStudentData] = useState({
-        parentName : "",
-        parentEmail :  "",
-        parentRelationship : ""
+        parent_name: "",
+        email: "",
+        relationship: "",
+        child_name: "",
+        child_class: "",
+        DOB: "",
+        password: ""
     })
     return <AppContext.Provider value = {{
         studentData,
