@@ -1,5 +1,7 @@
-// STUDENT DASHBOARD
+//GENERAL
 export { default as Logo } from "./images/logo.png"
+
+// STUDENT DASHBOARD
 export { default as ProfileImg } from "./images/profileImg.png"
 export { default as Dashboard } from "./images/Dashboard.png"
 export { default as Quiz } from "./images/Quiz.png"
@@ -33,3 +35,31 @@ export { default as CourseCurve2 } from "./images/CourseCurve2.png"
 export { default as CourseCurve3 } from "./images/CourseCurve3.png"
 export { default as WavyLines1 } from "./images/WavyLines1.png"
 export { default as WavyLines2 } from "./images/WavyLines2.png"
+export { default as TestimonialImg1 } from "./images/TestimonialImg1.png"
+export { default as TestimonialImg2 } from "./images/TestimonialImg2.png"
+export { default as TestimonialCurve1 } from "./images/TestimonialCurve1.png"
+export { default as TestimonialCurve2 } from "./images/TestimonialCurve2.png"
+export { default as ArrowDown } from "./images/ArrowDown.png"
+export { default as ArrowUp } from "./images/ArrowUp.png"
+export { default as UpcomingBatch } from "./images/UpcomingBatch.png"
+export { default as Enroll } from "./images/Enroll.png"
+export { default as MenuBurger } from "./images/MenuBurger.png"
+
+//LOGIN PAGE
+export { default as FormImg} from "./images/FormImg.png"
+
+//SIGNUP PAGE
+export {default as ProfileIcon } from "./images/ProfileIcon.png"
+export {default as ArrowRight } from "./images/ArrowRight.png"
+
+//ADMIN PAGES
+export {default as AdminForm } from "./images/AdminForm.png"
+
+// FOOTER
+export { default as YellowLogo } from "./images/yellowLogo.png"
+export { default as Twitter } from "./images/twitter.png"
+export { default as Linkedln } from "./images/linkedln.png"
+export { default as Facebook } from "./images/facebook.png"
+export { default as Instagram } from "./images/instagram.png"
+export { default as Call } from "./images/call.png"
+export { default as SMS } from "./images/sms.png"
