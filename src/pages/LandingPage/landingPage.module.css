@@ -126,20 +126,16 @@
     .reasonContainer{
         padding: 2rem;
     }
-    .reasons{
-        background-color: green;
-        width: 350px;
-        /* display: grid;
-        grid-template-columns: ; */
-    }
     .reason{
         display: flex;
         flex-wrap: wrap;
+
     }
     .reason p{
         background-color: #FBD388;
         border-radius: 1.5rem;
-        padding: 0.5rem 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
     }
 
 }
