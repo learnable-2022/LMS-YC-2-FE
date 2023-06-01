@@ -7,9 +7,9 @@ import { StudentData, messages } from "../../../Data/MessageData";
 
 const StudentMessage = () => {
   return (
-    <div>
-      <div>
-        <input type="text" />
+    <div className={Message.cont}>
+      <div className={Message.long}>
+        <input type="text" placeholder="Search" />
       </div>
       <div className={Message.wrap}>
         <div className={Message.nav}>

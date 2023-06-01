@@ -1,6 +1,28 @@
+.cont {
+  background-color: #eff2f8;
+}
+.long {
+  border-radius: 15px;
+  height: 57px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  margin-left: 15px;
+  overflow: hidden;
+}
 .wrap {
   width: 100%;
   display: flex;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.long input {
+  height: 18px;
+  width: 295px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  border: none;
+  margin: 11px 20px 0 20px;
 }
 .nav {
   width: 30%;
