@@ -1,12 +1,7 @@
 import styles from "./landingPage.module.css"
 import { HeroImg, Logo, PlayBtn, Feature1, Feature2, Feature4, Feature5, Feature6, Course1, Course2, Course3,Course5,
-<<<<<<< HEAD
-    Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2,TestimonialCurve1, 
-    TestimonialCurve2, ArrowDown, ArrowUp} from "../../assets"
-=======
 Course6, Course7, Course8, Course9, CourseCurve1, CourseCurve2, CourseCurve3, TestimonialImg1, TestimonialImg2,TestimonialCurve1, 
 TestimonialCurve2, ArrowDown, ArrowUp, UpcomingBatch, Enroll, MenuBurger} from "../../assets"
->>>>>>> testing
 import Footer from "../../components/footer/Footer"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
