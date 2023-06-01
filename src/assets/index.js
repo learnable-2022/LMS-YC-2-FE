@@ -63,6 +63,10 @@ export {default as ArrowRight } from "./images/ArrowRight.png"
 
 //ADMIN PAGES
 export {default as AdminForm } from "./images/AdminForm.png"
+export {default as Lessons} from "./images/lessons.png"
+export {default as GreaterThan} from "./images/GreaterThan.png"
+export {default as Analytics} from "./images/Analytics.png"
+export {default as AdminWelcome} from "./images/AdminWelcome.png"
 
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
