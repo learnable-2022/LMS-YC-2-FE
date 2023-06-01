@@ -37,7 +37,7 @@ function SignUpOptions() {
               <img src= {ProfileIcon} alt=""/>
               <p> Sign up as a tutor</p>
             </button>
-            <NavLink to = {pathLink == "none" ? "/signup" : pathLink == "student" ? "/signup/student" : "/signup" } className= {`${styles.continue} ${pathLink == "none" ? styles.disabled : ""}`}>
+            <NavLink to = {pathLink == "none" ? "/signup" : pathLink == "student" ? "/signup/student" : "/admin/signup" } className= {`${styles.continue} ${pathLink == "none" ? styles.disabled : ""}`}>
               <p>Continue</p>
               <img src= {ArrowRight} alt=""/>
             </NavLink>
