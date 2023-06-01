@@ -1,0 +1,54 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    padding: 4rem 4rem 2rem;
+    width: 100%;
+    background-color: #1E1E1E;
+    color: white;
+    position: relative;
+
+}
+.cont{
+    margin: auto;
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 10rem;
+}
+.footerInfos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.cont li a{
+    color: white;
+    line-height: 40px;
+}
+.para{
+    text-align: center;
+}
+.flex{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------MEDIA QUERY FOR SMALL PHONES--------------------------------------- */
+@media screen and (max-width : 600px){
+    .wrapper{
+        padding: 2rem 1rem;
+    }
+    .cont{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    .footerInfos{
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 0.9rem;
+        gap: 0;
+    }
+}

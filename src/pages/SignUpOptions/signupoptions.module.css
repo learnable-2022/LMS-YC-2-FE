@@ -1,0 +1,171 @@
+.mainBody {
+  background-color: #b0c4dd;
+  overflow-x: hidden;
+}
+    
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+  
+.imageArea {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  right: 50px;
+  justify-content: space-evenly;
+}
+  
+.logoImage {
+  width: 160px;
+  height: auto;
+}
+  
+.loginImage {
+  width: 400px;
+  height: auto;
+  left: 57px;
+  top: 57px;
+}
+
+.formArea {
+  max-width: 60%;
+  display: flex;
+  right: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formContainer {
+  width: 400px;
+  height: 80vh;
+  padding: 20px;
+  top: 57px;
+  background-color: #fff;
+  border-radius: 25px 0;
+}
+
+.formTitle {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.h2 {
+  color: #F8A711;
+  text-align: center;
+  font-size: 25px;
+  margin: 20px;
+}
+
+.h4 {
+  color: #070000;
+  width: 350px;
+  text-align: center;
+  font-weight: normal;
+  margin: 20px 13px;
+  font-size: 13px;
+}
+
+.formContainer .signupOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 350px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #86B7F4;
+  margin: 30px auto 10px;
+  background-color: white;
+  border: 1px solid #86B7F4;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.formContainer .signupOption.active{
+  background-color: #F8A711;
+  color: white;
+  border-color: transparent;
+}
+
+.formContainer .signupOption img{
+  height: 1.5rem;
+}
+
+.formContainer .signupOption:hover{
+  background-color: #F8A711;
+  color: white;
+  border-color: transparent;
+}
+.formContainer .continue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 50px auto 0;
+  padding: 10px 0px;
+  color: white;
+  text-decoration: none;
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #F8A711;
+  border-radius: 6px;
+}
+.formContainer .continue.disabled{
+  background-color: #ccc;
+}
+
+.login {
+  color: #070000;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+  
+.login a {
+  cursor: pointer;
+  color: #2767DC;
+  font-weight: 600;
+}
+
+    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+
+    @media screen and (max-width : 650px) {
+      .mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .imageArea {
+        max-width: 100%;
+      }
+      .logoImage {
+        width: 100px;
+      }
+      .loginImage {
+        width: 300px;
+        height: auto;
+      }
+      .formArea {
+        max-width: 100%;
+      }
+      .formContainer {
+        border-radius: 0%;
+        width: 350px;
+      }
+      /* button[type="submit"] {
+        width: 200px;
+      } */
+
+    }
