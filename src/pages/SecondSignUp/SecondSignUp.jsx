@@ -87,7 +87,6 @@ function SignUp() {
     studentData.DOB = childDOB
     studentData.password = password
 
-    // const submitData = async () => {
       const response = fetch("https://learnz.onrender.com/api/v1/user/register", {
         method : "POST",
         body : JSON.stringify(studentData),
@@ -97,18 +96,26 @@ function SignUp() {
         }
       })
       .then(response => response.json())
-      .then (data => setData(data))
+      .then (data => (
+        data.success == true ? navigate("/student/dashboard") : "",
+        setData(data)
+      ))
       
-      // console.log(response.json)
-    // }
-
-    // submitData()
-    if(data.message == 'User created successfully'){
-      navigate("/student/dashboard")
+    if (data !== null && data !== undefined) {
+      if (data.success !== null && data.success !== undefined) {
+        if (data.success === true) {
+          studentData.Id = data.user[0]._id
+          console.log(studentData.Id)
+        } else if (data.success === false) {
+          console.log("remain on the home page");
+        }
+      }
     }
+
+  
   } 
 
-    return (
+      return (
         <div className= {styles.mainBody}>
         <div className= {styles.mainContainer}>
           <div className= {styles.imageArea}>
