@@ -77,20 +77,27 @@
       font-size: 13px;
     }
   
-    
-    .form input {
+    .inputGroup{
+      margin: 15px;
+    }
+
+    .inputGroup input{
+      margin-bottom: 0.2rem;
       padding: 8px;
-      margin-bottom: 15px;
       font-size: 11px;
-      width: 93%;
+      max-width: 93%;
       background-color: transparent;
       border: 1px solid #070000;
       border-radius: 3px;
     }
 
-    input [type="date"] {
+    .inputGroup input[type="date"] {
       padding: 10px;
       width: 93%;
+    }
+    .inputGroup .error{
+      color: #FA8072;
+      font-size: 0.7rem;
     }
 
     .formContainer .passwordInfo {
@@ -114,6 +121,10 @@
       font-weight: 500;
       background-color: #F8A711;
       border-radius: 6px;
+      }
+
+      .formContainer .done.disabled{
+        background-color: gray;
       }
 
     /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
