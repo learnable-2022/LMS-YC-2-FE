@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageImage1, Search } from "../../../assets";
+import { MessageImage1, Plus, Search, Send } from "../../../assets";
 import Message from "./studentMessage.module.css";
 import { StudentData } from "../../../Data/MessageData";
 
@@ -99,7 +99,7 @@ const StudentMessage = () => {
                     alignItems:
                       message.status === "sender" ? "flex-end" : "flex-start",
                     width: "100%",
-                    overflow:'hidden'
+                    overflow: "hidden",
                   }}
                 >
                   <div
@@ -119,7 +119,11 @@ const StudentMessage = () => {
             </div>
           </div>
           <div className={Message.mainThree}>
+            <div className={Message.plus}>
+              <img src={Plus} alt="" />
+            </div>
             <input type="text" placeholder="Type a message...." />
+            <img src={Send} alt="" className={Message.send} />
           </div>
         </div>
       </div>

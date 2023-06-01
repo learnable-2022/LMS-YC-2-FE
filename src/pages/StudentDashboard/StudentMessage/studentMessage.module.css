@@ -69,7 +69,7 @@
 }
 .mainTwo {
   background-color: #eff2f8;
-  padding-top: 40px;
+  padding: 40px 20px 0 20px;
 }
 .chat {
   width: 45%;
@@ -82,4 +82,35 @@
 .mainTwo img {
   margin-top: -50px;
   border-radius: 50%;
+}
+.mainThree {
+  position: relative;
+  margin-top: 40px;
+}
+.mainThree input {
+  border-radius: 10px;
+  background-color: #eff2f8;
+  border: none;
+  height: 51px;
+  padding: 0 60px;
+}
+.send {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+}
+.plus {
+  border: 1px solid #747474;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 14px;
+  left: 7px;
+}
+.plus img {
+  object-fit: cover;
+  padding-top: 3px;
 }

@@ -58,6 +58,8 @@ export {default as AdminForm } from "./images/AdminForm.png"
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 
 export { default as Search} from "./images/search.png" 
+export { default as Send} from "./images/send.png" 
+export { default as Plus} from "./images/plus.png" 
 
 
 // FOOTER
