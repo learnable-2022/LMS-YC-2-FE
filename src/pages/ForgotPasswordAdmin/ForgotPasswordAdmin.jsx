@@ -5,27 +5,7 @@ import {Logo, AdminForm} from "../../assets";
 function ForgotPasswordAdmin() {
   return (
     <div className={styles.container}>
-        <div className={styles.adminNav}>
-
-            <div className= {styles.logo}>
-                <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
-            </div>
-
-            <div className= {styles.nav}>
-                <ul>
-                    <li className={styles.active}>Home</li>
-                    <li>Website</li>
-                    <li>Blog</li>
-                </ul>
-            </div>
-           
-        </div>
-
-
-
-
         <div className={styles.main}>
-
             <div className={styles.textBox}>
                 <h1>Forgot Password?</h1>
                 <p>Enter your username or email address and we'll 
