@@ -3,8 +3,6 @@ import { MessageImage1, Plus, ProfileImg, Search, Send } from "../../../assets";
 import Message from "./studentMessage.module.css";
 import { StudentData, messages } from "../../../Data/MessageData";
 
-
-
 const StudentMessage = () => {
   return (
     <div className={Message.cont}>
