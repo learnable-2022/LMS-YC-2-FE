@@ -65,6 +65,7 @@
         font-size: 12px;
         display: block;
     }
+    
     .form input{
       padding: 8px;
       margin-bottom: 15px;
@@ -74,7 +75,16 @@
       border-radius: 3px;
       outline: none;
     }
-    
+    .inputGroup{
+      margin-bottom: 15px;
+    }
+    .inputGroup input{
+      margin-bottom: 0;
+    }
+    .inputGroup .error{
+      font-size: 0.6rem;
+      color: red;
+    }
     .h2 {
       color: #F8A711;
       text-align: center;
@@ -154,6 +164,7 @@
       .formContainer {
         border-radius: 0%;
         width: 350px;
+        height: fit-content;
       }
       /* button[type="submit"] {
         width: 200px;
