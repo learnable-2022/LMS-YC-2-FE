@@ -1,4 +1,5 @@
-import { MessageImage1 } from "../assets";
+import { MessageImage1, MessageImage2, MessageImage3, MessageImage4, MessageImage5,
+   MessageImage6, MessageImage7, ProfileImg } from "../assets";
 
 export const  StudentData = [
   {
@@ -9,21 +10,21 @@ export const  StudentData = [
     active: "yes",
   },
   {
-    image: MessageImage1,
+    image: MessageImage2,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
     active: "yes",
   },
   {
-    image: MessageImage1,
+    image: MessageImage3,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
     active: "yes",
   },
   {
-    image: MessageImage1,
+    image: MessageImage4,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
@@ -37,24 +38,52 @@ export const  StudentData = [
     active: "no",
   },
   {
-    image: MessageImage1,
+    image: MessageImage5,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
     active: "no",
   },
   {
-    image: MessageImage1,
+    image: MessageImage6,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
     active: "no",
   },
   {
-    image: MessageImage1,
+    image: MessageImage7,
     name: "Mr. Drew Teachston",
     track: "Web flow",
     para: "The course is saying....",
     active: "no",
+  },
+];
+
+
+export const messages = [
+  {
+    text: "Mr. Drew Teachston",
+    image: MessageImage1,
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    status: "receiver",
+  },
+  {
+    text: "",
+    image: ProfileImg,
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    status: "sender",
+  },
+  {
+    text: "Mr. Drew Teachston",
+    image: MessageImage1,
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    status: "receiver",
+  },
+  {
+    text: "",
+    image: ProfileImg,
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
+    status: "sender",
   },
 ];

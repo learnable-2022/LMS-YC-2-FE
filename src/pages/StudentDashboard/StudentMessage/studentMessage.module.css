@@ -6,6 +6,9 @@
   width: 30%;
   padding: 0 30px;
 }
+.nav h2 {
+  padding: 35px 0;
+}
 .main {
   width: 70%;
 }
@@ -17,6 +20,7 @@
   border-radius: 8.98px;
   align-items: center;
   margin-bottom: 15px;
+  height: 37.71px;
 }
 .ash div {
   background-color: white;
@@ -24,15 +28,16 @@
   height: 26.94px;
   text-align: center;
   width: 126.6px;
+  padding-top: 4px;
 }
 .input {
   position: relative;
 }
 .input img {
   position: absolute;
-  right: 15px;
+  right: 45px;
   height: 15px;
-  top: 10px;
+  top: 13px;
 }
 .nav input {
   border-radius: 10px;
@@ -41,11 +46,15 @@
 }
 .box {
   height: 86.19px;
-  width: 339.3px;
   border-radius: 10.77px;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 25px 0;
+  padding-left: 20px;
+}
+.box img {
+  border-radius: 8.98px;
+  padding-right: 15px;
 }
 .box span {
   height: 25px;
@@ -54,17 +63,22 @@
   background-color: blue;
   color: white;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 95px;
+  padding-top: 4px;
 }
 
 /* MAIN SECTION */
 .mainOne {
   display: flex;
+  padding: 20px 0;
 }
 .mainOne div span {
   height: 12px;
   width: 12px;
   background-color: #00c008;
+  border-radius: 50%;
+}
+.mainOne img {
   border-radius: 50%;
 }
 .mainTwo {

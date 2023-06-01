@@ -1,34 +1,9 @@
 import React from "react";
-import { MessageImage1, Plus, Search, Send } from "../../../assets";
+import { MessageImage1, Plus, ProfileImg, Search, Send } from "../../../assets";
 import Message from "./studentMessage.module.css";
-import { StudentData } from "../../../Data/MessageData";
+import { StudentData, messages } from "../../../Data/MessageData";
 
-const messages = [
-  {
-    text: "Mr. Drew Teachston",
-    image: MessageImage1,
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    status: "receiver",
-  },
-  {
-    text: "",
-    image: MessageImage1,
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    status: "sender",
-  },
-  {
-    text: "Mr. Drew Teachston",
-    image: MessageImage1,
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    status: "receiver",
-  },
-  {
-    text: "",
-    image: MessageImage1,
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
-    status: "sender",
-  },
-];
+
 
 const StudentMessage = () => {
   return (
@@ -76,6 +51,8 @@ const StudentMessage = () => {
             ))}
           </div>
         </div>
+
+        {/* MAIN SECTION */}
         <div className={Message.main}>
           <div className={Message.mainOne}>
             <img src={MessageImage1} alt="" />
