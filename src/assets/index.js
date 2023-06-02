@@ -62,6 +62,7 @@ export {default as ProfileIcon } from "./images/ProfileIcon.png"
 export {default as ArrowRight } from "./images/ArrowRight.png"
 export {default as FormProfileIcon } from "./images/FormProfileIcon.png"
 export {default as Eyeslash } from "./images/Eyeslash.png"
+export {default as Loader } from "./images/Loader.gif"
 
 //ADMIN PAGES
 export {default as AdminForm } from "./images/AdminForm.png"
