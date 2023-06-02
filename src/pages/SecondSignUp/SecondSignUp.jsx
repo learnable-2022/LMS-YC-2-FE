@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styles from './secondsignup.module.css'
-import {Eyeslash, FormImg} from '../../assets';
+import {Eyeslash, FormImg, Loader} from '../../assets';
 import { NavLink, useNavigate } from 'react-router-dom';
 import AppContext from "../../context/Appcontext"
 
@@ -22,6 +22,7 @@ function SignUp() {
   const navigate = useNavigate() 
   const [data, setData] = useState()
   const [passwordVisibility, setPasswordVisibility] = useState(false)
+  const [loading, setLoading] = useState(false)
 
 
   const checkChildName = () => {
@@ -74,13 +75,14 @@ function SignUp() {
 
   useEffect(() => {
     checkBtnDisabled()
-  }, [childName, password])
+  }, [childName, password, childClass, childDOB])
 
   useEffect(() => {
     checkAge()
   }, [childDOB])
 
   const signUpUser = (e) => {
+    setLoading(true)
     e.preventDefault();
 
     studentData.child_name = childName
@@ -97,10 +99,11 @@ function SignUp() {
         }
       })
       .then(response => response.json())
-      .then (data => (
-        data.success == true ? navigate("/student/dashboard") : "",
+      .then (data => {
         setData(data)
-      ))
+        setLoading(false)
+        data.success == true ? navigate("/student/dashboard") : ""
+      })
       
     if (data !== null && data !== undefined) {
       if (data.success !== null && data.success !== undefined) {
@@ -149,7 +152,10 @@ function SignUp() {
               <p className = {styles.error}>{passwordError}</p>
             </div>
             
-            <button type = "submit" className = {`${styles.done} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>Done</button>
+            <button type = "submit" className = {`${styles.done} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>
+              {loading && <img src = {Loader}/>}
+              {!loading && "done"}
+            </button>
           </form>
             
         </div> 
