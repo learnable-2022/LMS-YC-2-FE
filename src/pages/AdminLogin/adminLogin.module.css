@@ -48,8 +48,7 @@
     border-radius: 10px;
 }
 
-.form input[type="email"],
-input[type="password"] {
+.form input {
   padding: 8px 15px !important;
   margin-bottom: 10px;
   min-width: 90%;
