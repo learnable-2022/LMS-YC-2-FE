@@ -14,6 +14,10 @@ import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
 import ForgotPasswordAdmin from "../pages/ForgotPasswordAdmin/ForgotPasswordAdmin";
+import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
+import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
+import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
+import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
 
     const Routy = () => {
     
@@ -33,15 +37,23 @@ import ForgotPasswordAdmin from "../pages/ForgotPasswordAdmin/ForgotPasswordAdmi
               {/* SIGN UP OPTIONS */}
               <Route path = "/signup" element = {<SignUpOptions />} />
 
-              {/* SIGN UP PAGE */}
-              <Route path = "/signup/student" element = {<StudentSignUp />} />
+              {/* STUDENT SIGN UP PAGE */}
+              <Route path = "signup" element = {<StudentFormNavbar />}>
+                <Route index element = {<SignUpOptions />} />
+                <Route path = "student" element = {<StudentSignUp />}/>
+                <Route path = "student_2" element = {<SecondSignUp />}/>
 
-              {/* SECOND SIGN UP PAGE */}
-              <Route path = "/signup/student_2" element = {<SecondSignUp />} />
+              </Route>
 
               {/* ADMIN PAGEs */}
-              <Route path = "/admin/login" element = {<AdminLogin />} />
-              <Route path = "/admin/forgotPassword" element = {<ForgotPasswordAdmin />} />
+              <Route path = "admin" element = {<AdminNavbar />}>
+                <Route index element = {<AdminLogin />} />
+                <Route path = "signup" element = {<AdminSignUp />} />
+                <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
+                <Route path = "welcome" element = {<WelcomeAdmin />} />
+              </Route>
+              
+              
 
           </>
           
