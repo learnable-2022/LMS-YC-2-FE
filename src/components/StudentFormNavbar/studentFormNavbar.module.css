@@ -1,0 +1,16 @@
+.container {
+    background-color: #b0c4dd;
+    padding: 1rem  4rem;
+    min-height: 100vh;
+}
+.nav img{
+    height: 2.5rem;
+}
+
+/* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+
+@media screen and (max-width : 600px) {
+    .container{
+        padding: 2rem;
+    }
+}
