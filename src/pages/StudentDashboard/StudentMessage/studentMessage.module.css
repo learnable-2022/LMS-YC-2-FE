@@ -1,0 +1,152 @@
+.cont {
+  background-color: #eff2f8;
+}
+.long {
+  border-radius: 15px;
+  height: 57px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  margin-left: 15px;
+  overflow: hidden;
+}
+.wrap {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.long input {
+  height: 18px;
+  width: 295px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  border: none;
+  margin: 11px 20px 0 20px;
+}
+.nav {
+  width: 30%;
+  padding: 0 30px;
+}
+.nav h2 {
+  padding: 35px 0;
+}
+.main {
+  width: 70%;
+}
+.ash {
+  background-color: #eff2f8;
+  display: flex;
+  justify-content: space-around;
+  height: 37.71px;
+  border-radius: 8.98px;
+  align-items: center;
+  margin-bottom: 15px;
+  height: 37.71px;
+}
+.ash div {
+  background-color: white;
+  border-radius: 8.98px;
+  height: 26.94px;
+  text-align: center;
+  width: 126.6px;
+  padding-top: 4px;
+}
+.input {
+  position: relative;
+}
+.input img {
+  position: absolute;
+  right: 45px;
+  height: 15px;
+  top: 13px;
+}
+.nav input {
+  border-radius: 10px;
+  background-color: #eff2f8;
+  border: none;
+}
+.box {
+  height: 86.19px;
+  border-radius: 10.77px;
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  padding-left: 20px;
+}
+.box img {
+  border-radius: 8.98px;
+  padding-right: 15px;
+}
+.box span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin-left: 95px;
+  padding-top: 4px;
+}
+
+/* MAIN SECTION */
+.mainOne {
+  display: flex;
+  padding: 20px 0;
+}
+.mainOne div span {
+  height: 12px;
+  width: 12px;
+  background-color: #00c008;
+  border-radius: 50%;
+}
+.mainOne img {
+  border-radius: 50%;
+}
+.mainTwo {
+  background-color: #eff2f8;
+  padding: 40px 20px 0 20px;
+}
+.chat {
+  width: 45%;
+  margin: 30px 45px;
+  padding: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.mainTwo img {
+  margin-top: -50px;
+  border-radius: 50%;
+}
+.mainThree {
+  position: relative;
+  margin-top: 40px;
+}
+.mainThree input {
+  border-radius: 10px;
+  background-color: #eff2f8;
+  border: none;
+  height: 51px;
+  padding: 0 60px;
+}
+.send {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+}
+.plus {
+  border: 1px solid #747474;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 14px;
+  left: 7px;
+}
+.plus img {
+  object-fit: cover;
+  padding-top: 3px;
+}

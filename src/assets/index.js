@@ -71,6 +71,19 @@ export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
 
+//STUDENT DASHBOARD MESSAGE
+export { default as MessageImage1} from "./images/messageImage1.png" 
+export { default as Search} from "./images/search.png" 
+export { default as Send} from "./images/send.png" 
+export { default as Plus} from "./images/plus.png" 
+export { default as MessageImage2} from "./images/MessageImage2.png" 
+export { default as MessageImage3} from "./images/MessageImage3.png" 
+export { default as MessageImage4} from "./images/MessageImage4.png" 
+export { default as MessageImage5} from "./images/MessageImage5.png" 
+export { default as MessageImage6} from "./images/MessageImage6.png" 
+export { default as MessageImage7} from "./images/MessageImage7.png" 
+
+
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
 export { default as Twitter } from "./images/twitter.png"
