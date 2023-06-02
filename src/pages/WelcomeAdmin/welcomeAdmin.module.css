@@ -1,0 +1,68 @@
+.container{
+    background:  #EFF2F8;
+    min-height: 100vh;
+    padding: 3rem;
+    position: relative;
+}
+.container h2{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+.container p{
+    font-size: 0.9rem;
+}
+.adminOptions{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+.adminOptions > div{
+    background-color: #FEEDCF;
+    padding: 1rem 2rem;
+    box-shadow: 0px 6.79211px 9.05615px -6.79211px rgba(24, 39, 75, 0.12), 0px 9.05615px 18.1123px -6.79211px rgba(24, 39, 75, 0.08);
+    border-radius: 1rem;
+    width: 350px;
+}
+.optionIcon{
+    padding: 0.4rem 0.5rem;
+    background-color: #FDE2B0;
+    width: fit-content;
+    border-radius: 50%;
+}
+.optionIcon img{
+    height: 2.5rem;
+}
+.optionFlex{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.optionFlex p{
+    font-size: 1.4rem;
+    color: #4F4F4F;
+    max-width: 250px;
+    font-weight: bold;
+}
+.optionFlex img{
+    height: 1rem;
+}
+.bgBlur{
+    height: 150px;
+    width: 200px;
+    background-color: #F8A711;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    z-index: 4;
+    filter: blur(60px);
+    
+}
+.container > img{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    height: 15rem;
+    z-index: 200;
+}
