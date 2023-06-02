@@ -69,7 +69,10 @@
   background-color: #F8A711;
   border-radius: 6px;
   border-color: transparent;
-}  
+} 
+.continue.disabled{
+  background-color: #ccc;
+} 
 .formContainer  .previous {
   width: 100%;
   display: block;

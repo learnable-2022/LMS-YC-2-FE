@@ -19,12 +19,16 @@ function StudentSignUp() {
     // setParentName(e.target.value)
     if(parentName !== "" && parentName.trim().length < 8 ){
       setParentNameError("Name must be greater than 7 characters")
-      setBtnDisabled(true)
     }else {
       setParentNameError(null)
+    }
+  }
+  const checkBtnDisabled = () => {
+    if(parentName == "" || parentEmail == "" || parentRelationship == "" || (parentName !== "" && parentName.trim().length < 8 ) ){
+      setBtnDisabled(true)
+    }else {
       setBtnDisabled(false)
     }
-
   }
   const submitParentInfo = (e) => {
     e.preventDefault();
@@ -37,10 +41,12 @@ function StudentSignUp() {
     navigate("/signup/student_2")
 
   }
-
   useEffect(() => {
     checkParentName()
   }, [parentName])
+  useEffect(() => {
+    checkBtnDisabled()
+  }, [parentName, parentEmail,parentRelationship])
     return (
       <div className= {styles.container}>
         <div className= {styles.imageArea}>
@@ -58,24 +64,24 @@ function StudentSignUp() {
             </div>
             <div className = {styles.inputGroup}>
               <label>Email address</label>  
-              <input value = "email" value =  {parentEmail} id="email" placeholder='Ifunanya123@gmail.com' onChange = {(e) => setParentEmail(e.target.value)} required/>
+              <input type = "email" value =  {parentEmail} id="email" placeholder='Ifunanya123@gmail.com' onChange = {(e) => setParentEmail(e.target.value)} required/>
             </div>
             <div className = {styles.inputGroup}>
               <label>Relationship</label>  
               <input type = "text"  value = {parentRelationship} id="relationship" placeholder='Mother'  onChange = {(e) => setParentRelationship(e.target.value)} required/>
             </div>
-            <button type = "submit" className= {styles.continue} disabled = {btnDisabled}>
+            <button type = "submit" className = {`${styles.continue} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>
               <p>Continue</p>
               <img src= {ArrowRight} alt=""/>
             </button>
           </form>
           <NavLink to = "/signup" className= {styles.previous}>
-          Previous
+            Previous
           </NavLink>
         </div>
       </div>
        
-    )
+  )
 }
 
 export default StudentSignUp
