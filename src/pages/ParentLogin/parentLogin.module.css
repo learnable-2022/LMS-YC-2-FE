@@ -1,157 +1,150 @@
-.mainBody {
+.container {
   background-color: #b0c4dd;
-  }
-  
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  
-  .imageArea {
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
-    right: 50px;
-    justify-content: space-evenly;
-  }
-  
-  .logoImage {
-    width: 160px;
-    height: auto;
-  }
-  
-.loginImage {
-    width: 400px;
-    height: auto;
-    left: 57px;
-    top: 57px;
-  }
+  padding: 1rem  4rem;
+  min-height: 100vh;
+}
+.nav img{
+  height: 2.5rem;
+}
+.formArea {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.imageArea img {
+  width: 400px;
+  height: auto;
+}
+.formContainer{
+  background-color: white;
+  width: 500px;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.formContainer > h2 {
+  color: #F8A711;
+  text-align: center;
+}
 
-  .formArea {
-    max-width: 60%;
-    display: flex;
-    right: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .formContainer {
-    width: 400px;
-    height: 80vh;
-    padding: 20px;
-    top: 57px;
-    background-color: #fff;
-    border-radius: 25px 0;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-  }
-  
-  .h2 {
-    color: #F8A711;
-    text-align: center;
-  }
-  
-  .h4 {
-    color: #070000;
-    text-align: center;
-    font-weight: normal;
-    margin-top: 15px;
-  }
-  
-  .h3 {
-    color: #070000;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 93%;
-    background-color: transparent;
-    border: 1px solid #070000;
-    border-radius: 3px;
-  }
-  
-  button[type="submit"],
-  button[type="button"],
-  .googleBtn,
-  .facebookBtn {
-    color: #070000;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    background-color: #F8A711;
-    padding: 10px;
-    border: none;
-  }
-
-  
+.formContainer > h4 {
+  color: #070000;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 15px;
+}
+.form {
+  margin: 3rem 0;
+}
+.h3 {
+  color: #070000;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.inputGroup{
+  position: relative;
+  height: fit-content;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.inputGroup input {
+  padding: 10px 22px 10px 10px;
+  display: block !important;
+  margin: auto !important;
+  background-color: transparent;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #2767DC;
+  width: 100%;
+}
+.inputGroup img{
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+  z-index: 10;
+}
+#passwordVisible{
+  cursor: pointer;
+}
+.form button{
+  width: 100%;
+  background-color: #F8A711;
+  padding: 10px;
+  border: none;
+  display: block;
+  margin: 2rem auto 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: white;
+}
   .line {
-    border-top: 1px solid #ccc;
-    margin-bottom: 10px;
+  border-top: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.googleBtn, .facebookBtn {
+  width: 100%;
+  display: block;
+  margin: auto;
+  border: 1px solid #2767DC;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.3rem;
+  background-color: white;
+  cursor: pointer;
+}
+.googleBtn:hover, .facebookBtn:hover{
+  background-color: #F8A711;
+  color: white;
+  border-color: transparent;
+}
+.signUp {
+  color: #070000;
+  font-size: 13px;
+  margin-top: 10px;
+  margin: auto;
+}
+
+.signUp a {
+  cursor: pointer;
+  color: #2767DC;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+@media screen and (max-width : 600px) {
+  .container{
+    padding: 2rem;
   }
+  .formArea{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .imageArea img {
+    width: 350px;
+    height: auto;
   
-  .googleBtn, .facebookBtn {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border: 1px solid #070000;
   }
+  .formContainer{
+    width: 350px;
+    margin: auto;
+  }
+
+}
+
+/* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+@media screen and (max-width : 390px) {
+  .container{
+    padding: 1rem;
+  }
+  .imageArea img {
+    width: 300px;
+    height: auto;
   
-  .signUp {
-    color: #070000;
-    font-size: 13px;
-    margin-top: 10px;
   }
-  
-  .signUp a {
-    cursor: pointer;
-    color: #2767DC;
-    font-weight: 600;
+  .formContainer{
+    width: 300px;
   }
-
-    /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
-
-    @media screen and (max-width : 650px) {
-      .mainContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .imageArea {
-        max-width: 100%;
-      }
-      .logoImage {
-        width: 100px;
-      }
-      .loginImage {
-        width: 300px;
-        height: auto;
-      }
-      .formArea {
-        max-width: 100%;
-      }
-      .formContainer {
-        border-radius: 0%;
-        width: 350px;
-      }
-      /* button[type="submit"] {
-        width: 200px;
-      } */
-
-    }
+}

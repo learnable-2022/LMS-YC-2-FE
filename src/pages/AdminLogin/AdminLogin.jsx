@@ -1,26 +1,12 @@
 import styles from "./adminLogin.module.css";
-import {Logo, AdminForm} from "../../assets";
+import {AdminForm} from "../../assets";
+import AdminNavbar from "../../components/AdminNavbar/AdminNavbar";
+import { NavLink } from "react-router-dom";
 
 
 function AdminLogin() {
   return (
     <div className={styles.container}>
-        
-        <div className={styles.adminNav}>
-            <div className= {styles.logo}>
-                <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
-            </div>
-            <div className= {styles.nav}>
-                <ul>
-                    <li className={styles.active}>Home</li>
-                    <li>Website</li>
-                    <li>Blog</li>
-                </ul>
-            </div>
-           
-        </div>
-
-
         <div className={styles.main}>
             <div className={styles.textBox}>
                 <h1>Admin Login</h1>
@@ -32,33 +18,36 @@ function AdminLogin() {
             
             <div className={styles.inputContainer}>
                 <div className = {styles.formBlur}></div>
-                <div className={styles.inputPage}>
+                <form className = {styles.form}>
+                    <h1>Login</h1>
+
+                    <div className = {styles.inputGroup}>
+                        <label className={styles.LabelItem}>
+                            Company Email Address
+                        </label>
+                        <br />
+                        <input type= "email" placeholder= "peter@gmail.com" required/>
+                    </div>
+
+                    <div className = {styles.inputGroup}>
+                        <label className={styles.LabelItem}>
+                            Password
+                        </label>
+                        <br />
+                        <input type= "password" placeholder= "************" required/>
+                    </div>
+
+                    <div className = {styles.formExtras}>
+                        <p><span className = {styles.dont}>Don't have an account?</span> <NavLink to = "signup">Sign up</NavLink> </p>
+                        <p>Forgot password?</p>
+                    </div>
+
                     
-                    <form className = {styles.form}>
-                        <h1>Login</h1>
 
-                        <div>
-                            <label className={styles.LabelItem}>
-                                Email address
-                            </label>
-                            <br />
-                            <input type= "email" placeholder= "peter@gmail.com" required/>
-                        </div>
+                    <button type="submit">Log In</button>
 
-                        <div>
-                            <label className={styles.LabelItem}>
-                                Email address
-                            </label>
-                            <br />
-                            <input type= "password" placeholder= "************" required/>
-                        </div>
-
-                        <p>Forget your password?</p>
-
-                        <button type="submit">Log In</button>
-
-                    </form>
-                </div>
+                </form>
+                
                 <img src= {AdminForm} alt=""/>
 
             </div>
