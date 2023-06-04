@@ -1,6 +1,9 @@
 li {
   list-style: none;
 }
+a{
+    color: #000000;
+}
 .Cont {
   display: flex;
   height: 100vh;
