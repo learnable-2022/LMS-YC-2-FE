@@ -40,19 +40,19 @@ const ProductNav = () => {
             style={{ display: open ? "block" : "none" }}
           >
             <NavLink to="" className={Product.linko}>
-              <input type="radio" />
+              <div></div>
               <p>Week 1</p>
             </NavLink>
             <NavLink to="" className={Product.linko}>
-              <input type="radio" />
+              <div></div>
               <p>Week 2</p>
             </NavLink>
             <NavLink to="" className={Product.linko}>
-              <input type="radio" />
+              <div></div>
               <p>Week 3</p>
             </NavLink>
             <NavLink to="" className={Product.linko}>
-              <input type="radio" />
+              <div></div>
               <p>Week 4</p>
             </NavLink>
           </div>

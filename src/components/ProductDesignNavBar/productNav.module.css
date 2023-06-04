@@ -1,8 +1,8 @@
 li {
   list-style: none;
 }
-a{
-    color: #000000;
+a {
+  color: #000000;
 }
 .Cont {
   display: flex;
@@ -60,10 +60,13 @@ a{
 .linko p {
   font-size: 16px;
 }
-.linko input {
-  height: 32px;
-  width: 32px;
+.linko div {
+  height: 28px;
+  width: 28px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
 }
+
 .list li {
   margin-top: 15px;
 }
