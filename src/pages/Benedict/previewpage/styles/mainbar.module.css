@@ -1,0 +1,191 @@
+.mainbar{
+    z-index: 1;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #e9ebed;
+}
+
+.mainheader{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.mainheadercnt{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 63rem;
+}
+.admind{
+    width: 200px;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: black;
+}
+.search{
+    width: 350px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    background-color: #e9ebed;
+}
+
+.search i {
+    position: absolute;
+    top: 0;
+    margin-left: 320px;
+    width: 10px;
+    height: 55px;
+    line-height: 40px;
+    text-align: center;
+}
+ .S{
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+ }
+ .sbox{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 4px 5px 4px;
+ }
+ .sbox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    background-color: white;
+    font-size: 25px;
+    text-decoration: darkorange;
+
+ }
+ .sbox ::placeholder{
+    color: orange;
+    font-weight: bolder;
+ }
+
+ .steph{
+    color: #8c8c8c;
+    font-size: 12px;
+ }
+ .adminis{
+    color: orange;
+    font-size: 12px;
+ }
+
+
+ .mainbody{
+    margin-top: 70px;
+    display: flex;
+    height: 600px;
+ }
+ .mainnewlesson{
+   width: 700px;
+   border-right: solid gray;
+   
+ }
+ .mainnewlesson img{
+    margin-left: 4rem;
+    margin-top: 40px;
+    width: 550px;
+    height: 90px;
+ }
+ .phone{
+   display: flex;
+   margin-left: 40px;
+   width: 260px;
+ }
+ .phone1 img{
+   height: 400px;
+   margin-top: 50px;
+   width: 230px;
+ }
+ .phone2 img{
+   height: 270px;
+   margin-top: 130px;
+   margin-left: 7px;
+   width: 5px;
+ }
+ .phoneprev{
+   font-size: 12px;
+   text-align: center;
+ }
+ .mainoverview{
+    margin-left: 30px;
+    margin-right: 30px;
+ }
+ .over{
+    color: #8c8c8c;
+    font-size: 13px;
+ }
+ .letter1{
+   margin-left: 4rem;
+   font-size: 15px;
+   font-weight: bolder;
+   margin-top: 17px;
+ }
+ .letter1 i{
+   margin-left: 8px;
+   color: orange;
+   font-size: 12px;
+ }
+ .letter2{
+   margin-left: 4rem;
+   font-size: 12px;
+   color: #8c8c8c;
+ }
+ .letter3{
+   margin-left: 4rem;
+   font-size: 13px;
+   font-weight: bolder;
+   margin-top: 17px;
+ }
+ .letter4{
+   margin-left: 4rem;
+   font-size: 12px;
+   color: #8c8c8c;
+ }
+ .save{
+   display: flex;
+   justify-content: space-around;
+   width: 230px;
+   margin-top: 9rem;
+   margin-left: 30rem;
+ }
+ .save1{
+   background-color: orange;
+   width: 80px;
+   height: 35px;
+   font-size: 14px;
+   font-weight: 600;
+   color: white;
+   text-align: center;
+   line-height: 33px;
+   border-radius: 5px;
+ }
+ .save2{
+   color: orange;
+   font-size: 14px;
+   margin-top: 6px;
+   margin-right: 6px;
+ }
+ 
