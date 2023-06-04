@@ -7,9 +7,9 @@
   overflow-y: auto;
   /* gap: 0.5rem; */
 }
-/* .dashboardContainer main{
+.dashboardContainer main{
   width: 80%;
-} */
+}
 .dashboardNav {
   width: 30%;
   height: 100vh;
