@@ -103,6 +103,9 @@
 .done.disabled{
   background-color: #ccc;
 }
+.done img{
+  height: 1.5rem;
+}
 
 /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 @media screen and (max-width : 600px) {
