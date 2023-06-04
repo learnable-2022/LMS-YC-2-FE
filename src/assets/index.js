@@ -83,6 +83,9 @@ export { default as MessageImage5} from "./images/MessageImage5.png"
 export { default as MessageImage6} from "./images/MessageImage6.png" 
 export { default as MessageImage7} from "./images/MessageImage7.png" 
 
+// PRODUCT DESIGN SESSION
+export { default as productImage} from "./images/productLogo.png"
+export { default as productArrow} from "./images/ProductArrow.png"
 
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
