@@ -1,0 +1,22 @@
+.container{
+    height: fit-content;
+}
+.adminNavbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 1rem 4rem;
+}
+.logo img{
+    height: 2.5rem;
+}
+.navLinks ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+.active {
+    color: #F8A711;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styles from './secondsignup.module.css'
-import {Logo, FormImg} from '../../assets';
+import {Eyeslash, FormImg, Loader} from '../../assets';
 import { NavLink, useNavigate } from 'react-router-dom';
 import AppContext from "../../context/Appcontext"
 
@@ -21,6 +21,8 @@ function SignUp() {
   const [age, setAge] = useState()
   const navigate = useNavigate() 
   const [data, setData] = useState()
+  const [passwordVisibility, setPasswordVisibility] = useState(false)
+  const [loading, setLoading] = useState(false)
 
 
   const checkChildName = () => {
@@ -47,7 +49,7 @@ function SignUp() {
     }
   }
   const checkBtnDisabled = () => {
-    if(childName == "" || password === "" || (childName !== "" && childName.trim().length < 8) || (!passwordRegex.test(password) && password !== "") || age < 6 || age > 13){
+    if(childName == "" || password === "" || (childName !== "" && childName.trim().length < 8) || (!passwordRegex.test(password) && password !== "") || age < 6 || age > 13 || childClass === ""){
       setBtnDisabled(true)
     }else{
       setBtnDisabled(false)
@@ -73,13 +75,14 @@ function SignUp() {
 
   useEffect(() => {
     checkBtnDisabled()
-  }, [childName, password])
+  }, [childName, password, childClass, childDOB])
 
   useEffect(() => {
     checkAge()
   }, [childDOB])
 
   const signUpUser = (e) => {
+    setLoading(true)
     e.preventDefault();
 
     studentData.child_name = childName
@@ -96,10 +99,11 @@ function SignUp() {
         }
       })
       .then(response => response.json())
-      .then (data => (
-        data.success == true ? navigate("/student/dashboard") : "",
+      .then (data => {
         setData(data)
-      ))
+        setLoading(false)
+        data.success == true ? navigate("/student/dashboard") : ""
+      })
       
     if (data !== null && data !== undefined) {
       if (data.success !== null && data.success !== undefined) {
@@ -115,47 +119,48 @@ function SignUp() {
   
   } 
 
-      return (
-        <div className= {styles.mainBody}>
-        <div className= {styles.mainContainer}>
-          <div className= {styles.imageArea}>
-            <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
-            <img src={FormImg} alt="Log in Image"  className= {styles.loginImage} />
-          </div>
-          <div className= {styles.formArea}>
-            <div className= {styles.formContainer}>
-              <h2 className = {styles.h2}>Sign up</h2>
-              <h4 className = {styles.h4}>Please enter the information below to give your child an edge.</h4>
-              <p className= {styles.formTitle}>Account Information</p>
-              <form className = {styles.form} onSubmit = {signUpUser}>
-                <div className = {styles.inputGroup}>
-                  <label>Child's name</label>
-                  <input type="text" placeholder='Full name' required value = {childName} onChange={(e) => setChildName(e.target.value)} />
-                  <p className = {styles.error}>{childNameError}</p>
-                </div>
-                <div className = {styles.inputGroup}>
-                  <label>Date of birth</label>  
-                  <input type="date" placeholder='12 April 2012' value = {childDOB} onChange = {(e) => setChildDOB(e.target.value)} required />
-                  <p className = {styles.error}>{dobError}</p>
-                </div>
-                <div className = {styles.inputGroup}>
-                <label>Class</label>  
-                  <input type="text" placeholder='Grade 6' value = {childClass} onChange = {(e) => setChildClass(e.target.value)} required/>
-                </div>
-                <div className = {styles.inputGroup}>
-                  <label>Password</label>  
-                  <input type="password" placeholder='Password' value = {password} onChange = {(e) => setPassword(e.target.value)} required/>
-                  <p className = {styles.error}>{passwordError}</p>
-                </div>
-                
-                <button type = "submit" className = {`${styles.done} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>Done</button>
-              </form>
-              
-            </div>
-          </div>  
+  return (
+      <div className= {styles.container}>
+        <div className= {styles.imageArea}>
+          <img src={FormImg} alt="Log in Image" />
         </div>
-      </div>
-    )
+        <div className= {styles.formContainer}>
+          <h2 className = {styles.h2}>Sign up</h2>
+          <h4 className = {styles.h4}>Please enter the information below to give your child an edge.</h4>
+          <p className= {styles.formTitle}>Account Information</p>
+          <form className = {styles.form} onSubmit = {signUpUser}>
+            <div className = {styles.inputGroup}>
+              <label>Child's name</label>
+              <input type="text" placeholder='Full name' required value = {childName} onChange={(e) => setChildName(e.target.value)} />
+              <p className = {styles.error}>{childNameError}</p>
+            </div>
+            <div className = {styles.inputGroup}>
+              <label>Date of birth</label>  
+              <input type="date" placeholder='12 April 2012' value = {childDOB} onChange = {(e) => setChildDOB(e.target.value)} required />
+              <p className = {styles.error}>{dobError}</p>
+            </div>
+            <div className = {styles.inputGroup}>
+            <label>Class</label>  
+              <input type="text" placeholder='Grade 6' value = {childClass} onChange = {(e) => setChildClass(e.target.value)} required/>
+            </div>
+            <div className = {styles.inputGroup}>
+              <div className= {styles.inputGroupPassword}>
+                <label>Password</label>  
+                <input type= {passwordVisibility ? "text" : "password"} placeholder='Password' value = {password} onChange = {(e) => setPassword(e.target.value)} required/>
+                <img src= {Eyeslash} alt="" onClick = {(e) => setPasswordVisibility(!passwordVisibility)} id = {styles.passwordVisible}/>
+              </div>
+              <p className = {styles.error}>{passwordError}</p>
+            </div>
+            
+            <button type = "submit" className = {`${styles.done} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>
+              {loading && <img src = {Loader}/>}
+              {!loading && "done"}
+            </button>
+          </form>
+            
+        </div> 
+    </div>
+  )
 }
 
 export default SignUp

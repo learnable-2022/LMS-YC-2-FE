@@ -1,33 +1,8 @@
 .container {
     width: 100%;
     background:  #EFF2F8;
+    position: relative;
 }
-
-.adminNav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    
-}
-
-.logo {
-    padding-left: 80px;
-}
-
-.nav ul {
-    display: flex;
-    margin: 0 50px;
-}
-
-.nav li {
-    padding: 20px;
-}
-
-.active {
-    color: #F8A711;
-}
-
 .main {
     display: flex;
     align-items: center; 
@@ -37,7 +12,7 @@
 
 .textBox h1 {
     font-size: 32px;
-    width: 300px;
+    width: 213px;
     padding-bottom: 10px;
 }
 
@@ -72,20 +47,9 @@
     height: 470px;
     border-radius: 10px;
 }
-
-.form input[type="email"] {
-  padding: 8px 15px;
-  margin-bottom: 10px;
-  width: 300px;
-  background-color: #E0E0E0 !important;
-  border: none !important;
-  border-radius: 3px;
-  outline: none;
-}
-
 .form {
     padding: 50px;
-    
+    z-index: 500;
 }
 
 .form h1 {
@@ -93,14 +57,21 @@
     font-size: 24px;
 }
 
-.form p {
-    text-align: center;
+.form > p {
+    float: right;
     font-size: 12px;
-}
-
-.form span {
     color: #F8A711;
 }
+
+.form input{
+  padding: 8px 15px !important;
+  margin-bottom: 10px;
+  min-width: 90%;
+  background-color: #E0E0E0 !important;
+  border: none !important;
+  border-radius: 3px;
+}
+
 
 .LabelItem {
     width: 44px;
@@ -110,22 +81,37 @@
     padding-top: 50px;
 }
 
-.form button {
+.inputPage button {
   border-radius: 5px !important;
   cursor: pointer;
-  margin: 15px 0;
-  width: 300px;
-  padding: 8px 0;
+  margin-top: 15px;
+  width: 370px;
+  padding: 8px 15px !important;
   border: none !important;
   color: #fff !important;
   background-color: #F8A711 !important;
-  border: 1px solid transparent !important;
 }
 
-.form button:hover {
-    border-color:  #F8A711 !important;
+.inputPage button:hover {
+    border: 1px solid #F8A711 !important;
     color: #F8A711 !important;
     background-color: #FFF !important;
+}
+.formExtras{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.formExtras p{
+    font-size: 0.7rem;
+    color: #F8A711;
+}
+.formExtras a{
+    text-decoration: none;
+    color: #F8A711;
+}
+.dont{
+    color: black;
 }
 .formBlur{
     height: 50px;
