@@ -18,6 +18,7 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
+import AdminCreateLesson from "../pages/AdminCreateLesson/AdminCreateLesson";
 
     const Routy = () => {
     
@@ -51,6 +52,7 @@ import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar
                 <Route path = "signup" element = {<AdminSignUp />} />
                 <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
                 <Route path = "welcome" element = {<WelcomeAdmin />} />
+                <Route path = "createLesson" element = {<AdminCreateLesson />} />
               </Route>
               
               
