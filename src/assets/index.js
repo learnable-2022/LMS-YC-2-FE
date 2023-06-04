@@ -60,9 +60,16 @@ export { default as FormImg} from "./images/FormImg.png"
 //SIGNUP PAGE
 export {default as ProfileIcon } from "./images/ProfileIcon.png"
 export {default as ArrowRight } from "./images/ArrowRight.png"
+export {default as FormProfileIcon } from "./images/FormProfileIcon.png"
+export {default as Eyeslash } from "./images/Eyeslash.png"
+export {default as Loader } from "./images/Loader.gif"
 
 //ADMIN PAGES
 export {default as AdminForm } from "./images/AdminForm.png"
+export {default as Lessons} from "./images/lessons.png"
+export {default as GreaterThan} from "./images/GreaterThan.png"
+export {default as Analytics} from "./images/Analytics.png"
+export {default as AdminWelcome} from "./images/AdminWelcome.png"
 
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 

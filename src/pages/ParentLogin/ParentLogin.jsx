@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styles from './parentLogin.module.css'
-import {Logo, FormImg} from '../../assets';
+import {Logo, FormImg, Eyeslash, FormProfileIcon} from '../../assets';
 import { NavLink } from 'react-router-dom';
 
 function ParentLogin() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [data, setData] = useState()
+  const [passwordVisibility, setPasswordVisibility] = useState(false)
 
   const signIn = (e) => {
     e.preventDefault();
@@ -27,30 +28,31 @@ function ParentLogin() {
     .then (data => console.log(data))
 
     console.log(data)
-    
-
   }
 
   return (
-    <div className= {styles.mainBody}>
-      <div className= {styles.mainContainer}>
+    <div className= {styles.container}>
+      <nav className = {styles.nav}>
+        <img src= {Logo} alt=""/>
+      </nav>
+      <div className= {styles.formArea}>
         <div className= {styles.imageArea}>
-          <img src={Logo} alt="Logo Image" className= {styles.logoImage} />
-          <img src={FormImg} alt="Log in Image"  className= {styles.loginImage} />
+          <img src={FormImg} alt="Log in Image"/>
         </div>
-        <div className= {styles.formArea}>
-          <div className= {styles.formContainer}>
-            <h2 className = {styles.h2}>Welcome</h2>
-            <h4 className = {styles.h4}>Please enter your information below to resume your beautiful learning experience.</h4>
-            <form className = {styles.form} onSubmit = {signIn}>
-              <div>
-                <input type="text" value = {email} onChange = {(e) => setEmail(e.target.value)} placeholder='Email/Username' required/>
-              </div>
-              <div>
-                <input type="password" value = {password} onChange = {(e) => setPassword(e.target.value)} placeholder='Password' required/>
-              </div>
-              <button type="submit">Sign In</button>
-            </form>
+        <div className= {styles.formContainer}>
+          <h2>Welcome</h2>
+          <h4>Please enter your information below to resume your beautiful learning experience.</h4>
+          <form className = {styles.form} onSubmit = {signIn}>
+            <div className = {styles.inputGroup}>
+              <input type="email" value = {email} onChange = {(e) => setEmail(e.target.value)} placeholder='Email/Username' required/>
+              <img src= {FormProfileIcon} alt=""/>
+            </div>
+            <div className = {styles.inputGroup}>
+              <input type= {passwordVisibility ? "text" : "password"} value = {password} onChange = {(e) => setPassword(e.target.value)} placeholder='Password' required/>
+              <img src= {Eyeslash} alt="" onClick = {(e) => setPasswordVisibility(!passwordVisibility)} id = {styles.passwordVisible}/>
+            </div>
+            <button type="submit">Sign In</button>
+          </form>
             <div className= {styles.line}></div>
             <h3 className = {styles.h3}>OR</h3>
             <div>
@@ -65,7 +67,6 @@ function ParentLogin() {
           </div>
         </div>  
       </div>
-    </div>
   );
 }
 
