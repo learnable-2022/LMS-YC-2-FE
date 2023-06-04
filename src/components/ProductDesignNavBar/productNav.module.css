@@ -8,7 +8,6 @@ li {
 }
 .Cont nav {
   width: 20%;
-  border: 1px solid black;
   height: 100vh;
 }
 .wrap {
@@ -38,13 +37,14 @@ li {
   display: flex;
   align-items: center;
   gap: 14px;
+  cursor: pointer;
 }
 
 .linko {
   display: flex;
   align-items: center;
   gap: 13px;
-  margin-top: 12px;
+  margin-top: 15px;
   height: 46px;
   width: 211px;
 }
@@ -62,5 +62,5 @@ li {
   width: 32px;
 }
 .list li {
-  margin-top: 12px;
+  margin-top: 15px;
 }

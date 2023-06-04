@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./productNav.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { LogoSvg, productArrow, productImage } from "../../assets";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const ProductNav = () => {
+  const [open, setOpen] = useState(true);
+
+  const DropDown = () => {
+    setOpen(!open);
+  };
   return (
     <div className={Product.Cont}>
       <nav>
@@ -17,11 +23,22 @@ const ProductNav = () => {
             <img src={productImage} alt="" />
           </div>
 
-          <div className={Product.drop}>
-            <img src={productArrow} alt="" />
+          <div className={Product.drop} onClick={DropDown}>
+            <div>
+              {open ? (
+                <img src={productArrow} alt="" />
+              ) : (
+                <MdKeyboardArrowRight
+                  style={{ fontSize: "25px", color: "#292D32" }}
+                />
+              )}
+            </div>
             <p>Course Material</p>
           </div>
-          <div className={Product.linky}>
+          <div
+            className={Product.linky}
+            style={{ display: open ? "block" : "none" }}
+          >
             <NavLink to="" className={Product.linko}>
               <input type="radio" />
               <p>Week 1</p>
