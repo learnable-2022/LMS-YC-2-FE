@@ -1,17 +1,79 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import styles from "./adminSignUp.module.css"
-import {AdminForm} from "../../assets";
-import { useState } from "react";
+import {AdminForm, Loader} from "../../assets";
+import { useContext, useEffect, useState } from "react";
+import AppContext from "../../context/Appcontext";
 
 function AdminSignUp() {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [btnDisabled, setBtnDisabled] = useState(true)
+    const [loading, setLoading] = useState(false)
+    const [data, setData] = useState({})
+    const [signUpError, setSignUpError] = useState("")
+    const navigate = useNavigate()
+    const {adminData} = useContext(AppContext)
+    const [message, setMessage] = useState()
+
+    const checkBtnDisabled = () => {
+        if(email == "" || password == ""){
+            setBtnDisabled(true)
+        }else{
+            setBtnDisabled(false)
+        }
+    }
+
+    useEffect(() => {
+        checkBtnDisabled()
+    }, [email, password])
 
     const adminSignUp = (e) => {
         e.preventDefault();
+        setLoading(true)
         
+        adminData.email = email;
+        adminData.password = password
+
+        const response = fetch("https://learnz.onrender.com/api/v1/admin/register", {
+            method : "POST",
+            body : JSON.stringify(adminData),
+            headers : {
+                "Content-Type" : "application/json",
+                "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
+            }
+            })
+            .then(response => response.json())
+            .then (data => {
+                setLoading(false)
+                setData(data)
+                data.success == true ? navigate("/admin/login") : ""
+            })
+            .catch(err => {
+                setSignUpError(err)
+                setLoading(false)
+            })
 
     }
+
+    const checkData = () => {
+        if(data !== null && data !== undefined){
+            if(data.success !== null && data.success !== undefined){
+                if(!data.success){
+                    setMessage(data?.message)
+                    setTimeout(() =>{
+                        setMessage("")
+                    }, 2000)
+                }else{
+                    setMessage("")
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        console.log(data)
+        checkData()
+    }, [data])
     return (
         <div className={styles.container}>
             <div className={styles.main}>
@@ -25,8 +87,9 @@ function AdminSignUp() {
                 
                 <div className={styles.inputContainer}>
                     <div className = {styles.formBlur}></div>
-                    <form className = {styles.form} onSubmit = {AdminSignUp} >
+                    <form className = {styles.form} onSubmit = {adminSignUp} >
                         <h1>Sign Up</h1>
+                        <p className = {styles.dataMessage}>{message}</p>
 
                         <div className = {styles.inputGroup}>
                             <label className={styles.LabelItem}>
@@ -45,13 +108,16 @@ function AdminSignUp() {
                         </div>
 
                         <div className = {styles.formExtras}>
-                            <p><span className = {styles.dont}>Have an account?</span> <NavLink to = "/admin">Sign in</NavLink> </p>
+                            <p><span className = {styles.dont}>Have an account?</span> <NavLink to = "/admin/login">Sign in</NavLink> </p>
                             <p>Forgot password?</p>
                         </div>
 
                         
 
-                        <button type="submit">Log In</button>
+                        <button type = "submit" className = {`${styles.signUpBtn} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>
+                            {loading && <img src = {Loader}/>}
+                            {!loading && "Login"}
+                        </button>
 
                     </form>
                     
