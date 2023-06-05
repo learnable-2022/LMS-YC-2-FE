@@ -6,7 +6,13 @@ export const AppProvider = ({children}) => {
 
     const [studentStatus, setStudentStatus] = useState()
     const studentInfo = JSON.parse(window.localStorage.getItem("student-status"))
+    const adminInfo = JSON.parse(window.localStorage.getItem("admin-status"))
     const [courseIndex, setCourseIndex] = useState("")
+
+    const [adminData, setAdminData] = useState({
+        email: "",
+        password: ""
+    })
     
     const [studentData, setStudentData] = useState({
         parent_name: "",
@@ -25,6 +31,8 @@ export const AppProvider = ({children}) => {
         loggedIn,
         studentStatus,
         studentInfo,
+        adminInfo,
+        adminData,
         courseIndex,
         setLoggedIn,
         setStudentSignedUp,
