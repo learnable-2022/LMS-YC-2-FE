@@ -1,10 +1,5 @@
 .container {
-  background-color: #b0c4dd;
-  padding: 1rem  4rem;
-  min-height: 100vh;
-}
-.nav img{
-  height: 2.5rem;
+  /* background-color: blue; */
 }
 .formArea {
   display: flex;
@@ -35,6 +30,14 @@
 }
 .form {
   margin: 3rem 0;
+}
+.dataMessage{
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: red;
+  animation: anim 1s ease;
 }
 .h3 {
   color: #070000;
@@ -79,6 +82,9 @@
   border-radius: 0.3rem;
   cursor: pointer;
   color: white;
+}
+.form button img{
+  height: 1.5rem;
 }
   .line {
   border-top: 1px solid #ccc;

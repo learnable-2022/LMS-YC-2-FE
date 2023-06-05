@@ -30,8 +30,9 @@ function StudentSignUp() {
   const [confirmPasswordVisibility, setConfirmPasswordVisibility] = useState(false)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const [signupError, setSignUpError] = useState()
+  const [message, setMessage] = useState()
 
-  const studentInfo = JSON.parse(window.localStorage.getItem("student-status"))
   
   //functions
   const checkParentName = (e) => {
@@ -48,19 +49,22 @@ function StudentSignUp() {
       setChildNameError(null)
     }
   }
-   const checkAge = () => {
-    let dob = new Date(childDOB)
-    let monthDiff = Date.now() - dob.getTime()
-    let ageDate = new Date(monthDiff)
-    let year = ageDate.getUTCFullYear()
-    setAge(Math.abs(year-1970))
-
-    if(age < 6 || age > 13){
-      setDobError("Child must be within 6 to 13 years")
-    }else{
-      setDobError(null)
+  const checkAge = () => {
+    if (childDOB) {
+      const today = new Date();
+      const dob = new Date(childDOB);
+      const ageDiff = today.getTime() - dob.getTime();
+      const ageDate = new Date(ageDiff);
+      const years = ageDate.getUTCFullYear() - 1970;
+      setAge(years);
+  
+      if (years < 6 || years > 13) {
+        setDobError("Child must be within 6 to 13 years");
+      } else {
+        setDobError("");
+      }
     }
-  }
+  };
   const checkPassword = (e) => {
     if(passwordRegex.test(password)){
       setPasswordError("")
@@ -79,23 +83,46 @@ function StudentSignUp() {
       setConfirmPasswordError("")
     }
   } 
-  const checkBtnDisabled = () => {
-    if(parentName == "" || childName == "" || email == "" || relationship == "" || gender == "" || childDOB == "" || password == "" || confirmPassword == "" ||  
-      (parentName !== "" && parentName.trim().length < 8 || age < 6 || age > 13 || (!passwordRegex.test(password) && password !== "") || ((password === "" || confirmPassword !== "") && confirmPassword !== password)) 
-    ){
-      setBtnDisabled(true)
-    }else {
-      setBtnDisabled(false)
+  
+  const updateBtnDisabled = () => {
+    if (
+      parentName === "" ||
+      childName === "" ||
+      email === "" ||
+      relationship === "" ||
+      gender === "" ||
+      childDOB === "" ||
+      password === "" ||
+      confirmPassword === "" ||
+      parentName.trim().length < 8 ||
+      age < 6 ||
+      age > 13 ||
+      (!passwordRegex.test(password) && password !== "") ||
+      ((password === "" || confirmPassword !== "") && confirmPassword !== password)
+    ) {
+      setBtnDisabled(true);
+    } else {
+      setBtnDisabled(false);
     }
-  }
+  };
+  
  // -------------------------------------------------------------------------USE EFFECTS--------------------------------------------------
   useEffect(() => {
     checkParentName()
   }, [parentName])
 
-  useEffect(() => {
-    checkBtnDisabled()
-  }, [parentName, email, relationship])
+  useEffect(updateBtnDisabled, [
+    parentName,
+    childName,
+    email,
+    relationship,
+    gender,
+    childDOB,
+    password,
+    confirmPassword,
+    age,
+  ]);
+
   
   useEffect(() => {
     checkChildName()
@@ -109,12 +136,8 @@ function StudentSignUp() {
   }, [confirmPassword, password]) 
 
   useEffect(() => {
-    checkBtnDisabled()
-  }, [childName, password, childDOB])
-
-  useEffect(() => {
     checkAge()
-  }, [childDOB, age])
+  }, [childDOB])
 
   const signUpUser = (e) => {
     e.preventDefault();
@@ -129,40 +152,46 @@ function StudentSignUp() {
     studentData.gender = gender
     studentData.child_class = childClass
 
-  const response = fetch("https://learnz.onrender.com/api/v1/user/register", {
-    method : "POST",
-    body : JSON.stringify(studentData),
-    headers : {
-      "Content-Type" : "application/json",
-      "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
-    }
-  })
-  .then(response => response.json())
-  .then (data => {
-    window.localStorage.setItem("student-status", JSON.stringify(data))
-    setLoading(false)
-    data.success == true ? setStudentSignedUp(true) : ""
-    data.success == true ? navigate("/login") : ""
-  })
-  .catch(err => console.log(err))
-
-  
-      
-  // if (studentStatus !== null && studentStatus !== undefined) {
-  //   if (studentStatus.success !== null && studentStatus.success !== undefined) {
-  //     if (studentStatus.success === true) {
-  //       studentData.Id = studentStatus.user[0]._id
-        
-  //       console.log(studentData.Id)
-  //       console.log(studentStatus)
-  //     } else if (studentStatus.success === false) {
-  //       console.log("remain on the home page");
-  //     }
-  //   }
-  // }
+    const response = fetch("https://learnz.onrender.com/api/v1/user/register", {
+      method : "POST",
+      body : JSON.stringify(studentData),
+      headers : {
+        "Content-Type" : "application/json",
+        "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
+      }
+    })
+    .then(response => response.json())
+    .then (data => {
+      setLoading(false)
+      setData(data)
+      data.success == true ? setStudentSignedUp(true) : ""
+      data.success == true ? navigate("/login/student") : ""
+    })
+    .catch(err => {
+      setSignUpError(err)
+      setLoading(false)
+    })
 
   }
 
+  const checkData = () => {
+    if(data !== null && data !== undefined){
+        if(data.success !== null && data.success !== undefined){
+            if(!data.success){
+                setMessage(data?.message)
+                setTimeout(() =>{
+                    setMessage("")
+                }, 2000)
+            }else{
+                setMessage("")
+            }
+        }
+    }
+  }
+
+  useEffect(() => {
+    checkData()
+  }, [data])
 
     return (
       <div className= {styles.container}>
@@ -172,8 +201,9 @@ function StudentSignUp() {
         <div className= {styles.formContainer}>
           <h2>Sign up</h2>
           <h4>Please enter the information below to give your child an edge.</h4>
-          <p className= {styles.formTitle}>Parents Information</p>
+         
           <form className = {styles.form} onSubmit = {signUpUser}>
+            <p className = {styles.dataMessage}>{message}</p>
             <div className= {styles.usersName}>
               <div className = {styles.inputGroup}>
                 <label>Guardian's Name</label>
