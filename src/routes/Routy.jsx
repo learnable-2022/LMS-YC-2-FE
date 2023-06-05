@@ -7,7 +7,6 @@ import {
 import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
-import ParentLogin from "../pages/StudentLogin/StudentLogin";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
@@ -23,6 +22,9 @@ import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
+import AdminSidebar from "../components/AdminSideBar/adminsidebar";
+import AdminOverview from "../pages/AdminOverview/AdminOverview";
+import LoginOptions from "../pages/LoginOptions/LoginOption";
 
 
 const Routy = () => {
@@ -31,7 +33,7 @@ const Routy = () => {
       <>
         <Route path="/" element={<LandingPage />} />
 
-        {/* DASHBOARD */}
+        {/* STUDENT DASHBOARD */}
         <Route path="/student/dashboard" element={<StudentSidebar />}>
           <Route index element={<StudentDashboard />} />
           <Route path="studentMessage" element={<StudentMessage />} />
@@ -43,9 +45,12 @@ const Routy = () => {
           <Route path = "studentLessons/enroll/:courseName" element = {<LessonsApply />} />
         </Route>
 
-        {/* LOGIN PAGE*/}
-        <Route path="/student/login" element={<StudentLogin />} />
-
+        {/* STUDENT LOGIN PAGE*/}
+        <Route path="login" element={<StudentFormNavbar />}>
+          <Route index element = {<LoginOptions />} />
+          <Route path = "student" element = {<StudentLogin />} />
+        </Route>
+        
         {/* STUDENT SIGN UP PAGE */}
         <Route path = "signup" element = {<StudentFormNavbar />}>
           <Route index element = {<SignUpOptions />} />
@@ -54,10 +59,15 @@ const Routy = () => {
 
         {/* ADMIN PAGEs */}
         <Route path = "admin" element = {<AdminNavbar />}>
-          <Route index element = {<AdminLogin />} />
+          <Route path = "login" element = {<AdminLogin />} />
           <Route path = "signup" element = {<AdminSignUp />} />
           <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
           <Route path = "welcome" element = {<WelcomeAdmin />} />
+        </Route>
+
+        {/* ADMIN DASHBOARD */}
+        <Route path = "/admin/dashboard" element = {<AdminSidebar />}>
+          <Route index element = {<AdminOverview />}/>
         </Route>
       </>
     )
