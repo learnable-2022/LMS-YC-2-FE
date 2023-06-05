@@ -1,6 +1,32 @@
-.adminContainer{
+.lessonContainer{
     background:  #EFF2F8;
     min-height: 100vh;
     padding: 3rem;
     position: relative;
+}
+
+.backBtn{
+    color: #F8A711;
+    border: none;
+}
+
+.mainBody {
+    width: 69%;
+    border-right: #F8A711 2px solid;
+}
+
+.mainBody .placeholderImage{
+    width: 200px;
+    height: auto;
+    margin-top: 18px;
+    margin-left: 22px;
+}
+
+.verticalRule{
+    width: 1%;
+    background-color: #8C8C8C;
+}
+
+.sideBody {
+    width: 30%;
 }
