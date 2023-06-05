@@ -17,13 +17,10 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
-import AppContext from "../context/Appcontext";
 import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
-import AdminSidebar from "../components/AdminSideBar/AdminSidebar";
-import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LoginOptions from "../pages/LoginOptions/LoginOption";
 
 
@@ -65,10 +62,7 @@ const Routy = () => {
           <Route path = "welcome" element = {<WelcomeAdmin />} />
         </Route>
 
-        {/* ADMIN DASHBOARD */}
-        <Route path = "/admin/dashboard" element = {<AdminSidebar />}>
-          <Route index element = {<AdminOverview />}/>
-        </Route>
+        
       </>
     )
   );
