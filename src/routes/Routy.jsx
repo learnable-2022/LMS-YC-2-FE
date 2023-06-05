@@ -22,7 +22,7 @@ import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
-import AdminSidebar from "../components/AdminSideBar/adminsidebar";
+import AdminSidebar from "../components/AdminSideBar/AdminSidebar";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LoginOptions from "../pages/LoginOptions/LoginOption";
 
