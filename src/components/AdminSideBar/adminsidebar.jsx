@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './adminSidebar.module.css';
-// import { MdLogout } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
 import { Logo } from "../../assets"
 import AdminSidebarCont from './AdminSideBarCont';
 import AdminSidebarList from './AdminSidebarList';
@@ -10,7 +10,7 @@ import { Outlet } from 'react-router';
 function AdminSidebar() {
   return (
     <div className={styles.container}>
-      {/* <div className={styles.dashboardNav}>
+      <div className={styles.dashboardNav}>
         <div className= {styles.lefttop}>
         <img src= {Logo} alt=""/>
         </div>
@@ -30,7 +30,7 @@ function AdminSidebar() {
         </div>
         </div>
         </div>
-      </div> */}
+      </div>
 
       <main>
         <div className= {styles.mainContainer}>
