@@ -1,0 +1,11 @@
+.studentStats{
+    display: flex;
+    justify-content: space-between;
+}
+.studentStats > div{
+    width: 300px;
+    padding: 1rem;
+}
+.studentStats h2{
+    margin-top: 1rem;
+}

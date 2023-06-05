@@ -21,6 +21,8 @@ export { default as BooksIcon } from "./images/BooksIcon.png"
 export { default as FileIcon } from "./images/FileIcon.png"
 export { default as MedalIcon } from "./images/MedalIcon.png"
 export { default as PersonIcon } from "./images/PersonIcon.png"
+export { default as View } from "./images/View.png"
+export { default as Logout } from "./images/Logout.png"
 
 // LANDING PAGE
 export { default as LandingPageLogo} from "./images/LandingPageLogo.png"
@@ -71,6 +73,28 @@ export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
 
+//STUDENT DASHBOARD MESSAGE
+export { default as MessageImage1} from "./images/messageImage1.png" 
+export { default as Search} from "./images/search.png" 
+export { default as Send} from "./images/send.png" 
+export { default as Plus} from "./images/plus.png" 
+export { default as MessageImage2} from "./images/MessageImage2.png" 
+export { default as MessageImage3} from "./images/MessageImage3.png" 
+export { default as MessageImage4} from "./images/MessageImage4.png" 
+export { default as MessageImage5} from "./images/MessageImage5.png" 
+export { default as MessageImage6} from "./images/MessageImage6.png" 
+export { default as MessageImage7} from "./images/MessageImage7.png" 
+
+//STUDENT LESSONS
+export { default as Lesson1} from "./images/Lesson1.png" 
+export { default as Lesson2} from "./images/Lesson2.png" 
+export { default as Lesson3} from "./images/Lesson3.png" 
+export { default as Lesson4} from "./images/Lesson4.png" 
+export { default as Lesson5} from "./images/Lesson5.png" 
+export { default as Lesson6} from "./images/Lesson6.png" 
+export { default as Lesson7} from "./images/Lesson7.png" 
+export { default as Lesson8} from "./images/Lesson8.png" 
+
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
 export { default as Twitter } from "./images/twitter.png"
@@ -79,3 +103,7 @@ export { default as Facebook } from "./images/facebook.png"
 export { default as Instagram } from "./images/instagram.png"
 export { default as Call } from "./images/call.png"
 export { default as SMS } from "./images/sms.png"
+
+
+// LESSONS 
+export { default as CalendarIcon } from "./images/CalendarIcon.png"
