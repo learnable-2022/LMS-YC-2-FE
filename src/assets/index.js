@@ -71,6 +71,16 @@ export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
 
+//GAMIFICATION
+export {default as BackIcon} from "./images/BackIcon.png"
+export {default as PenIcon} from "./images/PenIcon.png"
+export {default as PlaceholderImg} from "./images/PlaceholderImg.png"
+export {default as ArrowDownIcon} from "./images/ArrowDownIcon.png"
+export {default as TripleDotsIcon} from "./images/TripleDotsIcon.png"
+export {default as DeleteIcon} from "./images/DeleteIcon.png"
+export {default as ImageIcon} from "./images/ImageIcon.png"
+export {default as ScreenshotImg} from "./images/ScreenshotImg.png"
+
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"
 export { default as Twitter } from "./images/twitter.png"

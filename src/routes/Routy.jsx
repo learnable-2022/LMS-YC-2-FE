@@ -19,6 +19,8 @@ import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
 
+
+
     const Routy = () => {
     
       const router = createBrowserRouter(
