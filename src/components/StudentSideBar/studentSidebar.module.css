@@ -2,21 +2,23 @@
 
 .dashboardContainer {
   display: flex !important;
-  background: hsl(0, 0%, 78%);
+  background: #C8C8C8;
   height: 100vh;
   overflow-y: auto;
+  gap: 0.5rem;
   /* gap: 0.5rem; */
 }
 /* .dashboardContainer main{
   width: 80%;
 } */
 .dashboardNav {
-  width: 30%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: white;
-  border-radius: 10px;
+    /* position: fixed; */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
 }
 .dashboardNav::-webkit-scrollbar {
   display: none;
@@ -137,5 +139,11 @@
 .link.none {
   display: none;
 }
-/* #haveQuestion {
-} */
+.dashboardContainer > main{
+  width: 100%;
+  /* background-color: orange; */
+  /* margin-left: 22%; */
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0 2rem;
+}
