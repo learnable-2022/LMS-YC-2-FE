@@ -7,9 +7,7 @@ import {
 import StudentSidebar from "../components/StudentSideBar/StudentSidebar";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import LandingPage from "../pages/LandingPage/LandingPage";
-import ParentLogin from "../pages/ParentLogin/ParentLogin";
-import SignUp from "../pages/StudentSignUp/StudentSignUp";
-import SecondSignUp from "../pages/SecondSignUp/SecondSignUp";
+import ParentLogin from "../pages/StudentLogin/StudentLogin";
 import StudentDashboard from "../pages/StudentDashboard/StudentDashboard";
 import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/StudentSignUp/StudentSignUp";
@@ -20,6 +18,11 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
+import AppContext from "../context/Appcontext";
+import StudentLessons from "../pages/StudentLessons/StudentLessons";
+import StudentProfile from "../pages/StudentProfile/StudentProfile";
+import LessonsApply from "../pages/LessonsApply/LessonsApply";
+import StudentLogin from "../pages/StudentLogin/StudentLogin";
 
 
 const Routy = () => {
@@ -33,17 +36,20 @@ const Routy = () => {
           <Route index element={<StudentDashboard />} />
           <Route path="studentMessage" element={<StudentMessage />} />
           <Route path="studentQuiz" element={<StudentQuiz />} />
+          <Route path = "studentLessons" element = {<StudentLessons />}>
+            {/* <Route path = "frontend" ></Route> */}
+          </Route>
+          <Route path = "profile" element = {<StudentProfile />} />
+          <Route path = "studentLessons/enroll/:courseName" element = {<LessonsApply />} />
         </Route>
 
         {/* LOGIN PAGE*/}
-        <Route path="/login" element={<ParentLogin />} />
+        <Route path="/student/login" element={<StudentLogin />} />
 
         {/* STUDENT SIGN UP PAGE */}
         <Route path = "signup" element = {<StudentFormNavbar />}>
           <Route index element = {<SignUpOptions />} />
           <Route path = "student" element = {<StudentSignUp />}/>
-          <Route path = "student_2" element = {<SecondSignUp />}/>
-
         </Route>
 
         {/* ADMIN PAGEs */}
