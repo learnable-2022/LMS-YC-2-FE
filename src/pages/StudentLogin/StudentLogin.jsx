@@ -10,16 +10,19 @@ function StudentLogin() {
   const [data, setData] = useState()
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [loginError, setLoginError] = useState()
+  const [message, setMessage] = useState()
   // const [btnDisabled, setBtnDisabled] = useState(true)
 
   const navigate = useNavigate()
 
-  const  {setLoggedIn, studentStatus, studentData} = useContext(AppContext)
+  const  {setLoggedIn, studentInfo, studentData} = useContext(AppContext)
 
   // const check
 
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true)
     const loginData = {
       email : email,
       password: password
@@ -35,23 +38,41 @@ function StudentLogin() {
     })
     .then(response => response.json())
     .then (data => {
+      window.localStorage.setItem("student-status", JSON.stringify(data))
       setLoading(false)
+      setData(data)
       data.success ? setLoggedIn(true) : ""
       data.success ? navigate("/student/dashboard") : ""
     })
+    .catch((err) => {
+      setLoginError(err)
+      setLoading(false)
+    })
 
-    console.log(data)
   }
 
-  useEffect(() => {
-    console.log(studentData)
-  })
+  const checkData = () => {
+    if(data !== null && data !== undefined){
+        if(data.success !== null && data.success !== undefined){
+            if(!data.success){
+                setMessage(data.message)
+                setTimeout(() =>{
+                    setMessage("")
+                }, 2000)
+            }else{
+                setMessage("")
+            }
+        }
+    }
+  }
+  
+
+useEffect(() => {
+    checkData()
+}, [data])
 
   return (
     <div className= {styles.container}>
-      <nav className = {styles.nav}>
-        <img src= {Logo} alt=""/>
-      </nav>
       <div className= {styles.formArea}>
         <div className= {styles.imageArea}>
           <img src={FormImg} alt="Log in Image"/>
@@ -60,6 +81,7 @@ function StudentLogin() {
           <h2>Welcome</h2>
           <h4>Please enter your information below to resume your beautiful learning experience.</h4>
           <form className = {styles.form} onSubmit = {signIn}>
+            <p className = {styles.dataMessage}>{message}</p>
             <div className = {styles.inputGroup}>
               <input type="email" value = {email} onChange = {(e) => setEmail(e.target.value)} placeholder='Email/Username' required/>
               <img src= {FormProfileIcon} alt=""/>
@@ -85,8 +107,8 @@ function StudentLogin() {
             </div>
             <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
           </div>
-        </div>  
-      </div>
+      </div>  
+    </div>
   );
 }
 
