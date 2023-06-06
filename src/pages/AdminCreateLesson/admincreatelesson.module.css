@@ -13,7 +13,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    border-right: #8C8C8C 2px solid;
+    border-right: #8C8C8C 1px solid;
 }
 
 .mainBody .backBtn{
