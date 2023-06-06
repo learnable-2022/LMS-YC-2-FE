@@ -1,8 +1,8 @@
 .loginOptionsContainer{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 2rem;
-    /* background-color: green; */
   }
   .imageArea img{
     width: 400px;
@@ -96,18 +96,27 @@
   }
   
   /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
-  
-  @media screen and (max-width : 600px) {
-    .loginOptionsContainer{
-      flex-direction: column;  
-      gap: 2rem;
-    }
-    .imageArea img{
-      width: 350px;
-    }
-    .formContainer{
-      width: 350px;
-      margin: auto;
-    }
-  
+
+@media screen and (max-width : 600px) {
+  .loginOtionsContainer{
+    flex-direction: column;  
   }
+  .imageArea img{
+    width: 350px;
+  }
+  .formContainer{
+    width: 300px;
+    margin: auto;
+    padding: 1rem;
+  }
+
+
+}
+@media screen and (max-width : 390px) {
+  .imageArea img{
+    width: 300px;
+  }
+  .formContainer{
+    width: 270px;
+  }
+}
