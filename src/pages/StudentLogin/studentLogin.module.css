@@ -1,9 +1,11 @@
 .container {
   /* background-color: blue; */
+  margin-top: 2rem;
 }
 .formArea {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .imageArea img {
@@ -122,14 +124,14 @@
 /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
 @media screen and (max-width : 600px) {
   .container{
-    padding: 2rem;
+    margin-top: 1rem;
   }
   .formArea{
     flex-direction: column;
     justify-content: center;
   }
   .imageArea img {
-    width: 350px;
+    width: 300px;
     height: auto;
   
   }
@@ -141,16 +143,16 @@
 }
 
 /* ---------------------------------------------------------------- MEDIA RESPONSIVENESS-------------------------------------------- */
+@media screen and (max-width: 1024){
+
+}
 @media screen and (max-width : 390px) {
-  .container{
-    padding: 1rem;
-  }
-  .imageArea img {
-    width: 300px;
-    height: auto;
-  
+  .formArea{
+    flex-direction: column;
+    justify-content: center;
   }
   .formContainer{
     width: 300px;
   }
+
 }

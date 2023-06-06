@@ -107,3 +107,11 @@ export { default as SMS } from "./images/sms.png"
 
 // LESSONS 
 export { default as CalendarIcon } from "./images/CalendarIcon.png"
+
+//ADMIN LESSONS OVERVIEW PAGE
+export { default as Kid1} from "./images/Kid1.jfif"
+export { default as Kid2} from "./images/Kid2.png"
+export { default as Kid3} from "./images/Kid3.png"
+export { default as Kid4} from "./images/Kid4.png"
+export { default as Kid5} from "./images/Kid5.png"
+export { default as Kid6} from "./images/Kid6.png"

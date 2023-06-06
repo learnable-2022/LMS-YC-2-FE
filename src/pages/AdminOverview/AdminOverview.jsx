@@ -3,30 +3,12 @@ import styles from './adminOverview.module.css';
 import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { BiPencil } from "react-icons/bi";
 import { IoStatsChart } from "react-icons/io5";
+import AdminDashboardNav from '../../components/AdminDashboardNav/AdminDashboardNav';
 
 function AdminOverview() {
   return (
     <div className = {styles.mainbar}>
-      <div className = {styles.mainheader}>
-        <div className={styles.mainheadercnt}>
-          <div className= {styles.admind}>
-          Admin Dashboard
-          </div>
-          <div className= {styles.search}>
-        <input type="text" placeholder='Search'/>
-        <i><BsSearch/></i>
-        </div>
-        <div className= {styles.S}>
-          <div className= {styles.sbox}>
-          <input type="text" placeholder='S'/>
-          </div>
-          <div className={styles.stev}>
-            <span className={styles.steph}>Stephen O.</span> <br/>
-            <span className={styles.adminis}>Administrator</span>
-          </div>
-        </div>
-        </div>
-      </div>
+      <AdminDashboardNav navTitle = "Admin Dashboard" />
       <div className= {styles.mainbody}>
         <div className= {styles.mainnewlesson}>
           Create new Lesson

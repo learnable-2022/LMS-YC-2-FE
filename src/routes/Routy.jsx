@@ -22,6 +22,9 @@ import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
 import LoginOptions from "../pages/LoginOptions/LoginOption";
+import AdminSidebar from "../components/AdminSidebar/AdminSidebar";
+import AdminOverview from "../pages/AdminOverview/AdminOverview";
+import LessonOverview from "../pages/LessonOverview/LessonOverview";
 
 
 const Routy = () => {
@@ -52,6 +55,12 @@ const Routy = () => {
         <Route path = "signup" element = {<StudentFormNavbar />}>
           <Route index element = {<SignUpOptions />} />
           <Route path = "student" element = {<StudentSignUp />}/>
+        </Route>
+
+        {/* ADMIN DASHBOARD */}
+        <Route path = "/admin/dashboard" element = {<AdminSidebar />}>
+          <Route index element = {<AdminOverview />} />
+          <Route path = "lessons" element = {<LessonOverview />} />
         </Route>
 
         {/* ADMIN PAGEs */}
