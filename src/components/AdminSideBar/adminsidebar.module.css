@@ -1,95 +1,54 @@
 .container{
-  display: flex !important;
-  background: #C8C8C8;
-  height: 100vh;
-  overflow-y: auto;
-  gap: 0.5rem;
-  background-color: orange;
-}
-
-.dashboardNav{
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: white;
-  border-radius: 10px;
-  width: 20%;
-  background-color: brown;
-
-}
-
-.lefttop img{
-  height: 70px;
-  width: 100%;
-  image-rendering: pixelated;
-}
-
-.barcontent{
-  /* background-color: green; */
-}
-
-.barcontent ul{
-    width: 100%;
-    border: none;
-  }
-
-  .barcontent ul li{
-    list-style: none;
-    margin: 11px;
-    margin-left: 0;
-    position: relative;
-
-  }
-  .barcontent ul li a:hover, .barcontent ul li a.active{
-    color: orange;
-    transition: 0.4s;
-
-}
-
-  .barcontent ul li a{
-    text-decoration: none;
-    color:  rgba(0, 0, 0, 0.671);
-    font-weight: 1px;
     display: flex;
-    align-items: center;
-  }
-
-  .barcontent ul li a i{
-    font-size: 18px;
-    margin-right: 12px;
-  }
-  .barcontent ul li a span{
-    font-size: 11px;
-  }
-  .logout{
-    margin-top: 120px;
-    margin-left: 35px;
-    font-size: 12px;
-  }
-  .logoutmain{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 6px;
-    width: 50px;
-    color: rgb(209, 11, 71);
-  }
-  .logoutleta{
-    font-size: 9px;
-    margin-top: 1px;
-  }
-  .logouticon{
-    font-size: 14px;
-  }
-
-  .leftbarContainer > main{
-    width: 100%;
-    /* background-color: orange; */
-    margin-left: 22%;
+    background-color: #C8C8C8;
     height: 100vh;
     overflow-y: auto;
-    background-color: orange;
-    /* padding: 0 2rem; */
-  }
-  .mainContainer{
-    background-color: blue;
-  }
+}
+.sidebarContainer{
+    height: 100vh;
+    background-color: white;
+    width: 15%;
+}
+.logo {
+    background-color: #f8a711;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 2rem 0;
+    gap: 0.5rem;
+}
+.logo h3{
+    color: white;
+    font-size: 1.4rem;
+}
+.logo img{
+    height: 1.5rem;
+}
+.links{
+    margin-top: 1rem;
+}
+.link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    color: #8C8C8C;
+    text-decoration: none;
+    /* width: 70%; */
+}
+.link:hover{
+    background-color: #8C8C8C;
+    color: #f8a711;
+}
+.link.active{
+    color: #f8a711 !important;
+}
+.link:active{
+    color: #f8a711;
+}
+.container > main{
+    width: 85%;
+}
