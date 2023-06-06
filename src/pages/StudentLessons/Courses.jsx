@@ -7,6 +7,7 @@ const Courses = [
         title: "Frontend Web Development",
         desc: "Learn how to successfully develop and build websites using HTML, CSS and Javascript",
         courseName: "frontend",
+        path : "Frontend",
         id: 1
     }, 
     {
@@ -21,6 +22,7 @@ const Courses = [
         title: "Backend Web Development",
         desc: "Learn how to successfully develop and build websites using PHP",
         courseName: "backend",
+        path: "Backend",
         id: 3
     },
     {
@@ -28,6 +30,7 @@ const Courses = [
         title: "Product Design",
         desc: "Design, build and maintain web application structures using Node JS",
         courseName: "product_design",
+        path: "Product Design",
         id: 4
     },
     {
