@@ -22,9 +22,9 @@ import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
 import LoginOptions from "../pages/LoginOptions/LoginOption";
-import AdminSidebar from "../components/AdminSidebar/AdminSidebar";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
+import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 
 
 const Routy = () => {
@@ -58,7 +58,7 @@ const Routy = () => {
         </Route>
 
         {/* ADMIN DASHBOARD */}
-        <Route path = "/admin/dashboard" element = {<AdminSidebar />}>
+        <Route path = "/admin/dashboard" element = {<SidebarAdmin />}>
           <Route index element = {<AdminOverview />} />
           <Route path = "lessons" element = {<LessonOverview />} />
         </Route>

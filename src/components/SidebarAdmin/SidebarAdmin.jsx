@@ -1,14 +1,11 @@
-import styles from "./adminsidebar.module.css"
+import styles from "./sidebarAdmin.module.css"
 import { LogoSvg} from "../../assets"
 import AdminSidebarList from "./AdminSidebarList"
 import { NavLink, Outlet } from "react-router-dom";
-import AdminDashboardNav from "../AdminDashboardNav/AdminDashboardNav";
 import { TiDivide } from "react-icons/ti";
 import { useEffect, useState } from "react";
 
-function AdminSidebar() {
-  const [linked, setLinkined] = useState({})
-
+function SidebarAdmin() {
     const activeLink = (e) => {
         if (
             e?.target.classList.contains(styles.link) ||
@@ -85,4 +82,4 @@ function AdminSidebar() {
     )
 }
 
-export default AdminSidebar
+export default SidebarAdmin
