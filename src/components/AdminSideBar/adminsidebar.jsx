@@ -1,4 +1,4 @@
-import styles from "./adminSidebar.module.css"
+import styles from "./adminsidebar.module.css"
 import { LogoSvg} from "../../assets"
 import AdminSidebarList from "./AdminSidebarList"
 import { NavLink, Outlet } from "react-router-dom";
