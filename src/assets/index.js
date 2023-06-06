@@ -72,6 +72,8 @@ export {default as Lessons} from "./images/lessons.png"
 export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
+export {default as PlaceholderBW} from "./images/PlaceholderBW.png"
+export {default as pencil} from "./images/pencil.png"
 
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 
