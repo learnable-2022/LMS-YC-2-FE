@@ -7,9 +7,32 @@
 .navLinks{
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.9rem;
+    gap: 2rem;
+ }
+
+.navLinks a{
+    text-decoration: none;
+    font-size: 0.8rem;
     font-weight: bold;
+}
+.enrolLink{
+    background-color: #F8A711;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+.enrolLink:hover{
+    background-color: white;
+    color: #F8A711;
+    border-color: #F8A711 ;
+}
+.contactLink{
+    color: black;
+    transition: all 200ms ease;
+}
+.contactLink:hover{
+    color: #F8A711;
 }
 #burger{
     display: none;
@@ -53,16 +76,36 @@
     max-width: 500px;
 
 }
-.heroContents button{
+.heroLinks{
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    background-color: #B0C4DD;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.heroLinks a:nth-child(1){
+    text-decoration: none;
+    background-color: #F8A711;
     color: white;
-    margin: 1rem 0;
-    border-radius: 3px;
-    padding: 0.3rem 1rem;
-    border: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid #F8A711;
+    transition: all 400ms ease;
+
+}
+.heroLinks a:nth-child(1):hover{
+    background-color: transparent;
+    color: #F8A711;
+}
+.heroLinks a:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #F8A711;
+    text-decoration: none;
+    color: #F8A711;
+    padding: 0.4rem 1rem;
+    transition: all 400ms ease;
+}
+.heroLinks a:nth-child(2):hover{
+    background-color: #F8A711;
+    color: white;
 }
 .heroContents button img{
     width: 1.5rem;
@@ -400,7 +443,7 @@
         display: block;
     }
     .navLinks{
-        display: none;
+        gap: 1rem;
     }
     .heroContainer{
         grid-template-columns: repeat(1, 1fr);
@@ -419,7 +462,6 @@
     
     }
     .heroImg{
-        background-color: green;
         width: 350px;
 
     }
@@ -484,6 +526,11 @@
         width: 320px;
         display: block;
         margin: auto
+    }
+    .upcomingBatchContents > h2{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     /* ---------------------------------------------------------------------------FAQS SECTION----------------------------------------------------   */

@@ -18,7 +18,7 @@ import StudentStats from "../../components/StudentStats/StudentStats";
 
 function StudentDashboard() {
   const { studentInfo} = useContext(AppContext)
-  const [fullName, setFullName] = useState(studentInfo.user.child_name)
+  const [fullName, setFullName] = useState(studentInfo.loggedin.child_name)
   const [firstName, setFirstName] = useState("")
  
    const getFirstName = () => {
