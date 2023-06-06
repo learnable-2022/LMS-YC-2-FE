@@ -68,8 +68,7 @@ function StudentLogin() {
   
 
 useEffect(() => {
-  console.log(data)
-    checkData()
+  checkData()
 }, [data])
 
   return (
