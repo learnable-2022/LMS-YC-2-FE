@@ -1,0 +1,28 @@
+.lessonContainer{
+    display: flex;
+    flex-direction: column;
+    background:  #EFF2F8;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0 40px;
+}
+
+.backBtn{
+    color: #F8A711;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    padding-top: 10px;
+}
+.addLessonArea{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    max-width: 800px;
+    min-height: 100px;
+    border: #F8A711 1px dashed;
+    border-radius: 5px;
+    background-color: transparent;
+}

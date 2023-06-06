@@ -24,7 +24,7 @@ import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
 import StudentLogin from "../pages/StudentLogin/StudentLogin";
 import AdminCreateLesson from "../pages/AdminCreateLesson/AdminCreateLesson";
-
+import CreateLessonTwo from "../pages/CreateLessontwo/CreateLessonTwo";
 
 const Routy = () => {
   const router = createBrowserRouter(
@@ -60,6 +60,7 @@ const Routy = () => {
           <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
           <Route path = "welcome" element = {<WelcomeAdmin />} />
           <Route path = "createLesson" element = {<AdminCreateLesson />} />
+          <Route path = "createNewLesson" element = {<CreateLessonTwo />} />
         </Route>
       </>
     )
