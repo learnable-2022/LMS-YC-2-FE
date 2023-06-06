@@ -38,7 +38,7 @@ function StudentLogin() {
     })
     .then(response => response.json())
     .then (data => {
-      window.localStorage.setItem("student-status", JSON.stringify(data))
+      data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data)) : ""
       setLoading(false)
       setData(data)
       data.success ? setLoggedIn(true) : ""
@@ -68,6 +68,7 @@ function StudentLogin() {
   
 
 useEffect(() => {
+  console.log(data)
     checkData()
 }, [data])
 
