@@ -41,14 +41,16 @@ function LandingPage() {
 
   return (
     <div className={styles.landingPageContainer}>
+
+      {/* ----------------------------------------------------------------NAVBARR SECTION--------------------------------------------------- */}
       <nav className={styles.nav}>
-        <img src={MenuBurger} alt="" id={styles.burger} />
+        {/* <img src={MenuBurger} alt="" id={styles.burger} /> */}
         <div className={styles.logo}>
           <img src={Logo} alt="" />
         </div>
-        <div className={styles.login}>
-          <NavLink to="/login">Login</NavLink>
-          {/* <button>Start free trial</button> */}
+        <div className={styles.navLinks}>
+          <NavLink to = "#contact" className = {styles.contactLink}>Contact Us</NavLink>
+          <NavLink to="/signup" className = {styles.loginLink} className = {styles.enrolLink}>Enrol Now</NavLink>
         </div>
       </nav>
 
@@ -58,14 +60,12 @@ function LandingPage() {
           <h1>Let's make learning easy for the younger ones</h1>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-            ipsa magnam dolor laboriosam architecto, doloremque repellendus
-            voluptate tempore ea praesentium!
+          Discover, Learn, and Play: Unleash your learning adventure! Explore captivating courses, interactive activities, and unlock your full potential with us!"
           </p>
-          <button disabled>
-            <img src={PlayBtn} alt="" />
-            <p>See how it works</p>
-          </button>
+          <div className= {styles.heroLinks}>
+            <NavLink to = "/signup">Enrol Now</NavLink>
+            <NavLink>View Courses</NavLink>
+          </div>
           <div className={styles.users}>
             <div>
               <p id={styles.userNo}>400k+</p>
@@ -136,7 +136,7 @@ function LandingPage() {
             <div className={styles.featureImg}>
               <img src={Feature5} alt="" />
             </div>
-            <h4 className={styles.featureTitle}>Gamified Learning</h4>
+            <h4 className={styles.featureTitle}>Parental involvment</h4>
             <p id={styles.abtFeature}>
               We believe that learning is a collaborative effort between parents
               and educators. Our platform provides resources and tools to keep
@@ -147,7 +147,7 @@ function LandingPage() {
             <div className={styles.featureImg}>
               <img src={Feature6} alt="" />
             </div>
-            <h4 className={styles.featureTitle}>Gamified Learning</h4>
+            <h4 className={styles.featureTitle}>Community Forum</h4>
             <p id={styles.abtFeature}>
               Join our community of educators and learners, and share your
               knowledge and experience. Our forum is a place for discussion and
@@ -358,7 +358,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className={styles.support}>
+        <div id = {styles.contact} className={styles.support}>
           <h3>Couldn't find what you were looking for?</h3>
           <p>
             Our support team is just an email away and ready to help you out

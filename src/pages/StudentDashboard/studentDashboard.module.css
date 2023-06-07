@@ -1,24 +1,21 @@
-.container{
-    min-height: 100vh;
-    width: 850px;
-    margin-left: 290px ;
-    padding: 0.4rem 0;
-    /* background: blue; */
-}
 .dashboard{
-    display: flex;
+    padding: 2rem;
 }
 .majorDashboardPart{
-    width: 65%;
+    /* width: 65%; */
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 4rem;
+    margin: 1rem 0;
 }
 
 /* ------------------------------------WELCOME USER--------------------------------------------------------- */
 .welcomeUserContainer{
     background: linear-gradient(135deg, #FCCF31 0%, #F55555 100%);
-    margin-top: 1rem;
     padding: 1rem;
     position: relative;
     border-bottom-right-radius: 4rem;
+    width: 70%;
 }
 .welcomeUser{
     display: flex;
@@ -36,7 +33,7 @@
 }
 .welcomeUser img{
     height: 10rem;
-    z-index: 300;
+    z-index: 100;
 }
 .welcomeUserContainer > img{
     position: absolute;
@@ -45,66 +42,93 @@
     height: 8rem;
 }
 
-/* ----------------------------------------------------------------REPORT CONTAINER----------------------------------------------------------------- */
-.reports{
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr); */
-    align-items: center;
+.topStudents{
+    width: 30%;
+}
+.topStudents div{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* -------------------------------------------------------------------STUDENT STATS---------------------------------------------------------- */
+.studentStats{
     display: flex;
     justify-content: space-between;
-    /* gap: 0.4rem; */
+}
+.studentStats > div{
+    width: 300px;
+    padding: 1rem;
+}
+.studentStats h2{
     margin-top: 1rem;
 }
-.report{
-    background: white;
+
+/* -------------------------------------------------------------------------ACTIVITIES------------------------------------------------------- */
+.activity{
+    margin-top: 2rem;
+}
+.activityCards{
     display: flex;
-    align-items: center;
-    padding: 0 0.5rem;
-    gap: 0.5rem;
-    height: 4rem;
-    width: fit-content;
-    border-radius: 0.5rem;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 0.5rem;
 }
-#reportImg{
-    height: 1.2rem;
-    border-radius: 50%;
-    padding: 0.3rem;
-    object-fit: cover;
+.activityCards div{
+    width: 90%;
+    min-height: 12rem;
+    position: relative;
 }
-.reportText h4{
-    font-size: 0.8rem;
-}
-.reportText p{
-    font-size: 0.6rem;
-    color: #A5AAB5;
+.activityCards div img{
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
-/* --------------------------------------------ASSIGNMENT AND COURSES SECTION------------------------------------------------------ */
-.assignmentCourses{
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-.assignmentTitle, .courseTitle{
-    display: flex;
-}
-.assignmentsOverview th, .coursesOverview th{
-    font-size: 0.9rem;
-    padding: 0.3rem;
-}
-.assignmentsOverview td, .coursesOverview td{
-    border-bottom: 1px dotted black ;
-    font-size: 0.7rem;
-    padding: 0.4rem;
-}
-.status{
-    background-color: #f8a711;
-    color: white;
-    padding: 0.3rem 0.7rem;
-    border-radius: 0.4rem;
-}
-.course{
-    /* display: flex; */
-    align-items: flex-start;
+/* --------------------------------------------------------------------------MEDIA QUERIES------------------------------------------------------------ */
+@media screen and (max-width : 600px) {
+    .majorDashboardPart > .topStudents{
+        display: none;
+    }
+    .welcomeUserContainer{
+        width: 100%;
+        border-bottom-right-radius: 0;
+        padding: 1rem;
+        padding-right: 0;
+    }
+    .welcomeUser{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .welcomeUser img{
+        width: auto;
+        height: 8rem;
+        z-index: 100;
+    }
+    .welcomeUserContainer > img{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 5rem;
+    }
+    .welcomeUserContents p{
+        max-width: 200px;
+        font-size: 0.7rem;
+    }
+    .welcomeUserContents h2{
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .dashboard{
+        padding: 0 1rem ;
+    }
+    .activityCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
