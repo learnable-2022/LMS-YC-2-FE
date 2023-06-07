@@ -18,11 +18,12 @@ import StudentStats from "../../components/StudentStats/StudentStats";
 
 function StudentDashboard() {
   const { studentInfo} = useContext(AppContext)
-  const [fullName, setFullName] = useState(studentInfo.loggedin.child_name)
+  const [fullName, setFullName] = useState(studentInfo.child_name)
   const [firstName, setFirstName] = useState("")
  
    const getFirstName = () => {
-    const words = fullName.split(" ")
+    if(fullName !== undefined && fullName !== null){
+      const words = fullName.split(" ")
 
     if(words.length >= 2){
       setFirstName(words.shift())
@@ -32,6 +33,8 @@ function StudentDashboard() {
       setFirstName(fullName)
     }
 
+    }
+      
 
   }
 
@@ -41,7 +44,7 @@ function StudentDashboard() {
 
   return (
     <div className={styles.container}>
-      <UserDashboardNav />
+      <UserDashboardNav navTitle = "Home"/>
       <div className={styles.dashboard}>
         <div className={styles.majorDashboardPart}>
           <div className={styles.welcomeUserContainer}>

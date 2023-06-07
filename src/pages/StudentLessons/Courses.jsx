@@ -12,9 +12,10 @@ const Courses = [
     }, 
     {
         img: Lesson2,
-        title: "Frontend Web Development(React JS)",
+        title: "Web3 Development",
         desc: "Implement website and software program user interface systems using ReactJS",
-        courseName: "reactJS",
+        courseName: "web3",
+        path : "Web3",
         id: 2
     },
     {
@@ -32,35 +33,7 @@ const Courses = [
         courseName: "product_design",
         path: "Product Design",
         id: 4
-    },
-    {
-        img: Lesson5,
-        title: "Game Development",
-        desc: "Learn how to successfully develop and build websites using HTML, CSS and Javascript",
-        courseName: "game_development",
-        id: 5
-    },
-    {
-        img: Lesson6,
-        title: "Mobile Application Development",
-        desc: "Learn how to successfully develop and build websites using HTML, CSS and Javascript",
-        courseName: "mobile_app_development",
-        id: 6
-    },
-    {
-        img: Lesson7,
-        title: "Quality Assurance",
-        desc: "Learn how to successfully develop and build websites using HTML, CSS and Javascript",
-        courseName: "quality_assurance",
-        id: 7
-    },
-    {
-        img: Lesson8,
-        title: "Technical Writing",
-        desc: "Learn how to successfully develop and build websites using HTML, CSS and Javascript",
-        courseName: "technical_writing",
-        id: 8
-    },
+    }
 ]
 
 export default Courses
