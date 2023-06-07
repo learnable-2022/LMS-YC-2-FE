@@ -115,3 +115,7 @@ export { default as Kid3} from "./images/Kid3.png"
 export { default as Kid4} from "./images/Kid4.png"
 export { default as Kid5} from "./images/Kid5.png"
 export { default as Kid6} from "./images/Kid6.png"
+
+
+// ERROR PAGE
+export { default as ErrorImage} from "./images/Error.png"

@@ -25,7 +25,7 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
-
+import NotFound from "../pages/ErrorPage/NotFound";
 
 const Routy = () => {
   const router = createBrowserRouter(
@@ -38,40 +38,43 @@ const Routy = () => {
           <Route index element={<StudentDashboard />} />
           <Route path="studentMessage" element={<StudentMessage />} />
           <Route path="studentQuiz" element={<StudentQuiz />} />
-          <Route path = "studentLessons" element = {<StudentLessons />}>
+          <Route path="studentLessons" element={<StudentLessons />}>
             {/* <Route path = "frontend" ></Route> */}
           </Route>
-          <Route path = "profile" element = {<StudentProfile />} />
-          <Route path = "studentLessons/enroll/:courseName" element = {<LessonsApply />} />
+          <Route path="profile" element={<StudentProfile />} />
+          <Route
+            path="studentLessons/enroll/:courseName"
+            element={<LessonsApply />}
+          />
         </Route>
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
-          <Route index element = {<LoginOptions />} />
-          <Route path = "student" element = {<StudentLogin />} />
+          <Route index element={<LoginOptions />} />
+          <Route path="student" element={<StudentLogin />} />
         </Route>
-        
+
         {/* STUDENT SIGN UP PAGE */}
-        <Route path = "signup" element = {<StudentFormNavbar />}>
-          <Route index element = {<SignUpOptions />} />
-          <Route path = "student" element = {<StudentSignUp />}/>
+        <Route path="signup" element={<StudentFormNavbar />}>
+          <Route index element={<SignUpOptions />} />
+          <Route path="student" element={<StudentSignUp />} />
         </Route>
 
         {/* ADMIN DASHBOARD */}
-        <Route path = "/admin/dashboard" element = {<SidebarAdmin />}>
-          <Route index element = {<AdminOverview />} />
-          <Route path = "lessons" element = {<LessonOverview />} />
+        <Route path="/admin/dashboard" element={<SidebarAdmin />}>
+          <Route index element={<AdminOverview />} />
+          <Route path="lessons" element={<LessonOverview />} />
         </Route>
 
         {/* ADMIN PAGEs */}
-        <Route path = "admin" element = {<AdminNavbar />}>
-          <Route path = "login" element = {<AdminLogin />} />
-          <Route path = "signup" element = {<AdminSignUp />} />
-          <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
-          <Route path = "welcome" element = {<WelcomeAdmin />} />
+        <Route path="admin" element={<AdminNavbar />}>
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="signup" element={<AdminSignUp />} />
+          <Route path="forgotPassword" element={<ForgotPasswordAdmin />} />
+          <Route path="welcome" element={<WelcomeAdmin />} />
         </Route>
 
-        
+        <Route path="*" element={<NotFound />} />
       </>
     )
   );
@@ -83,4 +86,3 @@ const Routy = () => {
 };
 
 export default Routy;
-
