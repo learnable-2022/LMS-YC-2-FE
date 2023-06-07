@@ -11,13 +11,17 @@ import {
   Settings,
   FAQ,
   Support,
+  Logout
 } from "../../assets";
-import { useState } from "react";
+import { useState, useContext} from "react";
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
+import AppContext from "../../context/Appcontext"
 
 function StudentSidebar() {
   // const [links, setLinks] = useState()
+  const { studentData} = useContext(AppContext)
+
   const activeLink = (e) => {
     if (
       e.target.classList.contains(styles.link) ||
@@ -57,23 +61,8 @@ function StudentSidebar() {
         <div className={styles.lowerContents}>
           <div className={styles.info}>
             <img src={ProfileImg} alt="" />
-            <p id={styles.name}>Emily Johnson</p>
+            <p id={styles.name}>{studentData.child_name}</p>
             <p id={styles.level}> Level 2</p>
-          </div>
-
-          <div className={styles.stats}>
-            <div className={styles.stat}>
-              <p>Badges</p>
-              <p id={styles.statNo}>5</p>
-            </div>
-            <div className={styles.stat}>
-              <p>Position</p>
-              <p id={styles.statNo}>2nd</p>
-            </div>
-            <div className={styles.stat}>
-              <p>Friends</p>
-              <p id={styles.statNo}>23</p>
-            </div>
           </div>
 
           <div className={styles.menu}>
@@ -85,18 +74,19 @@ function StudentSidebar() {
 
                 <NavLink to="/student/dashboard">Dashboard</NavLink>
               </li>
+              <NavLink to = "studentLessons" className={styles.link}>
+                <div className={styles.linkImg}>
+                  <img src={Resources} alt="" />
+                </div>
+                <p>Lessons</p>
+              </NavLink>
               <li className={styles.link}>
                 <div className={styles.linkImg}>
                   <img src={Quiz} alt="" />
                 </div>
                 <NavLink to="studentQuiz">Quiz</NavLink>
               </li>
-              <li className={styles.link}>
-                <div className={styles.linkImg}>
-                  <img src={Resources} alt="" />
-                </div>
-                <p>Resources</p>
-              </li>
+              
               <li className={styles.link}>
                 <div className={styles.linkImg}>
                   <img src={Assignments} alt="" />
@@ -115,6 +105,12 @@ function StudentSidebar() {
                 </div>
                 <p>TimeTable</p>
               </li>
+              <NavLink to = "profile" className={styles.link}>
+                <div className={styles.linkImg}>
+                  <img src={Resources} alt="" />
+                </div>
+                <p>Profile</p>
+              </NavLink>
               <li className={styles.link}>
                 <div className={styles.linkImg}>
                   <img src={Settings} alt="" />
@@ -134,13 +130,23 @@ function StudentSidebar() {
                 </div>
                 <p>Support</p>
               </li>
+
+              <li className={styles.link}>
+                <div className={styles.linkImg}>
+                  <img src={Logout} alt="" />
+                </div>
+                <p>Logout</p>
+              </li>
               <li className={styles.link}></li>
             </ul>
           </div>
         </div>
       </div>
       <main>
-        <Outlet />
+        <div className= {styles.mainContainer}>
+          <Outlet />
+        </div>
+        
       </main>
     </div>
   );

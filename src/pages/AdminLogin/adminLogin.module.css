@@ -23,38 +23,18 @@
 
 .inputContainer {
     width: 35%;
-    height: 550px;
+    min-height: 550px;
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 16px;
     z-index: 300;
     position: relative;
 }
-.inputContainer img{
+.inputContainer > img{
     height: 10rem;
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left: 7%;
-}
-
-.InputPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-    width: 410px;
-    height: 470px;
-    border-radius: 10px;
-}
-
-.form input {
-  padding: 8px 15px !important;
-  margin-bottom: 10px;
-  min-width: 90%;
-  background-color: #E0E0E0 !important;
-  border: none !important;
-  border-radius: 3px;
 }
 
 .form {
@@ -66,13 +46,23 @@
     padding-bottom: 20px;
     font-size: 24px;
 }
-
-.form > p {
-    float: right;
-    font-size: 12px;
-    color: #F8A711;
+.dataMessage{
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: red;
+    animation: anim 1s ease;
 }
-
+.inputGroup input{
+    padding: 8px 15px !important;
+    margin-bottom: 10px;
+    min-width: 100%;
+    background-color: #E0E0E0 !important;
+    border: none !important;
+    border-radius: 3px;
+    outline: none;
+}
 .LabelItem {
     width: 44px;
     font-weight: 400;
@@ -81,21 +71,31 @@
     padding-top: 50px;
 }
 
-.inputPage button {
-  border-radius: 5px !important;
-  cursor: pointer;
-  margin-top: 15px;
-  width: 370px;
-  padding: 8px 15px !important;
-  border: none !important;
-  color: #fff !important;
-  background-color: #F8A711 !important;
+.loginBtn {
+    border-radius: 5px !important;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid  transparent!important;
+    color: #fff !important;
+    background-color: #F8A711;
+    transition: all 400ms ease;
+    text-align: center !important;
 }
-
-.inputPage button:hover {
+.loginBtn:hover {
     border: 1px solid #F8A711 !important;
     color: #F8A711 !important;
     background-color: #FFF !important;
+}
+.loginBtn.disabled{
+    background-color: #ccc;
+    cursor: default;
+}
+.loginBtn > img{
+    height: 1.5rem ;
+    display: block;
+    margin: auto;
 }
 .formExtras{
     display: flex;

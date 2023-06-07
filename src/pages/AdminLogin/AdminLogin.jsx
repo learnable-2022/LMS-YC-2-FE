@@ -1,11 +1,86 @@
 import styles from "./adminLogin.module.css";
-import {AdminForm} from "../../assets";
+import {AdminForm, Loader} from "../../assets";
 import AdminNavbar from "../../components/AdminNavbar/AdminNavbar";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useState,useEffect, useContext } from "react";
+import AppContext from "../../context/Appcontext";
 
 
 function AdminLogin() {
-  return (
+    const [loading, setLoading] = useState(false)
+    const [btnDisabled, setBtnDisabled] = useState(true)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [data, setData] = useState("")
+    const [message, setMessage] = useState("")
+    const navigate = useNavigate()
+
+    const {adminInfo} = useContext(AppContext)
+
+    const checkBtnDisabled = () => {
+        if(email == "" || password == ""){
+            setBtnDisabled(true)
+        }else{
+            setBtnDisabled(false)
+        }
+    }
+
+    useEffect(() => {
+        checkBtnDisabled()
+    }, [email, password])
+
+    const adminLogin = (e) => {
+        e.preventDefault()
+        setLoading(true)
+
+        const loginData = {
+            email : email,
+            password: password
+        }
+    
+        const response = fetch("https://learnz.onrender.com/api/v1/admin/login", {
+            method : "POST",
+            body : JSON.stringify(loginData),
+            headers : {
+                "Content-Type" : "application/json",
+                "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
+            }
+        })
+        .then(response => response.json())
+        .then (data => {
+            window.localStorage.setItem("admin-status", JSON.stringify(data))
+            setLoading(false)
+            setData(data)
+            data.success ? navigate("/admin/welcome") : ""
+        })
+        .catch((err) => {
+        console.log(err)
+        setLoading(false)
+        })
+      
+    }
+
+    const checkData = () => {
+        if(data !== null && data !== undefined){
+            if(data.success !== null && data.success !== undefined){
+                if(!data.success){
+                    setMessage("Invalid Credentials")
+                    setTimeout(() =>{
+                        setMessage("")
+                    }, 2000)
+                }else{
+                    setMessage("")
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        checkData()
+    }, [data])
+
+
+    return (
     <div className={styles.container}>
         <div className={styles.main}>
             <div className={styles.textBox}>
@@ -18,15 +93,17 @@ function AdminLogin() {
             
             <div className={styles.inputContainer}>
                 <div className = {styles.formBlur}></div>
-                <form className = {styles.form}>
+                <form className = {styles.form} onSubmit = {adminLogin}>
                     <h1>Login</h1>
+
+                    <p className = {styles.dataMessage}>{message}</p>
 
                     <div className = {styles.inputGroup}>
                         <label className={styles.LabelItem}>
                             Company Email Address
                         </label>
                         <br />
-                        <input type= "email" placeholder= "peter@gmail.com" required/>
+                        <input type= "email" placeholder= "peter@gmail.com" value= {email} onChange = {(e) => setEmail(e.target.value)} required />
                     </div>
 
                     <div className = {styles.inputGroup}>
@@ -34,17 +111,20 @@ function AdminLogin() {
                             Password
                         </label>
                         <br />
-                        <input type= "password" placeholder= "************" required/>
+                        <input type= "password" placeholder= "************"  value = {password} onChange = {(e) => setPassword(e.target.value)} required/>
                     </div>
 
                     <div className = {styles.formExtras}>
-                        <p><span className = {styles.dont}>Don't have an account?</span> <NavLink to = "signup">Sign up</NavLink> </p>
+                        <p><span className = {styles.dont}>Don't have an account?</span> <NavLink to = "/admin/signup">Sign up</NavLink> </p>
                         <p>Forgot password?</p>
                     </div>
 
                     
 
-                    <button type="submit">Log In</button>
+                     <button type = "submit" className = {`${styles.loginBtn} ${btnDisabled ? styles.disabled : "" }`} disabled = {btnDisabled}>
+                        {loading && <img src = {Loader}/>}
+                        {!loading && "Login"}
+                    </button>
 
                 </form>
                 
