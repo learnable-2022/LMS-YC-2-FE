@@ -70,6 +70,7 @@ export {default as Lessons} from "./images/lessons.png"
 export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
+export {default as ExtraResourceImg} from "./images/ExtraResourceImg.png"
 
 //GAMIFICATION
 export {default as BackIcon} from "./images/BackIcon.png"
