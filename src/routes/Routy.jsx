@@ -25,25 +25,32 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
+import ProtectedRoutes from "../ProtectedRoute";
+import { useContext } from "react";
 
 
 const Routy = () => {
+
+  const {studdntInfo} = useContext
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<LandingPage />} />
 
         {/* STUDENT DASHBOARD */}
-        <Route path="/student/dashboard" element={<StudentSidebar />}>
-          <Route index element={<StudentDashboard />} />
-          <Route path="studentMessage" element={<StudentMessage />} />
-          <Route path="studentQuiz" element={<StudentQuiz />} />
-          <Route path = "studentLessons" element = {<StudentLessons />}>
-            {/* <Route path = "frontend" ></Route> */}
+        {/* <Route element = {<ProtectedRoutes />}> */}
+          <Route path="/student/dashboard" element={<StudentSidebar />}>
+            <Route index element={<StudentDashboard />} />
+            <Route path="studentMessage" element={<StudentMessage />} />
+            <Route path="studentQuiz" element={<StudentQuiz />} />
+            <Route path = "lessons" element = {<StudentLessons />}>
+              {/* <Route path = "frontend" ></Route> */}
+            </Route>
+            <Route path = "profile" element = {<StudentProfile />} />
+            <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
           </Route>
-          <Route path = "profile" element = {<StudentProfile />} />
-          <Route path = "studentLessons/enroll/:courseName" element = {<LessonsApply />} />
-        </Route>
+        {/* </Route> */}
+        
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
