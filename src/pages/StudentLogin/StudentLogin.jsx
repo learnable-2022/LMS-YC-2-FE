@@ -18,8 +18,6 @@ function StudentLogin() {
 
   const  {setLoggedIn, studentInfo, studentData} = useContext(AppContext)
 
-  // const check
-
   const signIn = (e) => {
     e.preventDefault();
     setLoading(true)
@@ -32,24 +30,25 @@ function StudentLogin() {
       method : "POST",
       body : JSON.stringify(loginData),
       headers : {
-        "Content-Type" : "application/json",
-        "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
+        "Content-Type" : "application/json"
       }
     })
-    .then(response => response.json())
+    .then(response => response.json()) 
     .then (data => {
-      data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data)) : ""
+      data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data.loggedin)) : "";
       setLoading(false)
-      setData(data)
       data.success ? setLoggedIn(true) : ""
-      data.success ? navigate("/student/dashboard") : ""
+      data.success ? (studentInfo?.path == null || studentInfo?.path == undefined || studentInfo?.path == "NULL " ? navigate("/student/dashboard/lessons") : navigate("/student/dashboard")) : ""
     })
     .catch((err) => {
       setLoginError(err)
       setLoading(false)
+      console.log(err)
     })
 
   }
+
+  // console.log(studentInfo)
 
   const checkData = () => {
     if(data !== null && data !== undefined){

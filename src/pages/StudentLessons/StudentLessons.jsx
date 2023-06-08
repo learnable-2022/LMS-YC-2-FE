@@ -15,34 +15,36 @@ function StudentLessons() {
     
 
     return(
-        <div>
-           <UserDashboardNav /> 
-        
+        <div className = {styles.container}>
+           <UserDashboardNav navTitle = "Lessons"/> 
+
+           <div className= {styles.body}>
             <div className={styles.studentStats}>
-                <StudentStats />
-            </div>
-
-            <div className= {styles.studentCoursesContainer}>
-                <h2>Choose a course to learn</h2>
-
-
-                <div className= {styles.studentCourses}>
-                    {Courses.map((course, index) => (
-                        <Card bgColor = "white" key = {index}>
-                            <div className= {styles.courseImg}>
-                                <img src= {course.img} alt=""/>
-                            </div>
-                            <h3>{course.title}</h3>
-                            <p>{course.desc}</p>
-
-                            <NavLink to = {`enroll/${course.courseName}`} onClick = {() => setCourseIndex(index)}
-                                
-                            >Select Course</NavLink>
-                        </Card>
-                    ))}  
+                    <StudentStats />
                 </div>
-                
-            </div>
+
+                <div className= {styles.studentCoursesContainer}>
+                    <h2>Choose a course to learn</h2>
+
+
+                    <div className= {styles.studentCourses}>
+                        {Courses.map((course, index) => (
+                            <Card bgColor = "white" key = {index}>
+                                <div className= {styles.courseImg}>
+                                    <img src= {course.img} alt=""/>
+                                </div>
+                                <h3>{course.title}</h3>
+                                <p>{course.desc}</p>
+
+                                <NavLink to = {`enroll/${course.courseName}`} onClick = {() => setCourseIndex(index)}>Select Course</NavLink>
+                            </Card>
+                        ))}  
+                    </div>
+                    
+                </div>
+           </div>
+        
+            
            
         </div>
     )

@@ -1,20 +1,23 @@
+.body{
+    padding: 0 2rem;
+}
 .studentStats{
     margin-top: 2rem;
 }
 .studentCoursesContainer{
-    margin: 3rem 0;
+    margin: 3rem 0 1rem;
 }
 .studentCourses{
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-    row-gap: 1rem;
+    gap: 1rem;
     margin-top: 1rem;
 }
 .studentCourses > div{
     padding: 0.5rem;
     position: relative;
+    /* width: 250px; */
     height: 320px;
 }
 .courseImg img{
@@ -49,4 +52,35 @@
     background-color: #F8A711;
     cursor: pointer;
     
+}
+
+/* ---------------------------------------------------------------------MOBILE RESPONSIVENESS-------------------------------------------------------------- */
+@media screen and (max-width : 1024px){
+    .studentCourses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
+@media screen and (max-width : 600px){
+    .body{
+        padding: 1rem ;
+    }
+    .studentCourses{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .studentCourses > div{
+        width: fit-content;
+        height: 270px;
+    }
+    .courseImg img{
+        width: 150px;
+    }
+    .studentCourses h3{
+        font-size: 1rem;
+    }
+    .studentCourses p{
+        font-size: 0.7rem;
+    }
 }

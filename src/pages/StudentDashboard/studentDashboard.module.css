@@ -1,5 +1,5 @@
 .dashboard{
-    /* display: flex; */
+    padding: 2rem;
 }
 .majorDashboardPart{
     /* width: 65%; */
@@ -33,7 +33,7 @@
 }
 .welcomeUser img{
     height: 10rem;
-    z-index: 300;
+    z-index: 100;
 }
 .welcomeUserContainer > img{
     position: absolute;
@@ -84,4 +84,51 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* --------------------------------------------------------------------------MEDIA QUERIES------------------------------------------------------------ */
+@media screen and (max-width : 600px) {
+    .majorDashboardPart > .topStudents{
+        display: none;
+    }
+    .welcomeUserContainer{
+        width: 100%;
+        border-bottom-right-radius: 0;
+        padding: 1rem;
+        padding-right: 0;
+    }
+    .welcomeUser{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .welcomeUser img{
+        width: auto;
+        height: 8rem;
+        z-index: 100;
+    }
+    .welcomeUserContainer > img{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 5rem;
+    }
+    .welcomeUserContents p{
+        max-width: 200px;
+        font-size: 0.7rem;
+    }
+    .welcomeUserContents h2{
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .dashboard{
+        padding: 0 1rem ;
+    }
+    .activityCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }

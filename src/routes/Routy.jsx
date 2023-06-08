@@ -17,6 +17,7 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
+import ProductNav from "../components/ProductDesignNavBar/ProductNav";
 import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
@@ -25,28 +26,31 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
-import NotFound from "../pages/ErrorPage/NotFound";
+import ProtectedRoutes from "../ProtectedRoute";
+import { useContext } from "react";
 
-const Routy = () => {
+  const Routy = () => {
+
+  const {studdntInfo} = useContext
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<LandingPage />} />
 
         {/* STUDENT DASHBOARD */}
-        <Route path="/student/dashboard" element={<StudentSidebar />}>
-          <Route index element={<StudentDashboard />} />
-          <Route path="studentMessage" element={<StudentMessage />} />
-          <Route path="studentQuiz" element={<StudentQuiz />} />
-          <Route path="studentLessons" element={<StudentLessons />}>
-            {/* <Route path = "frontend" ></Route> */}
+        {/* <Route element = {<ProtectedRoutes />}> */}
+          <Route path="/student/dashboard" element={<StudentSidebar />}>
+            <Route index element={<StudentDashboard />} />
+            <Route path="studentMessage" element={<StudentMessage />} />
+            <Route path="studentQuiz" element={<StudentQuiz />} />
+            <Route path = "lessons" element = {<StudentLessons />}>
+              {/* <Route path = "frontend" ></Route> */}
+            </Route>
+            <Route path = "profile" element = {<StudentProfile />} />
+            <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
           </Route>
-          <Route path="profile" element={<StudentProfile />} />
-          <Route
-            path="studentLessons/enroll/:courseName"
-            element={<LessonsApply />}
-          />
-        </Route>
+        {/* </Route> */}
+        
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
@@ -75,6 +79,10 @@ const Routy = () => {
         </Route>
 
         <Route path="*" element={<NotFound />} />
+        {/* PRODUCT DESIGN SECTION */}
+        <Route path = 'productDesign' element = {<ProductNav />} >
+
+        </Route>
       </>
     )
   );
