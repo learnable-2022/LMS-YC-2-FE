@@ -59,11 +59,12 @@ function LessonsApply() {
     }
 
     const getUsers = () => {
-        const response = fetch("https://learnz.onrender.com/api/v1/user/64810669bc4275487a26583d3", {
+        const response = fetch("/api/user/648161eaafcd38ffc7bea51a", {
             method : "GET",
-            headers: {
-                "Content-Type" : "application/json"
-            }
+            credentials : "include"
+            // headers: {
+            //     "Content-Type" : "application/json"
+            // }
         })
         .then(response => response.json())
         .then(data => console.log(data))

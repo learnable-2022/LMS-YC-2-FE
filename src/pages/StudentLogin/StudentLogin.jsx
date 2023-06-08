@@ -35,6 +35,7 @@ function StudentLogin() {
     })
     .then(response => response.json()) 
     .then (data => {
+      console.log(data)
       data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data.loggedin)) : "";
       setLoading(false)
       data.success ? setLoggedIn(true) : ""

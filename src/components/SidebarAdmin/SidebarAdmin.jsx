@@ -71,8 +71,9 @@ function SidebarAdmin() {
             </div>
 
             <main>
+              <div className = {styles.maincontainer}>
                 <Outlet />
-                
+              </div>
             </main>
         </div>
     )

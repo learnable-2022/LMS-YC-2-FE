@@ -45,7 +45,6 @@ function StudentSidebar() {
     if(window.confirm("Do you want to log out")){
       const response = fetch("https://learnz.onrender.com/api/v1/user/logout", {
       method : "POST",
-      withCredentials : true,
       headers : {
         "Content-Type": "application/json"
       }
