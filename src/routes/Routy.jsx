@@ -26,6 +26,7 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
+import NotFound from "../pages/ErrorPage/NotFound"
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
 
@@ -54,30 +55,31 @@ import { useContext } from "react";
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
-          <Route index element = {<LoginOptions />} />
-          <Route path = "student" element = {<StudentLogin />} />
+          <Route index element={<LoginOptions />} />
+          <Route path="student" element={<StudentLogin />} />
         </Route>
-        
+
         {/* STUDENT SIGN UP PAGE */}
-        <Route path = "signup" element = {<StudentFormNavbar />}>
-          <Route index element = {<SignUpOptions />} />
-          <Route path = "student" element = {<StudentSignUp />}/>
+        <Route path="signup" element={<StudentFormNavbar />}>
+          <Route index element={<SignUpOptions />} />
+          <Route path="student" element={<StudentSignUp />} />
         </Route>
 
         {/* ADMIN DASHBOARD */}
-        <Route path = "/admin/dashboard" element = {<SidebarAdmin />}>
-          <Route index element = {<AdminOverview />} />
-          <Route path = "lessons" element = {<LessonOverview />} />
+        <Route path="/admin/dashboard" element={<SidebarAdmin />}>
+          <Route index element={<AdminOverview />} />
+          <Route path="lessons" element={<LessonOverview />} />
         </Route>
 
         {/* ADMIN PAGEs */}
-        <Route path = "admin" element = {<AdminNavbar />}>
-          <Route path = "login" element = {<AdminLogin />} />
-          <Route path = "signup" element = {<AdminSignUp />} />
-          <Route path = "forgotPassword" element = {<ForgotPasswordAdmin />} />
-          <Route path = "welcome" element = {<WelcomeAdmin />} />
+        <Route path="admin" element={<AdminNavbar />}>
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="signup" element={<AdminSignUp />} />
+          <Route path="forgotPassword" element={<ForgotPasswordAdmin />} />
+          <Route path="welcome" element={<WelcomeAdmin />} />
         </Route>
 
+        <Route path="*" element={<NotFound />} />
         {/* PRODUCT DESIGN SECTION */}
         <Route path = 'productDesign' element = {<ProductNav />} >
 
@@ -93,4 +95,3 @@ import { useContext } from "react";
 };
 
 export default Routy;
-
