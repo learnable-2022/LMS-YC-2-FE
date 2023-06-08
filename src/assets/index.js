@@ -81,7 +81,7 @@ export {default as PlaceholderImg} from "./images/PlaceholderImg.png"
 export {default as ArrowDownIcon} from "./images/ArrowDownIcon.png"
 export {default as TripleDotsIcon} from "./images/TripleDotsIcon.png"
 export {default as DeleteIcon} from "./images/DeleteIcon.png"
-export {default as ImageIcon} from "./images/ImageIcon.png"
+export {default as ImageIcon} from "./images/imageIcon.png"
 export {default as ScreenshotImg} from "./images/ScreenshotImg.png"
 
 //STUDENT DASHBOARD MESSAGE
