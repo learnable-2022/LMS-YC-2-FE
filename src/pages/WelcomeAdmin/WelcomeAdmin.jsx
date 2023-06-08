@@ -1,5 +1,6 @@
 import styles from "./welcomeAdmin.module.css"
 import { Lessons, GreaterThan, Analytics, AdminWelcome } from "../../assets"
+import { NavLink } from "react-router-dom"
 
 function WelcomeAdmin() {
     return (
@@ -8,7 +9,7 @@ function WelcomeAdmin() {
             <p>Here's what you can do today</p>
 
             <div className= {styles.adminOptions}>
-                <div className= {styles.createLessons}>
+                <NavLink to = "/admin/dashboard/createLesson" className= {styles.createLessons}>
                     <div className= {styles.optionIcon} >
                         <img src= {Lessons} alt=""/>
                     </div>
@@ -16,9 +17,9 @@ function WelcomeAdmin() {
                         <p>Jump right in and create Lessons</p>
                         <img src= {GreaterThan} alt="" id = {styles.next}/> 
                     </div>
-                </div>
+                </NavLink>
 
-                <div className= {styles.studentsAnalytics}>
+                <NavLink to = "/admin/dashboard" className= {styles.studentsAnalytics}>
                     <div className= {styles.optionIcon} >
                         <img src= {Analytics} alt=""/>
                     </div>
@@ -28,7 +29,7 @@ function WelcomeAdmin() {
                         <img src= {GreaterThan} alt="" id = {styles.next}/>
                     </div>
                     
-                </div>
+                </NavLink>
             </div>
 
             <div className = {styles.bgBlur}></div>

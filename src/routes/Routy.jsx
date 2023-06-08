@@ -29,6 +29,8 @@ import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import NotFound from "../pages/ErrorPage/NotFound"
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
+import EmptyStatePage from "../pages/EmptyStatePage/EmptyStatePage";
+import CoursePage from "../pages/CoursePage/CoursePage";
 
   const Routy = () => {
 
@@ -69,6 +71,7 @@ import { useContext } from "react";
         <Route path="/admin/dashboard" element={<SidebarAdmin />}>
           <Route index element={<AdminOverview />} />
           <Route path="lessons" element={<LessonOverview />} />
+          <Route path = "createLesson" element = {<EmptyStatePage />} />
         </Route>
 
         {/* ADMIN PAGEs */}
@@ -81,8 +84,8 @@ import { useContext } from "react";
 
         <Route path="*" element={<NotFound />} />
         {/* PRODUCT DESIGN SECTION */}
-        <Route path = 'productDesign' element = {<ProductNav />} >
-
+        <Route path = '/student/course' element = {<ProductNav />} >
+          <Route index element = {<CoursePage />} />
         </Route>
       </>
     )
