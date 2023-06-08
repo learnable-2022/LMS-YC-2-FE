@@ -17,6 +17,7 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
+import ProductNav from "../components/ProductDesignNavBar/ProductNav";
 import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
@@ -28,8 +29,7 @@ import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
 
-
-const Routy = () => {
+  const Routy = () => {
 
   const {studdntInfo} = useContext
   const router = createBrowserRouter(
@@ -78,7 +78,10 @@ const Routy = () => {
           <Route path = "welcome" element = {<WelcomeAdmin />} />
         </Route>
 
-        
+        {/* PRODUCT DESIGN SECTION */}
+        <Route path = 'productDesign' element = {<ProductNav />} >
+
+        </Route>
       </>
     )
   );
