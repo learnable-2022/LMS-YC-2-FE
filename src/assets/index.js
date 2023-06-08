@@ -85,11 +85,10 @@ export { default as MessageImage5} from "./images/MessageImage5.png"
 export { default as MessageImage6} from "./images/MessageImage6.png" 
 export { default as MessageImage7} from "./images/MessageImage7.png" 
 
-<<<<<<< HEAD
 // PRODUCT DESIGN SESSION
 export { default as productImage} from "./images/productLogo.png"
 export { default as productArrow} from "./images/ProductArrow.png"
-=======
+
 //STUDENT LESSONS
 export { default as Lesson1} from "./images/Lesson1.png" 
 export { default as Lesson2} from "./images/Lesson2.png" 
@@ -99,7 +98,6 @@ export { default as Lesson5} from "./images/Lesson5.png"
 export { default as Lesson6} from "./images/Lesson6.png" 
 export { default as Lesson7} from "./images/Lesson7.png" 
 export { default as Lesson8} from "./images/Lesson8.png" 
->>>>>>> testing
 
 // FOOTER
 export { default as YellowLogo } from "./images/yellowLogo.png"

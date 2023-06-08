@@ -17,7 +17,7 @@ import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/WelcomeAdmin/WelcomeAdmin";
 import StudentFormNavbar from "../components/StudentFormNavbar/StudentFormNavbar";
-import ProductNav from "../components/ProductDesignNavBar/ProductNAv";
+import ProductNav from "../components/ProductDesignNavBar/ProductNav";
 import StudentLessons from "../pages/StudentLessons/StudentLessons";
 import StudentProfile from "../pages/StudentProfile/StudentProfile";
 import LessonsApply from "../pages/LessonsApply/LessonsApply";
