@@ -1,0 +1,228 @@
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    font-style: normal;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.navigation {
+    width: 1190px;
+    height: 100vh;
+    background-color: #EFF2F8;
+}
+
+.navigation .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+    height: 65px;
+    background-color: #FFFFFF;
+}
+
+.leftside p {
+    color: #4F4F4F;
+    font-size: 16px;
+}
+
+.rightside {
+    display: flex;
+    padding: 10px;
+}
+
+.rightside input {
+    width: 388px;
+    background-color: #C3CAD9;
+    height: 40px;
+    margin-right: 70px;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+
+.rightside .profile {
+    display: flex;
+    align-items: center;
+}
+
+.rightside .profile .profileIcon {
+    margin-right: 10px;
+    padding: 5px 15px;
+    color: #F8A711;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px  #e7e6e6;
+}
+
+.rightside .profile .profileIcon h1 {
+    font-size: 20px;
+}
+
+.rightside .profileName p {
+    font-size: 14px;
+}
+
+.rightside .profileName span {
+    color: #F8A711;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0 0 40px;
+}
+
+.back .backName {
+    color: #F8A711;
+}
+
+
+.mainSection {
+    width: 1040px;
+    height: 120vh;
+    position: relative;
+    margin-top: -35rem;
+    margin-left: 17rem;
+    background-color: #EFF2F8;
+}
+
+.mainSection .dashedBox {
+    width: 1000px;
+    height: 91px;
+    border: 1px dashed black;
+    margin: 30px 0 20px 30px;
+}
+
+.mainSection .uploadImg {
+   text-align: center;
+   margin: 25px 0;
+}
+
+.mainSection .uploadImg p {
+    font-size: 12px;
+    color: #333333;
+}
+
+.mainSection  .lessonTitle p {
+    padding: 0 0 0 30px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333333;
+}
+
+.mainSection  .lessonTitle .titleBox {
+    width: 1000px;
+    height: 40px;
+    background: #BDBDBD;
+    border-radius: 5px;
+    margin: 10px 0 0 30px;
+}
+
+.mainSection  .lessonTitle .titleBox p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #4F4F4F;
+    padding: 10px 20px;
+}
+
+.mainSection .lessonContent {
+    margin: 20px 0 30px 30px;
+}
+
+.mainSection .lessonContent p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #4F4F4F;
+    padding-bottom: 10px;
+}
+
+.mainSection .answersSection {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 30px;
+}
+
+.mainSection .Answers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 423px;
+    height: 41px;
+    padding: 0 10px;
+    background: #BFBFBF;
+}
+
+.mainSection .Answers p {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.mainSection .deleteAnswer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    width: 68px;
+    height: 24px;
+    background: #C21313;
+    border-radius: 3px;
+}
+
+.mainSection .correctAnswer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.mainSection .correctAnswer p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.mainSection .circleAnswer {
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: 1px solid #E9C335;
+}
+
+.mainSection .addAnswers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    margin: 30px 0 10px 30px;
+    color: #F8A711;
+    font-weight: 500;
+   
+}
+
+.mainSection .addAnswers p {
+    font-size: 12px;
+}
+
+.mainSection .footerButton {
+    float: right;
+    margin: 20px 20px 0 0;
+}
+
+.mainSection .footerButton button {
+    width: 140px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 5px;
+    background-color: #F2994A;
+}

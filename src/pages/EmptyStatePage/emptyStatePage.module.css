@@ -1,0 +1,202 @@
+.box {
+    width: 100%;
+    height: 250vh;
+    background-color: #EFF2F8;
+}
+
+
+.sidebar {
+    height: 100vh;
+    width: 20%;
+    background-color: #FFFFFF;
+}
+
+
+
+.navigation {
+    width: 80%;
+    background-color: #FFFFFF;
+    height: 10vh;
+    top: 0;
+    left: 20%;
+    position: absolute;
+}
+
+
+
+.mainSection {
+    width: 1040px;
+    height: 230vh;
+    position: relative;
+    margin-top: -35rem;
+    margin-left: 17rem;
+    padding: 0 30px;
+    background-color: #EFF2F8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainSection .mainSectionLeft {
+    padding: 0 0 0 20px;
+    
+}
+
+.mainSectionLeft .lesson {
+    margin: 0 0 50px 0;
+}
+
+.mainSectionLeft .lesson h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+.mainSectionLeft .lesson p {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 5px 0;
+    width: 70%;
+    color: #A098AE;
+}
+
+.mainSectionLeft .lesson .rectangle {
+    width: 580px;
+    height: 100px;
+    margin-top: 15px;
+    background: #FEEDCF;
+}
+
+
+.mainSectionLeft .lesson .rectangle p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+    padding: 25px 50px;
+}
+
+.mainSectionLeft .lesson .rectanglebox {
+    width: 500px;
+    height: 300px;
+    border: 1.6717px dashed #F8A711;
+    background: #FFF5E3;
+    border-radius: 4.17924px;
+    margin-top: 20px;
+}
+
+.mainSectionLeft .lesson .rectanglebox .profilePic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #BDBDBD;
+    text-align: center;
+    margin: 50px 0 0 200px;
+}
+
+.mainSectionLeft .lesson .rectanglebox .text {
+    width: 30rem; 
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.mainSectionLeft .lesson .rectanglebox .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainSectionLeft .lesson .rectanglebox .button .save {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #F8A711;
+    border: 1px solid #F8A711;
+    border-radius: 5px;
+    padding: 5px;
+    width: 130px;
+    margin: 0 20px;
+}
+
+.mainSectionLeft .rectangleImg {
+    width: 700px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.mainSectionLeft .rectangleImg .resourceRectangle {
+    background: #FFF5E3;
+    height: 200px;
+    margin-top: 0;
+}
+
+.mainSectionLeft .rectangleImg .resourceRectangle p {
+    text-align: center;
+    padding: 50px 0 20px 150px;
+}
+
+
+.mainSectionLeft .uploadButton button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #F8A711;
+    border: 1px solid #F8A711;
+    border-radius: 5px;
+    padding: 5px;
+    width: 130px;
+}
+
+.mainSection .mainSectionRight {
+    width: 300px;
+}
+
+.mainSectionRight .boxModel {
+    width: 220px;
+    height: 114px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 60px;
+}
+
+.mainSectionRight .boxList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSectionRight .boxModel .boxList img {
+    margin: 25px 20px 0 0;
+}
+
+.mainSectionRight .boxModel p {
+    padding: 30px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainSectionRight .boxModel h3 {
+    padding: 0 0 0 25px;
+    font-size: 25px;
+}
+
+.mainSectionRight .boxReport {
+    width: 220px;
+    height: 68px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 60px;
+}
+
+.mainSectionRight .boxReport .boxList p {
+    padding: 20px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainSectionRight .boxReport .boxList img {
+    margin: 25px 20px 0 0;
+}
