@@ -16,8 +16,9 @@
     align-items: center;
     margin: 2rem 0;
     gap: 2rem;
+    padding: 1rem 0;
 }
-.adminOptions > div{
+.adminOptions > a{
     background-color: #FEEDCF;
     padding: 1rem 2rem;
     box-shadow: 0px 6.79211px 9.05615px -6.79211px rgba(24, 39, 75, 0.12), 0px 9.05615px 18.1123px -6.79211px rgba(24, 39, 75, 0.08);

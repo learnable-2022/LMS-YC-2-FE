@@ -1,10 +1,20 @@
+.Cont{
+  display: flex;
+  height: 100vh;
+  background-color: #e9ebed;
+  overflow-y: auto;
+}
+.nav{
+  width: 100%;
+  height: 100vh;
+}
 li {
   list-style: none;
 }
 a {
   color: #000000;
 }
-.Cont {
+/* .Cont {
   display: flex;
   height: 100vh;
   overflow: auto;
@@ -12,7 +22,7 @@ a {
 .Cont nav {
   width: 20%;
   height: 100vh;
-}
+} */
 .wrap {
   width: 50%;
   margin: auto;
