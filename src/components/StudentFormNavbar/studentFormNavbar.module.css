@@ -1,5 +1,5 @@
 .container {
-    background-color: #b0c4dd;
+    background-color: #E5EAF8;
     padding: 1rem  4rem;
     min-height: 100vh;
 }
@@ -12,5 +12,11 @@
 @media screen and (max-width : 600px) {
     .container{
         padding: 2rem;
+    }
+}
+
+@media screen and (max-width : 390px) {
+    .container{
+        padding: 1rem;
     }
 }
