@@ -26,6 +26,7 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
+import NotFound from "../pages/ErrorPage/NotFound"
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
 
