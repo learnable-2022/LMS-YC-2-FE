@@ -82,7 +82,7 @@ export {default as ArrowDownIcon} from "./images/ArrowDownIcon.png"
 export {default as TripleDotsIcon} from "./images/TripleDotsIcon.png"
 export {default as DeleteIcon} from "./images/DeleteIcon.png"
 export {default as ImageIcon} from "./images/imageIcon.png"
-export {default as ScreenshotImg} from "./images/ScreenshotImg.png"
+export {default as ScreenshotImg} from "./images/screenshotimg.png"
 
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 
