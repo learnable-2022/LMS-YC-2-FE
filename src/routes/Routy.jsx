@@ -26,13 +26,12 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
-import NotFound from "../pages/ErrorPage/NotFound"
+import NotFound from "../pages/ErrorPage/NotFound";
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
 
-  const Routy = () => {
-
-  const {studdntInfo} = useContext
+const Routy = () => {
+  const { studdntInfo } = useContext;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -40,18 +39,17 @@ import { useContext } from "react";
 
         {/* STUDENT DASHBOARD */}
         {/* <Route element = {<ProtectedRoutes />}> */}
-          <Route path="/student/dashboard" element={<StudentSidebar />}>
-            <Route index element={<StudentDashboard />} />
-            <Route path="studentMessage" element={<StudentMessage />} />
-            <Route path="studentQuiz" element={<StudentQuiz />} />
-            <Route path = "lessons" element = {<StudentLessons />}>
-              {/* <Route path = "frontend" ></Route> */}
-            </Route>
-            <Route path = "profile" element = {<StudentProfile />} />
-            <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
+        <Route path="/student/dashboard" element={<StudentSidebar />}>
+          <Route index element={<StudentDashboard />} />
+          <Route path="studentMessage" element={<StudentMessage />} />
+          <Route path="studentQuiz" element={<StudentQuiz />} />
+          <Route path="lessons" element={<StudentLessons />}>
+            {/* <Route path = "frontend" ></Route> */}
           </Route>
+          <Route path="profile" element={<StudentProfile />} />
+          <Route path="lessons/enroll/:courseName" element={<LessonsApply />} />
+        </Route>
         {/* </Route> */}
-        
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
@@ -79,11 +77,10 @@ import { useContext } from "react";
           <Route path="welcome" element={<WelcomeAdmin />} />
         </Route>
 
-        <Route path="*" element={<NotFound />} />
         {/* PRODUCT DESIGN SECTION */}
-        <Route path = 'productDesign' element = {<ProductNav />} >
+        <Route path="productDesign" element={<ProductNav />}></Route>
 
-        </Route>
+        <Route path="*" element={<NotFound />} />
       </>
     )
   );
