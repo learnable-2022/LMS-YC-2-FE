@@ -37,10 +37,16 @@ function StudentDashboard() {
       
 
   }
+  console.log(document.cookie)
 
   useEffect(() => {
     getFirstName()
-  })
+    // console.log(document.cookie)
+  }, [])
+
+  
+
+ 
 
   return (
     <div className={styles.container}>

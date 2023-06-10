@@ -12,7 +12,7 @@ const ProductNav = () => {
   };
   return (
     <div className={Product.Cont}>
-      <nav>
+      <nav className = {Product.nav}>
         <div className={Product.logo}>
           <img src={LogoSvg} alt="" />
           <h3>Learn.Z</h3>
