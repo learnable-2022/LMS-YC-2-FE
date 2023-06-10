@@ -27,13 +27,13 @@ const StudentSidebarList = [
         id: 3,
         logo: <MdAssignment/>,
         name: 'Assignments',
-        link: "/student/dashboard"
+        link: "assignments"
     },
     {
         id: 4,
         logo: <TiMessages/>,
         name: 'Messages',
-        link: "/student/dashboard"
+        link: "message"
     },
     {
         id:5,

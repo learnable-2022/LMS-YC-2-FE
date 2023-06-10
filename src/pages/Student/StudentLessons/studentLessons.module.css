@@ -1,0 +1,86 @@
+.body{
+    padding: 0 2rem;
+}
+.studentStats{
+    margin-top: 2rem;
+}
+.studentCoursesContainer{
+    margin: 3rem 0 1rem;
+}
+.studentCourses{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.studentCourses > div{
+    padding: 0.5rem;
+    position: relative;
+    /* width: 250px; */
+    height: 320px;
+}
+.courseImg img{
+    width: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: auto;
+}
+.studentCourses h3{
+    max-width: 200px;
+    margin: 0.5rem 0;   
+}
+.studentCourses p{
+    max-width: 200px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+.studentCourses a{
+    margin-top: 1rem;
+    color: #F8A711;
+    border: 1px solid #F8A711;
+    background-color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3%;
+}
+.studentCourses a:hover{
+    color: white;
+    background-color: #F8A711;
+    cursor: pointer;
+    
+}
+
+/* ---------------------------------------------------------------------MOBILE RESPONSIVENESS-------------------------------------------------------------- */
+@media screen and (max-width : 1024px){
+    .studentCourses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
+@media screen and (max-width : 600px){
+    .body{
+        padding: 1rem ;
+    }
+    .studentCourses{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .studentCourses > div{
+        width: fit-content;
+        height: 270px;
+    }
+    .courseImg img{
+        width: 150px;
+    }
+    .studentCourses h3{
+        font-size: 1rem;
+    }
+    .studentCourses p{
+        font-size: 0.7rem;
+    }
+}
