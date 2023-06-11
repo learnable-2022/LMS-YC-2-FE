@@ -134,3 +134,9 @@ export { default as Kid6} from "./images/Kid6.png"
 
 // ERROR PAGE
 export { default as ErrorImage} from "./images/Error.png"
+
+
+// CERTIFICATE PAGE
+export { default as upperFrameImg} from "./images/upperFrameImg.png"
+export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
+export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
