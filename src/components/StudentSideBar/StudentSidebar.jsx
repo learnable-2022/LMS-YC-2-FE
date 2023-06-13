@@ -1,7 +1,7 @@
 import styles from "./studentSidebar.module.css";
 import {LogoSvg} from "../../assets";
 import { useState, useContext} from "react";
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import AppContext from "../../context/Appcontext"
 import StudentSidebarList from "./StudentSidebarList";
@@ -10,47 +10,35 @@ import { MdLogout } from "react-icons/md";
 
 function StudentSidebar() {
   // const [links, setLinks] = useState()
-  const { studentData, showNav, setShowNav} = useContext(AppContext)
+  const { setStudentInfo, setStudentToken, showNav, setShowNav, studentToken, setStudentLoggedIn} = useContext(AppContext)
 
-  const activeLink = (e) => {
-    if (
-      e.target.classList.contains(styles.link) ||
-      e.target.parentElement.classList.contains(styles.link)
-    ) {
-      let links;
-      e.target.classList.contains(styles.link)
-        ? (links = Array.from(e.target.parentElement.children))
-        : (links = Array.from(e.target.parentElement.parentElement.children));
+  const [activeLink, setActiveLink] = useState("")
+  const navigate = useNavigate()
 
-      links.forEach((li) => {
-        if (li.classList.contains(styles.link)) {
-          li.classList.remove(styles.active);
-          if (
-            e.target.classList.contains(styles.link) ||
-            e.target.parentElement.classList.contains(styles.link)
-          ) {
-            e.target.classList.contains(styles.link)
-              ? e.target.classList.add(styles.active)
-              : e.target.parentElement.classList.add(styles.active);
-            li.classList.remove(styles.active);
-          } else {
-            e.target.classList.remove(styles.active);
-          }
-        }
-      });
-    }
-  };
+  const handleLinkClick = (link) => {
+    setActiveLink(link)
+  }
 
   const logout = () => {
     if(window.confirm("Do you want to log out")){
       const response = fetch("https://learnz.onrender.com/api/v1/user/logout", {
       method : "POST",
       headers : {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization" : `Bearer ${studentToken}`
       }
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data)
+      data.success ? window.localStorage.setItem("loggedIn", false) : window.localStorage.setItem("loggedIn", true);
+      data.success ? navigate("/login/student") : ""
+      data.success ?  window.localStorage.removeItem("student-status") : ""
+      data.success ? window.localStorage.removeItem("student-token") : ""
+      // data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
+      // data.success ? setStudentToken(JSON.parse(window.localStorage.getItem("student-token"))) : ""
+      // data.success ? setStudentLoggedIn(JSON.parse(window.localStorage.getItem("loggedIn"))) : ""
+    })
     .catch(err => console.log(err))
     }
     
@@ -68,12 +56,9 @@ function StudentSidebar() {
 
         <div className= {styles.links}>
             {StudentSidebarList.map((list, index) => (
-              <NavLink to = {`${list.link}`}  key = {index}>
-                <div className= {styles.link} onClick ={activeLink}>
+              <NavLink to = {`${list.link}`} className = {`${styles.link} ${activeLink === list.name ? styles.active : ""}`} key = {index} onClick = {() => handleLinkClick(list.name)} >  
                   {list.logo}  
                   <p>{list.name}</p>
-                </div>
-                  
               </NavLink>
             ))}
         </div>
@@ -85,6 +70,7 @@ function StudentSidebar() {
       </div>
       <main>
         <div className= {styles.mainContainer}>
+          {showNav && <div className={styles.overlay}></div>}
           <Outlet />
         </div>
         

@@ -1,0 +1,191 @@
+.container{
+    /* background-color: green; */
+}
+
+.mainSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+ }
+
+.mainSectionLeft {
+    width: 70%;
+    
+}
+
+.lesson {
+    margin: 0 0 50px 0;
+}
+
+.lesson h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #4F4F4F;
+}
+
+.lesson p {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 5px 0;
+    width: 70%;
+    color: #A098AE;
+}
+
+.lesson input, .lesson select {
+    width: 90%;
+    height: 100px;
+    background: #FEEDCF;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.lesson select{
+    height: 50px;
+}
+.lesson input::placeholder{
+    text-align: center;
+}
+.lesson .rectangle p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+    padding: 25px 50px;
+}
+.videoGroup{
+    margin-bottom: 50px;
+}
+.videoBox {
+    width: 90%;
+    height: 300px;
+    border: 1.6717px dashed #F8A711;
+    background: #FEEDCF;
+    border-radius: 4.17924px;
+    position: relative;
+}
+.videoCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.videoPic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #BDBDBD;
+    text-align: center;
+    margin: auto;
+    overflow-y: hidden;
+}
+.videoCont p{
+    font-weight: 400;
+    font-size: 12px;
+    width: 100%;
+    color: #A098AE;
+    margin: 5px auto;
+    text-align: center;
+}
+.videoPic img{
+    width: 100px;
+    display: block;
+    margin: auto;
+    height: 100%;
+    
+}
+.videoCont .inputGroup{
+    /* background-color: orange; */
+}
+.videoCont input{
+    display: block;
+    width: 20p;
+}
+.mainSectionLeft .rectangleImg {
+    width: 700px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.mainSectionLeft .rectangleImg .resourceRectangle {
+    background: #FFF5E3;
+    height: 200px;
+    margin-top: 0;
+}
+
+.mainSectionLeft .rectangleImg .resourceRectangle p {
+    text-align: center;
+    padding: 50px 0 20px 150px;
+}
+
+
+.mainSectionLeft .uploadButton button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #F8A711;
+    border: 1px solid #F8A711;
+    border-radius: 5px;
+    padding: 5px;
+    width: 130px;
+}
+.uploadBtn{
+    background-color: #f8a711;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+
+.mainSection .mainSectionRight {
+    width: 30%;
+}
+
+.mainSectionRight .boxModel {
+    width: 220px;
+    height: 114px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 60px;
+}
+
+.mainSectionRight .boxList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSectionRight .boxModel .boxList img {
+    margin: 25px 20px 0 0;
+}
+
+.mainSectionRight .boxModel p {
+    padding: 30px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainSectionRight .boxModel h3 {
+    padding: 0 0 0 25px;
+    font-size: 25px;
+}
+
+.mainSectionRight .boxReport {
+    width: 220px;
+    height: 68px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 60px;
+}
+
+.mainSectionRight .boxReport .boxList p {
+    padding: 20px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainSectionRight .boxReport .boxList img {
+    margin: 25px 20px 0 0;
+}

@@ -1,0 +1,136 @@
+.container {
+    width: 100%;
+    background:  #EFF2F8;
+    position: relative;
+}
+.main {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    margin: 50px 10px;
+}
+
+.textBox h1 {
+    font-size: 32px;
+    width: 213px;
+    padding-bottom: 10px;
+}
+
+.textBox p {
+    font-size: 16px;
+    width: 450px;
+}
+
+.inputContainer {
+    width: 35%;
+    min-height: 550px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    z-index: 300;
+    position: relative;
+}
+.inputContainer > img{
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+}
+
+.form {
+    padding: 50px;
+    z-index: 500;
+}
+
+.form h1 {
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+.dataMessage{
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: red;
+    animation: anim 1s ease;
+}
+.inputGroup input{
+    padding: 8px 15px !important;
+    margin-bottom: 10px;
+    min-width: 100%;
+    background-color: #E0E0E0 !important;
+    border: none !important;
+    border-radius: 3px;
+    outline: none;
+}
+.LabelItem {
+    width: 44px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    padding-top: 50px;
+}
+
+.loginBtn {
+    border-radius: 5px !important;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid  transparent!important;
+    color: #fff !important;
+    background-color: #F8A711;
+    transition: all 400ms ease;
+    text-align: center !important;
+}
+.loginBtn:hover {
+    border: 1px solid #F8A711 !important;
+    color: #F8A711 !important;
+    background-color: #FFF !important;
+}
+.loginBtn.disabled{
+    background-color: #ccc;
+    cursor: default;
+}
+.loginBtn > img{
+    height: 1.5rem ;
+    display: block;
+    margin: auto;
+}
+.formExtras{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.formExtras p{
+    font-size: 0.7rem;
+    color: #F8A711;
+}
+.formExtras a{
+    text-decoration: none;
+    color: #F8A711;
+}
+.dont{
+    color: black;
+}
+.formBlur{
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    filter: blur(50px);
+}
+.bgBlur{
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    filter: blur(100px);
+    
+}
