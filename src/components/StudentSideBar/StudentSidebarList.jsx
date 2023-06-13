@@ -1,14 +1,14 @@
-import { BsColumnsGap, BsFillCollectionFill, BsFillPersonFill } from "react-icons/bs";
+import {
+  BsColumnsGap,
+  BsFillCollectionFill,
+  BsFillPersonFill,
+} from "react-icons/bs";
 import { FaBookReader } from "react-icons/fa";
 import { MdAssignment, MdOutlineSettingsSuggest } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
 import { FcOvertime } from "react-icons/fc";
 import { VscReport } from "react-icons/vsc";
-import { GiPoliceBadge } from "react-icons/gi"
-
-
-
-
+import { GiPoliceBadge } from "react-icons/gi";
 
 const StudentSidebarList = [
     {

@@ -26,7 +26,7 @@ import LoginOptions from "../pages/LoginOptions/LoginOption";
 import AdminOverview from "../pages/Admin/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/Admin/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
-import NotFound from "../pages/ErrorPage/NotFound"
+import NotFound from "../pages/ErrorPage/NotFound";
 import ProtectedRoutes from "../ProtectedRoute";
 import { useContext } from "react";
 import CreateLesson from "../pages/Admin/CreateLesson/CreateLesson";
@@ -35,9 +35,8 @@ import AddAnswers from "../pages/AddAnswers/AddAnswers";
 import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssignments";
 
 
-  const Routy = () => {
-
-  const {studdntInfo} = useContext
+const Routy = () => {
+  const { studdntInfo } = useContext;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>

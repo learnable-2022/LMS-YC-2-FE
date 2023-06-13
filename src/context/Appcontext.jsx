@@ -45,7 +45,7 @@ export const AppProvider = ({children}) => {
         setStudentToken,
         setStudentLoggedIn,
         setAdminLoggedIn,
-        setAdminInfo,
+        setAdminInfo, 
         setAdminToken
    }}>
         {children}
