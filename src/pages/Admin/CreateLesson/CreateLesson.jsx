@@ -12,6 +12,7 @@ function EmptyStatePage() {
     const [path,setPath] = useState("")
     const [selectedFile, setSelectedFile] = useState("")
     const [previewUrl, setPreviewUrl] = useState("")
+    const [loading, setLoading] = useState(false)
     const {adminToken} = useContext(AppContext)
 
     const handleFileChange = (e) => {
@@ -33,48 +34,29 @@ function EmptyStatePage() {
     const uploadLesson = (e) => {
         e.preventDefault();
 
-        // const wee
+        setLoading(true)
 
-        const formData = {
-            title : title,
-            description: desc,
-            week: week,
-            path: path,
-            file : selectedFile
-        }
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("description", desc);
+        formData.append("week", week);
+        formData.append("track", path);
+        formData.append("file", selectedFile);
+
 
         const response = fetch("https://learnz.onrender.com/api/v1/admin/courses", {
             method : "POST",
-            body : JSON.stringify(formData),
+            body : formData,
             headers : {
-                "Content-Type" : "application/json",
-                "Authorization": `Beareer ${adminToken}`
+                "Authorization": `Bearer ${adminToken}`
             }
         })
         .then(res => res.json())
-        .then(data => console.log(data))
-
-        // if(selectedFile){
-        //     const videoData = {
-        //         file : selectedFile
-        //     }
-
-        //     const videoResponse = fetch("https://cloudinary://995592385629795:Lgm54RCpoZAGmk_YU8aVLB7nuW8@daqgw0ge2", {
-        //         method: "POST",
-        //         body: videoData
-        //         // headers : {
-        //         //     "Content-Type" : "application/json",
-        //         //     "Authorization": `Beareer ${adminToken}`
-        //         // }
-        //     })
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
-        // }
+        .then(data => {
+            console.log(data)
+            setLoading(false)
+        })
     }
-
-    useEffect(() => {
-        console.log(selectedFile)
-    })
 
   return (
 
@@ -83,14 +65,15 @@ function EmptyStatePage() {
         <div className={styles.box}>
             <div className={styles.mainSection}>
                 <div className={styles.mainSectionLeft}>
-                    <form onSubmit = {uploadLesson}>
+                    <form onSubmit = {uploadLesson} encType = "multipart/form-data">
                         <div className={styles.lesson}>
                             <h3>Lesson Title <img src={PenIcon} alt="" /> </h3>
                             <p>Add the title of your course. Keep it clear and interesting for your learners.</p>
 
                             <div className= {styles.inputGroup}>
                                 <input 
-                                    type= "text"   
+                                    type= "text"
+                                    name = "title"   
                                     placeholder= "Add Title" 
                                     value = {title} 
                                     onChange = {(e) => setTitle(e.target.value)} 
@@ -105,7 +88,8 @@ function EmptyStatePage() {
 
                             <div className= {styles.inputGroup}>
                                 <input 
-                                    type= "text"   
+                                    type= "text"  
+                                    name ="description" 
                                     placeholder= "Add Description" 
                                     value = {desc} 
                                     onChange = {(e) => setDesc(e.target.value)} 
@@ -134,6 +118,7 @@ function EmptyStatePage() {
                                     <div className={styles.inputGroup}>
                                         <input 
                                             type= "file" className={styles.save} 
+                                            name = "file"
                                             accept = "video/*" 
                                             onChange = {handleFileChange} 
                                             placeholder= "Add a video"
@@ -161,7 +146,7 @@ function EmptyStatePage() {
                             <h3>Lesson Path</h3>
                             <p>What path is this lesson for is it for the student.</p>
 
-                            <select name="path" value = {path} onChange = {(e) => setPath(e.target.value)}>
+                            <select name="track" value = {path} onChange = {(e) => setPath(e.target.value)}>
                                 <option value = "" disabled>Select Path</option>
                                 <option value="frontend">Frontend</option>
                                 <option value="backend">Backend</option>
@@ -170,7 +155,10 @@ function EmptyStatePage() {
                             </select>
                         </div>
 
-                        <button type = "submit" className = {styles.uploadBtn}>Upload Lesson</button>
+                        <button type = "submit" className = {styles.uploadBtn}>
+                            {!loading && "Upload Lesson"}
+                            {loading && "Loading"}
+                        </button>
 
                     </form>
                     
