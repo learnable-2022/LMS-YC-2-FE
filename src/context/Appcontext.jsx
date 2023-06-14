@@ -4,17 +4,21 @@ const AppContext = createContext()
 
 export const AppProvider = ({children}) => {
 
-    const [studentStatus, setStudentStatus] = useState()
-    const studentInfo = JSON.parse(window.localStorage.getItem("student-status"))
-    const adminInfo = JSON.parse(window.localStorage.getItem("admin-status"))
+    const [studentInfo, setStudentInfo] = useState(JSON.parse(window.localStorage.getItem("student-status")))
+    const [adminInfo, setAdminInfo] = useState(JSON.parse(window.localStorage.getItem("admin-status")))
+    const [studentLoggedIn, setStudentLoggedIn] = useState(JSON.parse(window.localStorage.getItem("loggedIn")))
+    const [adminLoggedIn, setAdminLoggedIn] = useState(JSON.parse(window.localStorage.getItem("admin-loggedIn")))
     const [courseIndex, setCourseIndex] = useState("")
+    const [showNav, setShowNav] = useState(false)
+    const [studentToken, setStudentToken] = useState(JSON.parse(window.localStorage.getItem("student-token")))
+    const [adminToken, setAdminToken] = useState(JSON.parse(window.localStorage.getItem("admin-token")))
 
     const [adminData, setAdminData] = useState({
         email: "",
         password: ""
     })
     
-    const [studentData, setStudentData] = useState({
+    const studentData = {
         parent_name: "",
         email: "",
         relationship: "",
@@ -23,21 +27,26 @@ export const AppProvider = ({children}) => {
         DOB: "",
         password: "",
         gender: ""
-    })
-    const [loggedIn, setLoggedIn] = useState(false)
-    const [studentSignedUp, setStudentSignedUp] = useState(false)
+    }
     return <AppContext.Provider value = {{
         studentData,
-        loggedIn,
-        studentStatus,
+        studentLoggedIn,
+        adminLoggedIn,
         studentInfo,
         adminInfo,
         adminData,
         courseIndex,
-        setLoggedIn,
-        setStudentSignedUp,
-        setStudentStatus,
-        setCourseIndex
+        showNav,
+        studentToken,
+        adminToken,
+        setStudentInfo,
+        setShowNav,
+        setCourseIndex,
+        setStudentToken,
+        setStudentLoggedIn,
+        setAdminLoggedIn,
+        setAdminInfo, 
+        setAdminToken
    }}>
         {children}
     </AppContext.Provider>

@@ -1,6 +1,8 @@
 .container{
-    margin-top: 3rem;
-    background-color: #C8C8C8;
+    /* padding: 3rem; */
+}
+.main{
+    padding: 2rem;
 }
 .courseDuration, .courseStart{
     display: flex;

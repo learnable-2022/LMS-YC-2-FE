@@ -72,6 +72,17 @@ export {default as Lessons} from "./images/lessons.png"
 export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
+export {default as ExtraResourceImg} from "./images/ExtraResourceImg.png"
+
+//GAMIFICATION
+export {default as BackIcon} from "./images/BackIcon.png"
+export {default as PenIcon} from "./images/PenIcon.png"
+export {default as PlaceholderImg} from "./images/PlaceholderImg.png"
+export {default as ArrowDownIcon} from "./images/ArrowDownIcon.png"
+export {default as TripleDotsIcon} from "./images/TripleDotsIcon.png"
+export {default as DeleteIcon} from "./images/DeleteIcon.png"
+export {default as ImageIcon} from "./images/imageIcon.png"
+export {default as ScreenshotImg} from "./images/screenshotImg.png"
 
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 
@@ -84,6 +95,10 @@ export { default as MessageImage4} from "./images/MessageImage4.png"
 export { default as MessageImage5} from "./images/MessageImage5.png" 
 export { default as MessageImage6} from "./images/MessageImage6.png" 
 export { default as MessageImage7} from "./images/MessageImage7.png" 
+
+// PRODUCT DESIGN SESSION
+export { default as productImage} from "./images/productLogo.png"
+export { default as productArrow} from "./images/ProductArrow.png"
 
 //STUDENT LESSONS
 export { default as Lesson1} from "./images/Lesson1.png" 
@@ -107,3 +122,15 @@ export { default as SMS } from "./images/sms.png"
 
 // LESSONS 
 export { default as CalendarIcon } from "./images/CalendarIcon.png"
+
+//ADMIN LESSONS OVERVIEW PAGE
+export { default as Kid1} from "./images/Kid1.jfif"
+export { default as Kid2} from "./images/Kid2.png"
+export { default as Kid3} from "./images/Kid3.png"
+export { default as Kid4} from "./images/Kid4.png"
+export { default as Kid5} from "./images/Kid5.png"
+export { default as Kid6} from "./images/Kid6.png"
+
+
+// ERROR PAGE
+export { default as ErrorImage} from "./images/Error.png"

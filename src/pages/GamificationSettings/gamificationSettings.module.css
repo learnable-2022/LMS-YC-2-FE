@@ -1,0 +1,285 @@
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    font-style: normal;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.navigation {
+    width: 1190px;
+    height: 100vh;
+    background-color: #EFF2F8;
+}
+
+.navigation .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+    height: 65px;
+    background-color: #FFFFFF;
+}
+
+.leftside p {
+    color: #4F4F4F;
+    font-size: 16px;
+}
+
+.rightside {
+    display: flex;
+    padding: 10px;
+}
+
+.rightside input {
+    width: 388px;
+    background-color: #C3CAD9;
+    height: 40px;
+    margin-right: 70px;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+
+.rightside .profile {
+    display: flex;
+    align-items: center;
+}
+
+.rightside .profile .profileIcon {
+    margin-right: 10px;
+    padding: 5px 15px;
+    color: #F8A711;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px  #e7e6e6;
+}
+
+.rightside .profile .profileIcon h1 {
+    font-size: 20px;
+}
+
+.rightside .profileName p {
+    font-size: 14px;
+}
+
+.rightside .profileName span {
+    color: #F8A711;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0 0 40px;
+}
+
+.back .backName {
+    color: #F8A711;
+}
+
+.main {
+    width: 1040px;
+    height: 160vh;
+    position: relative;
+    margin-top: -35rem;
+    margin-left: 17rem;
+    background-color: #EFF2F8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .mainLeft {
+    width: 900px;
+}
+
+.mainLeft .upperSection {
+    display: flex;
+    padding: 20px 20px;
+}
+
+.mainLeft .image {
+    padding-right: 20px;
+}
+
+.mainLeft .reactivityText {
+    width: 400px;
+}
+
+.mainLeft .reactivityText h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+.mainLeft .reactivityText p {
+    line-height: 24px;
+    font-size: 13px;
+    color: #A098AE;
+}
+
+.main .mainLeft .listItems li {
+    padding: 0 20px;
+    display: inline;
+    font-size: 13px;
+    color: #787878;
+}
+
+.mainLeft .listItems .specialList {
+    color: #F8A711 !important;
+}
+
+.gamification h1 {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.gamification .point {
+    display: flex;
+    align-items: center;
+    background-color: #FEEDCF;
+    width: 722px;
+    padding: 4px 8px 4px 30px;
+    margin-left: 20px; 
+}
+
+.point .pointButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 8px;
+    width: 45px;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+}
+
+.point .pointButton .specialList {
+    width: 20px;
+    height: 18px;
+    border-radius: 50px;
+    background-color: #62B130;
+}
+
+.mainLeft .pointText {
+    display: flex;
+    margin: 15px 20px 10px 20px;
+}
+
+.mainLeft .pointText p {
+    font-size: 12px;
+    padding: 0 10px;
+    color: #333333;
+}
+
+.mainLeft .pointText .numb {
+    border: 1px solid #585858;
+    border-right: none;
+  
+}
+
+.mainLeft .pointText .pointNumb {
+    background-color: #BFBFBF;
+}
+
+
+
+.mainLeft .lowerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.mainLeft .lowerSection .button {
+    display: flex;
+}
+
+.mainLeft .lowerSection .save {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #F8A711;
+    border: 1px solid #F8A711;
+    border-radius: 10px;
+    padding: 10px;
+    width: 160px;
+    margin: 0 20px;
+} 
+
+.mainLeft .lowerSection .cancel {
+    border: none;
+    outline: none;
+    color: #F8A711;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.mainLeft .lowerSection .reset button {
+    border: none;
+    outline: none;
+    color: #F8A711;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 30px;
+}
+
+.main .mainRight {
+    width: 300px;
+   
+}
+
+.mainRight .boxModel {
+    width: 220px;
+    height: 114px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 40px;
+}
+
+.mainRight .boxList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainRight .boxModel .boxList img {
+    margin: 25px 20px 0 0;
+}
+
+.mainRight .boxModel p {
+    padding: 30px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainRight .boxModel h3 {
+    padding: 0 0 0 25px;
+    font-size: 25px;
+}
+
+.mainRight .boxReport {
+    width: 220px;
+    height: 68px;
+    background-color: #FDE2B0;
+    border-radius: 8px;
+    margin: 0 0 20px 40px;
+}
+
+.mainRight .boxReport .boxList p {
+    padding: 20px 0 10px 25px;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+.mainRight .boxReport .boxList img {
+    margin: 25px 20px 0 0;
+}

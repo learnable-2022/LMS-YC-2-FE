@@ -3,6 +3,7 @@ import styles from "./studentStats.module.css"
 
 function StudentStats() {
     return (
+      <div className= {styles.studentStatsContainer}>
         <div className= {styles.studentStats}>
           <Card bgColor = "#FEEDCF">
             <p>Your progress</p>
@@ -22,6 +23,8 @@ function StudentStats() {
             <h2>0</h2>
           </Card>
         </div>
+      </div>
+        
     )
 }
 
