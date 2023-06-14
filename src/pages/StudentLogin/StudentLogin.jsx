@@ -10,16 +10,17 @@ function StudentLogin() {
   const [data, setData] = useState()
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [loginError, setLoginError] = useState()
+  const [message, setMessage] = useState()
   // const [btnDisabled, setBtnDisabled] = useState(true)
 
   const navigate = useNavigate()
 
-  const  {setLoggedIn, studentStatus, studentData} = useContext(AppContext)
-
-  // const check
+  const  {setLoggedIn, studentInfo, studentData} = useContext(AppContext)
 
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true)
     const loginData = {
       email : email,
       password: password
@@ -29,29 +30,49 @@ function StudentLogin() {
       method : "POST",
       body : JSON.stringify(loginData),
       headers : {
-        "Content-Type" : "application/json",
-        "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
+        "Content-Type" : "application/json"
       }
     })
-    .then(response => response.json())
+    .then(response => response.json()) 
     .then (data => {
+      console.log(data)
+      data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data.loggedin)) : "";
       setLoading(false)
       data.success ? setLoggedIn(true) : ""
-      data.success ? navigate("/student/dashboard") : ""
+      data.success ? (studentInfo?.path == null || studentInfo?.path == undefined || studentInfo?.path == "NULL " ? navigate("/student/dashboard/lessons") : navigate("/student/dashboard")) : ""
+    })
+    .catch((err) => {
+      setLoginError(err)
+      setLoading(false)
+      console.log(err)
     })
 
-    console.log(data)
   }
 
-  useEffect(() => {
-    console.log(studentData)
-  })
+  // console.log(studentInfo)
+
+  const checkData = () => {
+    if(data !== null && data !== undefined){
+        if(data.success !== null && data.success !== undefined){
+            if(!data.success){
+                setMessage(data.message)
+                setTimeout(() =>{
+                    setMessage("")
+                }, 2000)
+            }else{
+                setMessage("")
+            }
+        }
+    }
+  }
+  
+
+useEffect(() => {
+  checkData()
+}, [data])
 
   return (
     <div className= {styles.container}>
-      <nav className = {styles.nav}>
-        <img src= {Logo} alt=""/>
-      </nav>
       <div className= {styles.formArea}>
         <div className= {styles.imageArea}>
           <img src={FormImg} alt="Log in Image"/>
@@ -60,6 +81,7 @@ function StudentLogin() {
           <h2>Welcome</h2>
           <h4>Please enter your information below to resume your beautiful learning experience.</h4>
           <form className = {styles.form} onSubmit = {signIn}>
+            <p className = {styles.dataMessage}>{message}</p>
             <div className = {styles.inputGroup}>
               <input type="email" value = {email} onChange = {(e) => setEmail(e.target.value)} placeholder='Email/Username' required/>
               <img src= {FormProfileIcon} alt=""/>
@@ -73,7 +95,7 @@ function StudentLogin() {
               {!loading && "Sign in"}
             </button>
           </form>
-            <div className= {styles.line}></div>
+            {/* <div className= {styles.line}></div>
             <h3 className = {styles.h3}>OR</h3>
             <div>
               <button className= {styles.googleBtn}>
@@ -82,11 +104,14 @@ function StudentLogin() {
               <button className= {styles.facebookBtn}>
                 Sign In with Facebook
               </button>
+            </div> */}
+            <div className={styles.loginOptions}>
+              <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
+              <p className= {styles.forgotPassword}><NavLink to = "/signup">Forgot Password?</NavLink> </p>
             </div>
-            <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
           </div>
-        </div>  
-      </div>
+      </div>  
+    </div>
   );
 }
 

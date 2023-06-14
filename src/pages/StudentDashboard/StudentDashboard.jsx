@@ -17,42 +17,46 @@ import AppContext from "../../context/Appcontext";
 import StudentStats from "../../components/StudentStats/StudentStats";
 
 function StudentDashboard() {
-  const { studentData, studentStatus} = useContext(AppContext)
-  const studentInfo = JSON.parse(window.localStorage.getItem("student-status"))
+  const { studentInfo} = useContext(AppContext)
+  const [fullName, setFullName] = useState(studentInfo.child_name)
+  const [firstName, setFirstName] = useState("")
+ 
+   const getFirstName = () => {
+    if(fullName !== undefined && fullName !== null){
+      const words = fullName.split(" ")
 
-  const getUser = () => {
-    const response = fetch("https://learnz.onrender.com/api/v1/user/" + studentInfo.user[0].id, {
-      method : "GET",
-      headers : {
-        "Content-Type" : "application/json",
-        "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
-      }
-    })
-    .then(response => response.json())
-    .then (data => {
-      window.localStorage.setItem("getStudent", JSON.stringify(data))
-      data.succes ? setStudentSignedUp(true) : ""
-      data.success == true ? navigate("/login") : ""
-    })
-    .catch(err => console.log(err))
+    if(words.length >= 2){
+      setFirstName(words.shift())
+
+      const lastName = words.join()
+    }else{
+      setFirstName(fullName)
+    }
+
+    }
+      
+
   }
+  console.log(document.cookie)
 
   useEffect(() => {
-    console.log(studentInfo)
-    // console.log(JSON.parse(window.localStorage.getItem("student-status")))
-    getUser()
-    
-  })
+    getFirstName()
+    // console.log(document.cookie)
+  }, [])
+
+  
+
+ 
 
   return (
     <div className={styles.container}>
-      <UserDashboardNav />
+      <UserDashboardNav navTitle = "Home"/>
       <div className={styles.dashboard}>
         <div className={styles.majorDashboardPart}>
           <div className={styles.welcomeUserContainer}>
             <div className={styles.welcomeUser}>
               <div className={styles.welcomeUserContents}>
-                <h2>{`Welcome ${studentInfo.user[0].child_name}`}</h2>
+                <h2>{`Welcome ${firstName}`}</h2>
                 <p>
                   You have all the resources you need for learning right here
                   with you! Make sure to always do your assignments and read

@@ -1,6 +1,7 @@
 .studentStats{
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 .studentStats > div{
     width: 300px;
@@ -8,4 +9,40 @@
 }
 .studentStats h2{
     margin-top: 1rem;
+}
+
+
+/* -------------------------------------------MEDIA QUERY--------------------------------------------- */
+@media screen and (max-width: 1024px){
+    .studentStatsContainer{
+        width: 95%;
+        padding: 0;
+    }/* .studentStats */
+    .studentStats {
+        overflow-x: scroll;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .studentStats::-webkit-scrollbar{
+        /* display: block; */
+        /* height: 0.2rem; */
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .studentStatsContainer{
+        width: 95%;
+        padding: 0;
+    }
+    .studentStats {
+        overflow-x: scroll;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .studentStats > div{
+        width: 200px !important;
+    }
 }

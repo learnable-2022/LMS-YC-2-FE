@@ -2,14 +2,16 @@
   display: flex;
   justify-content: space-around;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .imageArea img{
-  width: 500px;
+  width: 400px;
 }
 .formContainer {
   background-color: white;
   width: 500px;
   padding: 2rem;
+  border: 1px solid #F8A711;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -31,7 +33,15 @@
   font-weight: bolder;
 }
 .form {
-  margin: 1rem 0;
+  margin: 2rem 0;
+}
+.dataMessage{
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: red;
+  animation: anim 1s ease;
 }
 .inputGroup{
   margin-bottom: 15px;

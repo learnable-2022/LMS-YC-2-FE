@@ -1,6 +1,8 @@
 .signupOtionsContainer{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .imageArea img{
   width: 400px;
@@ -11,6 +13,7 @@
   padding: 2rem 3rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  border: 1px solid #F8A711;
 }
 .formContainer > h2 {
   color: #F8A711;
@@ -97,14 +100,23 @@
 @media screen and (max-width : 600px) {
   .signupOtionsContainer{
     flex-direction: column;  
-    gap: 2rem;
   }
   .imageArea img{
     width: 350px;
   }
   .formContainer{
-    width: 350px;
+    width: 300px;
     margin: auto;
+    padding: 1rem;
   }
 
+
+}
+@media screen and (max-width : 390px) {
+  .imageArea img{
+    width: 300px;
+  }
+  .formContainer{
+    width: 270px;
+  }
 }
