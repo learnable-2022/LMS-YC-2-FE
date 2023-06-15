@@ -95,7 +95,7 @@ useEffect(() => {
               {!loading && "Sign in"}
             </button>
           </form>
-            <div className= {styles.line}></div>
+            {/* <div className= {styles.line}></div>
             <h3 className = {styles.h3}>OR</h3>
             <div>
               <button className= {styles.googleBtn}>
@@ -104,8 +104,11 @@ useEffect(() => {
               <button className= {styles.facebookBtn}>
                 Sign In with Facebook
               </button>
+            </div> */}
+            <div className={styles.loginOptions}>
+              <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
+              <p className= {styles.forgotPassword}><NavLink to = "/signup">Forgot Password?</NavLink> </p>
             </div>
-            <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
           </div>
       </div>  
     </div>

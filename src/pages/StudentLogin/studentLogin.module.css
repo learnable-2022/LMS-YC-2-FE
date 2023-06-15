@@ -16,6 +16,7 @@
   background-color: white;
   width: 500px;
   padding: 2rem;
+  border: 1px solid #F8A711;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -75,7 +76,7 @@
   cursor: pointer;
 }
 .form button{
-  width: 100%;
+  width: 250px;
   background-color: #F8A711;
   padding: 10px;
   border: none;
@@ -88,7 +89,7 @@
 .form button img{
   height: 1.5rem;
 }
-  .line {
+  /* .line {
   border-top: 1px solid #ccc;
   margin-bottom: 10px;
 }
@@ -107,17 +108,31 @@
   background-color: #F8A711;
   color: white;
   border-color: transparent;
+} */
+
+.loginOptions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 .signUp {
   color: #070000;
   font-size: 13px;
   margin-top: 10px;
-  margin: auto;
 }
 
 .signUp a {
   cursor: pointer;
   color: #2767DC;
+  font-weight: 600;
+}
+
+.forgotPassword a{
+  cursor: pointer;
+  color: #070000;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -138,6 +153,9 @@
   .formContainer{
     width: 350px;
     margin: auto;
+  }
+  .form button{
+    width: 150px;
   }
 
 }
