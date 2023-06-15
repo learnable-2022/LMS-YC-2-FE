@@ -35,7 +35,7 @@ import AddAnswers from "../pages/AddAnswers/AddAnswers";
 import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssignments";
 import StudentProtectedRoutes from "../StudentProtectedRoutes";
 import AdminProtectedRoutes from "../AdminProtectedRoutes";
-import Certificate from "../components/Certificate/Certificate";
+
 
 
 const Routy = () => {
@@ -71,7 +71,7 @@ const Routy = () => {
         </Route>
 
         {/* STUDENT SIGN UP PAGE */}
-        <Route path="signup" element={<Certificate />}>
+        <Route path="signup" element={<StudentFormNavbar />}>
           <Route index element={<SignUpOptions />} />
           <Route path="student" element={<StudentSignUp />} />
         </Route>
