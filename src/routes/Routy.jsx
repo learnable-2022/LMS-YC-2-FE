@@ -38,7 +38,6 @@ import AdminProtectedRoutes from "../AdminProtectedRoutes";
 
 
 const Routy = () => {
-  const { studdntInfo } = useContext;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
