@@ -1,13 +1,13 @@
 .container{
     display: flex;
-    background-color: #C8C8C8;
+    background-color: #e9ebed;;
     height: 100vh;
     overflow-y: auto;
 }
 .sidebarContainer{
     height: 100vh;
     background-color: white;
-    width: 15%;
+    width: 20%;
 }
 .logo {
     background-color: #f8a711;
@@ -15,8 +15,9 @@
     align-items: center;
     justify-content: center;
     /* text-align: center; */
-    padding: 2rem 0;
+    padding: 1rem 0;
     gap: 0.5rem;
+    height: 5rem;
 }
 .logo h3{
     color: white;
@@ -49,6 +50,18 @@
 .link:active{
     color: #f8a711;
 }
+.logout {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    color: red;
+    gap: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  .logout:hover{
+    background-color: #8C8C8C;
+  }
 .container > main{
-    width: 85%;
+    width: 80%;
 }

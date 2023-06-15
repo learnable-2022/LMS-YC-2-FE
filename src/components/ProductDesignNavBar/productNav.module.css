@@ -1,20 +1,21 @@
+.Cont{
+  display: flex;
+  height: 100vh;
+  background-color: #e9ebed;
+  overflow-y: auto;
+}
+.nav{
+  width: 20%;
+  height: 100vh;
+}
 li {
   list-style: none;
 }
 a {
   color: #000000;
 }
-.Cont {
-  display: flex;
-  height: 100vh;
-  overflow: auto;
-}
-.Cont nav {
-  width: 20%;
-  height: 100vh;
-}
 .wrap {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 .logo {
@@ -69,4 +70,7 @@ a {
 
 .list li {
   margin-top: 15px;
+}
+.Cont main{
+  width: 80%;
 }

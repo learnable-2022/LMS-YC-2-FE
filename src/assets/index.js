@@ -72,6 +72,17 @@ export {default as Lessons} from "./images/lessons.png"
 export {default as GreaterThan} from "./images/GreaterThan.png"
 export {default as Analytics} from "./images/Analytics.png"
 export {default as AdminWelcome} from "./images/AdminWelcome.png"
+export {default as ExtraResourceImg} from "./images/ExtraResourceImg.png"
+
+//GAMIFICATION
+export {default as BackIcon} from "./images/BackIcon.png"
+export {default as PenIcon} from "./images/PenIcon.png"
+export {default as PlaceholderImg} from "./images/PlaceholderImg.png"
+export {default as ArrowDownIcon} from "./images/ArrowDownIcon.png"
+export {default as TripleDotsIcon} from "./images/TripleDotsIcon.png"
+export {default as DeleteIcon} from "./images/DeleteIcon.png"
+export {default as ImageIcon} from "./images/imageIcon.png"
+export {default as ScreenshotImg} from "./images/screenshotImg.png"
 
 //STUDENT DASHBOARD MESSAGE
 export { default as MessageImage1} from "./images/messageImage1.png" 
@@ -123,3 +134,9 @@ export { default as Kid6} from "./images/Kid6.png"
 
 // ERROR PAGE
 export { default as ErrorImage} from "./images/Error.png"
+
+// COURSE PAGE
+export { default as Web3} from "./images/Web3.jpg"
+export { default as Frontend} from "./images/Frontend.jpg"
+export { default as Backend} from "./images/Backend.jpg"
+export { default as ProductDesign} from "./images/ProductDesign.png"

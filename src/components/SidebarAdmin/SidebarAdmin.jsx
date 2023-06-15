@@ -1,55 +1,43 @@
 import styles from "./sidebarAdmin.module.css"
 import { LogoSvg} from "../../assets"
 import AdminSidebarList from "./AdminSidebarList"
-import { NavLink, Outlet } from "react-router-dom";
-import { TiDivide } from "react-icons/ti";
-import { useEffect, useState } from "react";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { MdLogout } from "react-icons/md";
+import AppContext from "../../context/Appcontext";
 
 function SidebarAdmin() {
-    const activeLink = (e) => {
-        if (
-            e?.target.classList.contains(styles.link) ||
-            e.target.parentElement.classList.contains(styles.link) ||
-            e.target.parentElement.parentElement.classList.contains(styles.link)
-          ) {
-            let links;
-            e.target.classList.contains(styles.link) ? (links = Array.from(e.target.parentElement.children)) 
-            : e.target.parentElement.classList.contains(styles.link) ? (links = Array.from(e.target.parentElement.parentElement.parentElement.children))
-            : e.target.parentElement.parentElement.classList.contains(styles.link) ?  (links = Array.from(e.target.parentElement.parentElement.parentElement.parentElement.children)) : "";
-      
-            links.forEach((li) => {
-              if (li.classList.contains(styles.link)) {
-                li.classList.remove(styles.active);
-                if (
-                  e.target.classList.contains(styles.link) ||
-                  e.target.parentElement.classList.contains(styles.link)||
-                  e.target.parentElement.parentElement.classList.contains(styles.link)
-                ) {
-                    e.target.classList.contains(styles.link) ? e.target.classList.add(styles.active)
-                    : e.target.parentElement.classList.contains(styles.link) ? e.target.parentElement.classList.add(styles.active)
-                    : e.target.parentElement.parentElement.classList.contains(styles.link) ? e.target.parentElement.parentElement.classList.add(styles.active) : "";
-                  li.classList.remove(styles.active);
-                  // setLinked(li)
-                } else {
-                  e.target.classList.remove(styles.active);
-                }
-              }
-            });
-           
-          }
+  const {adminToken} = useContext(AppContext)
+  const [activeLink, setActiveLink] = useState("")
+  const navigate = useNavigate()
 
-        // if(e.target.parentElement.parentElement.classList.contains(styles.link)){
-        //   console.log(e.target.parentElement.parentElement.parentElement.parentElement.children)
-        // }
+  const handleLinkClick = (link) => {
+    setActiveLink(link)
+  }
 
-        // console.log(e.target.parentElement.className)
-
+  const logout = () => {
+    if(window.confirm("Do you want to log out")){
+      const response = fetch("https://learnz.onrender.com/api/v1/admin/logout", {
+      method : "POST",
+      headers : {
+        "Content-Type": "application/json",
+        "Authorization" : `Bearer ${adminToken}`
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      data.success ? window.localStorage.setItem("admin-loggedIn", false) : window.localStorage.setItem("admin-loggedIn", true);
+      data.success ? navigate("/admin/login") : ""
+      data.success ?  window.localStorage.removeItem("admin-status") : ""
+      data.success ? window.localStorage.removeItem("admin-token") : ""
+    })
+    .catch(err => console.log(err))
     }
-
-    // useEffect(() => {
-    //   activeLink()
-    // }, [linked])
-    return (
+    
+  }
+  
+  return (
         <div className = {styles.container}>
             <div className= {styles.sidebarContainer}>
                 <div className= {styles.logo}>
@@ -59,20 +47,24 @@ function SidebarAdmin() {
 
                 <div className= {styles.links}>
                     {AdminSidebarList.map((list, index) => (
-                      <NavLink to = {`${list.link}`}  key = {index}>
-                        <div className= {styles.link} onClick ={activeLink}>
-                          {list.logo}  
-                          <p>{list.name}</p>
-                        </div>
-                          
-                      </NavLink>
+                      <NavLink to = {`${list.link}`} className = {`${styles.link} ${activeLink === list.name ? styles.active : ""}`} key = {index} onClick = {() => handleLinkClick(list.name)} >  
+                      {list.logo}  
+                      <p>{list.name}</p>
+                  </NavLink>
                     ))}
+                </div>
+
+                <div className={styles.logout} onClick = {logout}>
+                  <MdLogout />
+                  <p>Logout</p>
                 </div>
             </div>
 
+
             <main>
+              <div className = {styles.maincontainer}>
                 <Outlet />
-                
+              </div>
             </main>
         </div>
     )

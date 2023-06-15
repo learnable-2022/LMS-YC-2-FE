@@ -47,7 +47,7 @@ function UserDashboardNav({navTitle}) {
             </div>
             
             <div className = {styles.navName}>
-                <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p>
+                {/* <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p> */}
                 <p>{`${firstName} ${lastName[0]}. `}</p>
             </div>
         </nav>
