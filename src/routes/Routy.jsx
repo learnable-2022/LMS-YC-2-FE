@@ -37,13 +37,7 @@ import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssig
 
 const Routy = () => {
 
-  const[loading, setLoading] = useState(true)
-
-  useEffect(()=>{
-      setTimeout(()=>{
-          setLoading(false)
-      }, 2000)
-  },[])
+  
 
   //  STUDENT INFO
   const { studdntInfo } = useContext;
