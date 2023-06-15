@@ -134,3 +134,9 @@ export { default as Kid6} from "./images/Kid6.png"
 
 // ERROR PAGE
 export { default as ErrorImage} from "./images/Error.png"
+
+// COURSE PAGE
+export { default as Web3} from "./images/Web3.jpg"
+export { default as Frontend} from "./images/Frontend.jpg"
+export { default as Backend} from "./images/Backend.jpg"
+export { default as ProductDesign} from "./images/ProductDesign.png"
