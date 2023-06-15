@@ -47,12 +47,15 @@ function StudentProfile() {
           <span>{studentInfo.relationship}</span>
         </p>
         <p>
-          Path :{" "}
-          {studentInfo.path == null ||
-          studentInfo.path == undefined ||
-          studentInfo.path == "NULL "
-            ? ""
-            : studentInfo.path}
+          <span>Path :</span>{" "}
+          <span>
+            {" "}
+            {studentInfo.path == null ||
+            studentInfo.path == undefined ||
+            studentInfo.path == "NULL "
+              ? ""
+              : studentInfo.path}
+          </span>
         </p>
       </div>
     </div>

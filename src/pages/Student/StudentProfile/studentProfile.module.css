@@ -7,6 +7,8 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 4px;
+  font-size: 24px;
+  font-weight: 500;
 }
 .ProfileBody h2::before {
   content: "";
