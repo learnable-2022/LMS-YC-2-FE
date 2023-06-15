@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Product from "./productNav.module.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { LogoSvg, productArrow, productImage } from "../../assets";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import AppContext from "../../context/Appcontext";
 
 const ProductNav = () => {
   const [open, setOpen] = useState(true);
+  const {studentInfo} = useContext(AppContext)
+
+  const weeks = ["Week 1", "Week 2", "Week 3", "Week 4"]
+  const [activeWeek, setActiveWeek] = useState()
+
+  const courseLinks = ["Grades", "Notes", "Discussion Forums", "Messages", "Resources", "Course Info"]
 
   const DropDown = () => {
     setOpen(!open);
@@ -39,42 +46,20 @@ const ProductNav = () => {
             className={Product.linky}
             style={{ display: open ? "block" : "none" }}
           >
-            <NavLink to="" className={Product.linko}>
-              <div></div>
-              <p>Week 1</p>
-            </NavLink>
-            <NavLink to="" className={Product.linko}>
-              <div></div>
-              <p>Week 2</p>
-            </NavLink>
-            <NavLink to="" className={Product.linko}>
-              <div></div>
-              <p>Week 3</p>
-            </NavLink>
-            <NavLink to="" className={Product.linko}>
-              <div></div>
-              <p>Week 4</p>
-            </NavLink>
+            {weeks.map((week, index) => (
+                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index}>
+                  <p>{week}</p>
+                </NavLink>
+            ))}
           </div>
           <ul className={Product.list}>
-            <li>
-              <NavLink to="">Grades</NavLink>
-            </li>
-            <li>
-              <NavLink to="">Notes</NavLink>
-            </li>
-            <li>
-              <NavLink to="">Discussion forums</NavLink>
-            </li>
-            <li>
-              <NavLink to="">Messages</NavLink>
-            </li>
-            <li>
-              <NavLink to="">Resources</NavLink>
-            </li>
-            <li>
-              <NavLink to="">Course info</NavLink>
-            </li>
+            {courseLinks.map((link, index) => (
+              // <>
+                <li key = {index}>
+                  <NavLink to="">{link}</NavLink>
+                </li>
+              // </>
+            ))}
           </ul>
         </div>
       </nav>
