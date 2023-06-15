@@ -135,8 +135,16 @@ export { default as Kid6} from "./images/Kid6.png"
 // ERROR PAGE
 export { default as ErrorImage} from "./images/Error.png"
 
+<<<<<<< HEAD
 
 // CERTIFICATE PAGE
 export { default as upperFrameImg} from "./images/upperFrameImg.png"
 export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
 export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
+=======
+// COURSE PAGE
+export { default as Web3} from "./images/Web3.jpg"
+export { default as Frontend} from "./images/Frontend.jpg"
+export { default as Backend} from "./images/Backend.jpg"
+export { default as ProductDesign} from "./images/ProductDesign.png"
+>>>>>>> 078910b39a28d9dcbf3abdc666f7e65d18828a48

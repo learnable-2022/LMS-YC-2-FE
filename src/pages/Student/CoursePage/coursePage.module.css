@@ -1,0 +1,64 @@
+.container{
+    width: 100%;
+    height: fit-content;
+}
+.courseHead{
+    padding: 2rem;
+    width: 100%; 
+}
+.courseHead h2{
+    padding: 2rem 1rem 0.5rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+.courseDesc{
+    margin: 1rem;
+}
+.courseDesc h3{
+    margin-bottom: 1rem ;
+}
+.courseDesc p{
+    font-size: 0.9rem;
+    max-width: 800px;
+}
+.courseImg{
+    background-color: green;
+    width: 100%;
+    height: 300px;
+}
+.courseImg img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.courseContents{
+    padding: 2rem;
+    width: 100%;
+}
+.courseContents p{
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    line-height: 1.2rem;
+    text-align: justify;
+    /* max-width: 700px; */
+}
+.courseVideo{
+    margin: 3rem 0;
+}
+
+.noCourses{
+    width: 100%;
+    position: relative;
+    min-height: 50vh;
+    /* background-color: green; */
+}
+.noCourses p{
+     position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: green; */
+    font-size: 2rem;
+
+}
