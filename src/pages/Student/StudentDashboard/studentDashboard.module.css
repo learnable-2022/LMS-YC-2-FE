@@ -1,0 +1,132 @@
+.dashboard{
+    padding: 2rem;
+}
+.majorDashboardPart{
+    display: flex;
+    gap: 4rem;
+    margin: 1rem 0;
+}
+
+/* ------------------------------------WELCOME USER--------------------------------------------------------- */
+.welcomeUserContainer{
+    background: linear-gradient(135deg, #FCCF31 0%, #F55555 100%);
+    padding: 1rem;
+    position: relative;
+    border-bottom-right-radius: 4rem;
+    width: 70%;
+}
+.welcomeUser{
+    display: flex;
+    justify-content: space-between;
+}
+.welcomeUserContents{
+    color: white;
+}
+.welcomeUserContents h2{
+    margin-bottom: 0.5rem;
+}
+.welcomeUserContents p{
+    max-width: 250px;
+    font-size: 0.9rem;
+}
+.welcomeUser img{
+    height: 10rem;
+    z-index: 100;
+}
+.welcomeUserContainer > img{
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    height: 8rem;
+}
+
+.topStudents{
+    width: 30%;
+}
+.topStudents div{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* -------------------------------------------------------------------STUDENT STATS---------------------------------------------------------- */
+.studentStats{
+    display: flex;
+    justify-content: space-between;
+}
+.studentStats > div{
+    width: 300px;
+    padding: 1rem;
+}
+.studentStats h2{
+    margin-top: 1rem;
+}
+
+/* -------------------------------------------------------------------------ACTIVITIES------------------------------------------------------- */
+.activity{
+    margin-top: 2rem;
+}
+.activityCards{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 0.5rem;
+}
+.activityCards div{
+    width: 90%;
+    min-height: 12rem;
+    position: relative;
+}
+.activityCards div img{
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* --------------------------------------------------------------------------MEDIA QUERIES------------------------------------------------------------ */
+@media screen and (max-width : 600px) {
+    .majorDashboardPart > .topStudents{
+        display: none;
+    }
+    .welcomeUserContainer{
+        width: 100%;
+        border-bottom-right-radius: 0;
+        padding: 1rem;
+        padding-right: 0;
+    }
+    .welcomeUser{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .welcomeUser img{
+        width: auto;
+        height: 8rem;
+        z-index: 100;
+    }
+    .welcomeUserContainer > img{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 5rem;
+    }
+    .welcomeUserContents p{
+        max-width: 200px;
+        font-size: 0.7rem;
+    }
+    .welcomeUserContents h2{
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .dashboard{
+        padding: 0 1rem ;
+    }
+    .activityCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

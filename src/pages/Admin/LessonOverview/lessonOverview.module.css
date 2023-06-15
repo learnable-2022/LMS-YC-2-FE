@@ -1,0 +1,431 @@
+.mainbar{
+    z-index: 1;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #C8C8C8;
+}
+
+ .mainbody{
+    margin-top: 40px;
+    padding: 0px 30px;
+ }
+ .mainnewlesson{
+    margin-left: 55rem;
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    line-height: 30px;
+    height: 33px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+ }
+ .over{
+    color: #8c8c8c;
+    font-size: 13px;
+ }
+ .mainlesson{
+    display: flex;
+    justify-content: space-between;
+ }
+ .totallesson img {
+   width: 320px;
+   height: 105px;
+ }
+ .totallesson{
+   position: relative;
+ }
+ 
+ .totallesson ::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 105px;
+   background-color: rgba(0, 0, 0, 0.63);
+ }
+ .totlesson{
+   color: black;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 10px;
+ }
+ .num28{
+   font-size: 10px;
+   margin-left: 10px;
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+   color: #8c8c8c;
+   top: 0;
+ }
+ .stevnum28{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum28 span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num2812{
+   height: 20px;
+   width: 80px;
+ }
+ .num2812 span{
+   margin-left: 7px;
+ }
+ .num283{
+   height: 20px;
+   width: 80px;
+ }
+ .num283 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .totalnum img{
+   width: 320px;
+   height: 105px;
+ }
+ .totnum{
+   color: black;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 10px;
+ }
+ .num400{
+   font-size: 10px;
+   margin-left: 10px;
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+   color: #8c8c8c;
+   top: 0;
+ }
+ .stevnum400{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum400 span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num40012{
+   height: 20px;
+   width: 80px;
+ }
+ .num40012 span{
+   margin-left: 7px;
+ }
+ .num4003{
+   height: 20px;
+   width: 80px;
+ }
+ .num4003 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .lessonprogress img {
+   width: 320px;
+   height: 105px;
+ }
+ .lessonprogress{
+    position: relative;
+ }
+ .num28i{
+    font-size: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    color: #8c8c8c;
+    top: 0;
+ }
+ .stevnum28i{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum28i span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num28i12{
+   height: 20px;
+   width: 80px;
+ }
+ .num28i12 span{
+   margin-left: 7px;
+ }
+ .num28i3{
+   height: 20px;
+   width: 80px;
+ }
+ .num28i3 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .lesspro{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+ }
+ .lesson1{
+    width: 320px;
+    height: 150px;
+    background-color: #feedcf;
+    border-radius: 7px;
+    overflow: hidden;
+ }
+ .lesson2{
+    width: 320px;
+    height: 150px;
+    background-color: #feedcf;
+    border-radius: 7px;
+    overflow: hidden;
+ }
+ .lesson3{
+    width: 320px;
+    height: 150px;
+    background-color: #feedcf;
+    border-radius: 7px;
+    overflow: hidden;
+ }
+ .mainlesson1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+ }
+ .lesson4{
+    width: 320px;
+    height: 150px;
+    background-color: #feedcf;
+    border-radius: 7px;
+    overflow: hidden;
+ }
+ .lessoncom img{
+   width: 320px;
+   height: 105px;
+ }
+ .lessoncompleted{
+   color: black;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 10px;
+ }
+ .num28green{
+   font-size: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    color: #8c8c8c;
+    top: 0;
+ }
+ .stevnum28green{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum28green span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num28green12{
+   height: 20px;
+   width: 80px;
+ }
+ .num28green12 span{
+   margin-left: 7px;
+ }
+ .num28green3{
+   height: 20px;
+   width: 80px;
+ }
+ .num28green3 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .lesson6{
+   width: 320px;
+   height: 150px;
+   background-color: #feedcf;
+   border-radius: 7px;
+   overflow: hidden;
+}
+.lessoncom1 img{
+   width: 320px;
+   height: 105px;
+ }
+ .lessoncompleted1{
+   color: black;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 10px;
+ }
+ .num28green1{
+   font-size: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    color: #8c8c8c;
+    top: 0;
+ }
+ .stevnum28green1{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum28green1 span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num28green112{
+   height: 20px;
+   width: 80px;
+ }
+ .num28green112 span{
+   margin-left: 7px;
+ }
+ .num28green13{
+   height: 20px;
+   width: 80px;
+ }
+ .num28green13 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .lesson5{
+    width: 320px;
+    height: 150px;
+    background-color: #feedcf;
+    border-radius: 7px;
+    overflow: hidden;
+ }
+ .not img{
+   width: 320px;
+   height: 105px;
+ }
+ .not2{
+   color: black;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 10px;
+ }
+ .num8{
+   font-size: 10px;
+   margin-left: 10px;
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+   color: #8c8c8c;
+   top: 0;
+ }
+ .stevnum8{
+   height: 60px;
+   width: 60px;
+ }
+ .stevnum8 span{
+   top: 0;
+   margin-left: 7px;
+ }
+ .num812{
+   height: 20px;
+   width: 80px;
+ }
+ .num812 span{
+   margin-left: 7px;
+ }
+ .num83{
+   height: 20px;
+   width: 80px;
+ }
+ .num83 span{
+   margin-left: 8px;
+   line-height: 10px;
+ }
+ .see{
+    display: flex;
+    justify-content: space-between;
+    color: #8c8c8c;
+    font-size: 13px;
+ }
+  .page{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 51rem;
+
+  }
+  .page1:hover, .page1.active{
+    background-color: orange;
+    color: white;
+    transition: 0.4s;
+}
+.page2:hover, .page2.active{
+    background-color: orange;
+    color: white;
+    transition: 0.4s;
+} .page3:hover, .page3.active{
+    background-color: orange;
+    color: white;
+    transition: 0.4s;
+} .page4:hover, .page4.active{
+    background-color: orange;
+    color: white;
+    transition: 0.4s;
+} .page5:hover, .page5.active{
+    background-color: orange;
+    color: white;
+    transition: 0.4s;
+}
+  .page1{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: #8c8c8c;
+  }
+  .page2{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: #8c8c8c;
+  }
+  .page3{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: #8c8c8c;
+  }
+  .page4{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: #8c8c8c;
+  }
+  .page5{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: #8c8c8c;
+  }
