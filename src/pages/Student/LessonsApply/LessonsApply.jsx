@@ -51,7 +51,7 @@ function LessonsApply() {
             console.log(data)
             setLoading(false)
             window.localStorage.setItem("student-status", JSON.stringify(data.updated.filter((student, id) => student._id == studentInfo._id)[0]))
-            data.success ? navigate(`/student/course/${enrollCourse.path}/week1`) : ""
+            data.success ? navigate(`/student/course/${enrollCourse.path}/${enrollCourse.week}`) : ""
             data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
         })
         .catch((err) => {

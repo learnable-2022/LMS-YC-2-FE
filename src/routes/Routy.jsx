@@ -35,6 +35,7 @@ import AddAnswers from "../pages/AddAnswers/AddAnswers";
 import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssignments";
 import StudentProtectedRoutes from "../StudentProtectedRoutes";
 import AdminProtectedRoutes from "../AdminProtectedRoutes";
+import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
 
 
 const Routy = () => {
@@ -51,6 +52,7 @@ const Routy = () => {
             <Route path="studentQuiz" element={<StudentQuiz />} />
             <Route path = "lessons" element = {<StudentLessons />} />
             <Route path = "assignments" element = {<StudentAssignments />} />
+            <Route path = "certificate" element = {<StudentCertificate />} />
             <Route path = "profile" element = {<StudentProfile />} />
             <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
           </Route>

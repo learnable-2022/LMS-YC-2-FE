@@ -12,7 +12,7 @@ const ProductNav = () => {
   const weeks = ["Week 1", "Week 2", "Week 3", "Week 4"]
   const [activeWeek, setActiveWeek] = useState()
 
-  const courseLinks = ["Grades", "Notes", "Discussion Forums", "Messages", "Resources", "Course Info"]
+  const courseLinks = ["Grades", "Notes", "Discussion Forums", "Quiz", "Resources", "Course Info", "Dashboard"]
 
   const DropDown = () => {
     setOpen(!open);
@@ -25,7 +25,7 @@ const ProductNav = () => {
           <h3>Learn.Z</h3>
         </div>
         <div className={Product.wrap}>
-          <p>Foundation of user experience (UX) design</p>
+          <p>{studentInfo.course}</p>
           <div className={Product.Log}>
             <img src={productImage} alt="" />
           </div>
@@ -47,7 +47,8 @@ const ProductNav = () => {
             style={{ display: open ? "block" : "none" }}
           >
             {weeks.map((week, index) => (
-                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index}>
+                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index} className = {Product.linko}>
+                  <div></div>
                   <p>{week}</p>
                 </NavLink>
             ))}
