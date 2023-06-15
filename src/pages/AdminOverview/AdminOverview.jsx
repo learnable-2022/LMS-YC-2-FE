@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './adminOverview.module.css';
-import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
-import { BiPencil } from "react-icons/bi";
-import { IoStatsChart } from "react-icons/io5";
+import {  BsThreeDotsVertical } from "react-icons/bs";
+import { ImFilesEmpty } from "react-icons/im";
 import AdminDashboardNav from '../../components/AdminDashboardNav/AdminDashboardNav';
 
 function AdminOverview() {
@@ -26,7 +25,7 @@ function AdminOverview() {
               <i><BsThreeDotsVertical/></i>
               </div>
               <div className= {styles.num28}>
-                28
+                0
               </div>
             </div>
             <div className= {styles.lesson2}>
@@ -37,7 +36,7 @@ function AdminOverview() {
               <i><BsThreeDotsVertical/></i>
               </div>
               <div className= {styles.num28i}>
-                28
+                0
               </div>
             </div>
             <div className= {styles.lesson3}>
@@ -48,7 +47,7 @@ function AdminOverview() {
               <i><BsThreeDotsVertical/></i>
               </div>
               <div className= {styles.num400}>
-                400
+                0
               </div>
             </div>
           </div>
@@ -61,7 +60,7 @@ function AdminOverview() {
               <i><BsThreeDotsVertical/></i>
             </div>
             <div className= {styles.num28green}>
-              28
+              0
             </div>
             </div>
             <div className= {styles.lesson5}>
@@ -70,7 +69,7 @@ function AdminOverview() {
                 <i><BsThreeDotsVertical/></i>
               </div>
               <div className= {styles.num8}>
-                8
+                0
               </div>
             </div>
           </div>
@@ -88,118 +87,11 @@ function AdminOverview() {
                   <th>Completion Date</th>
                   <th>Option</th>
                 </tr>
-                <tr>
-                  <td>Product Design</td>
-                  <td>19</td>
-                  <td>Miss Favour</td>
-                  <td>-----</td>
-                  <td className= {styles.tb1}>
-                    <div className= {styles.tb1s1}>
-                      <i><BiPencil/></i>
-                      Edit
-                    </div>
-                    <div className= {styles.tb1s2}>
-                      <i><IoStatsChart/></i>
-                      Report
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Frontend</td>
-                  <td>11</td>
-                  <td>Mr Yuki</td>
-                  <td>-----</td>
-                  <td className= {styles.tb2}>
-                    <span className= {styles.tb2s1}>
-                    <i><BiPencil/></i>
-                      Edit
-                    </span>
-                    <span className= {styles.tb2s2}>
-                    <i><IoStatsChart/></i>
-                      Report
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Data Analysis</td>
-                  <td>45</td>
-                  <td>Mr Steven</td>
-                  <td>-----</td>
-                  <td className= {styles.tb3}>
-                    <span className= {styles.tb3s1}>
-                    <i><BiPencil/></i>
-                      Edit
-                    </span>
-                    <span className= {styles.tb3s2}>
-                    <i><IoStatsChart/></i>
-                      Report
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Computer Application</td>
-                  <td>4</td>
-                  <td>Mr Josh</td>
-                  <td>-----</td>
-                  <td className= {styles.tb4}>
-                    <span className= {styles.tb4s1}>
-                    <i><BiPencil/></i>
-                      Edit
-                    </span>
-                    <span className= {styles.tb4s2}>
-                    <i><IoStatsChart/></i>
-                      Report
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Systems Hardware</td>
-                  <td>2</td>
-                  <td>Miss Anna</td>
-                  <td>-----</td>
-                  <td className= {styles.tb5}>
-                    <span className={styles.tb5s1}>
-                    <i><BiPencil/></i>
-                      Edit
-                    </span>
-                    <span className={styles.tb5s2}>
-                    <i><IoStatsChart/></i>
-                      Report
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Logic</td>
-                  <td>2</td>
-                  <td>Mrs Buhari</td>
-                  <td>-----</td>
-                  <td className= {styles.tb6}>
-                    <span className= {styles.tb6s1}>
-                    <i><BiPencil/></i>
-                      Edit
-                    </span>
-                    <span className={styles.tb6s2}>
-                    <i><IoStatsChart/></i>
-                      Report
-                    </span>
-                  </td>
-                </tr>
               </table>
             </div>
-          </div>
-          <div className={styles.page}>
-            <div className={styles.page1}>
-              1
-            </div>
-            <div className={styles.page2}>
-              2
-            </div>
-            <div className={styles.page3}>
-              3
-            </div>
-            <div className={styles.page4}>4</div>
-            <div className={styles.page5}>
-              5
+            <div className={styles.empty}>
+              <i className={styles.empty1}><ImFilesEmpty/></i>
+              <h5 className={styles.emptytxt}>No data yet</h5>
             </div>
           </div>
         </div>
