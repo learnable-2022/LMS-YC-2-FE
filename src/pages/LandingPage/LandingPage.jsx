@@ -50,7 +50,7 @@ function LandingPage() {
         </div>
         <div className={styles.navLinks}>
           <NavLink to = "#contact" className = {styles.contactLink}>Contact Us</NavLink>
-          <NavLink to="/signup" className = {styles.loginLink} className = {styles.enrolLink}>Enroll Now</NavLink>
+          <NavLink to="/signup" className = {styles.enrolLink}>Enroll Now</NavLink>
         </div>
       </nav>
 

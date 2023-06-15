@@ -35,13 +35,13 @@ function StudentLogin() {
     })
     .then(response => response.json()) 
     .then (data => {
-      let path;
-      data.success ? path = data.user.path : ""
+      let track;
+      data.success ? track = data.user.track : ""
       data.success ?  window.localStorage.setItem("student-status", JSON.stringify(data.user)) : ""
       data.success ? window.localStorage.setItem("student-token", JSON.stringify(data.token)) : ""
       setData(data)
       setLoading(false)
-      data.success ? path.trim() == "NULL" ? navigate("/student/dashboard/lessons") : navigate("/student/dashboard") : ""
+      data.success ? track.trim() == "NULL" ? navigate("/student/dashboard/lessons") : navigate("/student/dashboard") : ""
       data.success ? window.localStorage.setItem("loggedIn", true) : window.localStorage.setItem("loggedIn", false);
       data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
       data.success ? setStudentToken(JSON.parse(window.localStorage.getItem("student-token"))) : ""
