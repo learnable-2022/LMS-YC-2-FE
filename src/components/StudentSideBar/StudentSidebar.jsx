@@ -9,8 +9,7 @@ import { FaTimes} from "react-icons/fa"
 import { MdLogout } from "react-icons/md";
 
 function StudentSidebar() {
-  // const [links, setLinks] = useState()
-  const { setStudentInfo, setStudentToken, showNav, setShowNav, studentToken, setStudentLoggedIn} = useContext(AppContext)
+  const {showNav, setShowNav, studentToken} = useContext(AppContext)
 
   const [activeLink, setActiveLink] = useState("")
   const navigate = useNavigate()
@@ -35,9 +34,6 @@ function StudentSidebar() {
       data.success ? navigate("/login/student") : ""
       data.success ?  window.localStorage.removeItem("student-status") : ""
       data.success ? window.localStorage.removeItem("student-token") : ""
-      // data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
-      // data.success ? setStudentToken(JSON.parse(window.localStorage.getItem("student-token"))) : ""
-      // data.success ? setStudentLoggedIn(JSON.parse(window.localStorage.getItem("loggedIn"))) : ""
     })
     .catch(err => console.log(err))
     }

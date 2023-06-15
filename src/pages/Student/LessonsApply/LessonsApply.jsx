@@ -8,7 +8,7 @@ import UserDashboardNav from "../../../components/UserDashboardNav/UserDashboard
 
 function LessonsApply() {
 
-    const {studentInfo, studentData,studentToken} = useContext(AppContext)
+    const {studentInfo, setStudentInfo, studentData,studentToken} = useContext(AppContext)
     const [enrollCourse, setEnrollCourse] = useState({})
     const [loading, setLoading] = useState(false)
     const [newInfo, setNewInfo] = useState({})
@@ -31,7 +31,7 @@ function LessonsApply() {
         setLoading(true)
 
         const updatedData = {
-            path: enrollCourse.path,
+            track: enrollCourse.path,
             course: enrollCourse.course,
             register: true
         }
@@ -48,11 +48,11 @@ function LessonsApply() {
         })
         .then(response => response.json())
         .then(data => {
-            // data.success ? window.localStorage.setItem("student-status", JSON.stringify(data.user[data.user.length - 1])) : "";
             console.log(data)
             setLoading(false)
-            window.localStorage.setItem("student-status", JSON.stringify(data.user.filter((student, id) => student._id == studentInfo._id)[0]))
-            data.success ? navigate(`/student/course/${enrollCourse.path}`) : ""
+            window.localStorage.setItem("student-status", JSON.stringify(data.updated.filter((student, id) => student._id == studentInfo._id)[0]))
+            data.success ? navigate(`/student/course/${enrollCourse.path}/week1`) : ""
+            data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
         })
         .catch((err) => {
             console.log(err)

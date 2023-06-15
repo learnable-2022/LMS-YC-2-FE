@@ -1,31 +1,84 @@
+import { useContext, useEffect, useState } from "react"
+import { useParams } from "react-router"
 import UserDashboardNav from "../../../components/UserDashboardNav/UserDashboardNav"
+import AppContext from "../../../context/Appcontext"
+import CourseDesc from "./CourseDesc"
 import styles from "./coursePage.module.css"
 
-function CoursePage() {
+function CoursePage({match}) {
+
+    const {path, week} = useParams()
+    const {studentToken} = useContext(AppContext)
+    const [currentCourses, setCurrentCourses] = useState()
+
+    const getCourses = () => {
+        const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
+            headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : `Bearer ${studentToken}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.courses)
+            setCurrentCourses(data.courses.filter((course, index) => course.track.toLowerCase() == path.toLowerCase() && course.week == week))
+            
+        })
+
+        console.log(currentCourses)
+        console.log(week)
+    }
+
+    useEffect(() => {
+        getCourses()
+    }, [path, week])
     return (
         <div className = {styles.container}>
             <UserDashboardNav navTitle = "Course" />
 
+            <div className= {styles.courseHead}>
+                {CourseDesc.map((course, index) => (
+                    course.path.toLowerCase() == path.toLowerCase() ? (
+                        <div key = {index}>
+                        <div className= {styles.courseImg}>
+                                <img src= {course.img} alt=""/>  
+                            </div> 
+                            <h2 id = {styles.courseTitle}>{course.title}</h2>
 
-            <div className= {styles.courseContents}>
-                <h2>Introducing user experience design</h2> 
-                <p>User experience (UX) designers focus on the experience that users have while using products like websites, apps, and physical objects. 
-                UX designers make those everyday interactions useful, enjoyable, and accessible. In the first part of this course, you'll be introduced to the world of UX and the factors that contribute to great user experience design. 
-                You'll understand the job of a UX designer and teams that UX designers often work withUser experience (UX) designers focus on the experience that users have while using products like websites, apps, and physical objects. 
-                UX designers make those everyday interactions useful, enjoyable, and accessible. In the first part of this course, you'll be introduced to the world of UX and the factors that contribute to great user xperience design. 
-                You'll understand the job of a UX designer and teams that UX designers often work with
-                </p>
-
-                <p>Start the course</p>
-
-                <div className= {styles.courseVideo}>
-                    <video width= "500" height = "200" controls >
-                        <source src = "" type = "video/*" /> 
-                    </video>
-                </div>
-               
-
+                            <div className= {styles.courseDesc}>
+                                <h3>Course Description:</h3>
+                                <p>{course.desc}</p>
+                            </div>
+                        </div>
+                    ) : ""
+                ))}
             </div>
+            
+
+            {currentCourses !== undefined && currentCourses !== null && currentCourses.length !== 0  ? (
+                <p>Start Lesson: </p>
+            ) : "" }
+            { currentCourses !== undefined && currentCourses !== null && currentCourses.length !== 0 ? (
+                currentCourses.map((course, index) => (
+                    <div className = {styles.courseContents} key = {index}>
+                        <h2>{course.title}</h2>
+                        <p>{course.description}</p>
+
+                        <div className= {styles.courseVideo}>
+                            <video width= "500" height = "500" controls >
+                                <source src = {`${course.url}`} type = "video/mp4" /> 
+                            </video>
+                        </div>
+                
+
+                    </div>
+                ))
+                
+            ): (
+                <div className={styles.noCourses}>
+                    <p>No Lesson yet for this week</p>
+                </div>
+            )}
            
            
 

@@ -27,12 +27,14 @@ import AdminOverview from "../pages/Admin/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/Admin/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import NotFound from "../pages/ErrorPage/NotFound";
-import ProtectedRoutes from "../ProtectedRoute";
+import ProtectedRoutes from "../StudentProtectedRoutes";
 import { useContext } from "react";
 import CreateLesson from "../pages/Admin/CreateLesson/CreateLesson";
 import CoursePage from "../pages/Student/CoursePage/CoursePage";
 import AddAnswers from "../pages/AddAnswers/AddAnswers";
 import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssignments";
+import StudentProtectedRoutes from "../StudentProtectedRoutes";
+import AdminProtectedRoutes from "../AdminProtectedRoutes";
 
 
 const Routy = () => {
@@ -43,7 +45,7 @@ const Routy = () => {
         <Route path="/" element={<LandingPage />} />
 
         {/* STUDENT DASHBOARD */}
-        <Route element = {<ProtectedRoutes />}>
+        <Route element = {<StudentProtectedRoutes />}>
           <Route path="/student/dashboard" element={<StudentSidebar />}>
             <Route index element={<StudentDashboard />} />
             <Route path="message" element={<StudentMessage />} />
@@ -55,7 +57,7 @@ const Routy = () => {
           </Route>
 
           {/* PRODUCT DESIGN SECTION */}
-          <Route path = '/student/course/:path' element = {<ProductNav />} >
+          <Route path = '/student/course/:path/:week' element = {<ProductNav />} >
             <Route index element = {<CoursePage />} />
           </Route>
         </Route>
@@ -74,18 +76,23 @@ const Routy = () => {
         </Route>
 
         {/* ADMIN DASHBOARD */}
-        <Route path="/admin/dashboard" element={<SidebarAdmin />}>
-          <Route index element={<AdminOverview />} />
-          <Route path="lessons" element={<LessonOverview />} />
-          <Route path = "createLesson" element = {<CreateLesson />} />
+        <Route element = {<AdminProtectedRoutes />}>
+          <Route path="/admin/dashboard" element={<SidebarAdmin />}>
+            <Route index element={<AdminOverview />} />
+            <Route path="lessons" element={<LessonOverview />} />
+            <Route path = "createLesson" element = {<CreateLesson />} />
+          </Route>
         </Route>
+        
 
         {/* ADMIN PAGEs */}
         <Route path="admin" element={<AdminNavbar />}>
           <Route path="login" element={<AdminLogin />} />
           <Route path="signup" element={<AdminSignUp />} />
           <Route path="forgotPassword" element={<ForgotPasswordAdmin />} />
-          <Route path="welcome" element={<WelcomeAdmin />} />
+          <Route element = {<AdminProtectedRoutes />} >
+            <Route path="welcome" element={<WelcomeAdmin />} />
+          </Route>
         </Route>
 
         <Route path="*" element={<NotFound />} />
