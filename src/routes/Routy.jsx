@@ -28,17 +28,29 @@ import LessonOverview from "../pages/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import NotFound from "../pages/ErrorPage/NotFound";
 import ProtectedRoutes from "../ProtectedRoute";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import EmptyStatePage from "../pages/EmptyStatePage/EmptyStatePage";
 import CoursePage from "../pages/CoursePage/CoursePage";
+import MyLoader from "../components/Loader/MyLoader";
+import { useState } from "react";
 
 const Routy = () => {
+
+  const[loading, setLoading] = useState(true)
+
+  useEffect(()=>{
+      setTimeout(()=>{
+          setLoading(false)
+      }, 2000)
+  },[])
+
+  //  STUDENT INFO
   const { studdntInfo } = useContext;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<LandingPage />} />
-
+    
         {/* STUDENT DASHBOARD */}
         {/* <Route element = {<ProtectedRoutes />}> */}
         <Route path="/student/dashboard" element={<StudentSidebar />}>
@@ -69,7 +81,7 @@ const Routy = () => {
         <Route path="/admin/dashboard" element={<SidebarAdmin />}>
           <Route index element={<AdminOverview />} />
           <Route path="lessons" element={<LessonOverview />} />
-          <Route path = "createLesson" element = {<EmptyStatePage />} />
+          <Route path="createLesson" element={<EmptyStatePage />} />
         </Route>
 
         {/* ADMIN PAGEs */}
@@ -82,15 +94,19 @@ const Routy = () => {
 
         <Route path="*" element={<NotFound />} />
         {/* PRODUCT DESIGN SECTION */}
-        <Route path = '/student/course' element = {<ProductNav />} >
-          <Route index element = {<CoursePage />} />
+        <Route path="/student/course" element={<ProductNav />}>
+          <Route index element={<CoursePage />} />
         </Route>
       </>
     )
   );
   return (
     <div>
-      <RouterProvider router={router} />
+      
+      <RouterProvider
+        router={router}
+
+      />
     </div>
   );
 };
