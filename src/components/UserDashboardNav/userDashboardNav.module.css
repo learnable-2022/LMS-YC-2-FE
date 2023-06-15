@@ -74,4 +74,20 @@ input {
     align-items: center;
     gap: 0.5rem;
   }
+  input {
+    display: none;
+  }
+  .Inp {
+    height: 30px;
+    width: 30px;
+  }
+  .Inp img {
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  .navName p {
+    display: none;
+  }
 }
