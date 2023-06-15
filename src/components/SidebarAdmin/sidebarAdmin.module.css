@@ -50,6 +50,18 @@
 .link:active{
     color: #f8a711;
 }
+.logout {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    color: red;
+    gap: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  .logout:hover{
+    background-color: #8C8C8C;
+  }
 .container > main{
     width: 80%;
 }
