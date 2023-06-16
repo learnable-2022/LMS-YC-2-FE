@@ -1,6 +1,7 @@
 .mainbar{
     height: 100%;
     width: 100%;
+    background-color: #eff2f8;
 }
 .mainbody{
     margin-top: 30px;
@@ -80,19 +81,19 @@
  .lesson1{
     width: 326px;
     height: 100px;
-    background-color: #feedcf;
+    background-color: #fff5e3;
     border-radius: 7px;
  }
  .lesson2{
     width: 326px;
     height: 100px;
-    background-color: #feedcf;
+    background-color: #fff5e3;
     border-radius: 7px;
  }
  .lesson3{
     width: 326px;
     height: 100px;
-    background-color: #feedcf;
+    background-color: #fff5e3;
     border-radius: 7px;
  }
  .mainlesson1{
@@ -103,7 +104,7 @@
  .lesson4{
     width: 495px;
     height: 100px;
-    background-color: #feedcf;
+    background-color: #fff5e3;
     border-radius: 7px;
  }
  .lessoncom{
@@ -124,7 +125,7 @@
  .lesson5{
     width: 495px;
     height: 100px;
-    background-color: #feedcf;
+    background-color: #fff5e3;
     border-radius: 7px;
  }
  .not{
@@ -159,213 +160,15 @@
     padding: 8px;
     text-align: left;
     border: 1px solid #8c8c8c;
-    background-color: #fac460;
+    background-color: #fbd388;
+    font-weight: 500;
   }
-  td{
-    height: 20px;
-    font-size: 12px;
-    text-align: center;
-    border: 1px solid #8c8c8c;
-    background-color: #fde2b0;
-    color: #8c8c8c;
+  .empty1{
+   font-size: 70px;
+   height: 10px;
   }
-  .tb1{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb1s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb1s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb2{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb2s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb2s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb3{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb3s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb3s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb4{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb4s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb4s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb5{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb5s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb5s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb6{
-    display: flex;
-    justify-content: space-around;
-  }
-  .tb6s1{
-    width: 50px;
-    height: 17px;
-    background-color: orange;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .tb6s2{
-    width: 70px;
-    height: 17px;
-    background-color: green;
-    border-radius: 3px;
-    margin-top: 2px;
-    color: white;
-  }
-  .page{
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin-top: 10px;
-    margin-left: 51rem;
-
-  }
-  .page1:hover, .page1.active{
-    background-color: orange;
-    color: white;
-    transition: 0.4s;
+.empty{
+   color: #7A7A7A;
+   margin-left: 450px;
+   margin-top: 50px;
 }
-.page2:hover, .page2.active{
-    background-color: orange;
-    color: white;
-    transition: 0.4s;
-} .page3:hover, .page3.active{
-    background-color: orange;
-    color: white;
-    transition: 0.4s;
-} .page4:hover, .page4.active{
-    background-color: orange;
-    color: white;
-    transition: 0.4s;
-} .page5:hover, .page5.active{
-    background-color: orange;
-    color: white;
-    transition: 0.4s;
-}
-  .page1{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    border: 1px solid orange;
-    border-radius: 6px;
-    color: #8c8c8c;
-  }
-  .page2{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    border: 1px solid orange;
-    border-radius: 6px;
-    color: #8c8c8c;
-  }
-  .page3{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    border: 1px solid orange;
-    border-radius: 6px;
-    color: #8c8c8c;
-  }
-  .page4{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    border: 1px solid orange;
-    border-radius: 6px;
-    color: #8c8c8c;
-  }
-  .page5{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 28px;
-    border: 1px solid orange;
-    border-radius: 6px;
-    color: #8c8c8c;
-  }
