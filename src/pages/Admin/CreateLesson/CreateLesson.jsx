@@ -55,7 +55,13 @@ function EmptyStatePage() {
         .then(data => {
             console.log(data)
             setLoading(false)
+            data.success ? setTitle("") : ""
+            data.success ? setDesc("") : ""
+            data.success ? setWeek("") : ""
+            data.success ? setSelectedFile("") : ""
+            data.success ? setPath("") : ""
         })
+        .catch(err => console.log(err))
     }
 
   return (

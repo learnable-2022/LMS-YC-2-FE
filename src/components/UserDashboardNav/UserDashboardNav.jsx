@@ -16,13 +16,13 @@ function UserDashboardNav({navTitle}) {
         const words = fullName.split(" ")
 
         if(words.length >= 2){
-        setFirstName(words.shift())
+            setFirstName(words.shift())
 
-        setLastName(words.join()) 
+            setLastName(words.join()) 
         }else{
-        setFirstName(fullName)
+            setFirstName(fullName)
+            setLastName("")
         }
-
         }
     }
     
@@ -36,26 +36,22 @@ function UserDashboardNav({navTitle}) {
     }
 
     return (
-      <nav className={styles.container}>
-        <h3 className={styles.title}>{navTitle}</h3>
-        <div className={styles.burger} onClick={showNav}>
-          <FiMenu />
-        </div>
-        <div className={styles.logo}>
-          <img src={LogoSvg} alt="" />
-          <p>Learnz</p>
-        </div>
-
-        <div className={styles.navName}>
-          {/* <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p> */}
-          <div className={styles.Inp}>
-            <input type="text" placeholder="Search" />
-            <img src={Search} alt="" />
-          </div>
-          <p>{`${firstName} ${lastName[0]}. `}</p>
-        </div>
-      </nav>
-    );
+        <nav className = {styles.container}>
+            <h3 className = {styles.title}>{navTitle}</h3>
+            <div className= {styles.burger} onClick = {showNav}>
+                <FiMenu />
+            </div>
+            <div className= {styles.logo}>
+                <img src= {LogoSvg} alt=""/>
+                <p>Learnz</p>
+            </div>
+            
+            <div className = {styles.navName}>
+                <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p>
+                <p>{`${firstName && (firstName[0].toUpperCase() + firstName.slice(1))}  ${lastName && (lastName[0].toUpperCase() + ".")} `}</p>
+            </div>
+        </nav>
+    )
 }
 
 export default UserDashboardNav

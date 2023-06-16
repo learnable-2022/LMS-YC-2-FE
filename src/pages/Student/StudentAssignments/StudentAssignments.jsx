@@ -35,7 +35,7 @@ function StudentAssignments() {
 
             <div className= {styles.assignmentsContent}>
                 <img src= {View} alt=""/>
-                <p>No assignments yet. Complete Course and get assignments to course</p>
+                <p>No Quiz yet. Complete Course and get quiz to course</p>
             </div>
 
         </div>

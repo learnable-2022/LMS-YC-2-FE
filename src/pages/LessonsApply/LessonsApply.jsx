@@ -8,7 +8,7 @@ import UserDashboardNav from "../../components/UserDashboardNav/UserDashboardNav
 
 function LessonsApply() {
 
-    const {studentInfo, studentData} = useContext(AppContext)
+    const {studentInfo, studentToken} = useContext(AppContext)
     const [enrollCourse, setEnrollCourse] = useState({})
     const [loading, setLoading] = useState(false)
 
@@ -30,7 +30,7 @@ function LessonsApply() {
 
         const updatedData = {
             path: enrollCourse.path,
-            course: enrollCourse.course,
+            course: enrollCourse.title,
             register: true
         }
        
@@ -40,7 +40,8 @@ function LessonsApply() {
             method : "PATCH",
             body: JSON.stringify(updatedData),
             headers: {
-                "Content-Type" : "application/json"
+                "Content-Type" : "application/json",
+                "Authorisation" : `Bearer ${studentToken}`
             }
         })
         .then(response => response.json())
@@ -58,25 +59,6 @@ function LessonsApply() {
 
     }
 
-    const getUsers = () => {
-        const response = fetch("/api/user/648161eaafcd38ffc7bea51a", {
-            method : "GET",
-            credentials : "include"
-            // headers: {
-            //     "Content-Type" : "application/json"
-            // }
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-    }
-
-    useEffect(() => {
-        getUsers()
-    }, [])
-
-    // console.log(JSON.parse(window.localStorage.getItem("student-status")))
-    // console.log(JSON.parse(window.localStorage.getItem("student-status2")).user[0])
-    
     return (
         <div className = {styles.container}>
             <UserDashboardNav navTitle = "Lessons" />

@@ -7,6 +7,7 @@
 .nav{
   width: 20%;
   height: 100vh;
+  background: white;
 }
 li {
   list-style: none;
@@ -23,12 +24,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
-  padding: 2rem;
-  gap: 0.5rem;
-  color: white;
+ gap: 0.5rem;
+  color: rgb(172, 138, 138);
   font-size: 25.2px;
   margin-bottom: 30px;
+  height: 5rem;
 }
 .logo img {
   height: 42px;
