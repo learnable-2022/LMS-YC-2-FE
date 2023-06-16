@@ -56,8 +56,6 @@ function StudentLogin() {
 
   }
 
-  // console.log(studentInfo)
-
   const checkData = () => {
     if(data !== null && data !== undefined){
         if(data.success !== null && data.success !== undefined){
@@ -78,6 +76,10 @@ useEffect(() => {
   checkData()
 }, [data])
 
+  const forgotPassword = () => {
+
+  }
+
   return (
     <div className= {styles.container}>
       <div className= {styles.formArea}>
@@ -93,25 +95,16 @@ useEffect(() => {
               <input type="email" value = {email} onChange = {(e) => setEmail(e.target.value)} placeholder='Email/Username' required/>
               <img src= {FormProfileIcon} alt=""/>
             </div>
-            <div className = {styles.inputGroup}>
+            <div className = {`${styles.inputGroup} ${styles.password}`} >
               <input type= {passwordVisibility ? "text" : "password"} value = {password} onChange = {(e) => setPassword(e.target.value)} placeholder='Password' required/>
               <img src= {Eyeslash} alt="" onClick = {(e) => setPasswordVisibility(!passwordVisibility)} id = {styles.passwordVisible}/>
             </div>
+            <NavLink to = "forgotPassword" className = {styles.forgot}>Forgot Password?</NavLink>
             <button type = "submit" >
               {loading && <img src = {Loader}/>}
               {!loading && "Sign in"}
             </button>
           </form>
-            <div className= {styles.line}></div>
-            <h3 className = {styles.h3}>OR</h3>
-            <div>
-              <button className= {styles.googleBtn}>
-                Sign In with Google
-              </button>
-              <button className= {styles.facebookBtn}>
-                Sign In with Facebook
-              </button>
-            </div>
             <p className= {styles.signUp}>Don't have an account? <NavLink to = "/signup">Sign up</NavLink> </p>
           </div>
       </div>  

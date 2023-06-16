@@ -1,0 +1,75 @@
+.lessonContainer{
+    display: flex;
+    flex-direction: column;
+    background:  #EFF2F8;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0 40px;
+}
+
+.backBtn{
+    color: #F8A711;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    padding-top: 10px;
+    background-color: transparent;
+}
+.addLessonArea{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    max-width: 100vw;
+    min-height: 100px;
+    border: #F8A711 2px dashed;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.addInstruction{
+    color: #333333;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 13px;
+}
+
+.lessonTitle{
+    margin-top: 10px;
+    padding: 10px 0;
+    font-weight: 700;
+    color: #333333;
+}
+
+.placeholderContainer{
+    background-color: #FFF5E3;
+    padding: 20px;
+}
+
+.titlePlaceHolder{
+    color: #4F4F4F;
+}
+
+.inputAreaTitle{
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+    color: #4F4F4F;
+}
+
+.inputBox{
+    background-color: #FFF5E3;
+    border: none;
+    margin-top: 10px;
+    min-width: 100vw;
+    min-height: 200px;
+    border-bottom: 0.5px solid #F8A711;
+    outline: none;
+    
+}
+
+.inputBox:focus{
+    border: none;
+    box-shadow: none;
+}
