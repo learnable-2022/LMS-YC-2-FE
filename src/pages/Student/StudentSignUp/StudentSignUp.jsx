@@ -58,8 +58,8 @@ function StudentSignUp() {
       const years = ageDate.getUTCFullYear() - 1970;
       setAge(years);
   
-      if (years < 6 || years > 13) {
-        setDobError("Child must be within 6 to 13 years");
+      if (years < 9 || years > 13) {
+        setDobError("Child must be within 9 to 13 years");
       } else {
         setDobError("");
       }
@@ -96,7 +96,7 @@ function StudentSignUp() {
       confirmPassword === "" ||
       parentName.trim().length < 2 ||
       childName.trim().length < 2 ||
-      age < 6 ||
+      age < 9 ||
       age > 13 ||
       (!passwordRegex.test(password) && password !== "") ||
       ((password === "" || confirmPassword !== "") && confirmPassword !== password)
@@ -158,7 +158,6 @@ function StudentSignUp() {
       body : JSON.stringify(studentData),
       headers : {
         "Content-Type" : "application/json",
-        "Authorization" : "Basic c2FtdWVsOmNoaWR1YmVt",
       }
     })
     .then(response => response.json())
@@ -208,25 +207,25 @@ function StudentSignUp() {
             <div className= {styles.usersName}>
               <div className = {styles.inputGroup}>
                 <label>Guardian's Name</label>
-                <input type = "text" value = {parentName} placeholder= "Guardian's name" onChange = {(e) => setParentName(e.target.value)} required/>
+                <input type = "text" name = "Guardian name" value = {parentName} placeholder= "Guardian's name" onChange = {(e) => setParentName(e.target.value)} required/>
                 <p className = {styles.error}>{parentNameError}</p>
               </div> 
 
               <div className = {styles.inputGroup}>
                 <label>Child's Name</label>
-                <input type="text" placeholder="Child's name" value = {childName} onChange={(e) => setChildName(e.target.value)} required/>
+                <input type="text" name = "Child name" placeholder="Child's name"  value = {childName} onChange={(e) => setChildName(e.target.value)} required/>
                 <p className = {styles.error}>{childNameError}</p>
               </div>
             </div>
             
             <div className = {styles.inputGroup}>
               <label>Email address(Parent or Child)</label>  
-              <input type = "email" value =  {email} placeholder='Ifunanya123@gmail.com' onChange = {(e) => setEmail(e.target.value)} required/>
+              <input type = "email" name = "email" value =  {email} placeholder='Ifunanya123@gmail.com' onChange = {(e) => setEmail(e.target.value)} required/>
             </div>
 
             <div className = {styles.inputGroup}>
               <label>Relationship</label>
-              <select value = {relationship} onChange = {(e) => setRelationship(e.target.value)} required>
+              <select value = {relationship} name="relationship" onChange = {(e) => setRelationship(e.target.value)} required>
                 <option value ="" disabled>Choose a Guardian Relationship</option>
                 <option value = "Father">Father</option> 
                 <option value = "Mother">Mother</option> 
@@ -237,7 +236,7 @@ function StudentSignUp() {
             
             <div className = {styles.inputGroup}>
               <label>Gender</label>
-              <select value = {gender} onChange = {(e) => setGender(e.target.value)} required>
+              <select value = {gender} name="gender" onChange = {(e) => setGender(e.target.value)} required>
                 <option value ="" disabled>Select Gender</option>
                 <option value = "Male">Male</option> 
                 <option value = "Female">Female</option> 
@@ -246,20 +245,20 @@ function StudentSignUp() {
 
             <div className = {styles.inputGroup}>
               <label>Date of birth(Child)</label>  
-              <input type="date" placeholder='12 April 2012' value = {childDOB} onChange = {(e) => setChildDOB(e.target.value)} required />
+              <input type="date" name = "DOB" placeholder='12 April 2012' value = {childDOB} onChange = {(e) => setChildDOB(e.target.value)} required />
               <p className = {styles.error}>{dobError}</p>
             </div>
 
             <div className = {styles.inputGroup}>
             <label>Class</label>  
-              <input type="text" placeholder='Grade 6' value = {childClass} onChange = {(e) => setChildClass(e.target.value)} required/>
+              <input type="text" name = "class" placeholder='Grade 6' value = {childClass} onChange = {(e) => setChildClass(e.target.value)} required/>
             </div>
 
             <div className= {styles.passwordGroup}>
               <div className = {styles.inputGroup}>
                 <div className= {styles.inputGroupPassword}>
                   <label>Password</label>  
-                  <input type= {passwordVisibility ? "text" : "password"} placeholder='Password' value = {password} onChange = {(e) => setPassword(e.target.value)} required/>
+                  <input type= {passwordVisibility ? "text" : "password"} name = "password" placeholder='Password' value = {password} onChange = {(e) => setPassword(e.target.value)} required/>
                   <img src= {Eyeslash} alt="" onClick = {(e) => setPasswordVisibility(!passwordVisibility)} id = {styles.passwordVisible}/>
                 </div>
                 <p className = {styles.error}>{passwordError}</p>
@@ -268,7 +267,7 @@ function StudentSignUp() {
               <div className = {styles.inputGroup}>
                 <div className= {styles.inputGroupPassword}>
                   <label>Password</label>  
-                  <input type= {confirmPasswordVisibility ? "text" : "password"} placeholder='Confirm Password' value = {confirmPassword} onChange = {(e) => setConfirmPassword(e.target.value)} required/>
+                  <input type= {confirmPasswordVisibility ? "text" : "password"} name = "confirm password" placeholder='Confirm Password' value = {confirmPassword} onChange = {(e) => setConfirmPassword(e.target.value)} required/>
                   <img src= {Eyeslash} alt="" onClick = {(e) => setConfirmPasswordVisibility(!confirmPasswordVisibility)} id = {styles.passwordVisible}/>
                 </div>
                 <p className = {styles.error}>{confirmPasswordError}</p>

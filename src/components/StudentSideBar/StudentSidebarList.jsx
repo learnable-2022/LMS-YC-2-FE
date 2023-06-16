@@ -9,6 +9,7 @@ import { TiMessages } from "react-icons/ti";
 import { FcOvertime } from "react-icons/fc";
 import { VscReport } from "react-icons/vsc";
 import { GiPoliceBadge } from "react-icons/gi";
+import { TbCertificate } from "react-icons/tb"
 
 const StudentSidebarList = [
     {
@@ -26,8 +27,8 @@ const StudentSidebarList = [
     {
         id: 3,
         logo: <MdAssignment/>,
-        name: 'Assignments',
-        link: "assignments"
+        name: 'Quiz',
+        link: "quiz"
     },
     {
         id: 4,
@@ -42,10 +43,10 @@ const StudentSidebarList = [
         link: "/student/dashboard"
     },
     {
-        id: 6,
-        logo: <FcOvertime/>,
-        name: 'Timetable',
-        link: "/student/dashboard"
+        id:6,
+        logo: <TbCertificate />,
+        name: "Certification",
+        link: "certificate"
     },
     {
         id: 7,

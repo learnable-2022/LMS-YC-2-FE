@@ -23,6 +23,7 @@ export { default as MedalIcon } from "./images/MedalIcon.png"
 export { default as PersonIcon } from "./images/PersonIcon.png"
 export { default as View } from "./images/View.png"
 export { default as Logout } from "./images/Logout.png"
+export { default as ProfileEdit } from "./images/profileedit.png"
 
 // LANDING PAGE
 export { default as LandingPageLogo} from "./images/LandingPageLogo.png"
@@ -136,15 +137,25 @@ export { default as Kid6} from "./images/Kid6.png"
 export { default as ErrorImage} from "./images/Error.png"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6be3344da6fa8a3b9a015c4254c746a1c154c723
 
 // CERTIFICATE PAGE
 export { default as upperFrameImg} from "./images/upperFrameImg.png"
 export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
 export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 6be3344da6fa8a3b9a015c4254c746a1c154c723
 // COURSE PAGE
 export { default as Web3} from "./images/Web3.jpg"
 export { default as Frontend} from "./images/Frontend.jpg"
 export { default as Backend} from "./images/Backend.jpg"
 export { default as ProductDesign} from "./images/ProductDesign.png"
+<<<<<<< HEAD
 >>>>>>> 078910b39a28d9dcbf3abdc666f7e65d18828a48
+=======
+>>>>>>> 6be3344da6fa8a3b9a015c4254c746a1c154c723

@@ -1,5 +1,5 @@
 import styles from "./userDashboardNav.module.css"
-import { SearchIcon } from "../../assets"
+import { Search, SearchIcon } from "../../assets"
 import { FiMenu } from "react-icons/fi"
 import { LogoSvg , Logo} from "../../assets"
 import { useContext, useState,useEffect } from "react"
@@ -16,13 +16,13 @@ function UserDashboardNav({navTitle}) {
         const words = fullName.split(" ")
 
         if(words.length >= 2){
-        setFirstName(words.shift())
+            setFirstName(words.shift())
 
-        setLastName(words.join()) 
+            setLastName(words.join()) 
         }else{
-        setFirstName(fullName)
+            setFirstName(fullName)
+            setLastName("")
         }
-
         }
     }
     
@@ -47,8 +47,8 @@ function UserDashboardNav({navTitle}) {
             </div>
             
             <div className = {styles.navName}>
-                {/* <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p> */}
-                <p>{`${firstName} ${lastName[0]}. `}</p>
+                <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p>
+                <p>{`${firstName && (firstName[0].toUpperCase() + firstName.slice(1))}  ${lastName && (lastName[0].toUpperCase() + ".")} `}</p>
             </div>
         </nav>
     )

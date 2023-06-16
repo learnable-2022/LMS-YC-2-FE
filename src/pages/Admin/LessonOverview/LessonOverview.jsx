@@ -4,15 +4,16 @@ import { BsSearch, BsPersonFill } from "react-icons/bs";
 import { MdTimer, MdPlayLesson, } from "react-icons/md";
 import {Kid1, Kid2, Kid3, Kid4, Kid5, Kid6} from "../../../assets"
 import AdminDashboardNav from '../../../components/AdminDashboardNav/AdminDashboardNav';
+import { NavLink } from 'react-router-dom';
 
 function LessonOverview() {
   return (
     <div className = {styles.mainbar}>
       <AdminDashboardNav navTitle = "Lessons" />
       <div className= {styles.mainbody}>
-        <div className= {styles.mainnewlesson}>
+        <NavLink to = "/admin/dashboard/createLesson" className= {styles.mainnewlesson}>
           Create new Lesson
-        </div>
+        </NavLink>
         <div className= {styles.mainoverview}>
           <div className= {styles.over}>
           Lesson overview

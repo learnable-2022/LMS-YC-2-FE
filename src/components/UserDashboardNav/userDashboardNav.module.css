@@ -1,60 +1,93 @@
-.container{
-    background-color: white;
-    padding: 1.5rem 2rem 1rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow-y: hidden;
+.container {
+  background-color: white;
+  padding: 1.5rem 2rem 1rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
 }
-.burger{
+.burger {
+  display: none;
+}
+.logo {
+  display: none;
+}
+.logo img {
+  background-color: #f8a711;
+  border-radius: 50%;
+  padding: 0.2rem;
+  height: 2rem;
+}
+.logo p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.navName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nameLogo {
+  background-color: rgb(209, 209, 209);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+  width: fit-content;
+  padding: 0.2rem 0.7rem;
+  color: #f2994a;
+  font-weight: bolder;
+  border-radius: 0.2rem;
+  font-size: 1.3rem;
+}
+.Inp {
+  position: relative;
+}
+.Inp img {
+  position: absolute;
+  right: 40px;
+  top: 14px;
+}
+input {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  margin-right: 20px;
+  padding: 0 20px;
+  color: #adb8cc;
+}
+
+/* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .container {
+    height: 4.5rem;
+    padding: 1rem;
+  }
+  .title {
     display: none;
-}
-.logo{
-    display: none;
- }
-.logo img{
-    background-color: #F8A711;
-    border-radius: 50%;
-    padding: 0.2rem;
-    height: 2rem;
-}
-.logo p{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.navName{
+  }
+  .burger {
+    display: block;
+  }
+  .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-.nameLogo{
-    background-color: rgb(209, 209, 209);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
-    width: fit-content;
-    padding: 0.2rem 0.7rem;
-    color: #F2994A;
-    font-weight: bolder;
-    border-radius: 0.2rem;
-    font-size: 1.3rem;
-}
-
-
-/* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
-@media screen and (max-width : 600px){
-    .container{
-        height: 4.5rem;
-        padding: 1rem;
-    }
-    .title{
-        display: none;
-    }
-    .burger{
-        display: block;
-    }
-    .logo{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+  }
+  input {
+    display: none;
+  }
+  .Inp {
+    height: 30px;
+    width: 30px;
+  }
+  .Inp img {
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  .navName p {
+    display: none;
+  }
 }

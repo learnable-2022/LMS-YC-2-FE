@@ -15,17 +15,7 @@ function StudentLessons() {
     const { courseIndex, setCourseIndex, studentInfo} = useContext(AppContext)
     let [path, setPath] = useState("")
 
-    console.log(studentInfo.track)
-    const navigate = useNavigate()
-
     const [studentCourse, setStudentCourse] = useState(Courses.filter((course, index) => studentInfo.track.toLowerCase() == course.path.toLowerCase()))
-
-    // useEffect(() => {
-    //     setStudentCourse(Courses.filter((course, index) => studentInfo.track.toLowerCase() == course.path.toLowerCase()))
-    // }, [])
-
-    console.log(studentCourse)
-    
 
     return(
         <div className = {styles.container}>
@@ -50,7 +40,9 @@ function StudentLessons() {
                                     <h3>{course.title}</h3>
                                     <p>{course.desc}</p>
 
-                                    <NavLink to = {`enroll/${course.courseName}`} onClick = {() => setCourseIndex(index)}>Select Course</NavLink>
+                                    <NavLink to = {course.btnText == "Coming Soon" ? "/student/dashboard/lessons" : `enroll/${course.courseName}`} onClick = {() => setCourseIndex(index)} disabled = {course.btnText === "Coming Soon" ? true : false}>
+                                        {course.btnText}
+                                    </NavLink>
                                 </Card>
                             ))}  
                         </div>
