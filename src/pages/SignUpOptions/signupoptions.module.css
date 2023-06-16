@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  height: 80vh;
+  min-height: 80vh;
 }
 .imageArea img{
   width: 400px;
