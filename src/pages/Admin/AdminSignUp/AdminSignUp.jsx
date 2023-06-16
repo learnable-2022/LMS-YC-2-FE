@@ -127,7 +127,6 @@ function AdminSignUp() {
 
                         <div className = {styles.formExtras}>
                             <p><span className = {styles.dont}>Have an account?</span> <NavLink to = "/admin/login">Sign in</NavLink> </p>
-                            <p>Forgot password?</p>
                         </div>
 
                         

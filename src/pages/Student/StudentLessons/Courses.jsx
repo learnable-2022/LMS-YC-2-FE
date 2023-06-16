@@ -43,8 +43,8 @@ const Courses = [
         id: 4
     },
     {
-        img: Lesson3,
-        title: "Backend Web Development",
+        img: Lesson5,
+        title: "Cloud Computing",
         desc: "Learn how to successfully develop and build websites using PHP",
         courseName: "backend",
         path: "Backend",
@@ -53,8 +53,8 @@ const Courses = [
         id: 5
     },
     {
-        img: Lesson3,
-        title: "Backend Web Development",
+        img: Lesson6,
+        title: "Game Development",
         desc: "Learn how to successfully develop and build websites using PHP",
         courseName: "backend",
         path: "Backend",
@@ -64,7 +64,7 @@ const Courses = [
     },
     {
         img: Lesson7,
-        title: "Backend Web Development",
+        title: "Robotics",
         desc: "Learn how to successfully develop and build websites using PHP",
         courseName: "backend",
         path: "Backend",
@@ -74,7 +74,7 @@ const Courses = [
     },
     {
         img: Lesson8,
-        title: "Backend Web Development",
+        title: "Mobile App Development",
         desc: "Learn how to successfully develop and build websites using PHP",
         courseName: "backend",
         path: "Backend",
