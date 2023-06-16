@@ -1,4 +1,5 @@
 import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../../assets';
+import WalletBtn from '../../../components/WalletBtn/WalletBtn';
 
 
 
@@ -7,7 +8,7 @@ import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../../asse
 function StudentCertificate() {
   return (
     <div>
-        <div style={{width: "100%", height: "100vh", position: "relative"}}>
+        {/* <div style={{width: "100%", height: "100vh", position: "relative"}}>
             <div style={{ width: "50px", height: "100vh", backgroundColor: "#F8A711", position: "absolute", left: "0", top: "0" }}>
 
             </div>
@@ -82,7 +83,9 @@ function StudentCertificate() {
             <div style={{  position: "fixed", bottom: "0", top: "530px"}}>
                 <img src={lowerFrameImg} alt="" />
             </div>
-        </div>
+        </div> */}
+
+        <WalletBtn />
     </div>
   )
 }
