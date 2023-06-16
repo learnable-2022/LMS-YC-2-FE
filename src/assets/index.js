@@ -23,6 +23,7 @@ export { default as MedalIcon } from "./images/MedalIcon.png"
 export { default as PersonIcon } from "./images/PersonIcon.png"
 export { default as View } from "./images/View.png"
 export { default as Logout } from "./images/Logout.png"
+export { default as ProfileEdit } from "./images/profileedit.png"
 
 // LANDING PAGE
 export { default as LandingPageLogo} from "./images/LandingPageLogo.png"

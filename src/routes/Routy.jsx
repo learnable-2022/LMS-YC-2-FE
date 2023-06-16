@@ -46,7 +46,7 @@ const Routy = () => {
         <Route path="/" element={<LandingPage />} />
 
         {/* STUDENT DASHBOARD */}
-        <Route element = {<StudentProtectedRoutes />}>
+        <Route element={<StudentProtectedRoutes />}>
           <Route path="/student/dashboard" element={<StudentSidebar />}>
             <Route index element={<StudentDashboard />} />
             <Route path="message" element={<StudentMessage />} />
@@ -59,11 +59,10 @@ const Routy = () => {
           </Route>
 
           {/* PRODUCT DESIGN SECTION */}
-          <Route path = '/student/course/:path/:week' element = {<ProductNav />} >
-            <Route index element = {<CoursePage />} />
+          <Route path="/student/course/:path/:week" element={<ProductNav />}>
+            <Route index element={<CoursePage />} />
           </Route>
         </Route>
-        
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
@@ -79,27 +78,25 @@ const Routy = () => {
         </Route>
 
         {/* ADMIN DASHBOARD */}
-        <Route element = {<AdminProtectedRoutes />}>
+        <Route element={<AdminProtectedRoutes />}>
           <Route path="/admin/dashboard" element={<SidebarAdmin />}>
             <Route index element={<AdminOverview />} />
             <Route path="lessons" element={<LessonOverview />} />
-            <Route path = "createLesson" element = {<CreateLesson />} />
+            <Route path="createLesson" element={<CreateLesson />} />
           </Route>
         </Route>
-        
 
         {/* ADMIN PAGEs */}
         <Route path="admin" element={<AdminNavbar />}>
           <Route path="login" element={<AdminLogin />} />
           <Route path="signup" element={<AdminSignUp />} />
           <Route path="forgotPassword" element={<ForgotPasswordAdmin />} />
-          <Route element = {<AdminProtectedRoutes />} >
+          <Route element={<AdminProtectedRoutes />}>
             <Route path="welcome" element={<WelcomeAdmin />} />
           </Route>
         </Route>
 
         <Route path="*" element={<NotFound />} />
-        
       </>
     )
   );

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <style>
       .wrappy {
         height: 100%;
         width: 100%;
@@ -16,15 +8,12 @@
         position: absolute;
         top: 0;
         left: 0;
+        overflow: hidden;
       }
       .loader {
         width: 100px;
         height: 100px;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
       }
       .loader::before,
       .loader::after {
@@ -32,7 +21,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) scale(0.45);
+        transform: translate(-50%, -50%);
         width: 48em;
         height: 48em;
         background-image: radial-gradient(
@@ -83,14 +72,3 @@
           opacity: 0;
         }
       }
-    </style>
-  </head>
-  <body>
-    <div id="root">
-      <div class="wrappy">
-        <span class="loader"></span>
-      </div>
-    </div>
-    <script type="module" src="/src/index.jsx"></script>
-  </body>
-</html>

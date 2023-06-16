@@ -1,5 +1,5 @@
 import styles from "./userDashboardNav.module.css"
-import { SearchIcon } from "../../assets"
+import { Search, SearchIcon } from "../../assets"
 import { FiMenu } from "react-icons/fi"
 import { LogoSvg , Logo} from "../../assets"
 import { useContext, useState,useEffect } from "react"
