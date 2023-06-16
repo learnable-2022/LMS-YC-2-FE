@@ -32,12 +32,13 @@ function LessonsApply() {
 
         const updatedData = {
             track: enrollCourse.path,
-            course: enrollCourse.course,
+            course: enrollCourse.title,
             register: true
         }
        
         // const path = enrollCourse.path
 
+        
         fetch(`https://learnz.onrender.com/api/v1/user/${studentInfo._id}`, {
             method : "PATCH",
             body: JSON.stringify(updatedData),

@@ -1,12 +1,15 @@
 .container {
   /* background-color: blue; */
-  margin-top: 2rem;
+  /* height: 80vh; */
+
 }
 .formArea {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  min-height: 85vh;
 }
 .imageArea img {
   width: 400px;
@@ -14,10 +17,11 @@
 }
 .formContainer{
   background-color: white;
-  width: 500px;
+  width: 450px;
   padding: 2rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  border: 1px solid #F8A711;
 }
 .formContainer > h2 {
   color: #F8A711;
@@ -31,7 +35,7 @@
   margin-top: 15px;
 }
 .form {
-  margin: 3rem 0;
+  margin: 3rem 0 0.2rem;
 }
 .dataMessage{
   display: block;
@@ -71,6 +75,16 @@
   height: 1rem;
   z-index: 10;
 }
+.inputGroup.password{
+  margin-bottom: 0;
+}
+.forgot{
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  width: fit-content;
+  margin-left: auto ;
+  display: block;
+}
 #passwordVisible{
   cursor: pointer;
 }
@@ -88,31 +102,12 @@
 .form button img{
   height: 1.5rem;
 }
-  .line {
-  border-top: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-.googleBtn, .facebookBtn {
-  width: 100%;
-  display: block;
-  margin: auto;
-  border: 1px solid #2767DC;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.3rem;
-  background-color: white;
-  cursor: pointer;
-}
-.googleBtn:hover, .facebookBtn:hover{
-  background-color: #F8A711;
-  color: white;
-  border-color: transparent;
-}
-.signUp {
+ .signUp {
   color: #070000;
   font-size: 13px;
   margin-top: 10px;
   margin: auto;
+  text-align: center;
 }
 
 .signUp a {
