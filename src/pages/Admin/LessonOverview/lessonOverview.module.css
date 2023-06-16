@@ -2,15 +2,16 @@
     z-index: 1;
     flex-grow: 1;
     height: 100%;
-    background-color: #C8C8C8;
+    /* background-color: #C8C8C8; */
 }
 
  .mainbody{
     margin-top: 40px;
-    padding: 0px 30px;
+    padding: 0px 40px;
+    width: 100%;
  }
  .mainnewlesson{
-    margin-left: 55rem;
+    margin-left: auto;
     background-color: orange;
     color: white;
     font-size: 12px;
@@ -19,6 +20,7 @@
     width: 150px;
     text-align: center;
     border-radius: 8px;
+    display: block;
  }
  .over{
     color: #8c8c8c;
@@ -27,6 +29,7 @@
  .mainlesson{
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
  }
  .totallesson img {
    width: 320px;
@@ -195,6 +198,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
+    gap: 1rem;
  }
  .lesson4{
     width: 320px;
