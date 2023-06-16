@@ -17,14 +17,14 @@ function StudentForgotPassword() {
         e.preventDefault();
         setLoading(true)
 
-        const data = {
+        const formData = {
             email: email,
             password : password
         }
 
         const response = fetch("https://learnz.onrender.com/api/v1/user/recover", {
             method : "PATCH",
-            body : JSON.stringify(data),
+            body : JSON.stringify(formData),
             headers : {
                 "Content-Type" : "application/json",
             }
