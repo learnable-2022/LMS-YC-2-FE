@@ -50,11 +50,11 @@ function StudentProfile() {
           <span>Path :</span>{" "}
           <span>
             {" "}
-            {studentInfo.path == null ||
-            studentInfo.path == undefined ||
-            studentInfo.path == "NULL "
+            {studentInfo.track == null ||
+            studentInfo.track == undefined ||
+            studentInfo.track == "NULL "
               ? ""
-              : studentInfo.path}
+              : studentInfo.track}
           </span>
         </p>
       </div>

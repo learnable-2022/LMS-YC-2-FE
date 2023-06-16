@@ -1,6 +1,6 @@
 .container {
   overflow: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 100vh;
 }
 .ProfileBody h2 {
