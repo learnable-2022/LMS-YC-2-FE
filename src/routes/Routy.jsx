@@ -36,6 +36,7 @@ import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssig
 import StudentProtectedRoutes from "../StudentProtectedRoutes";
 import AdminProtectedRoutes from "../AdminProtectedRoutes";
 import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
+import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 
 
 const Routy = () => {
@@ -68,6 +69,7 @@ const Routy = () => {
         <Route path="login" element={<StudentFormNavbar />}>
           <Route index element={<LoginOptions />} />
           <Route path="student" element={<StudentLogin />} />
+          <Route path = "student/forgotPassword" element = {<StudentForgotPassword />} />
         </Route>
 
         {/* STUDENT SIGN UP PAGE */}
