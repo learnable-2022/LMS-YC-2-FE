@@ -1,6 +1,7 @@
 import styles from "./adminNavbar.module.css"
 import {Logo} from "../../assets"
 import { Outlet } from "react-router"
+import { NavLink } from "react-router-dom"
 
 function AdminNavbar() {
     return (
@@ -12,7 +13,7 @@ function AdminNavbar() {
 
             <div className= {styles.navLinks}>
                 <ul>
-                    <li className={styles.active}>Home</li>
+                    <NavLink to = "/" className={styles.active}>Home</NavLink>
                     <li>Website</li>
                     <li>Blog</li>
                 </ul>
