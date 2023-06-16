@@ -27,8 +27,8 @@ const StudentSidebarList = [
     {
         id: 3,
         logo: <MdAssignment/>,
-        name: 'Assignments',
-        link: "assignments"
+        name: 'Quiz',
+        link: "quiz"
     },
     {
         id: 4,
