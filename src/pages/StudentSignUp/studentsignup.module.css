@@ -11,6 +11,7 @@
   background-color: white;
   width: 500px;
   padding: 2rem;
+  border: 1px solid #F8A711;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
