@@ -35,10 +35,11 @@ import AddAnswers from "../pages/AddAnswers/AddAnswers";
 import StudentAssignments from "../pages/Student/StudentAssignments/StudentAssignments";
 import StudentProtectedRoutes from "../StudentProtectedRoutes";
 import AdminProtectedRoutes from "../AdminProtectedRoutes";
+import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
+import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 
 
 const Routy = () => {
-  const { studdntInfo } = useContext;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -52,6 +53,7 @@ const Routy = () => {
             <Route path="studentQuiz" element={<StudentQuiz />} />
             <Route path = "lessons" element = {<StudentLessons />} />
             <Route path = "assignments" element = {<StudentAssignments />} />
+            <Route path = "certificate" element = {<StudentCertificate />} />
             <Route path = "profile" element = {<StudentProfile />} />
             <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
           </Route>
@@ -67,6 +69,7 @@ const Routy = () => {
         <Route path="login" element={<StudentFormNavbar />}>
           <Route index element={<LoginOptions />} />
           <Route path="student" element={<StudentLogin />} />
+          <Route path = "student/forgotPassword" element = {<StudentForgotPassword />} />
         </Route>
 
         {/* STUDENT SIGN UP PAGE */}

@@ -3,6 +3,7 @@
   justify-content: space-around;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 .imageArea img{
   width: 400px;
@@ -13,6 +14,7 @@
   padding: 2rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  border: 1px solid #F8A711;
 }
 .formContainer > h2 {
   color: #F8A711;

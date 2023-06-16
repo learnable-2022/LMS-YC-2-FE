@@ -56,16 +56,16 @@ function CoursePage({match}) {
             
 
             {currentCourses !== undefined && currentCourses !== null && currentCourses.length !== 0  ? (
-                <p>Start Lesson: </p>
+                <p id = {styles.start}>Start Lesson: </p>
             ) : "" }
             { currentCourses !== undefined && currentCourses !== null && currentCourses.length !== 0 ? (
                 currentCourses.map((course, index) => (
                     <div className = {styles.courseContents} key = {index}>
-                        <h2>{course.title}</h2>
+                        <h3>{course.title}</h3>
                         <p>{course.description}</p>
 
                         <div className= {styles.courseVideo}>
-                            <video width= "500" height = "500" controls >
+                            <video controls >
                                 <source src = {`${course.url}`} type = "video/mp4" /> 
                             </video>
                         </div>
