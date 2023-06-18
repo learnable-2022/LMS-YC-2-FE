@@ -10,6 +10,7 @@ export const AppProvider = ({children}) => {
     const [adminLoggedIn, setAdminLoggedIn] = useState(JSON.parse(window.localStorage.getItem("admin-loggedIn")))
     const [courseIndex, setCourseIndex] = useState("")
     const [showNav, setShowNav] = useState(false)
+    const [showCourseNav, setShowCourseNav] = useState(false)
     const [studentToken, setStudentToken] = useState(JSON.parse(window.localStorage.getItem("student-token")))
     const [adminToken, setAdminToken] = useState(JSON.parse(window.localStorage.getItem("admin-token")))
 
@@ -37,10 +38,12 @@ export const AppProvider = ({children}) => {
         adminData,
         courseIndex,
         showNav,
+        showCourseNav,
         studentToken,
         adminToken,
         setStudentInfo,
         setShowNav,
+        setShowCourseNav,
         setCourseIndex,
         setStudentToken,
         setStudentLoggedIn,

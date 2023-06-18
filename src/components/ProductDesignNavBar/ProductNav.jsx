@@ -4,10 +4,11 @@ import { NavLink, Outlet } from "react-router-dom";
 import { LogoSvg, productArrow, productImage } from "../../assets";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import AppContext from "../../context/Appcontext";
+import { FaTimes} from "react-icons/fa"
 
 const ProductNav = () => {
   const [open, setOpen] = useState(true);
-  const {studentInfo} = useContext(AppContext)
+  const {showCourseNav, setShowCourseNav, studentInfo} = useContext(AppContext)
 
   const weeks = ["Week 1", "Week 2", "Week 3", "Week 4"]
   const [activeWeek, setActiveWeek] = useState()
@@ -19,8 +20,11 @@ const ProductNav = () => {
   };
   return (
     <div className={Product.Cont}>
-      <nav className = {Product.nav}>
+      <nav className = {`${Product.nav} ${showCourseNav ? Product.active : ""}`}>
         <div className={Product.logo}>
+          <div className= {Product.close} onClick = {() => setShowCourseNav(false)}>
+            <FaTimes />
+          </div>
           <img src={LogoSvg} alt="" />
           <h3>Learn.Z</h3>
         </div>
