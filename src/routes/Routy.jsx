@@ -53,7 +53,7 @@ const Routy = () => {
             <Route path="studentQuiz" element={<StudentQuiz />} />
             <Route path = "lessons" element = {<StudentLessons />} />
             <Route path = "quiz" element = {<StudentAssignments />} />
-            <Route path = "certificate" element = {<StudentCertificate />} />
+            <Route path = "certification" element = {<StudentCertificate />} />
             <Route path = "profile" element = {<StudentProfile />} />
             <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
           </Route>
