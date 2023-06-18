@@ -4,9 +4,10 @@ import { FiMenu } from "react-icons/fi"
 import { LogoSvg , Logo} from "../../assets"
 import { useContext, useState,useEffect } from "react"
 import AppContext from "../../context/Appcontext"
+import { NavLink } from "react-router-dom"
 
 function UserDashboardNav({navTitle}) {
-    const {studentInfo, setShowNav} = useContext(AppContext)
+    const {studentInfo, setShowNav, setShowCourseNav} = useContext(AppContext)
     const [fullName, setFullName] = useState(studentInfo.child_name)
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -32,7 +33,11 @@ function UserDashboardNav({navTitle}) {
     })
 
     const showNav = () => {
-        setShowNav(true)
+        if(location.pathname.includes("/student/dashboard")){
+            setShowNav(true)
+        }else if(location.pathname.includes("/student/course")){
+            setShowCourseNav(true)
+        }
     }
 
     return (
@@ -46,10 +51,10 @@ function UserDashboardNav({navTitle}) {
                 <p>Learnz</p>
             </div>
             
-            <div className = {styles.navName}>
+            <NavLink to = "/student/dashboard/profile" className = {styles.navName}>
                 <p className = {styles.nameLogo}>{studentInfo.child_name[0].toUpperCase()}</p>
                 <p>{`${firstName && (firstName[0].toUpperCase() + firstName.slice(1))}  ${lastName && (lastName[0].toUpperCase() + ".")} `}</p>
-            </div>
+            </NavLink>
         </nav>
     )
 }
