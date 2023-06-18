@@ -1,5 +1,5 @@
 import styles from "./certificate.module.css";
-import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../assets';
+import { lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../assets';
 
 
 
@@ -7,8 +7,8 @@ import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../assets'
 
 function Certificate() {
   return (
-    <div>
-        <div className={styles.container}>
+    <div className={styles.container}>
+        <div >
             <div className={styles.leftSide}>
 
             </div>
@@ -59,18 +59,11 @@ function Certificate() {
 
 
                 <div className={styles.footerItems}>
-                    <div>
-                        <input type="text" />
-                        <p>Date</p>
-                    </div>
-
+                
                     <div >
                         <img src={medalGoldIcon} className={styles.medalIcon} alt="" />
                     </div>
-
-                    <div>
-                        <img src={Logo} alt="" className={styles.logoIcon} />
-                    </div>
+                   
                 </div>
             </div>
 
