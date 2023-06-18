@@ -37,6 +37,7 @@ import StudentProtectedRoutes from "../StudentProtectedRoutes";
 import AdminProtectedRoutes from "../AdminProtectedRoutes";
 import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
 import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
+import Certificate from "../components/Certificate/Certificate";
 
 
 const Routy = () => {
@@ -72,7 +73,7 @@ const Routy = () => {
         </Route>
 
         {/* STUDENT SIGN UP PAGE */}
-        <Route path="signup" element={<StudentFormNavbar />}>
+        <Route path="signup" element={<StudentFormNavbar  />}>
           <Route index element={<SignUpOptions />} />
           <Route path="student" element={<StudentSignUp />} />
         </Route>

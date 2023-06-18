@@ -142,6 +142,7 @@ export { default as upperFrameImg} from "./images/upperFrameImg.png"
 export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
 export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
 
+
 // COURSE PAGE
 export { default as Web3} from "./images/Web3.jpg"
 export { default as Frontend} from "./images/Frontend.jpg"
