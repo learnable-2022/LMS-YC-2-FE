@@ -74,3 +74,53 @@ a {
 .Cont main{
   width: 80%;
 }
+
+/* ----------------------------------------------------------------MOBILE RESPONSIVENESS----------------------------------------- */
+@media screen and (max-width: 1024px){
+  .nav{
+    width: 20%;
+  }
+  .logo h3{
+    font-size: 1.2rem;
+  }
+  .logo > img{
+    font-size: 1.2rem;
+  }
+  .link{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width : 600px){
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 60%;
+    transform: translateX(-100%);
+    transition: all 400ms ease;
+  }
+  .nav.active{
+    transform: translateX(0);
+  }
+  .logo{
+    position: relative;
+  }
+  .close{
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    color: red;
+    font-size: 1.2rem
+  }
+  .link{
+    justify-content: center;
+  }
+  
+  .Cont > main{
+    width: 100%;
+  }
+}

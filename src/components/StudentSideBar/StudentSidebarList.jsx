@@ -65,10 +65,6 @@ const StudentSidebarList = [
         logo: <MdOutlineSettingsSuggest/>,
         name: 'Settings',
         link: "/student/dashboard"
-    },{
-        id: "",
-        logo: "",
-        name: ""
     }
 ]
 

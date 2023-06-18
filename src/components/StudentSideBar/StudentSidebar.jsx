@@ -1,8 +1,7 @@
 import styles from "./studentSidebar.module.css";
 import {LogoSvg} from "../../assets";
-import { useState, useContext} from "react";
-import { Outlet, useNavigate } from "react-router";
-import { NavLink } from "react-router-dom";
+import { useState, useContext, useEffect} from "react";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import AppContext from "../../context/Appcontext"
 import StudentSidebarList from "./StudentSidebarList";
 import { FaTimes} from "react-icons/fa"
@@ -13,10 +12,28 @@ function StudentSidebar() {
 
   const [activeLink, setActiveLink] = useState("")
   const navigate = useNavigate()
+  const location = useLocation()
 
+  // const onLoadLink = () => {
+  //   if(window.)
+  // }
   const handleLinkClick = (link) => {
     setActiveLink(link)
+    setShowNav(false)
   }
+
+  useEffect(() => {
+    // setActiveLink(location.pathname)
+    StudentSidebarList.forEach((link,index) => {
+      if(location.pathname.includes(link.name.toLowerCase())){
+        setActiveLink(link.name)
+        return;
+      }else if(location.pathname === "/student/dashboard"){
+        setActiveLink("Home")
+      }
+    })
+    // console.log(location, activeLink)
+  }, [location.pathname])
 
   const logout = () => {
     if(window.confirm("Do you want to log out")){
