@@ -71,3 +71,19 @@
     font-size: 2rem;
 
 }
+
+
+/* --------------------------------------------------------MOBILE RESPONSIVENESS----------------------------------------- */
+@media screen and (max-width: 600px){
+    .courseHead{
+        padding: 1rem;
+    }
+    .courseImg{
+        width: 100%;
+        height: 200px;
+    }
+    .courseDesc p{
+        font-size: 0.8rem;
+        max-width: 800px;
+    }
+}

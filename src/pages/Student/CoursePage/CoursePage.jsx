@@ -21,7 +21,7 @@ function CoursePage({match}) {
         .then(res => res.json())
         .then(data => {
             console.log(data.courses)
-            setCurrentCourses(data.courses.filter((course, index) => course.track.toLowerCase() == path.toLowerCase() && course.week == week))
+            data.success ? setCurrentCourses(data.courses.filter((course, index) => course.track.toLowerCase() == path.toLowerCase() && course.week == week)) : ""
             
         })
 
