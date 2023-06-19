@@ -1,0 +1,32 @@
+.certificateContainer{
+    background-color: white;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 3rem;
+    border: 1px solid #F8A711;
+    border-radius: 1.5rem;
+}
+.certificateContainer > h2{
+    color: #F8A711;
+    font-size: 2rem;
+}
+.certificateContainer > p{
+    margin: 1rem 0;
+}
+.certificateContainer > div > button{
+    margin: 1rem auto;
+    width: 60%;
+}
+.claimReward{
+    background-color: #F8A711;
+    border: none;
+    outline: none;
+    width: 60%;
+    display: block;
+    margin: auto;
+    padding: 1rem 0;
+    color: white;
+}
+.claimReward:disabled{
+    background-color: #ccc;
+}
