@@ -1,6 +1,7 @@
 import styles from "./studentDashboard.module.css";
 import {
   WelcomeGirl,
+  BoyStudying,
   DashboardEllipse,
   AlarmIcon,
   BooksIcon,
@@ -57,7 +58,7 @@ function StudentDashboard() {
                   your courses. have fun!
                 </p>
               </div>
-              <img src={WelcomeGirl} alt="" />
+              <img src={studentInfo.gender.toLowerCase() == "female" ? WelcomeGirl : BoyStudying} alt="" />
             </div>
             <img src={DashboardEllipse} alt="" />
           </div>

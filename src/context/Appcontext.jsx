@@ -13,6 +13,7 @@ export const AppProvider = ({children}) => {
     const [showCourseNav, setShowCourseNav] = useState(false)
     const [studentToken, setStudentToken] = useState(JSON.parse(window.localStorage.getItem("student-token")))
     const [adminToken, setAdminToken] = useState(JSON.parse(window.localStorage.getItem("admin-token")))
+    const [walletConnected, setWalletConnected] = useState(false)
 
     const [adminData, setAdminData] = useState({
         email: "",
@@ -41,6 +42,7 @@ export const AppProvider = ({children}) => {
         showCourseNav,
         studentToken,
         adminToken,
+        walletConnected,
         setStudentInfo,
         setShowNav,
         setShowCourseNav,
@@ -49,7 +51,8 @@ export const AppProvider = ({children}) => {
         setStudentLoggedIn,
         setAdminLoggedIn,
         setAdminInfo, 
-        setAdminToken
+        setAdminToken,
+        setWalletConnected
    }}>
         {children}
     </AppContext.Provider>
