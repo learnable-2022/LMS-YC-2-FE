@@ -1,4 +1,5 @@
 import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../../assets';
+import Certificate from '../../../components/Certificate/Certificate';
 import WalletBtn from '../../../components/WalletBtn/WalletBtn';
 
 
@@ -84,6 +85,7 @@ function StudentCertificate() {
                 <img src={lowerFrameImg} alt="" />
             </div>
         </div> */}
+        <Certificate />
 
         <WalletBtn />
     </div>

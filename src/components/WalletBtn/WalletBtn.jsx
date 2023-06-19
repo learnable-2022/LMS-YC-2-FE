@@ -6,7 +6,7 @@ const WalletBtn = () => {
     const onboarding = new MetaMaskOnboarding()
     const [walletConnected, setWalletConnected] = useState(false);
     const [btnText, setBtnText] = useState("")
-    const [account, setAccount] = useState('');
+    const [walletAddress, setWalletAddress] = useState();
     const [installMetaMask, setInstallMetamask] = useState()
 
     const onClickInstallMetaMask = () => {
@@ -17,40 +17,38 @@ const WalletBtn = () => {
       const {ethereum} = window;
       if(ethereum && ethereum.isMetaMask){
         setInstallMetamask(true)
+        setBtnText("Connect Wallet")
       }else{
         setInstallMetamask(false)
+        setBtnText("Please Install a MetaMask Wallet")
       }
       // return Boolean(ethereum && ethereum.isMetaMask)
     }
 
     async function connectWallet () {
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const connectedAccount = await signer.getAddress();
-      setBtnText("Connected")
-      setAccount(connectedAccount);
-      setWalletConnected(true);
-    }
-
-    const MetaMaskClientCheck = () => {
-      if(!installMetaMask) {
-        setBtnText("Please Install a MetaMask Wallet")
-      }else {
-        connectWallet()
-        setBtnText(account)
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      // const walletAddress = accounts[0]
+      // console.log(walletAddress)
+        setWalletAddress(accounts[0])
+        console.log(walletAddress)
+        setBtnText(walletAddress)
+      }catch (error){
+        console.log("Error Connecting to Metamask", error)
       }
+      
     }
 
     useEffect(() => {
       isMetaMaskInstalled()
-      MetaMaskClientCheck();
-    })
+      // MetaMaskClientCheck();
+    }, [walletAddress])
 ;
 
   return (
     <div>
-      <button onClick = {!installMetaMask ? onClickInstallMetaMask : ""}>{btnText}</button>
+      <button onClick = {!installMetaMask ? onClickInstallMetaMask : connectWallet}>{btnText}</button>
+      {/* <button onClick = {installMetaMask ? onClickInstal : ""}>{btnText}</button> */}
     </div>
   );
 };
