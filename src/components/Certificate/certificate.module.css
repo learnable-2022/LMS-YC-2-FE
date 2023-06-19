@@ -1,20 +1,18 @@
 .container {
-    width: 90%;
-    margin: 60px 0 0 400px;
+    display: block;
     position: relative;
 
-    @media (max-width: 600px) {
-        margin: 60px 20px 0 30px;
-    }
-
-    @media (max-width: 1200px) {
-        margin: 60px 20px 0 30px;
-    }
+}
+.certificate{
+    /* height: ; */
+    width: 600px;
+    margin: auto;
+    position: relative;
 }
 
 .container .leftSide {
     width: 30px;
-    height: 95%; 
+    height: 100%; 
     position: absolute;
     background-color: #F8A711; 
     top: 0;
@@ -24,37 +22,16 @@
     }
 }
 
-.container .upperFrameImg {
-    width: 40%;
-    height: 40%;
-    position: relative;
-
-
-    @media (max-width: 600px) {
-        width: 80%;
-    }
-
-    @media (max-width: 1200px) {
-        width: 80%;
-    }
-}
-
 .container .upperFrameImg img {
-    width: 100%;
+    width: 98%;
     height: 100%;
-}
+    /* display: none; */
+    z-index: 3000;
+ }
 
 .container .content {
-    width: 40%;
     text-align: center;
 
-    @media (max-width: 600px) {
-        width: 80%;
-    }
-
-    @media (max-width: 1200px) {
-        width: 80%;
-    }
 }
 
 .content h1 {
@@ -96,10 +73,6 @@
     border-left: none; 
     border-bottom: 1px solid #000000;
 
-
-     @media (max-width: 600px) {
-         margin: 0 30px;
-    }
 }
 
 .content .inputBox input {
@@ -110,6 +83,7 @@
     border: none;
     color: #000000;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .content .completeText p {
@@ -135,9 +109,6 @@
     border-bottom: 1px solid #000000;
     background: none;
 
-      @media (max-width: 600px) {
-         margin: 0 30px;
-    }
 }
 
 .content .courseInput input {
@@ -147,6 +118,7 @@
     border: none;
     color: #000000; 
     font-weight: bold;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -170,11 +142,12 @@
 
 .container .rightSide {
     width: 30px;
-    height: 95%; 
+    height: 100%; 
     position: absolute;
     background-color: #F8A711; 
     top: 0;
-    margin-left: 480px;
+    /* margin-left: 395px; */
+    right: 0;
 
 
     @media (max-width: 375px) and (max-width: 900px) {
@@ -189,23 +162,14 @@
 }
 
 .container .lowerFrameImg {
-    width: 41.5%;
-    height: 20%;
     position: relative;
-
-
-    @media (max-width: 600px) {
-        width: 90%;
-    }
-
-    @media (max-width: 1200px) {
-        width: 81.5%;
-    }
-}
+ }
 
 .container .lowerFrameImg img {
     width: 100%;
     height: 100%;
+    display: block;
+    margin-bottom: 0;
 }
 
 

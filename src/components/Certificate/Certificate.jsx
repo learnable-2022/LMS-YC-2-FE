@@ -1,14 +1,14 @@
 import styles from "./certificate.module.css";
 import { lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../assets';
-
-
-
-
+import { useContext } from "react";
+import AppContext from "../../context/Appcontext";
 
 function Certificate() {
+
+    const { studentInfo } = useContext(AppContext)
   return (
     <div className={styles.container}>
-        <div >
+        <div className = {styles.certificate}>
             <div className={styles.leftSide}>
 
             </div>
@@ -40,22 +40,24 @@ function Certificate() {
                     </p>
                 </div>
 
-
-                <div className={styles.inputBox}>
-                    <input type="text"/>
-                </div>
-
-
-                <div className={styles.completeText}>
-                    <p>
-                        has successfully completed the course
-                    </p>
-                </div>
+                <form action="">
+                    <div className={styles.inputBox}>
+                        <input type="text" value = {studentInfo.child_name.toUpperCase() } disabled = {true}/>
+                    </div>
 
 
-                <div className={styles.courseInput}>
-                    <input type="text" placeholder="COURSE NAME HERE" />
-                </div>
+                    <div className={styles.completeText}>
+                        <p>
+                            has successfully completed the course
+                        </p>
+                    </div>
+
+
+                    <div className={styles.courseInput}>
+                        <input type="text" value = {studentInfo.course}  disabled/>
+                    </div>  
+                </form>
+               
 
 
                 <div className={styles.footerItems}>

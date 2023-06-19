@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import MetaMaskOnboarding from "@metamask/onboarding"
+import styles from "./walletBtn.module.css"
+import AppContext from '../../context/Appcontext';
 
 const WalletBtn = () => {
     const onboarding = new MetaMaskOnboarding()
-    const [walletConnected, setWalletConnected] = useState(false);
     const [btnText, setBtnText] = useState("")
     const [walletAddress, setWalletAddress] = useState();
     const [installMetaMask, setInstallMetamask] = useState()
+    const {setWalletConnected} = useContext(AppContext)
 
     const onClickInstallMetaMask = () => {
       onboarding.startOnboarding()
@@ -17,7 +19,7 @@ const WalletBtn = () => {
       const {ethereum} = window;
       if(ethereum && ethereum.isMetaMask){
         setInstallMetamask(true)
-        setBtnText("Connect Wallet")
+        walletAddress === undefined || walletAddress === null || walletAddress == "" ? setBtnText("Connect Wallet") : setBtnText(walletAddress)
       }else{
         setInstallMetamask(false)
         setBtnText("Please Install a MetaMask Wallet")
@@ -28,11 +30,10 @@ const WalletBtn = () => {
     async function connectWallet () {
       try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-      // const walletAddress = accounts[0]
-      // console.log(walletAddress)
         setWalletAddress(accounts[0])
         console.log(walletAddress)
         setBtnText(walletAddress)
+        setWalletConnected(true)
       }catch (error){
         console.log("Error Connecting to Metamask", error)
       }
@@ -47,8 +48,7 @@ const WalletBtn = () => {
 
   return (
     <div>
-      <button onClick = {!installMetaMask ? onClickInstallMetaMask : connectWallet}>{btnText}</button>
-      {/* <button onClick = {installMetaMask ? onClickInstal : ""}>{btnText}</button> */}
+      <button onClick = {!installMetaMask ? onClickInstallMetaMask : connectWallet} className = {styles.walletBtn}>{btnText}</button>
     </div>
   );
 };
