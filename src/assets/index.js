@@ -24,6 +24,9 @@ export { default as PersonIcon } from "./images/PersonIcon.png"
 export { default as View } from "./images/View.png"
 export { default as Logout } from "./images/Logout.png"
 export { default as ProfileEdit } from "./images/profileedit.png"
+export { default as BoyStudying } from "./images/BoyStudying.png"
+export { default as BoyStudent } from "./images/BoyStudent.png"
+export { default as GirlStudent } from "./images/GirlStudent.png"
 
 // LANDING PAGE
 export { default as LandingPageLogo} from "./images/LandingPageLogo.png"
@@ -141,6 +144,7 @@ export { default as ErrorImage} from "./images/Error.png"
 export { default as upperFrameImg} from "./images/upperFrameImg.png"
 export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
 export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
+
 
 // COURSE PAGE
 export { default as Web3} from "./images/Web3.jpg"

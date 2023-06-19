@@ -46,7 +46,7 @@ const StudentSidebarList = [
         id:6,
         logo: <TbCertificate />,
         name: "Certification",
-        link: "certificate"
+        link: "certification"
     },
     {
         id: 7,

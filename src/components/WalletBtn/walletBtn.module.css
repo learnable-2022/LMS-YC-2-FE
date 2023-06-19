@@ -1,0 +1,9 @@
+.walletBtn{
+    background-color: orange;
+    display: block;
+    border: none;
+    margin: auto;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+}
