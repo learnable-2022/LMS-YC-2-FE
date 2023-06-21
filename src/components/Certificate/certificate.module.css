@@ -1,13 +1,13 @@
 .container {
     display: block;
     position: relative;
-
 }
 .certificate{
     /* height: ; */
     width: 600px;
     margin: auto;
     position: relative;
+    background-color: white;
 }
 
 .container .leftSide {
@@ -16,6 +16,7 @@
     position: absolute;
     background-color: #F8A711; 
     top: 0;
+    left: 0;
 
     @media (max-width: 600px) {
         width: 15px;
@@ -150,13 +151,8 @@
     right: 0;
 
 
-    @media (max-width: 375px) and (max-width: 900px) {
-        margin-left: 260px;
+    @media (max-width: 600px) {
         width: 15px;
-    }
-
-    @media (min-width: 786px) and (max-width: 1024px) {
-        margin: 0 0 0 570px;
     }
 
 }
@@ -170,6 +166,13 @@
     height: 100%;
     display: block;
     margin-bottom: 0;
+}
+
+/* ----------------------------------------------MOBILE RESPONSIVENESS--------------------------------------------------------- */
+@media screen and (max-width: 600px){
+    .certificate{
+        width: 300px
+    }
 }
 
 

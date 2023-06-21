@@ -51,7 +51,7 @@ function StudentLessons() {
                 </div>
             ) : (
                 <div className= {styles.main}>
-                    <h2>{studentCourse[0].path}</h2>
+                    <h2>{studentCourse[0].title}</h2>
                     <p>{studentCourse[0].desc}</p>
 
                     <div className= {styles.courseDuration}>
