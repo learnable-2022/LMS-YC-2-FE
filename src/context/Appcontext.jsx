@@ -13,7 +13,38 @@ export const AppProvider = ({children}) => {
     const [showCourseNav, setShowCourseNav] = useState(false)
     const [studentToken, setStudentToken] = useState(JSON.parse(window.localStorage.getItem("student-token")))
     const [adminToken, setAdminToken] = useState(JSON.parse(window.localStorage.getItem("admin-token")))
+    const [walletAddress, setWalletAddress] = useState();
     const [walletConnected, setWalletConnected] = useState(false)
+    const [totalVideos, setTotalVideos] = useState()
+    const [progress, setProgress] = useState(0)
+    const [showModal, setShowModal] = useState(false)
+
+    studentInfo.track.trim() !== "NULL"
+    ? (() => {
+        const getTotalVideos = () => {
+          const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${studentToken}`
+            }
+          })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data.courses);
+              if (data.success) {
+                setTotalVideos(data.courses.filter((course, index) => course.track.toLowerCase() === studentInfo.track.toLowerCase()).length);
+              }
+            });
+  
+          // console.log(totalVideos)
+          // console.log(week)
+        };
+  
+        getTotalVideos();
+      })()
+    : "";
+  
+
 
     const [adminData, setAdminData] = useState({
         email: "",
@@ -42,7 +73,11 @@ export const AppProvider = ({children}) => {
         showCourseNav,
         studentToken,
         adminToken,
+        walletAddress,
         walletConnected,
+        totalVideos,
+        progress,
+        showModal,
         setStudentInfo,
         setShowNav,
         setShowCourseNav,
@@ -52,7 +87,11 @@ export const AppProvider = ({children}) => {
         setAdminLoggedIn,
         setAdminInfo, 
         setAdminToken,
-        setWalletConnected
+        setWalletAddress,
+        setWalletConnected,
+        setTotalVideos,
+        setProgress,
+        setShowModal,
    }}>
         {children}
     </AppContext.Provider>
