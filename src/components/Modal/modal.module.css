@@ -1,0 +1,33 @@
+.modalContainer{
+    background-color: white;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+    width: 45%;
+    height: 20vh;
+    padding: 1rem;
+
+}
+.modalClose{
+    color: red;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    position: sticky !important;
+    top: 0;
+    right: 0;
+    z-index: 200;
+}
+
+/* --------------------------------------------MEDIA QUERY SMALL DEVICES------------------------------------ */
+@media screen and (max-width: 600px){
+    .modalContainer{
+        width: 80%;
+    }
+}
