@@ -109,9 +109,13 @@
     width: 350px;
   }
   .formContainer{
-    width: 300px;
+    width: 320px;
     margin: auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    min-height: fit-content;
+  }
+  .formContainer .continue{
+    margin-top: 40px;
   }
 
 

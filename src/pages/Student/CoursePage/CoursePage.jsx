@@ -8,8 +8,17 @@ import styles from "./coursePage.module.css"
 function CoursePage({match}) {
 
     const {path, week} = useParams()
-    const {studentToken} = useContext(AppContext)
+    const {studentToken, totalVideos, setTotalVideos, progress, setProgress} = useContext(AppContext)
     const [currentCourses, setCurrentCourses] = useState()
+    const [watchedVideo, setWatchedVideo] = useState([]);
+
+    const handleEnded = (index) => {
+        if (!watchedVideo.includes(index)) {
+            const updatedWatchedVideo = [...watchedVideo, index];
+            setWatchedVideo(updatedWatchedVideo);
+            setProgress(progress + 1);
+        }
+    };
 
     const getCourses = () => {
         const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
@@ -25,12 +34,12 @@ function CoursePage({match}) {
             
         })
 
-        console.log(currentCourses)
-        console.log(week)
     }
 
     useEffect(() => {
         getCourses()
+        // getTotalVideos()
+       
     }, [path, week])
     return (
         <div className = {styles.container}>
@@ -65,7 +74,10 @@ function CoursePage({match}) {
                         <p>{course.description}</p>
 
                         <div className= {styles.courseVideo}>
-                            <video controls >
+                            <video 
+                                controls 
+                                onEnded = {() => handleEnded(course._id)}
+                            >
                                 <source src = {`${course.url}`} type = "video/mp4" /> 
                             </video>
                         </div>

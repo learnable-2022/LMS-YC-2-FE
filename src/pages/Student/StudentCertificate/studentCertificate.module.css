@@ -1,3 +1,19 @@
+.container{
+    position: relative;
+}
+.container.noOverflow{
+    height: 100vh;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 5rem;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(206, 159, 159, 0.3), rgba(0,0,0,0.6));
+    z-index: 300;
+}
 .certificateContainer{
     background-color: white;
     width: fit-content;
@@ -26,7 +42,33 @@
     margin: auto;
     padding: 1rem 0;
     color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 .claimReward:disabled{
     background-color: #ccc;
+}
+.blockchainLink{
+    /* background-color: green; */
+    display: block;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.2rem;
+}
+.blockchainLink a{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------------MOBILE RESPONSIVENESS---------------------------------------------- */
+@media screen and (max-width: 600px){
+
+    .container{
+        /* padding: 1rem  */
+    }
+    .certificateContainer{
+        padding: 1rem;
+        
+    }
 }

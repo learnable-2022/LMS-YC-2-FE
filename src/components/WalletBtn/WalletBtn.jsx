@@ -7,9 +7,8 @@ import AppContext from '../../context/Appcontext';
 const WalletBtn = () => {
     const onboarding = new MetaMaskOnboarding()
     const [btnText, setBtnText] = useState("")
-    const [walletAddress, setWalletAddress] = useState();
     const [installMetaMask, setInstallMetamask] = useState()
-    const {setWalletConnected} = useContext(AppContext)
+    const {setWalletConnected, walletAddress, setWalletAddress} = useContext(AppContext)
 
     const onClickInstallMetaMask = () => {
       onboarding.startOnboarding()
@@ -32,7 +31,6 @@ const WalletBtn = () => {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setWalletAddress(accounts[0])
         console.log(walletAddress)
-        setBtnText(walletAddress)
         setWalletConnected(true)
       }catch (error){
         console.log("Error Connecting to Metamask", error)

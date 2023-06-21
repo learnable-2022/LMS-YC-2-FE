@@ -64,7 +64,7 @@ function LandingPage() {
           </p>
           <div className= {styles.heroLinks}>
             <NavLink to = "/signup">Enroll Now</NavLink>
-            <NavLink>View Courses</NavLink>
+            <a href = "#featuredCourses">View Courses</a>
           </div>
           <div className={styles.users}>
             <div>
@@ -158,7 +158,7 @@ function LandingPage() {
       </section>
 
       {/* ----------------------------------------------------------------FEATURED COURSES---------------------------------------------------------- */}
-      <section className={styles.featuredCoursesContainer}>
+      <section className={styles.featuredCoursesContainer} id = "featuredCourses">
         <h2>Featured Courses</h2>
 
         <div className={styles.featuredCourses}>
