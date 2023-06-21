@@ -1,3 +1,7 @@
+.landingPageContainer{
+    scroll-behavior: smooth;
+}
+/* body:scroll */
 .nav{
     display: flex;
     align-items: center;

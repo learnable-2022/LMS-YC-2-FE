@@ -19,7 +19,7 @@ export const AppProvider = ({children}) => {
     const [progress, setProgress] = useState(0)
     const [showModal, setShowModal] = useState(false)
 
-    studentInfo.track.trim() !== "NULL"
+    studentInfo?.track.trim() !== "NULL"
     ? (() => {
         const getTotalVideos = () => {
           const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
