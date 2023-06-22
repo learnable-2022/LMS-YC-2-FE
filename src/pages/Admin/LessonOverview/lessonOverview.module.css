@@ -10,17 +10,28 @@
     padding: 0px 40px;
     width: 100%;
  }
+
  .mainnewlesson{
     margin-left: auto;
     background-color: orange;
     color: white;
     font-size: 12px;
     line-height: 30px;
+    margin-bottom: 0;
     height: 33px;
     width: 150px;
     text-align: center;
     border-radius: 8px;
     display: block;
+
+
+    @media (max-width: 600px) {
+      margin-left: 0;
+      margin-bottom: 20px;
+      height: 50px;
+      line-height: 50px;
+      width: 220px;
+    }
  }
  .over{
     color: #8c8c8c;
@@ -30,6 +41,10 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
  }
  .totallesson img {
    width: 320px;
@@ -53,7 +68,12 @@
    font-size: 20px;
    font-weight: 500;
    margin-left: 10px;
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+  }
  }
+
  .num28{
    font-size: 10px;
    margin-left: 10px;
@@ -62,6 +82,8 @@
    width: 250px;
    color: #8c8c8c;
    top: 0;
+
+   
  }
  .stevnum28{
    height: 60px;
@@ -95,6 +117,10 @@
    font-size: 20px;
    font-weight: 500;
    margin-left: 10px;
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+  }
  }
  .num400{
    font-size: 10px;
@@ -172,6 +198,10 @@
     font-size: 20px;
     font-weight: 500;
     margin-left: 10px;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
  }
  .lesson1{
     width: 320px;
@@ -179,13 +209,24 @@
     background-color: #feedcf;
     border-radius: 7px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
  }
+
  .lesson2{
     width: 320px;
     height: 150px;
+    margin: 0;
     background-color: #feedcf;
     border-radius: 7px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      margin: 15px 0;
+      width: 100%;
+    }
  }
  .lesson3{
     width: 320px;
@@ -193,12 +234,20 @@
     background-color: #feedcf;
     border-radius: 7px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
  }
  .mainlesson1{
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
     gap: 1rem;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
  }
  .lesson4{
     width: 320px;
@@ -206,6 +255,10 @@
     background-color: #feedcf;
     border-radius: 7px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
  }
  .lessoncom img{
    width: 320px;
@@ -216,6 +269,10 @@
    font-size: 20px;
    font-weight: 500;
    margin-left: 10px;
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+   }
  }
  .num28green{
    font-size: 10px;
@@ -252,9 +309,15 @@
  .lesson6{
    width: 320px;
    height: 150px;
+   margin: 0;
    background-color: #feedcf;
    border-radius: 7px;
    overflow: hidden;
+
+   @media (max-width: 600px) {
+    margin: 15px 0;
+    width: 100%;
+  }
 }
 .lessoncom1 img{
    width: 320px;
@@ -265,6 +328,10 @@
    font-size: 20px;
    font-weight: 500;
    margin-left: 10px;
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+   }
  }
  .num28green1{
    font-size: 10px;
@@ -304,6 +371,10 @@
     background-color: #feedcf;
     border-radius: 7px;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
  }
  .not img{
    width: 320px;
@@ -314,6 +385,10 @@
    font-size: 20px;
    font-weight: 500;
    margin-left: 10px;
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+   }
  }
  .num8{
    font-size: 10px;
