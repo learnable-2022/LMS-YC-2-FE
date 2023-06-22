@@ -8,17 +8,52 @@ import styles from "./coursePage.module.css"
 function CoursePage({match}) {
 
     const {path, week} = useParams()
-    const {studentToken, totalVideos, setTotalVideos, progress, setProgress} = useContext(AppContext)
+    const {studentToken, totalVideos, setTotalVideos, progress, setProgress, studentInfo, watchedVideos, setWatchedVideos} = useContext(AppContext)
     const [currentCourses, setCurrentCourses] = useState()
-    const [watchedVideo, setWatchedVideo] = useState([]);
-
+    const [loading, setLoading] = useState(false)
     const handleEnded = (index) => {
-        if (!watchedVideo.includes(index)) {
-            const updatedWatchedVideo = [...watchedVideo, index];
-            setWatchedVideo(updatedWatchedVideo);
-            setProgress(progress + 1);
+        if (!watchedVideos.includes(index)) {
+            const updatedWatchedVideo = [...watchedVideos, index];
+            setWatchedVideos(updatedWatchedVideo);
+            setProgress((progress + 1));
         }
     };
+    
+
+    const updateProfile = () => {
+        const updatedData = {
+            watchedVideos: watchedVideos,
+            progess: `${progress}`
+        }
+
+        const response = fetch(`https://learnz.onrender.com/api/v1/user/${studentInfo._id}`, {
+            method : "PATCH",
+            body: JSON.stringify(updatedData),
+            headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : `Bearer ${studentToken}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // data.success ? window.localStorage.setItem("student-status", JSON.stringify(data.user[data.user.length - 1])) : "";
+            data.success ? window.localStorage.setItem("student-status", JSON.stringify(data.updated[0])) : ""
+            console.log(data.updated[0])
+            setLoading(false)
+            return data;
+            
+        })
+        .catch((err) => {
+            console.log(err)
+            setLoading(false)
+        })
+    }
+
+    useEffect(() => {
+        updateProfile()
+    }, [progress, watchedVideos])
+
+    
 
     const getCourses = () => {
         const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
