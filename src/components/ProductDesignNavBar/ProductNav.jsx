@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Product from "./productNav.module.css";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { LogoSvg, productArrow, productImage } from "../../assets";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import AppContext from "../../context/Appcontext";
@@ -8,10 +8,42 @@ import { FaTimes} from "react-icons/fa"
 
 const ProductNav = () => {
   const [open, setOpen] = useState(true);
+  const [activeWeek, setActiveWeek] = useState()
+  const [activeLink, setActiveLink] = useState("")
+  const navigate = useNavigate()
+  const location = useLocation()
   const {showCourseNav, setShowCourseNav, studentInfo} = useContext(AppContext)
 
-  const weeks = ["Week 1", "Week 2", "Week 3", "Week 4"]
-  const [activeWeek, setActiveWeek] = useState()
+  const weeks = [
+    {
+      week: "Week 1",
+      id: 1
+    },
+    {
+      week: "Week 2",
+      id: 2
+    },
+    {
+      week: "Week 3",
+      id: 3
+    },
+    {
+      week: "Week 4",
+      id: 4
+    },
+  ]
+  
+  useEffect(() => {
+    weeks.forEach((week, index) => {
+      if(location.pathname.endsWith((week.id))){
+        setActiveLink(week.id)
+      }
+    })
+    console.log(location)
+  })
+  const handleLinkClick = (link) => {
+    setActiveLink(link)
+  }
 
   const courseLinks = [ "Dashboard"]
 
@@ -51,9 +83,9 @@ const ProductNav = () => {
             style={{ display: open ? "block" : "none" }}
           >
             {weeks.map((week, index) => (
-                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index} className = {Product.linko}>
+                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index} className = {`${Product.linko} ${activeLink == week.id ? Product.active : ""}`} onClick={() => handleLinkClick(week.id)}>
                   <div></div>
-                  <p>{week}</p>
+                  <p>{week.week}</p>
                 </NavLink>
             ))}
           </div>
@@ -61,7 +93,7 @@ const ProductNav = () => {
             {courseLinks.map((link, index) => (
               // <>
                 <li key = {index}>
-                  <NavLink to="">{link}</NavLink>
+                  <NavLink to="/student/dashboard" className= {Product.listLink}>{link}</NavLink>
                 </li>
               // </>
             ))}

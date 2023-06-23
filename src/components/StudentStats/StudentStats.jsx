@@ -4,7 +4,7 @@ import Card from "../Card/Card"
 import styles from "./studentStats.module.css"
 
 function StudentStats() {
-  const {progress, totalVideos} = useContext(AppContext)
+  const {progress, totalVideos, scorePerentage} = useContext(AppContext)
   const progressPercentage = (progress / totalVideos) * 100
     return (
       <div className= {styles.studentStatsContainer}>
@@ -24,7 +24,7 @@ function StudentStats() {
           <Card bgColor = "#FEEDCF">
             <p>Total Quiz Score</p>
 
-            <h2>0</h2>
+            <h2>{scorePerentage ? scorePerentage : 0 + "%"}</h2>
           </Card>
         </div>
       </div>
