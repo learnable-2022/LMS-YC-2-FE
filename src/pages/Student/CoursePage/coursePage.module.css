@@ -59,19 +59,47 @@
 .noCourses{
     width: 100%;
     position: relative;
-    min-height: 50vh;
+    min-height: 30vh;
     /* background-color: green; */
 }
-.noCourses p{
-     position: absolute;
-    top: 30%;
+.noCourses > div{
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color: green; */
     font-size: 2rem;
-
 }
-
+.noCourses > div p{
+    font-size: 2rem;
+}
+.noCourses > div a{
+    font-size: 1rem;
+    display: block;
+    margin-top: 2rem;
+}
+.courseLoader{
+    width: 100%;
+    position: relative;
+    min-height: 40vh;
+ }
+.courseLoader img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    /* margin: auto; */
+    height: 8rem;
+}
+.takeQuiz {
+    background-color: #F8A711;
+    display: block;
+    width: fit-content;
+    color: white;
+    padding: 0.6rem 2rem;
+    margin: auto;
+    border-radius: 0.8rem;
+}
 
 /* --------------------------------------------------------MOBILE RESPONSIVENESS----------------------------------------- */
 @media screen and (max-width: 600px){

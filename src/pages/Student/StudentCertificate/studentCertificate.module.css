@@ -60,6 +60,23 @@
     text-decoration: underline;
 }
 
+.noCertificateCont{
+    min-height: 70vh;
+    position: relative;
+}
+
+.noCertificate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.noCertificate img{
+    display: block;
+    margin: 0.5rem auto;
+}
+
 
 /* --------------------------------------------MOBILE RESPONSIVENESS---------------------------------------------- */
 @media screen and (max-width: 600px){

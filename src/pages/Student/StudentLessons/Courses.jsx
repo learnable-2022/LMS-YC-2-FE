@@ -34,7 +34,7 @@ const Courses = [
     },
     {
         img: Lesson4,
-        title: "Product Design",
+        title: "Product Design (UI/UX)",
         desc: "Design, build and maintain web application structures using Node JS",
         courseName: "product_design",
         path: "Product Design",
