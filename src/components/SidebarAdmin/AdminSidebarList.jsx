@@ -46,22 +46,7 @@ const AdminSidebarList = [
         name: 'Timetable',
         link: "/admin/dashboard"
     },
-    {
-        id: 7,
-        logo: <VscReport/>,
-        name: 'Reports',
-        link: "lessons"
-    },
-    {
-        id: 8,
-        logo: <MdOutlineSettingsSuggest/>,
-        name: 'Settings',
-        link: "/admin/dashboard"
-    },{
-        id: "",
-        logo: "",
-        name: ""
-    }
+    
 ]
 
 export default AdminSidebarList;

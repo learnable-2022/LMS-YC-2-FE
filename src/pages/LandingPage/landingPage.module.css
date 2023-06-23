@@ -223,7 +223,7 @@
 }
 #abtFeature{
     color: #667085;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 
@@ -464,6 +464,15 @@
         line-height: 1.5rem;
         max-width: 350px;
     
+    }
+    .users > div{
+        gap: 0.4rem;
+    }
+    #userNo{
+        font-size: 1rem;
+    }
+    #user{
+        font-size: 0.8rem;
     }
     .heroImg{
         width: 350px;
