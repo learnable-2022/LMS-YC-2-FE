@@ -1,0 +1,59 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 40%;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.badgeImg{
+    background-color: #F8A711;
+}
+.badgeImg img{
+    height: 6rem;
+    display: block;
+    margin: auto;
+}
+.content{
+    text-align: center;
+    padding: 2rem;
+}
+#great{
+    color: lightgreen;
+    font-weight: bold;
+}
+#score{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+#unlock{
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    /* font-weight: bold; */
+}
+.modalBtns{
+    display: flex;
+    gap: 1rem;
+    /* background-color: floralwhite; */
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.modalBtns a{
+    padding: 1rem;
+    color: white;
+}
+.modalBtns a:nth-child(1){
+    background-color: #F8A711;
+}
+.modalBtns a:nth-child(2){
+    color: #F8A711;
+    border: 1px solid #F8A711;
+}

@@ -32,13 +32,12 @@ function LessonsApply() {
 
         const updatedData = {
             track: enrollCourse.path,
-            course: enrollCourse.title,
+            course : enrollCourse.title,
             register: true
         }
        
         // const path = enrollCourse.path
 
-        
         fetch(`https://learnz.onrender.com/api/v1/user/${studentInfo._id}`, {
             method : "PATCH",
             body: JSON.stringify(updatedData),
@@ -52,7 +51,7 @@ function LessonsApply() {
             console.log(data)
             setLoading(false)
             window.localStorage.setItem("student-status", JSON.stringify(data.updated.filter((student, id) => student._id == studentInfo._id)[0]))
-            data.success ? navigate(`/student/course/${enrollCourse.path}/${enrollCourse.week}`) : ""
+            data.success ? navigate(`/student/course/${enrollCourse.path}/1`) : ""
             data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
         })
         .catch((err) => {

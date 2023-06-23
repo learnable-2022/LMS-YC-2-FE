@@ -1,4 +1,4 @@
-import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg } from '../../../assets';
+import { Logo, lowerFrameImg, medalGoldIcon, upperFrameImg, View } from '../../../assets';
 import styles from "./studentCertificate.module.css"
 import Certificate from '../../../components/Certificate/Certificate';
 import WalletBtn from '../../../components/WalletBtn/WalletBtn';
@@ -9,7 +9,7 @@ import Modal from '../../../components/Modal/Modal';
 
 
 function StudentCertificate() {
-  const { walletConnected, walletAddress, studentInfo, showModal, setShowModal } = useContext(AppContext)
+  const { walletConnected, walletAddress, studentInfo, showModal, setShowModal, studentToken } = useContext(AppContext)
   const [ loading, setLoading ] = useState(false)
   const [data, setData] = useState()
   
@@ -27,7 +27,7 @@ function StudentCertificate() {
         method: "POST",
         body : JSON.stringify(dataBody),
         headers : {
-          "Content-Type" : "application/json"
+          "Content-Type" : "application/json",
         }
         
       })
@@ -51,17 +51,27 @@ function StudentCertificate() {
         <UserDashboardNav navTitle = "Certification" />
         {showModal && <div className= {styles.overlay}></div>}
 
-        <div className= {styles.certificateContainer}>
-            <h2>Great Job</h2>
-            <p>You have earned your certificate</p>
-            <Certificate />
-            <WalletBtn />
+        {studentInfo.quiz != 0 ? (
+          <div className= {styles.certificateContainer}>
+              <h2>Great Job</h2>
+              <p>You have earned your certificate</p>
+              <Certificate />
+              <WalletBtn />
 
-            <button disabled = {!walletConnected} className = {styles.claimReward} onClick = {claimReward}>
-              {!loading && "Claim Reward"}
-              {loading && "Loading..."}
-            </button>
-        </div>
+              <button disabled = {!walletConnected} className = {styles.claimReward} onClick = {claimReward}>
+                {!loading && "Claim Reward"}
+                {loading && "Loading..."}
+              </button>
+          </div> 
+        ) : (
+          <div className= {styles.noCertificateCont}>
+            <div className= {styles.noCertificate}>
+              <img src= {View} alt=""/>
+              <p>No Certificate yet. Finish a course and Take quiz to view certificate</p>
+            </div>
+            
+          </div>
+        )}
         {showModal && (
             <Modal>
               {data && (

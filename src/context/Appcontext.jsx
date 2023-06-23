@@ -16,8 +16,12 @@ export const AppProvider = ({children}) => {
     const [walletAddress, setWalletAddress] = useState();
     const [walletConnected, setWalletConnected] = useState(false)
     const [totalVideos, setTotalVideos] = useState()
-    const [progress, setProgress] = useState(0)
+    const [progress, setProgress] = useState(studentInfo !==  null && studentInfo !== undefined && studentInfo.progress.trim() == "NULL" ? 0 : studentInfo !==  null && studentInfo !== undefined && studentInfo.progress.trim() != "NULL" ? Number(studentInfo.progress) : 0)
     const [showModal, setShowModal] = useState(false)
+    const [watchedVideos, setWatchedVideos] = useState(studentInfo !==  null && studentInfo !== undefined  ? studentInfo.watchedVideos : [])
+    const [quizScore, setQuizScore] = useState(studentInfo !==  null && studentInfo !== undefined ? studentInfo.quiz : 0)
+    const [scorePercentage, setScorePercentage] = useState()
+    const [showScoreModal, setShowScoreModal] = useState(false)
 
     studentInfo?.track.trim() !== "NULL"
     ? (() => {
@@ -78,6 +82,10 @@ export const AppProvider = ({children}) => {
         totalVideos,
         progress,
         showModal,
+        watchedVideos,
+        quizScore,
+        scorePercentage,
+        showScoreModal,
         setStudentInfo,
         setShowNav,
         setShowCourseNav,
@@ -92,6 +100,10 @@ export const AppProvider = ({children}) => {
         setTotalVideos,
         setProgress,
         setShowModal,
+        setWatchedVideos,
+        setQuizScore,
+        setScorePercentage,
+        setShowScoreModal
    }}>
         {children}
     </AppContext.Provider>
