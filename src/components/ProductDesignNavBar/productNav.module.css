@@ -29,10 +29,22 @@ a {
   font-size: 25.2px;
   margin-bottom: 30px;
   height: 5rem;
+  position: relative;
 }
-.logo img {
-  height: 42px;
-  width: 42px;
+.logo  img {
+  height: 2rem;
+ }
+ .logo h3{
+  font-size: 1.5rem;
+  color: black;
+ }
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1;
+  color: red;
+  display: none;
 }
 .Log {
   margin: 10px 0 40px 0;
@@ -55,7 +67,7 @@ a {
 .linko:hover {
   background-color: #e9e9e9;
 }
-.linko :active {
+.linko.active {
   background-color: #e9e9e9;
 }
 .linko p {
@@ -70,6 +82,9 @@ a {
 
 .list li {
   margin-top: 15px;
+}
+.listLink:hover{
+  color: #f8a711;
 }
 .Cont main{
   width: 80%;
@@ -115,6 +130,9 @@ a {
     right: 3%;
     color: red;
     font-size: 1.2rem
+  }
+  .wrap{
+    width: 80%;
   }
   .link{
     justify-content: center;
