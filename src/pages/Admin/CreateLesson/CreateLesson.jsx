@@ -12,7 +12,7 @@ function EmptyStatePage() {
     const [path,setPath] = useState("")
     const [selectedFile, setSelectedFile] = useState("")
     const [previewUrl, setPreviewUrl] = useState("")
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState("")
     const {adminToken} = useContext(AppContext)
     const [uploadModal, setUploadModal] = useState(false)
@@ -60,7 +60,7 @@ function EmptyStatePage() {
             data.success ? setTitle("") : ""
             data.success ? setDesc("") : ""
             data.success ? setWeek("") : ""
-            data.success ? setSelectedFile(null) : ""
+            data.success ? setSelectedFile("") : ""
             data.success ? setPath("") : ""
             setData(data)
         })
