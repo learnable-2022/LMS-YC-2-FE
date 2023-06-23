@@ -61,8 +61,6 @@ function StudentAssignments() {
         setBtnDisabled(true)
         setShowScoreModal(true)
 
-        setScorePercentage((quizScore/ quiz.questions.length) * 100)
-
     }
 
     console.log(scorePercentage)
