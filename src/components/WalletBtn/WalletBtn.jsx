@@ -18,10 +18,10 @@ const WalletBtn = () => {
       const {ethereum} = window;
       if(ethereum && ethereum.isMetaMask){
         setInstallMetamask(true)
-        walletAddress === undefined || walletAddress === null || walletAddress == "" ? setBtnText("Connect Wallet") : setBtnText(walletAddress)
+        walletAddress === undefined || walletAddress === null || walletAddress == "" ? setBtnText("Connect Wallet") : setBtnText("Wallet Connected")
       }else{
         setInstallMetamask(false)
-        setBtnText("Please Install a MetaMask Wallet")
+        setBtnText("Install a MetaMask Wallet")
       }
       // return Boolean(ethereum && ethereum.isMetaMask)
     }

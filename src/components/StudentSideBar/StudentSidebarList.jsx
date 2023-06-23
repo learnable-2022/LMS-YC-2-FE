@@ -50,22 +50,10 @@ const StudentSidebarList = [
     },
     {
         id: 7,
-        logo: <VscReport/>,
-        name: 'Reports',
-        link: "/student/dashboard"
-    },
-    {
-        id: 8,
         logo: <BsFillPersonFill />,
         name: 'Profile',
         link: "/student/dashboard/profile"
     },
-    {
-        id: 9,
-        logo: <MdOutlineSettingsSuggest/>,
-        name: 'Settings',
-        link: "/student/dashboard"
-    }
-]
+ ]
 
 export default StudentSidebarList;

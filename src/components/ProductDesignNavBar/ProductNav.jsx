@@ -13,7 +13,7 @@ const ProductNav = () => {
   const weeks = ["Week 1", "Week 2", "Week 3", "Week 4"]
   const [activeWeek, setActiveWeek] = useState()
 
-  const courseLinks = ["Grades", "Notes", "Discussion Forums", "Quiz", "Resources", "Course Info", "Dashboard"]
+  const courseLinks = [ "Dashboard"]
 
   const DropDown = () => {
     setOpen(!open);

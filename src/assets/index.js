@@ -145,9 +145,12 @@ export { default as upperFrameImg} from "./images/upperFrameImg.png"
 export { default as lowerFrameImg} from "./images/lowerFrameImg.png"
 export { default as medalGoldIcon} from "./images/medalGoldIcon.png"
 
+//ASSIGNMENT SECTION
+export { default as QuizBadge} from "./images/QuizBadge.png"
 
 // COURSE PAGE
 export { default as Web3} from "./images/Web3.jpg"
 export { default as Frontend} from "./images/Frontend.jpg"
 export { default as Backend} from "./images/Backend.jpg"
 export { default as ProductDesign} from "./images/ProductDesign.png"
+export { default as CourseLoader } from "./images/CourseLoader.gif"

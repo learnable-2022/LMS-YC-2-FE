@@ -132,8 +132,13 @@
   
   }
   .formContainer{
-    width: 350px;
+    width: 320px;
     margin: auto;
+    padding: 2rem;
+    min-height: fit-content;
+  }
+  .form{
+    margin-top: 1rem;
   }
 
 }

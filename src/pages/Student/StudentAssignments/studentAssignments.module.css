@@ -1,5 +1,22 @@
+.container{
+    position: relative;
+}
 .assignmentCont{
     padding: 1rem 2rem;
+    position: relative;
+}
+.container.noOverflow{
+    height: 100vh;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 5rem;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(206, 159, 159, 0.3), rgba(0,0,0,0.6));
+    z-index: 300;
 }
 
 .heroPart{
@@ -49,5 +66,50 @@
 .noAssignment{
     margin: 6rem 0;
     text-align: center;
+}
+.pathQuiz{
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.questionCont{
+    margin: 2rem 0;
+}
+.questionNo{
+    margin-bottom: 0.9rem;
+}
+.question{
+    margin-bottom: 0.3rem;
+}
+.option{
+    margin-bottom: 0.3rem;
+}
+.option label{
+    margin-left: 0.3rem;
+}
+.submitQuiz{
+    padding: 0.5rem 0.8rem;
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+    /* display: block; */
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+}
+.submitQuiz:disabled{
+    background-color: #ccc;
+}
+.viewScore{
+    padding: 0.5rem 0.8rem;
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+    /* display: block; */
+    margin: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem
 }
 
