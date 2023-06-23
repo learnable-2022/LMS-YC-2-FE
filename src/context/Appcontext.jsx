@@ -22,6 +22,7 @@ export const AppProvider = ({children}) => {
     const [quizScore, setQuizScore] = useState(studentInfo !==  null && studentInfo !== undefined ? studentInfo.quiz : 0)
     const [scorePercentage, setScorePercentage] = useState()
     const [showScoreModal, setShowScoreModal] = useState(false)
+  
 
     studentInfo?.track.trim() !== "NULL"
     ? (() => {

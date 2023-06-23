@@ -1,5 +1,5 @@
 import styles from "./createLesson.module.css";
-import { ExtraResourceImg, PenIcon, TripleDotsIcon } from '../../../assets';
+import { ExtraResourceImg, PenIcon, TripleDotsIcon, success, Loader } from '../../../assets';
 import UserDashboardNav from "../../../components/UserDashboardNav/UserDashboardNav";
 import { useContext, useEffect, useState } from "react";
 import AdminDashboardNav from "../../../components/AdminDashboardNav/AdminDashboardNav";
@@ -12,8 +12,10 @@ function EmptyStatePage() {
     const [path,setPath] = useState("")
     const [selectedFile, setSelectedFile] = useState("")
     const [previewUrl, setPreviewUrl] = useState("")
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
+    const [data, setData] = useState("")
     const {adminToken} = useContext(AppContext)
+    const [uploadModal, setUploadModal] = useState(false)
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
@@ -58,16 +60,37 @@ function EmptyStatePage() {
             data.success ? setTitle("") : ""
             data.success ? setDesc("") : ""
             data.success ? setWeek("") : ""
-            data.success ? setSelectedFile("") : ""
+            data.success ? setSelectedFile(null) : ""
             data.success ? setPath("") : ""
+            setData(data)
         })
         .catch(err => console.log(err))
     }
 
+    const checkData = () => {
+        if(data !== null && data !== undefined){
+            if(data.success !== null && data.success !== undefined){
+                if(data.success){
+                    setUploadModal(true)
+                    setTimeout(() =>{
+                        setUploadModal(false)
+                    }, 2000)
+                }else{
+                    setUploadModal(false)
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        checkData()
+    }, [data])
+
   return (
 
-    <div className={styles.container}>
+    <div className={ `${styles.container} ${uploadModal && styles.noOverflow}`}>
         <AdminDashboardNav  navTitle = "Create Lesson" />
+        {uploadModal && <div className = {styles.overlay}></div>} 
         <div className={styles.box}>
             <div className={styles.mainSection}>
                 <div className={styles.mainSectionLeft}>
@@ -163,7 +186,9 @@ function EmptyStatePage() {
 
                         <button type = "submit" className = {styles.uploadBtn}>
                             {!loading && "Upload Lesson"}
-                            {loading && "Loading"}
+                            {loading && (
+                                <img src= {Loader} alt=""/>
+                            )}
                         </button>
 
                     </form>
@@ -209,8 +234,13 @@ function EmptyStatePage() {
             </div>
         </div>
 
-
-
+        {uploadModal && (
+            <div className = {styles.uploadModal}>
+                <h2>Yayy!</h2>
+                <img src= {success} alt=""/>
+                <p>Your video has been uploaded successfully</p>
+            </div>
+        )}
                          
 
     </div>

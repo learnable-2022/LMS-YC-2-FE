@@ -15,8 +15,8 @@ function CoursePage({match}) {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const handleEnded = (index) => {
-        if ((watchedVideos !== null && watchedVideos !== undefined) && !watchedVideos.includes(index)) {
-            const updatedWatchedVideo = [...watchedVideos, index];
+        if ((watchedVideos !== null && watchedVideos !== undefined) && !watchedVideos.includes(`${index}${studentInfo._id}`)) {
+            const updatedWatchedVideo = [...watchedVideos, `${index}${studentInfo._id}`];
             const updatedProgress = Number(progress) + 1
             setWatchedVideos(updatedWatchedVideo);
             setProgress(updatedProgress);

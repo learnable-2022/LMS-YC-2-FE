@@ -1,7 +1,20 @@
 .container{
     /* background-color: green; */
+    position: relative;
 }
-
+.container.noOverflow{
+    height: 100vh;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 5rem;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(206, 159, 159, 0.3), rgba(0,0,0,0.6));
+    z-index: 300;
+}
 .mainSection {
     display: flex;
     justify-content: space-between;
@@ -133,9 +146,14 @@
     color: white;
     border: none;
     outline: none;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     cursor: pointer;
     border-radius: 0.4rem;
+    height: 3rem;
+    width: fit-content;
+}
+.uploadBtn img{
+    height: 2rem;
 }
 
 
@@ -188,4 +206,26 @@
 
 .mainSectionRight .boxReport .boxList img {
     margin: 25px 20px 0 0;
+}
+
+.uploadModal{
+    background-color: white;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    text-align: center;
+    padding: 2rem 4rem;
+}
+.uploadModal img{
+    height: 4rem;
+    margin: 1rem;
+}
+.uploadModal h2{
+    font-size: 2.5rem;
+}
+.uploadModal p{
+    
 }
