@@ -7,6 +7,10 @@
 .container h2{
     margin-bottom: 0.5rem;
     font-size: 2rem;
+
+    @media (max-width: 600px) {
+        font-size: 1rem;
+    }
 }
 .container p{
     font-size: 0.9rem;
@@ -17,6 +21,10 @@
     margin: 2rem 0;
     gap: 2rem;
     padding: 1rem 0;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 .adminOptions > a{
     background-color: #FEEDCF;
@@ -25,6 +33,7 @@
     border-radius: 1rem;
     width: 350px;
 }
+
 .optionIcon{
     padding: 0.4rem 0.5rem;
     background-color: #FDE2B0;
@@ -45,6 +54,10 @@
     color: #4F4F4F;
     max-width: 250px;
     font-weight: bold;
+
+    @media (max-width: 600px) {
+        font-size: 1rem;
+    }
 }
 .optionFlex img{
     height: 1rem;

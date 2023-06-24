@@ -23,7 +23,10 @@
 
 .mainSectionLeft {
     width: 70%;
-    
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 .lesson {
@@ -34,14 +37,22 @@
     font-weight: 700;
     font-size: 16px;
     color: #4F4F4F;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 .lesson p {
     font-weight: 400;
     font-size: 12px;
     margin: 5px 0;
-    width: 70%;
+    width: 100%;
     color: #A098AE;
+
+    @media (max-width: 600px) {
+        font-size: 8px;
+    }
 }
 
 .lesson input, .lesson select {
@@ -67,6 +78,15 @@
 .videoGroup{
     margin-bottom: 50px;
 }
+
+.videoGroup h3 {
+    font-size: 16px;
+
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+}
 .videoBox {
     width: 90%;
     height: 300px;
@@ -74,6 +94,11 @@
     background: #FEEDCF;
     border-radius: 4.17924px;
     position: relative;
+
+    @media (max-width: 600px) {
+        width: 100%;
+        height: 200px;
+    }
 }
 .videoCont{
     position: absolute;
@@ -159,6 +184,10 @@
 
 .mainSection .mainSectionRight {
     width: 30%;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 .mainSectionRight .boxModel {
