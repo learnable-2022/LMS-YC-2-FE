@@ -26,7 +26,7 @@ function ScoreModal() {
                     <p id = {styles.unlock}>You just unlocked the novice badge</p>
 
                     <div className= {styles.modalBtns}>
-                        <NavLink className = {styles.game}>Play a Game</NavLink>
+                        <NavLink to = "/student/game" className = {styles.game}>Play a Game</NavLink>
                         <NavLink to = "/student/dashboard/certification" className = {styles.cert} onClick = {() => setShowScoreModal(false)}>View Certificate</NavLink>
                     </div>
                 </div>

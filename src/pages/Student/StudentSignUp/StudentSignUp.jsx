@@ -212,7 +212,7 @@ function StudentSignUp() {
               </div> 
 
               <div className = {styles.inputGroup}>
-                <label>Child's Name</label>
+                <label>Child's Full Name</label>
                 <input type="text" name = "Child name" placeholder="Child's name"  value = {childName} onChange={(e) => setChildName(e.target.value)} required/>
                 <p className = {styles.error}>{childNameError}</p>
               </div>
