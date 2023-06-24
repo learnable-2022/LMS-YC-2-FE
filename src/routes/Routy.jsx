@@ -38,6 +38,7 @@ import AdminProtectedRoutes from "../AdminProtectedRoutes";
 import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
 import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 import Certificate from "../components/Certificate/Certificate";
+import TicTacToeGame from "../pages/Student/TicTacToeGame/TicTacToeGame";
 
 
 const Routy = () => {
@@ -63,6 +64,8 @@ const Routy = () => {
           <Route path="/student/course/:path/:week" element={<ProductNav />}>
             <Route index element={<CoursePage />} />
           </Route>
+
+          <Route path = "/student/game" element = {<TicTacToeGame />}/>
         </Route>
 
         {/* STUDENT LOGIN PAGE*/}
