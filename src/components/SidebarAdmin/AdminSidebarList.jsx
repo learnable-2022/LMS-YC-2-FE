@@ -18,35 +18,16 @@ const AdminSidebarList = [
     },
     {
         id: 2,
-        logo: <FaBookReader/>,
-        name: 'Students',
-        link: "/admin/dashboard"
-    },
-    {
-        id: 3,
         logo: <BsFillCollectionFill/>,
         name: 'Lessons',
         link: "lessons"
     },
     {
-        id: 4,
-        logo: <MdAssignment/>,
-        name: 'Assignments',
-        link: "/admin/dashboard"
-    },
-    {
-        id: 5,
+        id: 3,
         logo: <TiMessages/>,
         name: 'Messages',
         link: "/admin/dashboard"
     },
-    {
-        id: 6,
-        logo: <FcOvertime/>,
-        name: 'Timetable',
-        link: "/admin/dashboard"
-    },
-    
 ]
 
 export default AdminSidebarList;
