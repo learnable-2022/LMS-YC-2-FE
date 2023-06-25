@@ -51,28 +51,6 @@ function AdminOverview() {
               </div>
             </div>
           </div>
-          <div className= {styles.mainlesson1}>
-            <div className= {styles.lesson4}>
-            <div className= {styles.lessoncom}>
-              <div className= {styles.lessoncompleted}>
-                Lessons Completed
-              </div>
-              <i><BsThreeDotsVertical/></i>
-            </div>
-            <div className= {styles.num28green}>
-              0
-            </div>
-            </div>
-            <div className= {styles.lesson5}>
-              <div className= {styles.not}>
-                <div className= {styles.not2}>Not Started</div>
-                <i><BsThreeDotsVertical/></i>
-              </div>
-              <div className= {styles.num8}>
-                0
-              </div>
-            </div>
-          </div>
           <div className= {styles.lessonoverview}>
             <div className= {styles.see}>
               <div>Lesson Overview</div>

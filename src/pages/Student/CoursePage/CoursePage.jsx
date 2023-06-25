@@ -88,6 +88,8 @@ function CoursePage({match}) {
 
     }
 
+    console.log(totalVideos)
+
     useEffect(() => {
         getCourses()
         // getTotalVideos()
