@@ -47,9 +47,10 @@ export const AppProvider = ({children}) => {
         };
 
         useEffect(() => {
-          if(studentInfo.track.trim() !== "NULL")
-          getTotalVideos()
-        }, [])
+          if(studentInfo !== null && studentInfo !== undefined && studentInfo.track.trim() !== "NULL"){
+            getTotalVideos()
+          }
+        }, [studentInfo])
     //   })
     // : "";
 

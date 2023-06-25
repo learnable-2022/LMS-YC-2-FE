@@ -14,9 +14,6 @@ function LessonOverview() {
   const [loading, setLoading] = useState(false)
   const location = useLocation()
   const {adminToken, adminInfo } = useContext(AppContext)
-  const [courses, setCourses] = useState()
-  const [selectedCourses, setSelectedCourses] = ("")
-  
   // console.log(location)
 
   const getAllCourses = () => {
