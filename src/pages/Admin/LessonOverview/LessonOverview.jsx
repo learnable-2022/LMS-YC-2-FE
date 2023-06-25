@@ -31,7 +31,6 @@ function LessonOverview() {
     .then(data => {
       console.log(data.courses)
       setLoading(false)
-      // data.success ? setAllCourses(data.courses.filter((course, index) => course.track.toLowerCase() == path.toLowerCase() && course.week == week)) : ""
       data.success? setAllCourses(data.courses) : ""
       data.success ? setMyCourses(data.courses.filter((course, index) => course.admin._id == adminInfo._id )) : ""
     })
@@ -64,24 +63,8 @@ function LessonOverview() {
     getAllCourses()
    }, [courseDelete])
 
-   useEffect(() => {
-     setCourses(allCourses)
-   }, [allCourses])
 
-   const handleAllCourses = () => {
-    setCourses(allCourses);
-  };
-
-  const handleMyCourses = () => {
-    setCourses(myCourses);
-  };
-
-  
-
-
-  console.log(allCourses, myCourses)
-  
-  return (
+    return (
     <div className = {styles.mainbar}>
       <AdminDashboardNav navTitle = "Lessons" />
       <div className= {styles.mainbody}>
