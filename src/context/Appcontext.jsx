@@ -23,12 +23,13 @@ export const AppProvider = ({children}) => {
     const [quizScore, setQuizScore] = useState(studentInfo !==  null && studentInfo !== undefined ? studentInfo.quiz : 0)
     const [scorePercentage, setScorePercentage] = useState()
     const [showScoreModal, setShowScoreModal] = useState(false)
+    const [allCourses, setAllCourses] = useState()
+    const [myCourses, setMyCourses] = useState()
+    const [loading, setLoading] = useState(false)
   
   
 
-    studentLoggedIn && studentInfo?.track.trim() !== "NULL"
-    ? (() => {
-        const getTotalVideos = () => {
+    const getTotalVideos = () => {
           const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
             headers: {
               "Content-Type": "application/json",
@@ -43,13 +44,16 @@ export const AppProvider = ({children}) => {
               }
             });
   
-          // console.log(totalVideos)
-          // console.log(week)
         };
-  
-        getTotalVideos();
-      })
-    : "";
+
+        useEffect(() => {
+          if(studentInfo.track.trim() !== "NULL")
+          getTotalVideos()
+        }, [])
+    //   })
+    // : "";
+
+    
       
      const [adminData, setAdminData] = useState({
         email: "",
@@ -107,6 +111,7 @@ export const AppProvider = ({children}) => {
         setScorePercentage,
         setShowScoreModal,
         setShowAdminNav,
+        
    }}>
         {children}
     </AppContext.Provider>
