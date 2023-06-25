@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    background-color: #e9ebed;;
+    background-color: #e9ebed;
     height: 100vh;
     overflow-y: auto;
 }
@@ -25,6 +25,9 @@
 }
 .logo img{
     height: 1.5rem;
+}
+.close{
+  display: none;
 }
 .links{
     margin-top: 1rem;
@@ -65,3 +68,57 @@
 .container > main{
     width: 80%;
 }
+/* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px){
+    .sidebarContainer{
+      width: 20%;
+    }
+    .logo h3{
+      font-size: 1.2rem;
+    }
+    .logo > img{
+      font-size: 1.2rem;
+    }
+    .link{
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width : 600px){
+    .sidebarContainer{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      width: 60%;
+      transform: translateX(-100%);
+      transition: all 400ms ease;
+    }
+    .sidebarContainer.active{
+      transform: translateX(0);
+    }
+    .logo{
+      position: relative;
+    }
+    .close{
+      display: block;
+      position: absolute;
+      top: 5%;
+      right: 2%;
+      color: red;
+    }
+    .link{
+      /* justify-content: center; */
+    }
+    .link{
+      font-size: 1rem;
+    }
+    .logout{
+      font-size: 1rem;
+    }
+    
+    .container > main{
+      width: 100%;
+    }
+  }

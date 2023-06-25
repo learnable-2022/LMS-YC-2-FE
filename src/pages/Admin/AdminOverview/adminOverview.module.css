@@ -9,6 +9,7 @@
  }
  .mainnewlesson{
     margin-left: auto;
+    margin-bottom: 0;
     background-color: orange;
     color: white;
     font-size: 12px;
@@ -18,15 +19,31 @@
     text-align: center;
     border-radius: 8px;
     display: block;
+
+    @media (max-width: 600px) {
+      margin-left: 0;
+      margin-bottom: 10px;
+      line-height: 40px;
+      width: 240px;
+      height: 40px;
+    }
  }
  .over{
     color: #8c8c8c;
     font-size: 13px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
  }
  .mainlesson{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
  }
  .totallesson{
     display: flex;
@@ -153,20 +170,34 @@
  table {
     width: 100%;
     border-collapse: collapse;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
   th{
     padding: 8px;
     text-align: left;
     border: 1px solid #8c8c8c;
     background-color: #fac460;
+
+    @media (max-width: 600px) {
+      padding: 5px;
+      font-size: 6px;
+    }
   }
   td{
     height: 20px;
     font-size: 12px;
+    padding: 8px;
     text-align: center;
     border: 1px solid #8c8c8c;
     background-color: #fde2b0;
     color: #8c8c8c;
+
+    @media (max-width: 600px) {
+      padding: 5px;
+    }
   }
   .tb1{
     display: flex;

@@ -1,4 +1,4 @@
-import {createContext, useState} from "react"
+import {createContext, useEffect, useState} from "react"
 
 const AppContext = createContext()
 
@@ -11,6 +11,7 @@ export const AppProvider = ({children}) => {
     const [courseIndex, setCourseIndex] = useState("")
     const [showNav, setShowNav] = useState(false)
     const [showCourseNav, setShowCourseNav] = useState(false)
+    const [showAdminNav, setShowAdminNav] = useState(false)
     const [studentToken, setStudentToken] = useState(JSON.parse(window.localStorage.getItem("student-token")))
     const [adminToken, setAdminToken] = useState(JSON.parse(window.localStorage.getItem("admin-token")))
     const [walletAddress, setWalletAddress] = useState();
@@ -22,11 +23,13 @@ export const AppProvider = ({children}) => {
     const [quizScore, setQuizScore] = useState(studentInfo !==  null && studentInfo !== undefined ? studentInfo.quiz : 0)
     const [scorePercentage, setScorePercentage] = useState()
     const [showScoreModal, setShowScoreModal] = useState(false)
+    const [allCourses, setAllCourses] = useState()
+    const [myCourses, setMyCourses] = useState()
+    const [loading, setLoading] = useState(false)
+  
   
 
-    studentInfo?.track.trim() !== "NULL"
-    ? (() => {
-        const getTotalVideos = () => {
+    const getTotalVideos = () => {
           const response = fetch('https://learnz.onrender.com/api/v1/user/courses', {
             headers: {
               "Content-Type": "application/json",
@@ -41,17 +44,18 @@ export const AppProvider = ({children}) => {
               }
             });
   
-          // console.log(totalVideos)
-          // console.log(week)
         };
-  
-        getTotalVideos();
-      })()
-    : "";
-  
 
+        useEffect(() => {
+          if(studentInfo.track.trim() !== "NULL")
+          getTotalVideos()
+        }, [])
+    //   })
+    // : "";
 
-    const [adminData, setAdminData] = useState({
+    
+      
+     const [adminData, setAdminData] = useState({
         email: "",
         password: ""
     })
@@ -76,6 +80,7 @@ export const AppProvider = ({children}) => {
         courseIndex,
         showNav,
         showCourseNav,
+        showAdminNav,
         studentToken,
         adminToken,
         walletAddress,
@@ -104,7 +109,9 @@ export const AppProvider = ({children}) => {
         setWatchedVideos,
         setQuizScore,
         setScorePercentage,
-        setShowScoreModal
+        setShowScoreModal,
+        setShowAdminNav,
+        
    }}>
         {children}
     </AppContext.Provider>

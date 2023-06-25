@@ -27,8 +27,6 @@ import AdminOverview from "../pages/Admin/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/Admin/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import NotFound from "../pages/ErrorPage/NotFound";
-import ProtectedRoutes from "../StudentProtectedRoutes";
-import { useContext } from "react";
 import CreateLesson from "../pages/Admin/CreateLesson/CreateLesson";
 import CoursePage from "../pages/Student/CoursePage/CoursePage";
 import AddAnswers from "../pages/AddAnswers/AddAnswers";
@@ -38,6 +36,7 @@ import AdminProtectedRoutes from "../AdminProtectedRoutes";
 import StudentCertificate from "../pages/Student/StudentCertificate/StudentCertificate";
 import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 import Certificate from "../components/Certificate/Certificate";
+import TicTacToeGame from "../pages/Student/TicTacToeGame/TicTacToeGame";
 
 
 const Routy = () => {
@@ -63,6 +62,8 @@ const Routy = () => {
           <Route path="/student/course/:path/:week" element={<ProductNav />}>
             <Route index element={<CoursePage />} />
           </Route>
+
+          <Route path = "/student/game" element = {<TicTacToeGame />}/>
         </Route>
 
         {/* STUDENT LOGIN PAGE*/}

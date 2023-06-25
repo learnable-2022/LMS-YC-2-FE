@@ -8,14 +8,15 @@ import AppContext from "../../../context/Appcontext";
 import ScoreModal from "./ScoreModal/ScoreModal";
 
 function StudentAssignments() {
-    const {studentInfo, progress, totalVideos, quizScore, setQuizScore, studentToken, scorePercentage, setScorePercentage, showScoreModal, setShowScoreModal } = useContext(AppContext)
+    const {studentInfo, progress, totalVideos, quizScore, setQuizScore, studentToken, scorePercentage, setScorePercentage, showScoreModal, setShowScoreModal, setStudentInfo } = useContext(AppContext)
     const [selectedOptions, setSelectedOptions] = useState({})
     const [correctOption, setCorrectOption] = useState({})
     const [fullName, setFullName] = useState(studentInfo.child_name)
     const [firstName, setFirstName] = useState("")
     const [btnDisabled, setBtnDisabled] = useState(false)
- 
-   const getFirstName = () => {
+    const [loading, setLoading] = useState(false)
+    
+    const getFirstName = () => {
     if(fullName !== undefined && fullName !== null){
       const words = fullName.split(" ")
 
@@ -35,7 +36,6 @@ function StudentAssignments() {
 
 
     const handleOptionChange = (e) => {
-        // setSelectedOption([...selectedOption], e.target.value)
         const questionId = e.target.name
         const optionValue = e.target.value
         setSelectedOptions((prevSelectedOptions) => ({
@@ -46,6 +46,7 @@ function StudentAssignments() {
 
     const submitQuiz = (e) => {
         e.preventDefault()
+        setLoading(true)
 
         quizQuestions.map((quiz, index) => {
             if(quiz.path.toLowerCase() === studentInfo.track.toLowerCase()){
@@ -56,15 +57,32 @@ function StudentAssignments() {
                     }))
                 })
             }
-
         })
-        setBtnDisabled(true)
+
+        const updatedData = {
+            quizTaken : true,
+        }
+        const response = fetch(`https://learnz.onrender.com/api/v1/user/${studentInfo._id}`, {
+            method : "PATCH",
+            body: JSON.stringify(updatedData),
+            headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : `Bearer ${studentToken}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            window.localStorage.setItem("student-status", JSON.stringify(data.updated.filter((student, id) => student._id == studentInfo._id)[0]))
+            data.success ? setStudentInfo(JSON.parse(window.localStorage.getItem("student-status"))) : ""
+        })
+        .catch((err) => {
+            console.log(err)
+            setLoading(false)
+        })
+
         setShowScoreModal(true)
-
     }
-
-    console.log(scorePercentage)
-
     useEffect(() => {
         
         let updatedScore = quizScore;
@@ -75,10 +93,16 @@ function StudentAssignments() {
         }
         setQuizScore(updatedScore);
 
+    }, [correctOption, selectedOptions]);
+
+    console.log(quizScore)
+
+    useEffect(() => {
         quizQuestions.map((quiz, index) => {
-           setScorePercentage((quizScore/ quiz.questions.length) * 100)
+            setScorePercentage((quizScore/ quiz.questions.length) * 100)
         })
-      }, [correctOption, selectedOptions]);
+        
+    }, [quizScore, studentInfo.quizTaken])
 
     const updateScore = () => {
         const updatedData = {
@@ -96,13 +120,10 @@ function StudentAssignments() {
         .then(response => response.json())
         .then(data => {
             window.localStorage.setItem("student-status", JSON.stringify(data.updated.filter((student, id) => student._id == studentInfo._id)[0]))
-            // setLoading(false)
             return data;
-            
         })
         .catch((err) => {
             console.log(err)
-            // setLoading(false)
         })
     }
 
@@ -163,9 +184,9 @@ function StudentAssignments() {
                                     </div>
                                 ))}
 
-                                <button type = "submit" className = {styles.submitQuiz}  disabled = {quizScore != 0 ? true : false }>Submit</button>
-
-                                {quizScore !==0 ? (
+                                <button type = "submit" className = {styles.submitQuiz} disabled = {studentInfo.quizTaken ? true : false }>Submit</button>
+                                
+                                {studentInfo.quizTaken ? (
                                     <button type = "button" onClick = {() => setShowScoreModal(true)} className = {styles.viewScore}>View Score</button>
                                 ) : ""}
                             </form>
@@ -178,7 +199,6 @@ function StudentAssignments() {
                     </div>
             )}
             </div>
-
             
             {showScoreModal && (
                 <ScoreModal />
@@ -188,3 +208,5 @@ function StudentAssignments() {
 }
 
 export default StudentAssignments
+
+
