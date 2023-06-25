@@ -1,19 +1,31 @@
 import styles from "./sidebarAdmin.module.css"
 import { LogoSvg} from "../../assets"
 import AdminSidebarList from "./AdminSidebarList"
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { MdLogout } from "react-icons/md";
 import AppContext from "../../context/Appcontext";
+import { FaTimes } from "react-icons/fa";
 
 function SidebarAdmin() {
-  const {adminToken} = useContext(AppContext)
+  const {adminToken, showAdminNav, setShowAdminNav} = useContext(AppContext)
   const [activeLink, setActiveLink] = useState("")
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleLinkClick = (link) => {
     setActiveLink(link)
+    
   }
+  useEffect(() => {
+    AdminSidebarList.forEach((link, index) => {
+      if(location.pathname.includes(link.name.toLowerCase())){
+        setActiveLink(link.name)
+      }else if(location.pathname == "/admin/dashboard"){
+        setActiveLink("Home")
+      }
+    })
+  })
 
   const logout = () => {
     if(window.confirm("Do you want to log out")){
@@ -39,8 +51,11 @@ function SidebarAdmin() {
   
   return (
         <div className = {styles.container}>
-            <div className= {styles.sidebarContainer}>
+            <div className= {`${styles.sidebarContainer} ${showAdminNav ? styles.active : ""}`}>
                 <div className= {styles.logo}>
+                <div className= {styles.close} onClick = {() => setShowAdminNav(false)}>
+                  <FaTimes />
+                </div>
                     <img src= {LogoSvg} alt=""/>
                     <h3>Learn.z</h3>
                 </div>

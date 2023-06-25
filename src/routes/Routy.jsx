@@ -27,8 +27,6 @@ import AdminOverview from "../pages/Admin/AdminOverview/AdminOverview";
 import LessonOverview from "../pages/Admin/LessonOverview/LessonOverview";
 import SidebarAdmin from "../components/SidebarAdmin/SidebarAdmin";
 import NotFound from "../pages/ErrorPage/NotFound";
-import ProtectedRoutes from "../StudentProtectedRoutes";
-import { useContext } from "react";
 import CreateLesson from "../pages/Admin/CreateLesson/CreateLesson";
 import CoursePage from "../pages/Student/CoursePage/CoursePage";
 import AddAnswers from "../pages/AddAnswers/AddAnswers";
