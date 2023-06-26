@@ -49,8 +49,8 @@ function LandingPage() {
           <img src={Logo} alt="" />
         </div>
         <div className={styles.navLinks}>
-          <NavLink to = "#contact" className = {styles.contactLink}>Contact Us</NavLink>
-          <NavLink to="/signup" className = {styles.enrolLink}>Enroll Now</NavLink>
+          <NavLink to="#contact" className={styles.contactLink}>Contact Us</NavLink>
+          <NavLink to="/signup" className={styles.enrolLink}>Enroll Now</NavLink>
         </div>
       </nav>
 
@@ -60,19 +60,19 @@ function LandingPage() {
           <h1>Let's make learning easy for the younger ones</h1>
 
           <p>
-          Discover, Learn, and Play: Unleash your learning adventure! Explore captivating courses, interactive activities, and unlock your full potential with us!"
+            Discover, Learn, and Play: Unleash your learning adventure! Explore captivating courses, interactive activities, and unlock your full potential with us!"
           </p>
-          <div className= {styles.heroLinks}>
-            <NavLink to = "/signup">Enroll Now</NavLink>
-            <a href = "#featuredCourses">View Courses</a>
+          <div className={styles.heroLinks}>
+            <NavLink to="/signup">Enroll Now</NavLink>
+            <a href="#featuredCourses">View Courses</a>
           </div>
           <div className={styles.users}>
             <div>
-              <p id={styles.userNo}>400k+</p>
+              <p id={styles.userNo}>4k+</p>
               <p id={styles.user}>Registered tutors</p>
             </div>
             <div>
-              <p id={styles.userNo}>1,000k+</p>
+              <p id={styles.userNo}>10k+</p>
               <p id={styles.user}>Students onboard</p>
             </div>
           </div>
@@ -158,17 +158,17 @@ function LandingPage() {
       </section>
 
       {/* ----------------------------------------------------------------FEATURED COURSES---------------------------------------------------------- */}
-      <section className={styles.featuredCoursesContainer} id = "featuredCourses">
+      <section className={styles.featuredCoursesContainer} id="featuredCourses">
         <h2>Featured Courses</h2>
 
         <div className={styles.featuredCourses}>
           <div className={styles.featuredCourse}>
-            <h3>Science</h3>
+            <h3>Frontend Development</h3>
             <img src={CourseCurve1} alt="" />
             <img src={Course1} alt="" />
           </div>
           <div className={styles.featuredCourse}>
-            <h3>{`Engineering & Tech`}</h3>
+            <h3>Backend Development</h3>
             <img src={CourseCurve2} alt="" />
             <img src={Course2} alt="" />
           </div>
@@ -183,22 +183,22 @@ function LandingPage() {
             <img src={Course2} alt="" />
           </div>
           <div className={styles.featuredCourse}>
-            <h3>English Language</h3>
+            <h3>Web3 Development</h3>
             <img src={CourseCurve3} alt="" />
             <img src={Course5} alt="" />
           </div>
           <div className={styles.featuredCourse}>
-            <h3>Web design</h3>
+            <h3>Game Development</h3>
             <img src={CourseCurve1} alt="" />
             <img src={Course6} alt="" />
           </div>
           <div className={styles.featuredCourse}>
-            <h3>Arts and Design</h3>
+            <h3>Mobile App Development</h3>
             <img src={CourseCurve3} alt="" />
             <img src={Course7} alt="" />
           </div>
           <div className={styles.featuredCourse}>
-            <h3>Languages </h3>
+            <h3>Cloud Computing </h3>
             <img src={CourseCurve1} alt="" />
             <img src={Course8} alt="" />
           </div>
@@ -280,7 +280,7 @@ function LandingPage() {
         <div className={styles.questions}>
           <div className={styles.question_answer}>
             <div className={styles.question}>
-              <p>What type of Courses can I create and upload</p>
+              <p>What age range of kids can be enrolled</p>
               <div
                 className={styles.showAnswer}
                 onClick={() => setShowAnswer1(!showAnswer1)}
@@ -291,16 +291,13 @@ function LandingPage() {
             </div>
 
             <p className={`${styles.answer} ${!showAnswer1 && styles.none}`}>
-              You can create courses on variety of topics and fields, from
-              business and technology to personal development and creative arts.
-              All courses only need to abide by our Code of Conduct and Policy
-              of Use.
+              Children within the age ranges of 9 to 13 years can be enrolled
             </p>
           </div>
 
           <div className={styles.question_answer}>
             <div className={styles.question}>
-              <p>What type of Courses can I create and upload</p>
+              <p>Is there a way to track my kids progress</p>
               <div
                 className={styles.showAnswer}
                 onClick={() => setShowAnswer2(!showAnswer2)}
@@ -311,16 +308,13 @@ function LandingPage() {
             </div>
 
             <p className={`${styles.answer} ${!showAnswer2 && styles.none}`}>
-              You can create courses on variety of topics and fields, from
-              business and technology to personal development and creative arts.
-              All courses only need to abide by our Code of Conduct and Policy
-              of Use.
+              You can track the progress of your kids using our platform and also know how well they perform in their assessments
             </p>
           </div>
 
           <div className={styles.question_answer}>
             <div className={styles.question}>
-              <p>What type of Courses can I create and upload</p>
+              <p>What type of Courses can a tutor I create and upload</p>
               <div
                 className={styles.showAnswer}
                 onClick={() => setShowAnswer3(!showAnswer3)}
@@ -339,7 +333,7 @@ function LandingPage() {
           </div>
           <div className={styles.question_answer}>
             <div className={styles.question}>
-              <p>What type of Courses can I create and upload</p>
+              <p>Do you offer third party integration with other products</p>
               <div
                 className={styles.showAnswer}
                 onClick={() => setShowAnswer4(!showAnswer4)}
@@ -350,15 +344,12 @@ function LandingPage() {
             </div>
 
             <p className={`${styles.answer} ${!showAnswer4 && styles.none}`}>
-              You can create courses on variety of topics and fields, from
-              business and technology to personal development and creative arts.
-              All courses only need to abide by our Code of Conduct and Policy
-              of Use.
+              Our platform offers integration wit blockchain to enable students get their certiicates.
             </p>
           </div>
         </div>
 
-        <div id = {styles.contact} className={styles.support}>
+        <div id={styles.contact} className={styles.support}>
           <h3>Couldn't find what you were looking for?</h3>
           <p>
             Our support team is just an email away and ready to help you out
@@ -393,12 +384,8 @@ function LandingPage() {
             <div className={styles.reason}>
               <p>Interview Support</p>
               <p>Internship Opportunities</p>
-              <p>6 real world projects</p>
             </div>
-            <div className={styles.reason}>
-              <p>8 hours a day Slack support</p>
-              <p>Build a job worthy Portfolio</p>
-            </div>
+
           </div>
         </div>
       </section>
