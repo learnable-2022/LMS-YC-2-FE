@@ -80,7 +80,7 @@ function LessonsApply() {
                     <p>Start date: <span id= {styles.start}>26 June, 2023</span></p>
                 </div>
                 <div className= {styles.tuition}>
-                    <p>Tuition: <span id= {styles.fee}>N5000</span> <span id= {styles.free}>Now Free</span></p>
+                    <p>Tuition: <span id= {styles.fee}>N10,000 monthly</span><span id= {styles.free}>Now Free</span></p>
                 </div>
                 
                 <div className= {styles.stepsContainer}>

@@ -1,7 +1,7 @@
 import {
-  BsColumnsGap,
-  BsFillCollectionFill,
-  BsFillPersonFill,
+    BsColumnsGap,
+    BsFillCollectionFill,
+    BsFillPersonFill,
 } from "react-icons/bs";
 import { FaBookReader } from "react-icons/fa";
 import { MdAssignment, MdOutlineSettingsSuggest } from "react-icons/md";
@@ -14,46 +14,40 @@ import { TbCertificate } from "react-icons/tb"
 const StudentSidebarList = [
     {
         id: 1,
-        logo: <BsColumnsGap/>,
+        logo: <BsColumnsGap />,
         name: 'Home',
         link: "/student/dashboard"
     },
     {
         id: 2,
-        logo: <FaBookReader/>,
+        logo: <FaBookReader />,
         name: 'Lessons',
         link: "lessons"
     },
     {
         id: 3,
-        logo: <MdAssignment/>,
+        logo: <MdAssignment />,
         name: 'Quiz',
         link: "quiz"
     },
     {
         id: 4,
-        logo: <TiMessages/>,
+        logo: <TiMessages />,
         name: 'Messages',
         link: "message"
     },
     {
-        id:5,
-        logo: <GiPoliceBadge />,
-        name: "Badges",
-        link: "/student/dashboard"
-    },
-    {
-        id:6,
+        id: 5,
         logo: <TbCertificate />,
         name: "Certification",
         link: "certification"
     },
     {
-        id: 7,
+        id: 6,
         logo: <BsFillPersonFill />,
         name: 'Profile',
         link: "/student/dashboard/profile"
     },
- ]
+]
 
 export default StudentSidebarList;

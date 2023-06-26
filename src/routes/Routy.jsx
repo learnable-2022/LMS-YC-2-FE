@@ -12,7 +12,6 @@ import SignUpOptions from "../pages/SignUpOptions/SignUpOptions";
 import StudentSignUp from "../pages/Student/StudentSignUp/StudentSignUp";
 import ForgotPasswordAdmin from "../pages/Admin/ForgotPasswordAdmin/ForgotPasswordAdmin";
 import StudentMessage from "../pages/Student/StudentMessage/StudentMessage";
-import StudentQuiz from "../pages/Student/StudentQuiz/StudentQuiz";
 import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import AdminSignUp from "../pages/Admin/AdminSignUp/AdminSignUp";
 import WelcomeAdmin from "../pages/Admin/WelcomeAdmin/WelcomeAdmin";
@@ -37,6 +36,7 @@ import StudentCertificate from "../pages/Student/StudentCertificate/StudentCerti
 import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 import Certificate from "../components/Certificate/Certificate";
 import TicTacToeGame from "../pages/Student/TicTacToeGame/TicTacToeGame";
+import AdminMessage from "../pages/Admin/AdminMessages/AdminMessages";
 
 
 const Routy = () => {
@@ -50,12 +50,11 @@ const Routy = () => {
           <Route path="/student/dashboard" element={<StudentSidebar />}>
             <Route index element={<StudentDashboard />} />
             <Route path="message" element={<StudentMessage />} />
-            <Route path="studentQuiz" element={<StudentQuiz />} />
-            <Route path = "lessons" element = {<StudentLessons />} />
-            <Route path = "quiz" element = {<StudentAssignments />} />
-            <Route path = "certification" element = {<StudentCertificate />} />
-            <Route path = "profile" element = {<StudentProfile />} />
-            <Route path = "lessons/enroll/:courseName" element = {<LessonsApply />} />
+            <Route path="lessons" element={<StudentLessons />} />
+            <Route path="quiz" element={<StudentAssignments />} />
+            <Route path="certification" element={<StudentCertificate />} />
+            <Route path="profile" element={<StudentProfile />} />
+            <Route path="lessons/enroll/:courseName" element={<LessonsApply />} />
           </Route>
 
           {/* PRODUCT DESIGN SECTION */}
@@ -63,18 +62,18 @@ const Routy = () => {
             <Route index element={<CoursePage />} />
           </Route>
 
-          <Route path = "/student/game" element = {<TicTacToeGame />}/>
+          <Route path="/student/game" element={<TicTacToeGame />} />
         </Route>
 
         {/* STUDENT LOGIN PAGE*/}
         <Route path="login" element={<StudentFormNavbar />}>
           <Route index element={<LoginOptions />} />
           <Route path="student" element={<StudentLogin />} />
-          <Route path = "student/forgotPassword" element = {<StudentForgotPassword />} />
+          <Route path="student/forgotPassword" element={<StudentForgotPassword />} />
         </Route>
 
         {/* STUDENT SIGN UP PAGE */}
-        <Route path="signup" element={<StudentFormNavbar  />}>
+        <Route path="signup" element={<StudentFormNavbar />}>
           <Route index element={<SignUpOptions />} />
           <Route path="student" element={<StudentSignUp />} />
         </Route>
@@ -84,6 +83,7 @@ const Routy = () => {
           <Route path="/admin/dashboard" element={<SidebarAdmin />}>
             <Route index element={<AdminOverview />} />
             <Route path="lessons" element={<LessonOverview />} />
+            <Route path="messages" element={<AdminMessage />} />
             <Route path="createLesson" element={<CreateLesson />} />
           </Route>
         </Route>

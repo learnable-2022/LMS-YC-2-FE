@@ -1,13 +1,26 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import AppContext from "../../context/Appcontext"
 import Card from "../Card/Card"
 import styles from "./studentStats.module.css"
+import quizQuestions from "../../pages/Student/StudentAssignments/Quiz"
 
 function StudentStats() {
-  const { progress, totalVideos, scorePerentage } = useContext(AppContext)
+  const { progress, totalVideos, studentInfo } = useContext(AppContext)
   const progressPercentage = (progress / totalVideos) * 100
+  const [quizPercentage, setQuizPercentage] = useState(0)
 
-  console.log(scorePerentage)
+  const getQuizPercentage = () => {
+    if (studentInfo.quizTaken) {
+      quizQuestions.map((quiz, index) => {
+        setQuizPercentage((studentInfo.quiz / quiz.questions.length) * 100)
+      })
+    }
+  }
+
+  useEffect(() => {
+    getQuizPercentage()
+  }, [studentInfo.quizTaken])
+
   return (
     <div className={styles.studentStatsContainer}>
       <div className={styles.studentStats}>
@@ -26,7 +39,7 @@ function StudentStats() {
         <Card bgColor="#FEEDCF">
           <p>Total Quiz Score</p>
 
-          <h2>{scorePerentage ? scorePerentage : 0 + "%"}</h2>
+          <h2>{quizPercentage ? quizPercentage + "%" : 0 + "%"}</h2>
         </Card>
       </div>
     </div>

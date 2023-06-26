@@ -31,8 +31,7 @@ function LessonOverview() {
         console.log(data.courses)
         setLoading(false)
         data.success ? setAllCourses(data.courses) : ""
-        data.success ? setMyCourses(data.courses.filter((course, index) => course.admin._id == adminInfo._id)) : ""
-      })
+       })
       .catch((err) => {
         setLoading(false)
         console.log(err)
@@ -88,7 +87,7 @@ function LessonOverview() {
                   </div>
                   <div className={styles.courseInfo}>
                     <p id={styles.courseTitle}>{course.title}</p>
-                    <p>{course.track}</p>
+                    <p id={styles.coursePath}>{course.track}</p>
                     <div className={styles.icons}>
                       <div className={styles.admin}>
                         <BsFillPersonFill />
