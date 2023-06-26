@@ -1,81 +1,100 @@
-.mainbar{
-    z-index: 1;
-    flex-grow: 1;
-    height: 100%;
-    /* background-color: #C8C8C8; */
+.mainbar {
+  z-index: 1;
+  flex-grow: 1;
+  height: 100%;
+  /* background-color: #C8C8C8; */
 }
 
- .mainbody{
-    margin-top: 40px;
-    padding: 0px 40px;
-    width: 100%;
- }
+.mainbody {
+  margin-top: 40px;
+  padding: 0px 40px;
+  width: 100%;
+}
 
- .mainnewlesson{
+.mainnewlesson {
   margin-left: auto;
   background-color: orange;
   color: white;
-  font-size: 12px;
+  font-size: 1.1rem;
   line-height: 30px;
   margin-bottom: 0;
-  height: 33px;
-  width: 150px;
-  text-align: center;
+  /* height: 33px; */
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  /* text-align: center; */
   border-radius: 8px;
   display: block;
 }
-.allCourses{
+
+.allCourses {
   margin-top: 2rem;
 }
-.courseSelect{
+
+.courseSelect {
   margin: 1rem 0;
   display: flex;
   gap: 2rem;
 }
-.courseSelect button{
+
+.courseSelect button {
   border: 1px solid orange;
   font-size: 1.5rem;
   display: block;
   padding: 0.5rem 1rem;
 }
-.courseSelect button.active{
+
+.courseSelect button.active {
   background-color: orange;
   color: white;
 }
-.coursesCont{
+
+.coursesCont {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* background-color: green; */
   gap: 1rem;
   row-gap: 1.5rem;
 }
-.course{
+
+.course {
   background-color: #FFF5E3;
   border-radius: 1rem;
 }
-.thumbnailImg img{ 
+
+.thumbnailImg img {
   height: 10rem;
   width: 350px;
   object-fit: cover;
 }
-.courseInfo{
+
+.courseInfo {
   padding: 0.5rem;
 }
-#courseTitle{
+
+#courseTitle {
   font-size: 1rem;
 }
-.coursesLoading{
+
+#coursePath {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  font-weight: bold;
+}
+
+.coursesLoading {
   position: relative;
-  height: 40vh ;
+  height: 40vh;
   margin-top: 2rem;
 }
-.coursesLoading img{
+
+.coursesLoading img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 8rem;
 }
+
 .icons {
   display: flex;
   justify-content: space-between;
@@ -83,15 +102,16 @@
   gap: 0.4rem;
   margin-top: 1rem;
 }
-.admin{
+
+.admin {
   display: flex;
   gap: 0.3rem;
 }
-.admin p{
+
+.admin p {
   font-size: 0.8rem;
 }
-.deleteCourse{
+
+.deleteCourse {
   color: red;
 }
-
-   

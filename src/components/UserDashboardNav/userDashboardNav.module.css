@@ -7,27 +7,33 @@
   justify-content: space-between;
   overflow-y: hidden;
 }
+
 .burger {
   display: none;
 }
+
 .logo {
   display: none;
 }
+
 .logo img {
   background-color: #f8a711;
   border-radius: 50%;
   padding: 0.2rem;
   height: 2rem;
 }
+
 .logo p {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .navName {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+
 .nameLogo {
   background-color: rgb(209, 209, 209);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
@@ -38,9 +44,11 @@
   border-radius: 0.2rem;
   font-size: 1.3rem;
 }
+
 .Inp {
   position: relative;
 }
+
 .Inp img {
   position: absolute;
   right: 40px;
@@ -54,30 +62,33 @@
     height: 4.5rem;
     padding: 1rem;
   }
+
   .title {
     display: none;
   }
+
   .burger {
     display: block;
   }
+
   .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  input {
-    display: none;
-  }
+
   .Inp {
     height: 30px;
     width: 30px;
   }
+
   .Inp img {
     top: 0;
     right: 0;
     object-fit: cover;
     width: 100%;
   }
+
   /* .navName p {
     display: none;
   } */
