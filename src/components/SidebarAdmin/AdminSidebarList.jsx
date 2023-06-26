@@ -12,21 +12,21 @@ import { VscReport } from "react-icons/vsc";
 const AdminSidebarList = [
     {
         id: 1,
-        logo: <BsColumnsGap/>,
+        logo: <BsColumnsGap />,
         name: 'Home',
         link: "/admin/dashboard"
     },
     {
         id: 2,
-        logo: <BsFillCollectionFill/>,
+        logo: <BsFillCollectionFill />,
         name: 'Lessons',
         link: "lessons"
     },
     {
         id: 3,
-        logo: <TiMessages/>,
+        logo: <TiMessages />,
         name: 'Messages',
-        link: "/admin/dashboard"
+        link: "messages"
     },
 ]
 

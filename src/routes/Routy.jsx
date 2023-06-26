@@ -36,6 +36,7 @@ import StudentCertificate from "../pages/Student/StudentCertificate/StudentCerti
 import StudentForgotPassword from "../pages/Student/StudentForgotPassword/StudentForgotPassword";
 import Certificate from "../components/Certificate/Certificate";
 import TicTacToeGame from "../pages/Student/TicTacToeGame/TicTacToeGame";
+import AdminMessage from "../pages/Admin/AdminMessages/AdminMessages";
 
 
 const Routy = () => {
@@ -82,6 +83,7 @@ const Routy = () => {
           <Route path="/admin/dashboard" element={<SidebarAdmin />}>
             <Route index element={<AdminOverview />} />
             <Route path="lessons" element={<LessonOverview />} />
+            <Route path="messages" element={<AdminMessage />} />
             <Route path="createLesson" element={<CreateLesson />} />
           </Route>
         </Route>

@@ -31,8 +31,7 @@ function LessonOverview() {
         console.log(data.courses)
         setLoading(false)
         data.success ? setAllCourses(data.courses) : ""
-        data.success ? setMyCourses(data.courses.filter((course, index) => course.admin._id == adminInfo._id)) : ""
-      })
+       })
       .catch((err) => {
         setLoading(false)
         console.log(err)
