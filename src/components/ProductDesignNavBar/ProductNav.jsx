@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { LogoSvg, productArrow, productImage } from "../../assets";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import AppContext from "../../context/Appcontext";
-import { FaTimes} from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
 
 const ProductNav = () => {
   const [open, setOpen] = useState(true);
@@ -12,7 +12,7 @@ const ProductNav = () => {
   const [activeLink, setActiveLink] = useState("")
   const navigate = useNavigate()
   const location = useLocation()
-  const {showCourseNav, setShowCourseNav, studentInfo} = useContext(AppContext)
+  const { showCourseNav, setShowCourseNav, studentInfo } = useContext(AppContext)
 
   const weeks = [
     {
@@ -32,10 +32,10 @@ const ProductNav = () => {
       id: 4
     },
   ]
-  
+
   useEffect(() => {
     weeks.forEach((week, index) => {
-      if(location.pathname.endsWith((week.id))){
+      if (location.pathname.endsWith((week.id))) {
         setActiveLink(week.id)
       }
     })
@@ -43,18 +43,19 @@ const ProductNav = () => {
   })
   const handleLinkClick = (link) => {
     setActiveLink(link)
+    setShowCourseNav(false)
   }
 
-  const courseLinks = [ "Dashboard"]
+  const courseLinks = ["Dashboard"]
 
   const DropDown = () => {
     setOpen(!open);
   };
   return (
     <div className={Product.Cont}>
-      <nav className = {`${Product.nav} ${showCourseNav ? Product.active : ""}`}>
+      <nav className={`${Product.nav} ${showCourseNav ? Product.active : ""}`}>
         <div className={Product.logo}>
-          <div className= {Product.close} onClick = {() => setShowCourseNav(false)}>
+          <div className={Product.close} onClick={() => setShowCourseNav(false)}>
             <FaTimes />
           </div>
           <img src={LogoSvg} alt="" />
@@ -83,18 +84,18 @@ const ProductNav = () => {
             style={{ display: open ? "block" : "none" }}
           >
             {weeks.map((week, index) => (
-                <NavLink to= {`/student/course/${studentInfo.track}/${index + 1}`} key = {index} className = {`${Product.linko} ${activeLink == week.id ? Product.active : ""}`} onClick={() => handleLinkClick(week.id)}>
-                  <div></div>
-                  <p>{week.week}</p>
-                </NavLink>
+              <NavLink to={`/student/course/${studentInfo.track}/${index + 1}`} key={index} className={`${Product.linko} ${activeLink == week.id ? Product.active : ""}`} onClick={() => handleLinkClick(week.id)}>
+                <div></div>
+                <p>{week.week}</p>
+              </NavLink>
             ))}
           </div>
           <ul className={Product.list}>
             {courseLinks.map((link, index) => (
               // <>
-                <li key = {index}>
-                  <NavLink to="/student/dashboard" className= {Product.listLink}>{link}</NavLink>
-                </li>
+              <li key={index}>
+                <NavLink to="/student/dashboard" className={Product.listLink}>{link}</NavLink>
+              </li>
               // </>
             ))}
           </ul>

@@ -75,6 +75,12 @@
   font-size: 1rem;
 }
 
+#coursePath {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  font-weight: bold;
+}
+
 .coursesLoading {
   position: relative;
   height: 40vh;

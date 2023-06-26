@@ -1,14 +1,16 @@
-.container{
+.container {
   display: flex;
   background-color: #e9ebed;
   height: 100vh;
   overflow-y: auto;
 }
-.sidebarContainer{
+
+.sidebarContainer {
   height: 100vh;
   background-color: white;
   width: 20%;
 }
+
 .logo {
   background-color: #f8a711;
   display: flex;
@@ -18,20 +20,25 @@
   gap: 0.5rem;
   height: 5rem;
 }
-.logo h3{
+
+.logo h3 {
   color: white;
   font-size: 1.5rem;
 }
-.logo img{
+
+.logo img {
   height: 1.5rem;
 }
-.close{
+
+.close {
   display: none;
 }
-.links{
+
+.links {
   margin-top: 1rem;
 }
-.link{
+
+.link {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -42,16 +49,20 @@
   text-decoration: none;
   /* width: 70%; */
 }
-.link:hover{
+
+.link:hover {
   background-color: #8C8C8C;
   color: #f8a711;
 }
-.link.active{
+
+.link.active {
   color: #f8a711 !important;
 }
-.link:active{
+
+.link:active {
   color: #f8a711;
 }
+
 .logout {
   display: flex;
   padding: 1rem;
@@ -61,33 +72,38 @@
   cursor: pointer;
   margin-bottom: 1rem;
 }
-.logout:hover{
+
+.logout:hover {
   background-color: #8C8C8C;
 }
-.container > main{
+
+.container>main {
   width: 80%;
 }
 
 
 /* -----------------------------------------------------------------------------MOBILE RESPONSIVENESS------------------------------------------------------------------------------------- */
-@media screen and (max-width: 1024px){
-  .sidebarContainer{
+@media screen and (max-width: 1024px) {
+  .sidebarContainer {
     width: 20%;
   }
-  .logo h3{
+
+  .logo h3 {
     font-size: 1.2rem;
   }
-  .logo > img{
+
+  .logo>img {
     font-size: 1.2rem;
   }
-  .link{
+
+  .link {
     padding: 0.5rem;
     font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width : 600px){
-  .sidebarContainer{
+@media screen and (max-width : 600px) {
+  .sidebarContainer {
     position: fixed;
     top: 0;
     left: 0;
@@ -96,24 +112,28 @@
     transform: translateX(-100%);
     transition: all 400ms ease;
   }
-  .sidebarContainer.active{
+
+  .sidebarContainer.active {
     transform: translateX(0);
   }
-  .logo{
+
+  .logo {
     position: relative;
   }
-  .close{
+
+  .close {
     display: block;
     position: absolute;
     top: 5%;
     right: 2%;
     color: red;
   }
-  .link{
-    justify-content: center;
+
+  .link {
+    /* justify-content: center; */
   }
-  
-  .container > main{
+
+  .container>main {
     width: 100%;
   }
 }
